@@ -1,9 +1,5 @@
 import gurobipy as gp
 from gurobipy import GRB
-import re
-from collections import defaultdict
-from data.data import unit_cost_G, demand, load_curve, technical_data_G, technical_data_W
-from models.AnalyzerClasses import SensitivityAnalyzer
 
 
 class Results:

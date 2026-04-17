@@ -1,16 +1,14 @@
 from gurobipy import GRB
 from models.OptimizationClasses import LP_InputData
-from data.data import unit_cost_G, demand, load_curve, technical_data_G, technical_data_W
+from data.data import prob_scenarios, prices_DA, prices_Bal, wind_production, P_max
 
-class Step1Builder:
-    """Builder for Copperplate Model constraints and coefficients for one hour"""
+class Step1point1Builder:
+    """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
     
-    def __init__(self, num_gen, num_wind, num_demand, model_name):
-        self.num_gen = num_gen
-        self.num_wind = num_wind
-        self.num_demand = num_demand
-        self.num_total = num_gen + num_wind + num_demand
-        self.num_hours = 1
+    def __init__(self, model_name="Task1_1_OnePrice"):
+        self.P_max = P_max
+        self.num_hours = 24
+        self.num_scenarios = len(prob_scenarios)
         self.model_name = model_name
         
         # Build variable names once
@@ -18,102 +16,82 @@ class Step1Builder:
     
     def _build_names(self):
         """Build all variable and constraint names"""
-        self.variables = (
-            [f"g{i+1}" for i in range(self.num_gen)] +
-            [f"w{i+1}" for i in range(self.num_wind)] +
-            [f"d{i+1}" for i in range(self.num_demand)]
-        )
-        self.u_keys = [f"u{i+1}" for i in range(self.num_total)]
-        self.l_keys = [f"l{i+1}" for i in range(self.num_total)]
+        self.p_DA_keys = [f"p_DA_{t+1}" for t in range(self.num_hours)]
+        self.delta_keys = []
+        self.bal_constraints = []
+        
+        for t in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                self.delta_keys.append(f"delta_{t+1}_{w+1}")
+                self.bal_constraints.append(f"bal_{t+1}_{w+1}")
+                
+        self.variables = self.p_DA_keys + self.delta_keys
+        self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
     
     def build_objective_coefficients(self):
         """Build objective coefficients from data"""
         obj_coeff = {}
         
-        # Generator costs
-        for i in range(self.num_gen):
-            obj_coeff[f"g{i+1}"] = unit_cost_G["C_i"][i]
-        
-        # Wind costs (zero)
-        for i in range(self.num_wind):
-            obj_coeff[f"w{i+1}"] = 0
-        
-        # Demand bid prices (negative for revenue)
-        for i in range(self.num_demand):
-            obj_coeff[f"d{i+1}"] = -demand['Bid_price'][i]
-        
+        # Day-Ahead: E[Price_DA] * p_DA
+        for t in range(self.num_hours):
+            exp_price_da = sum(1/1600 * prices_DA[t][w] for w in range(self.num_scenarios))
+            obj_coeff[f"p_DA_{t+1}"] = exp_price_da
+            
+        # Balancing: pi_w * price_B * (delta_pos - delta_neg)
+        for t in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                obj_coeff[f"delta_{t+1}_{w+1}"] = 1/1600 * prices_Bal[t][w]
+                
         return obj_coeff
     
     def build_constraint_coefficients(self):
         """Build constraint coefficients"""
         coeff = {}
         
-        # Upper bounds: x <= max
-        for i in range(self.num_total):
-            coeff[self.u_keys[i]] = self._one_hot_vector(i, sign=1)
-        
-        # Lower bounds: -x <= 0
-        for i in range(self.num_total):
-            coeff[self.l_keys[i]] = self._one_hot_vector(i, sign=-1)
-        
-        # Balance: gen + wind - demand = 0
-        balance = {v: 1 for v in self.variables[:self.num_gen + self.num_wind]}
-        balance.update({v: -1 for v in self.variables[self.num_gen + self.num_wind:]})
-        coeff["balance"] = balance
-        
+        # capacity: p_DA <= P_max
+        for t in range(self.num_hours):
+            coeff[self.u_keys[t]] = {f"p_DA_{t+1}": 1}
+            
+        # balancing: p_DA + delta = p_real
+        for t in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                c_name = f"bal_{t+1}_{w+1}"
+                coeff[c_name] = {
+                    f"p_DA_{t+1}": 1,
+                    f"delta_{t+1}_{w+1}": 1
+                }
         return coeff
     
     def build_constraint_rhs(self):
         """Build right-hand side values"""
         rhs = {}
-        max_load = max(load_curve['load_MW'])
-        
-        # Generator upper bounds
-        for i in range(self.num_gen):
-            rhs[self.u_keys[i]] = technical_data_G["P_max"][i]
-        
-        # Wind upper bounds
-        for i in range(self.num_wind):
-            rhs[self.u_keys[self.num_gen + i]] = technical_data_W["P_max"][i]
-        
-        # Demand upper bounds
-        for i in range(self.num_demand):
-            rhs[self.u_keys[self.num_gen + self.num_wind + i]] = (
-                demand['D_max %'][i] * max_load / 100
-            )
-        
-        # Lower bounds (all zero)
-        for key in self.l_keys:
-            rhs[key] = 0
-        
-        # Balance
-        rhs["balance"] = 0
-        
+        for t in range(self.num_hours):
+            rhs[self.u_keys[t]] = self.P_max
+            for w in range(self.num_scenarios):
+                rhs[f"bal_{t+1}_{w+1}"] = wind_production[t][w]
         return rhs
     
     def build_constraint_sense(self):
         """Build constraint senses"""
-        sense = {}
-        for key in self.u_keys + self.l_keys:
-            sense[key] = GRB.LESS_EQUAL
-        sense["balance"] = GRB.EQUAL
+        sense = {k: GRB.LESS_EQUAL for k in self.u_keys}
+        sense.update({k: GRB.EQUAL for k in self.bal_constraints})
         return sense
     
-    def _one_hot_vector(self, idx, sign=1):
-        """Helper: create one-hot coefficient vector"""
-        coeff = {v: 0 for v in self.variables}
-        coeff[self.variables[idx]] = sign
-        return coeff
+    # def _one_hot_vector(self, idx, sign=1):
+    #     """Helper: create one-hot coefficient vector"""
+    #     coeff = {v: 0 for v in self.variables}
+    #     coeff[self.variables[idx]] = sign
+    #     return coeff
     
     def build_input_data(self):
         """Build complete LP_InputData object"""
         return LP_InputData(
             VARIABLES=self.variables,
-            CONSTRAINTS=self.u_keys + self.l_keys + ["balance"],
+            CONSTRAINTS=self.u_keys + self.bal_constraints,
             objective_coeff=self.build_objective_coefficients(),
             constraints_coeff=self.build_constraint_coefficients(),
             constraints_rhs=self.build_constraint_rhs(),
             constraints_sense=self.build_constraint_sense(),
-            objective_sense=GRB.MINIMIZE,
+            objective_sense=GRB.MAXIMIZE,
             model_name=self.model_name
         )
