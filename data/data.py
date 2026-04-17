@@ -124,9 +124,40 @@ def plot_wind_sample(wind_data, sample_hours: int = 48, save_path: Optional[path
     return fig
 
 
+def plot_prices(price_data, save_path: Optional[pathlib.Path] = None):
+    """Plot the full hourly electricity price series with Plotly."""
+    plot_data = price_data.copy()
+    plot_data["HourStart"] = plot_data["Hour"].str.slice(0, 5)
+    plot_data["Timestamp"] = pd.to_datetime(
+        plot_data["Date"].dt.strftime("%Y-%m-%d") + " " + plot_data["HourStart"]
+    )
+    plot_data = plot_data.sort_values("Timestamp")
+
+    fig = px.line(
+        plot_data,
+        x="Timestamp",
+        y="Price",
+        markers=True,
+    )
+    fig.update_layout(
+        xaxis_title="Time",
+        yaxis_title="Electricity price [EUR/MWh]",
+        template="plotly_white",
+        margin=dict(l=25, r=10, t=45, b=25),
+        width=1100,
+        height=550,
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.write_image(save_path)
+
+    return fig
+
+
 scenarios = build_scenarios(wind_forecast, electricity_prices, imbalance_data)
 
 
 if __name__ == "__main__":
-    output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "wind_forecast_full.pdf"
-    fig = plot_wind_sample(wind_forecast, sample_hours=len(wind_forecast), save_path=output_path)
+    output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "electricity_prices_full.pdf"
+    fig = plot_prices(electricity_prices, save_path=output_path)
