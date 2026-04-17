@@ -3,6 +3,8 @@ import pathlib
 import numpy as np
 import itertools
 from dataclasses import dataclass
+from typing import Optional
+import plotly.express as px
 
 # Wind power generation data (Fingrid)
 def load_wind_forecasts():
@@ -56,9 +58,8 @@ class Scenario:
 
 
 def build_scenarios(wind_forecast, electricity_prices, imbalance_data) -> dict:
-    """
-    Returns a dict keyed by (wind_day, price_day, imbalance_day) → Scenario
-    Total: 20 × 20 × 4 = 1600 entries
+    """ Returns a dict keyed by (wind_day, price_day, imbalance_day) -> Scenario
+        Total: 20 * 20 * 4 = 1600 entries
     """
     # --- 1. Slice wind into 20 daily arrays (24h each) ---
     wind_days = [
@@ -97,4 +98,35 @@ def build_scenarios(wind_forecast, electricity_prices, imbalance_data) -> dict:
     return scenarios
 
 
+def plot_wind_sample(wind_data, sample_hours: int = 48, save_path: Optional[pathlib.Path] = None):
+    """Plot a sample of the hourly wind forecast data with Plotly."""
+    sample = wind_data.head(sample_hours).reset_index()
+
+    fig = px.line(
+        sample,
+        x="startTime",
+        y="Wind power generation - 15 min data",
+        markers=True,
+    )
+    fig.update_layout(
+        xaxis_title="Time",
+        yaxis_title="Wind power [MW]",
+        template="plotly_white",
+        margin=dict(l=25, r=10, t=45, b=25),
+        width=1100,
+        height=550,
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.write_image(save_path)
+
+    return fig
+
+
 scenarios = build_scenarios(wind_forecast, electricity_prices, imbalance_data)
+
+
+if __name__ == "__main__":
+    output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "wind_forecast_full.pdf"
+    fig = plot_wind_sample(wind_forecast, sample_hours=len(wind_forecast), save_path=output_path)
