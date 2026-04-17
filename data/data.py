@@ -14,6 +14,10 @@ def load_wind_forecasts():
     df = df.set_index('startTime')
     df_hourly = df.resample('h').mean(numeric_only=True)
 
+    max_value = df_hourly.max().max()
+    if pd.notna(max_value) and max_value > 0:
+        df_hourly = df_hourly * (500.0 / max_value)
+
     return df_hourly
 
 
@@ -36,10 +40,15 @@ def load_electricity_prices():
     return df_single_idx
 
 
-
 # Bernoulli distribution for imbalance modeling
-def load_imbalance_data():
+def create_imbalance_data():
     imbalance_data = np.random.binomial(n=1, p=0.5, size=(4, 24))
+    imbalance_data = pd.DataFrame(imbalance_data)
+    imbalance_data.to_csv('imbalance_data.csv', index=False, header=False)
+
+
+def load_imbalance_data():
+    imbalance_data = pd.read_csv(pathlib.Path(__file__).parent / 'imbalance_data.csv', header=None).values
     return imbalance_data
 
 wind_forecast = load_wind_forecasts()
@@ -160,4 +169,4 @@ scenarios = build_scenarios(wind_forecast, electricity_prices, imbalance_data)
 
 if __name__ == "__main__":
     output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "electricity_prices_full.pdf"
-    fig = plot_prices(electricity_prices, save_path=output_path)
+    fig = plot_wind_sample(wind_forecast, sample_hours=len(wind_forecast), save_path=output_path.with_name("wind_forecast_sample.pdf"))
