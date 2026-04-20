@@ -20,12 +20,13 @@ class DayAheadOnePriceBuilder:
         self.wind_scenarios = 20
         self.price_scenarios = 20
         self.imbalance_scenarios = 4
-        self.num_scenarios = len(scenarios)
-        self.scenario_list = list(scenarios.values())
+        self.num_scenarios = 200
+        self.scenario_list = list(scenarios.values())[200]
         self.model_name = model_name
-        
+
         # Build variable names once
         self._build_names()
+        
     
     def _build_names(self):
         """Build all variable and constraint names"""
@@ -40,34 +41,45 @@ class DayAheadOnePriceBuilder:
                 
         self.variables = self.p_DA_keys + self.delta_keys
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
+        self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
+
+        # Build variable names once
+        self._build_names()
+        
     
     def build_objective_coefficients(self):
         """Build objective coefficients from data"""
         obj_coeff = {}
-        
         for hour in range(self.num_hours):
-            exp_price_da = float(np.mean([scenario.prices[hour] for scenario in self.scenario_list]))
-            obj_coeff[f"p_DA_{hour+1}"] = exp_price_da
-            for w in range(self.num_scenarios):
-                obj_coeff[f"p_Imbal_{hour+1}_{w+1}"] = -exp_price_da
-
+            count = 0
+            #print(hour)
+            for w in self.scenario_list:
+                #print(w)
+                exp_price_da = float(w.prices[hour]/ self.num_scenarios)
+                #print(exp_price_da)
+                obj_coeff[f"lambda_DA_{hour+1}_{count+1}"] = exp_price_da
+                obj_coeff[f"lambda_Imbal_{hour+1}_{count+1}"] = -exp_price_da
+                count += 1
         return obj_coeff
     
     def build_constraint_coefficients(self):
         """Build constraint coefficients"""
         coeff = {}
-        
         # capacity: p_DA <= P_max
-        for t in range(self.num_hours):
-            coeff[self.u_keys[t]] = {f"p_DA_{t+1}": 1}
+        for hour in range(self.num_hours):
+            coeff[self.u_keys[hour]] = {f"p_DA_{hour+1}": 1}
+
+        # Lower bounds: -x <= 0
+        for i in range(self.num_total):
+            coeff[self.l_keys[i]] = self._one_hot_vector(i, sign=-1)
             
         # balancing: p_DA + delta = p_real
-        for t in range(self.num_hours):
+        for hour in range(self.num_hours):
             for w in range(self.num_scenarios):
-                c_name = f"bal_{t+1}_{w+1}"
+                c_name = f"bal_{hour+1}_{w+1}"
                 coeff[c_name] = {
-                    f"p_DA_{t+1}": 1,
-                    f"delta_{t+1}_{w+1}": 1
+                    f"p_DA_{hour+1}": 1,
+                    f"delta_{hour+1}_{w+1}": 1
                 }
         return coeff
     
@@ -86,11 +98,11 @@ class DayAheadOnePriceBuilder:
         sense.update({k: GRB.EQUAL for k in self.bal_constraints})
         return sense
     
-    # def _one_hot_vector(self, idx, sign=1):
-    #     """Helper: create one-hot coefficient vector"""
-    #     coeff = {v: 0 for v in self.variables}
-    #     coeff[self.variables[idx]] = sign
-    #     return coeff
+    def _one_hot_vector(self, idx, sign=1):
+        """Helper: create one-hot coefficient vector"""
+        coeff = {v: 0 for v in self.variables}
+        coeff[self.variables[idx]] = sign
+        return coeff
     
     def build_input_data(self):
         """Build complete LP_InputData object"""
