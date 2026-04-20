@@ -79,16 +79,27 @@ class DayAheadOnePriceBuilder:
     def build_constraint_rhs(self):
         """Build right-hand side values"""
         rhs = {}
+
+        # upper bounds
         for t in range(self.num_hours):
             rhs[self.u_keys[t]] = self.P_max
+
+        # lower bounds
+        for t in range(self.num_hours):
+            rhs[self.l_keys[t]] = 0
+
+        # balance constraints
+        for t in range(self.num_hours):
             for w in range(self.num_scenarios):
                 rhs[f"bal_{t+1}_{w+1}"] = float(self.scenario_list[w].wind[t])
         return rhs
     
     def build_constraint_sense(self):
         """Build constraint senses"""
-        sense = {k: GRB.LESS_EQUAL for k in self.u_keys}
-        sense.update({k: GRB.EQUAL for k in self.bal_constraints})
+        sense = {}
+        for key in self.u_keys + self.l_keys:
+            sense[key] = GRB.LESS_EQUAL
+        sense["balance"] = GRB.EQUAL
         return sense
     
     def _one_hot_vector(self, idx, sign=1):
@@ -101,7 +112,7 @@ class DayAheadOnePriceBuilder:
         """Build complete LP_InputData object"""
         return LP_InputData(
             VARIABLES=self.variables,
-            CONSTRAINTS=self.u_keys + self.bal_constraints,
+            CONSTRAINTS=self.u_keys + self.balance,
             objective_coeff=self.build_objective_coefficients(),
             constraints_coeff=self.build_constraint_coefficients(),
             constraints_rhs=self.build_constraint_rhs(),

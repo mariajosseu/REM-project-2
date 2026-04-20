@@ -36,7 +36,7 @@ class LP_OptimizationProblem():
     def __init__(self, builder): # initialize class
         self.builder = builder
         self.data = builder.build_input_data() # define data attributes
-        self.results = Results() # initialize results container
+        #self.results = Results() # initialize results container
         self._build_model() # build gurobi model
     
     def _build_variables(self):
