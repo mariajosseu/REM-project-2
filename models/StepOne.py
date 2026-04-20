@@ -59,11 +59,11 @@ class DayAheadOnePriceBuilder:
         """Build constraint coefficients"""
         coeff = {}
         # capacity: p_DA <= P_max
-        for hour in range(self.num_hours):
-            coeff[self.u_keys[hour]] = {f"p_DA_{hour+1}": 1}
-
+        # Upper bounds: x <= max
+        for i in range(self.num_hours):
+            coeff[self.u_keys[i]] = self._one_hot_vector(i, sign=1)
         # Lower bounds: -x <= 0
-        for i in range(self.num_total):
+        for i in range(self.num_hours):
             coeff[self.l_keys[i]] = self._one_hot_vector(i, sign=-1)
             
         # balancing: p_DA + delta = p_real
