@@ -34,7 +34,7 @@ class DayAheadOnePriceBuilder:
             [f"p_DA_{i+1}" for i in range(self.num_hours)] +
             [f"delta_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]
         )
-
+        
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
         self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
         self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
@@ -50,8 +50,8 @@ class DayAheadOnePriceBuilder:
                 #print(w)
                 exp_price_da = float(w.prices[hour]/ self.num_scenarios)
                 #print(exp_price_da)
-                obj_coeff[f"lambda_DA_{hour+1}_{count+1}"] = exp_price_da
-                obj_coeff[f"lambda_Imbal_{hour+1}_{count+1}"] = -exp_price_da
+                obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+                obj_coeff[f"delta_{hour+1}_{count+1}"] = -exp_price_da
                 count += 1
         return obj_coeff
     
@@ -99,7 +99,8 @@ class DayAheadOnePriceBuilder:
         sense = {}
         for key in self.u_keys + self.l_keys:
             sense[key] = GRB.LESS_EQUAL
-        sense["balance"] = GRB.EQUAL
+        for key in self.balance:
+            sense[key] = GRB.EQUAL
         return sense
     
     def _one_hot_vector(self, idx, sign=1):
@@ -112,7 +113,7 @@ class DayAheadOnePriceBuilder:
         """Build complete LP_InputData object"""
         return LP_InputData(
             VARIABLES=self.variables,
-            CONSTRAINTS=self.u_keys + self.balance,
+            CONSTRAINTS=self.u_keys + self.l_keys + self.balance,
             objective_coeff=self.build_objective_coefficients(),
             constraints_coeff=self.build_constraint_coefficients(),
             constraints_rhs=self.build_constraint_rhs(),
