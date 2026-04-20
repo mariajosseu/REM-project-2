@@ -21,7 +21,7 @@ class DayAheadOnePriceBuilder:
         self.price_scenarios = 20
         self.imbalance_scenarios = 4
         self.num_scenarios = 200
-        self.scenario_list = list(scenarios.values())[200]
+        self.scenario_list = list(scenarios.values())[:200]
         self.model_name = model_name
 
         # Build variable names once
@@ -30,21 +30,14 @@ class DayAheadOnePriceBuilder:
     
     def _build_names(self):
         """Build all variable and constraint names"""
-        self.p_DA_keys = [f"p_DA_{t+1}" for t in range(self.num_hours)]
-        self.delta_keys = []
-        self.bal_constraints = []
-        
-        for t in range(self.num_hours):
-            for w in range(self.num_scenarios):
-                self.delta_keys.append(f"delta_{t+1}_{w+1}")
-                self.bal_constraints.append(f"bal_{t+1}_{w+1}")
-                
-        self.variables = self.p_DA_keys + self.delta_keys
+        self.variables = (
+            [f"p_DA_{i+1}" for i in range(self.num_hours)] +
+            [f"delta_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]
+        )
+
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
         self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
-
-        # Build variable names once
-        self._build_names()
+        self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         
     
     def build_objective_coefficients(self):
