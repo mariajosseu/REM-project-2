@@ -4,14 +4,18 @@ from models.StepOne import DayAheadOnePriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 from pathlib import Path
 
-#%%
-scenarios
 # %%
-builder = DayAheadOnePriceBuilder()
+all_scenarios = list(scenarios.values())
+builder = DayAheadOnePriceBuilder(scenario_list=all_scenarios[:200], model_name="Day-Ahead One-Price Model")
 builder.build_objective_coefficients()
 
 # %% Solve optimization problem
 problem = LP_OptimizationProblem(builder)
+problem.run()
+problem.display_results()
+results = problem.get_results()
+
+
 
 # %%
 output_dir = Path(__file__).resolve().parent / "outputs"

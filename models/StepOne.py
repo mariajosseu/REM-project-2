@@ -14,14 +14,14 @@ from data.data import scenarios
 class DayAheadOnePriceBuilder:
     """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
     
-    def __init__(self, model_name="Day-Ahead One-Price Model"):
+    def __init__(self, scenario_list, model_name="Day-Ahead One-Price Model"):
         self.P_max = 500 # wind farm installed capacity [MW]
         self.num_hours = 24
         self.wind_scenarios = 20
         self.price_scenarios = 20
         self.imbalance_scenarios = 4
-        self.num_scenarios = 200
-        self.scenario_list = list(scenarios.values())[:200]
+        self.scenario_list = list(scenario_list)
+        self.num_scenarios = len(self.scenario_list)
         self.model_name = model_name
 
         # Build variable names once
