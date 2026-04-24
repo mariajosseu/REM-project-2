@@ -3,6 +3,7 @@ from data.data import scenarios
 from models.StepOne import DayAheadOnePriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 from pathlib import Path
+from typing import Optional
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -19,7 +20,7 @@ problem.run()
 # %%
 
 
-def plot_optimal_day_ahead_offers(problem, save_path: Path | None = None):
+def plot_optimal_day_ahead_offers(problem, save_path: Optional[Path] = None):
 	"""Plot the optimal day-ahead offer schedule."""
 	offers = pd.DataFrame(
 		{

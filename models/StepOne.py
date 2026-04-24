@@ -54,16 +54,8 @@ class DayAheadOnePriceBuilder:
                 obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
                 # 1= system has excess. -1 = system has deficit.
                 imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                if imbalance_sign == 1.0: # system has excess                    
-                    if obj_coeff[f"delta_{hour+1}_{count+1}"] > 0:
-                        obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.85 * exp_price_da
-                    else:
-                        obj_coeff[f"delta_{hour+1}_{count+1}"] = - 0.85 * exp_price_da
-                else: # system has deficit
-                    if obj_coeff[f"delta_{hour+1}_{count+1}"] > 0:
-                        obj_coeff[f"delta_{hour+1}_{count+1}"] = 1.25 * exp_price_da
-                    else:
-                        obj_coeff[f"delta_{hour+1}_{count+1}"] = - 1.25 * exp_price_da
+                obj_coeff[f"delta_{hour+1}_{count+1}"] = exp_price_da
+                count += 1
         return obj_coeff
     
     def build_constraint_coefficients(self):
@@ -133,9 +125,6 @@ class DayAheadOnePriceBuilder:
             objective_sense=GRB.MAXIMIZE,
             model_name=self.model_name
         )
-
-
-
 class DayAheadTwoPriceBuilder:
     """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
     
