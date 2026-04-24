@@ -36,7 +36,7 @@ class LP_OptimizationProblem():
     def __init__(self, builder): # initialize class
         self.builder = builder
         self.data = builder.build_input_data() # define data attributes
-        #self.results = Results() # initialize results container
+        self.results = Results() # initialize results container
         self._build_model() # build gurobi model
     
     def _build_variables(self):
@@ -96,5 +96,5 @@ class LP_OptimizationProblem():
         print("="*70)
         print(f"Model: {self.data.model_name}")
         print(f"Objective Value: €{self.results.objective_value:,.2f}")
-        print(f"Total operating cost: €{sum(self.data.objective_coeff[v] * self.results.variables[v] for v in self.data.VARIABLES if v.startswith('g'))}")
+        print(f"Total cost: €{sum(self.data.objective_coeff[v] * self.results.variables[v] for v in self.data.VARIABLES if v.startswith('delta'))}")
 
