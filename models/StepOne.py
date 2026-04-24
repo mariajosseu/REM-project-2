@@ -169,10 +169,11 @@ class DayAheadTwoPriceBuilder:
         """
         obj_coeff = {}
         for hour in range(self.num_hours):
-            count = 0
-            for w in self.scenario_list:
-                exp_price_da = float(w.prices[hour]/ self.num_scenarios)
-                obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+            obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+            for count, w in enumerate(self.scenario_list):
+                exp_price_da = float(w.prices[hour] / self.num_scenarios)
+                # Delta is a linking variable only in the 2-price model objective.
+                obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.0
                 imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
                 if imbalance_sign == 1.0: # system has excess, upward imbalance is penalized, downward imbalance is rewarded
                     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
@@ -180,7 +181,6 @@ class DayAheadTwoPriceBuilder:
                 else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
                     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
                     obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
-            count += 1
         return obj_coeff
     
     def build_constraint_coefficients(self):
@@ -257,6 +257,12 @@ class DayAheadTwoPriceBuilder:
         for key in self.balance + self.delta_def:
             sense[key] = GRB.EQUAL
         return sense
+    
+    def _one_hot_vector(self, idx, sign=1):
+        """Helper: create one-hot coefficient vector"""
+        coeff = {v: 0 for v in self.variables}
+        coeff[self.variables[idx]] = sign
+        return coeff
     
     def build_input_data(self):
         """Build complete LP_InputData object"""

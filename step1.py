@@ -63,3 +63,11 @@ fig.show(renderer="browser")
 builder2 = DayAheadTwoPriceBuilder()
 builder2.build_objective_coefficients()
 # %%
+
+problem2 = LP_OptimizationProblem(builder2)
+problem2.run()
+# %%
+fig2 = plot_optimal_day_ahead_offers(problem2, save_path=output_dir / "optimal_day_ahead_offers_two_price.html")
+fig2.show(renderer="browser")
+problem2.model.write(str(output_dir / "step1_2.lp"))
+# %%
