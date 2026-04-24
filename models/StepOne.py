@@ -41,17 +41,20 @@ class DayAheadOnePriceBuilder:
         
     
     def build_objective_coefficients(self):
-        """Build objective coefficients from data"""
+        """Build objective coefficients from data.
+
+        Imbalance contribution changes sign with system state:
+        - helps system -> earning (positive coefficient)
+        - hurts system -> cost (negative coefficient)
+        """
         obj_coeff = {}
         for hour in range(self.num_hours):
             count = 0
-            #print(hour)
             for w in self.scenario_list:
-                #print(w)
                 exp_price_da = float(w.prices[hour]/ self.num_scenarios)
-                #print(exp_price_da)
                 obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
-                obj_coeff[f"delta_{hour+1}_{count+1}"] = -exp_price_da
+                imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
+                obj_coeff[f"delta_{hour+1}_{count+1}"] = imbalance_sign * exp_price_da
                 count += 1
         return obj_coeff
     
