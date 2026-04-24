@@ -1,6 +1,6 @@
 #%%
 from data.data import scenarios
-from models.StepOne import DayAheadOnePriceBuilder
+from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 from pathlib import Path
 from typing import Optional
@@ -59,4 +59,7 @@ fig = plot_optimal_day_ahead_offers(problem, save_path=output_dir / "optimal_day
 fig.show(renderer="browser")
 
 
+# %%
+builder2 = DayAheadTwoPriceBuilder()
+builder2.build_objective_coefficients()
 # %%

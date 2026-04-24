@@ -36,7 +36,7 @@ class DayAheadOnePriceBuilder:
         
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
         self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
-        self.imbalance = [f"imbal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         
     
     def build_objective_coefficients(self):
@@ -54,7 +54,10 @@ class DayAheadOnePriceBuilder:
                 obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
                 # 1= system has excess. -1 = system has deficit.
                 imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                obj_coeff[f"delta_{hour+1}_{count+1}"] = exp_price_da
+                if imbalance_sign == 1.0: # system has excess
+                    obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.85 * exp_price_da
+                else: # system has deficit
+                    obj_coeff[f"delta_{hour+1}_{count+1}"] = -1.25 * exp_price_da
                 count += 1
         return obj_coeff
     
@@ -77,7 +80,6 @@ class DayAheadOnePriceBuilder:
                     f"p_DA_{hour+1}": 1,
                     f"delta_{hour+1}_{w+1}": 1
                 }
-        # 
         return coeff
     
     def build_constraint_rhs(self):
@@ -146,6 +148,7 @@ class DayAheadTwoPriceBuilder:
         """Build all variable and constraint names"""
         self.variables = (
             [f"p_DA_{i+1}" for i in range(self.num_hours)] +
+            [f"delta_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]+
             [f"delta_up_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]+
             [f"delta_down_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]
         )
@@ -153,6 +156,9 @@ class DayAheadTwoPriceBuilder:
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
         self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
         self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.delta_def = [f"delta_def_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.delta_up_nonneg = [f"delta_up_nonneg_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.delta_down_nonneg = [f"delta_down_nonneg_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         
     def build_objective_coefficients(self):
         """Build objective coefficients from data.
@@ -174,6 +180,96 @@ class DayAheadTwoPriceBuilder:
                 else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
                     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
                     obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+            count += 1
+        return obj_coeff
+    
+    def build_constraint_coefficients(self):
+        """Build constraint coefficients"""
+        coeff = {}
+        # capacity: p_DA <= P_max
+        # Upper bounds: x <= max
+        for i in range(self.num_hours):
+            coeff[self.u_keys[i]] = self._one_hot_vector(i, sign=1)
+        # Lower bounds: -x <= 0
+        for i in range(self.num_hours):
+            coeff[self.l_keys[i]] = self._one_hot_vector(i, sign=-1)
+            
+        # balancing: p_DA + delta = p_real
+        for hour in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                c_name = f"bal_{hour+1}_{w+1}"
+                coeff[c_name] = {
+                    f"p_DA_{hour+1}": 1,
+                    f"delta_{hour+1}_{w+1}": 1
+                }
+        # delta - delta_up + delta_down = 0
+        for hour in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                c_name = f"delta_def_{hour+1}_{w+1}"
+                coeff[c_name] = {
+                    f"delta_{hour+1}_{w+1}": 1,
+                    f"delta_up_{hour+1}_{w+1}": -1,
+                    f"delta_down_{hour+1}_{w+1}": 1
+                }
+        # -delta_up <= 0 and -delta_down <= 0;
+        for hour in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                c_name_up = f"delta_up_nonneg_{hour+1}_{w+1}"
+                c_name_down = f"delta_down_nonneg_{hour+1}_{w+1}"
+                coeff[c_name_up] = {f"delta_up_{hour+1}_{w+1}": -1}
+                coeff[c_name_down] = {f"delta_down_{hour+1}_{w+1}": -1}
+        return coeff
+    
+    def build_constraint_rhs(self):
+        """Build right-hand side values"""
+        rhs = {}
+
+        # upper bounds
+        for t in range(self.num_hours):
+            rhs[self.u_keys[t]] = self.P_max
+
+        # lower bounds
+        for t in range(self.num_hours):
+            rhs[self.l_keys[t]] = 0
+
+        # balance constraints
+        for t in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                rhs[f"bal_{t+1}_{w+1}"] = float(self.scenario_list[w].wind[t])
+        
+        # delta - delta_up + delta_down = 0
+        for hour in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                rhs[f"delta_def_{hour+1}_{w+1}"] = 0
+        
+        # -delta_up <= 0 and -delta_down <= 0;
+        for hour in range(self.num_hours):
+            for w in range(self.num_scenarios):
+                rhs[f"delta_up_nonneg_{hour+1}_{w+1}"] = 0
+                rhs[f"delta_down_nonneg_{hour+1}_{w+1}"] = 0
+        return rhs
+    
+    def build_constraint_sense(self):
+        """Build constraint senses"""
+        sense = {}
+        for key in self.u_keys + self.l_keys + self.delta_up_nonneg + self.delta_down_nonneg:
+            sense[key] = GRB.LESS_EQUAL
+        for key in self.balance + self.delta_def:
+            sense[key] = GRB.EQUAL
+        return sense
+    
+    def build_input_data(self):
+        """Build complete LP_InputData object"""
+        return LP_InputData(
+            VARIABLES=self.variables,
+            CONSTRAINTS=self.u_keys + self.l_keys + self.balance + self.delta_def + self.delta_up_nonneg + self.delta_down_nonneg,
+            objective_coeff=self.build_objective_coefficients(),
+            constraints_coeff=self.build_constraint_coefficients(),
+            constraints_rhs=self.build_constraint_rhs(),
+            constraints_sense=self.build_constraint_sense(),
+            objective_sense=GRB.MAXIMIZE,
+            model_name=self.model_name
+        )
 
 
 
