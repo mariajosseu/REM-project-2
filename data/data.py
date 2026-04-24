@@ -92,8 +92,8 @@ def build_scenarios(wind_forecast, electricity_prices, imbalance_data) -> dict:
     for w, p, b in itertools.product(range(20), range(20), range(4)):
         scaled_prices = np.where(
             imbalance_days[b] == 1,
-            price_days[p] * 1.25,
-            price_days[p] * 0.85,
+            price_days[p] * 1,
+            price_days[p] * 1,
         )
         scenarios[(w, p, b)] = Scenario(
             wind_day      = w,

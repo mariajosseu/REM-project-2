@@ -32,12 +32,11 @@ class DayAheadOnePriceBuilder:
         """Build all variable and constraint names"""
         self.variables = (
             [f"p_DA_{i+1}" for i in range(self.num_hours)] +
-            [f"delta_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]
-        )
+            [f"delta_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)])
         
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
         self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
-        self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.imbalance = [f"imbal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         
     
     def build_objective_coefficients(self):
@@ -53,9 +52,18 @@ class DayAheadOnePriceBuilder:
             for w in self.scenario_list:
                 exp_price_da = float(w.prices[hour]/ self.num_scenarios)
                 obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+                # 1= system has excess. -1 = system has deficit.
                 imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                obj_coeff[f"delta_{hour+1}_{count+1}"] = imbalance_sign * exp_price_da
-                count += 1
+                if imbalance_sign == 1.0: # system has excess                    
+                    if obj_coeff[f"delta_{hour+1}_{count+1}"] > 0:
+                        obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.85 * exp_price_da
+                    else:
+                        obj_coeff[f"delta_{hour+1}_{count+1}"] = - 0.85 * exp_price_da
+                else: # system has deficit
+                    if obj_coeff[f"delta_{hour+1}_{count+1}"] > 0:
+                        obj_coeff[f"delta_{hour+1}_{count+1}"] = 1.25 * exp_price_da
+                    else:
+                        obj_coeff[f"delta_{hour+1}_{count+1}"] = - 1.25 * exp_price_da
         return obj_coeff
     
     def build_constraint_coefficients(self):
@@ -77,6 +85,7 @@ class DayAheadOnePriceBuilder:
                     f"p_DA_{hour+1}": 1,
                     f"delta_{hour+1}_{w+1}": 1
                 }
+        # 
         return coeff
     
     def build_constraint_rhs(self):
@@ -125,4 +134,59 @@ class DayAheadOnePriceBuilder:
             model_name=self.model_name
         )
 
+
+
+class DayAheadTwoPriceBuilder:
+    """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
+    
+    def __init__(self, model_name="Day-Ahead One-Price Model"):
+        self.P_max = 500 # wind farm installed capacity [MW]
+        self.num_hours = 24
+        self.wind_scenarios = 20
+        self.price_scenarios = 20
+        self.imbalance_scenarios = 4
+        self.num_scenarios = 200
+        self.scenario_list = list(scenarios.values())[:200]
+        self.model_name = model_name
+
+        # Build variable names once
+        self._build_names()
+        
+    
+    def _build_names(self):
+        """Build all variable and constraint names"""
+        self.variables = (
+            [f"p_DA_{i+1}" for i in range(self.num_hours)] +
+            [f"delta_up_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]+
+            [f"delta_down_{i+1}_{w+1}" for i in range(self.num_hours) for w in range(self.num_scenarios)]
+        )
+        
+        self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)]
+        self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
+        self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        
+    def build_objective_coefficients(self):
+        """Build objective coefficients from data.
+
+        Imbalance contribution changes sign with system state:
+        - helps system -> earning (positive coefficient)
+        - hurts system -> cost (negative coefficient)
+        """
+        obj_coeff = {}
+        for hour in range(self.num_hours):
+            count = 0
+            for w in self.scenario_list:
+                exp_price_da = float(w.prices[hour]/ self.num_scenarios)
+                obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+                imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
+                if imbalance_sign == 1.0: # system has excess, upward imbalance is penalized, downward imbalance is rewarded
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
+                else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+
+
+
+    
 
