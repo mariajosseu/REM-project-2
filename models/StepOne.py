@@ -48,17 +48,34 @@ class DayAheadOnePriceBuilder:
         """
         obj_coeff = {}
         for hour in range(self.num_hours):
+            obj_coeff[f"p_DA_{hour+1}"] = sum(
+                                        float(s.prices[hour] / self.num_scenarios)
+                                        for s in self.scenario_list
+                                    )
             count = 0
             for w in self.scenario_list:
-                exp_price_da = float(w.prices[hour]/ self.num_scenarios)
-                obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
-                # 1= system has excess. -1 = system has deficit.
-                imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                if imbalance_sign == 1.0: # system has excess
-                    obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.85 * exp_price_da
-                else: # system has deficit
-                    obj_coeff[f"delta_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+                da_price = float(w.prices[hour])
+                prob = 1 / self.num_scenarios
+
+                if int(w.imbalance[hour]) == 1:
+                    balancing_price = 1.25 * da_price   # deficit
+                else:
+                    balancing_price = 0.85 * da_price   # surplus (excess)
+                obj_coeff[f"delta_{hour+1}_{count+1}"] = prob * balancing_price
                 count += 1
+        for hour in range(self.num_hours):
+            avg_da = sum(s.prices[hour] / self.num_scenarios for s in self.scenario_list)
+
+            avg_bp = 0
+            for w in self.scenario_list:
+                da_price = float(w.prices[hour])
+                if int(w.imbalance[hour]) == 1:
+                    bp = 1.25 * da_price
+                else:
+                    bp = 0.85 * da_price
+                avg_bp += bp / self.num_scenarios
+
+            print(hour + 1, "E[DA] =", avg_da, "E[BP] =", avg_bp, "E[DA-BP] =", avg_da - avg_bp)
         return obj_coeff
     
     def build_constraint_coefficients(self):
