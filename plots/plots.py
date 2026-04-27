@@ -66,6 +66,67 @@ def plot_optimal_day_ahead_offers(problem, builder, save_path: Optional[Path] = 
 	return fig
 
 
+def plot_optimal_day_ahead_offers_with_avg_imbalance(problem, builder, save_path: Optional[Path] = None):
+	"""Plot the optimal day-ahead offer schedule with average imbalance per hour."""
+	avg_imbalance = [
+		sum(float(s.imbalance[hour]) for s in builder.scenario_list) / len(builder.scenario_list)
+		for hour in range(builder.num_hours)
+	]
+
+	offers = pd.DataFrame(
+		{
+			"Hour": list(range(1, builder.num_hours + 1)),
+			"Offer [MW]": [problem.results.variables[f"p_DA_{hour}"] for hour in range(1, builder.num_hours + 1)],
+			"Avg imbalance": avg_imbalance,
+		}
+	)
+
+	fig = px.bar(
+		offers,
+		x="Hour",
+		y="Offer [MW]"
+	)
+	fig.add_scatter(
+		x=offers["Hour"],
+		y=offers["Avg imbalance"],
+		mode="lines+markers",
+		name="Avg imbalance",
+		yaxis="y2",
+		line=dict(color="#E4572E", width=2),
+	)
+	fig.update_layout(
+		xaxis_title="Hour",
+		xaxis=dict(tickmode="linear", dtick=1),
+		yaxis_title="Offer [MW]",
+		legend=dict(
+			orientation="h",
+			yanchor="top",
+			y=-0.2,
+			xanchor="center",
+			x=0.5,
+		),
+		yaxis2=dict(
+			title="Avg imbalance [0/1]",
+			overlaying="y",
+			side="right",
+			range=[0, 1],
+		),
+		template="plotly_white",
+		margin=dict(l=5, r=5, t=5, b=85),
+		width=700,
+		height=350,
+	)
+
+	if save_path is not None:
+		save_path.parent.mkdir(parents=True, exist_ok=True)
+		if save_path.suffix.lower() == ".html":
+			fig.write_html(str(save_path))
+		else:
+			fig.write_image(str(save_path))
+
+	return fig
+
+
 def plot_in_sample_profit_distribution(problem, builder, save_path: Optional[Path] = None):
 	"""Plot in-sample scenario profit distribution with expected profit marker."""
 	scenario_profits = []

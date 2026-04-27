@@ -192,12 +192,18 @@ class DayAheadTwoPriceBuilder:
                 # Delta is a linking variable only in the 2-price model objective.
                 obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.0
                 imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                if imbalance_sign == 1.0: # system has excess, upward imbalance is penalized, downward imbalance is rewarded
-                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
-                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
-                else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
+                # if imbalance_sign == 1.0: # system has excess, upward imbalance is penalized, downward imbalance is rewarded
+                #     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
+                #     obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
+                # else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
+                #     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
+                #     obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+                if imbalance_sign == 1.0: # system has deficit, downward imbalance is penalized, upward imbalance is rewarded
                     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
-                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25*exp_price_da
+                else: # system has excess, downward imbalance is rewarded, upward imbalance is penalized
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85*exp_price_da
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
         return obj_coeff
     
     def build_constraint_coefficients(self):
