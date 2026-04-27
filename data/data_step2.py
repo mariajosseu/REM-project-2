@@ -78,7 +78,7 @@ if __name__ == "__main__":
     base_dir = pathlib.Path(__file__).resolve().parent
     csv_path = base_dir / "fcr_flexibility_profiles.csv"
     
-    # 3. Plot the first 10 scenarios and save the PDF
+    # Plot the first 10 scenarios and save the PDF
     fig = plot_fcr_flexibility(data["f_up"], num_scenarios=10)
     fig.show()  
     
