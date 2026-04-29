@@ -147,7 +147,7 @@ class DayAheadOnePriceBuilder:
 class DayAheadTwoPriceBuilder:
     """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
     
-    def __init__(self, model_name="Day-Ahead One-Price Model"):
+    def __init__(self, model_name="Day-Ahead Two-Price Model"):
         self.P_max = 500 # wind farm installed capacity [MW]
         self.num_hours = 24
         self.wind_scenarios = 20

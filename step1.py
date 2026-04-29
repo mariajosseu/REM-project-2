@@ -1,7 +1,7 @@
 #%%
 from pathlib import Path
 
-from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution
+from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_one_price_vs_two_price_offers, plot_profit_distribution_comparison
 from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 # %%
@@ -29,7 +29,7 @@ builder2.build_objective_coefficients()
 problem2 = LP_OptimizationProblem(builder2)
 problem2.run()
 # %%
-fig2 = plot_optimal_day_ahead_offers(problem2, builder2, save_path=output_dir / "optimal_day_ahead_offers_two_price.html")
-fig2.show(renderer="browser")
+fig2 = plot_one_price_vs_two_price_offers(problem, problem2, builder, save_path=output_dir / "one_price_vs_two_price_offers.pdf")
+fig2 = plot_profit_distribution_comparison(problem, builder, problem2, builder2, save_path=output_dir / "profit_distribution_comparison.pdf")
 problem2.model.write(str(output_dir / "step1_2.lp"))
 # %%
