@@ -26,7 +26,7 @@ def generate_fcr_profiles(n_minutes=60, n_scenarios=300, p_min=220, p_max=600, m
         profiles[m, :] = np.clip(next_val, p_min, p_max)
         
     # Calculate upward flexibility (F_up)
-    f_up = profiles - p_min
+    f_up = profiles 
     
     # Return the full matrices 
     data = {
