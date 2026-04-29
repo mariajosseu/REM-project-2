@@ -297,16 +297,42 @@ def plot_profit_distribution_comparison(
         x=expected_one,
         line_dash="dash",
         line_width=2,
-        annotation_text="Expected one-price",
-        annotation_position="top left",
+        line_color="#1f77b4",
     )
 
     fig.add_vline(
         x=expected_two,
         line_dash="dot",
         line_width=2,
-        annotation_text="Expected two-price",
-        annotation_position="top right",
+        line_color="#ff7f0e",
+    )
+
+    labels_are_close = abs(expected_one - expected_two) < 0.12
+    y_one = 0.97
+    y_two = 0.88 if labels_are_close else 0.97
+
+    fig.add_annotation(
+        x=expected_one,
+        y=y_one,
+        yref="paper",
+        text=f"Expected one-price: {expected_one:.2f}",
+        showarrow=False,
+        xanchor="left",
+        xshift=8,
+        font=dict(color="#1f77b4"),
+        bgcolor="rgba(255,255,255,0.85)",
+    )
+
+    fig.add_annotation(
+        x=expected_two,
+        y=y_two,
+        yref="paper",
+        text=f"Expected two-price: {expected_two:.2f}",
+        showarrow=False,
+        xanchor="right",
+        xshift=-8,
+        font=dict(color="#ff7f0e"),
+        bgcolor="rgba(255,255,255,0.85)",
     )
 
     fig.update_layout(
