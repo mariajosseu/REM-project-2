@@ -50,7 +50,7 @@ class CVaRBuilder:
         for m in range(self.num_minutes):
             for w in range(self.num_scenarios):
                 c_name = f"def_excess_m{m+1}_w{w+1}"
-                z_name = f"zeta_m{m+1}_w{w+1}"
+                z_name = f"zeta_{m+1}_{w+1}"
                 coeff[c_name] = {
                     "c_up": 1.0,
                     z_name: -1.0
@@ -61,14 +61,14 @@ class CVaRBuilder:
         coeff["cvar_limit_constraint"] = {"beta": -(1.0 - self.epsilon)}
         for m in range(self.num_minutes):
             for w in range(self.num_scenarios):
-                z_name = f"zeta_m{m+1}_w{w+1}"
+                z_name = f"zeta_{m+1}_{w+1}"
                 coeff["cvar_limit_constraint"][z_name] = avg_multiplier
 
         # beta - zeta_{m,w} <= 0  
         for m in range(self.num_minutes):
             for w in range(self.num_scenarios):
                 c_name = f"beta_limit_m{m+1}_w{w+1}"
-                z_name = f"zeta_m{m+1}_w{w+1}"
+                z_name = f"zeta_{m+1}_{w+1}"
                 coeff[c_name] = {
                     "beta": 1.0,
                     z_name: -1.0

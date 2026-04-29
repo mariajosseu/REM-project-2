@@ -1,3 +1,4 @@
+#%%
 from pathlib import Path
 from models.StepTwo import CVaRBuilder, ALSOXBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
@@ -21,16 +22,16 @@ output_dir.mkdir(parents=True, exist_ok=True)
 problem_cvar.model.write(str(output_dir / "step2_cvar.lp"))
 
 
-# Genera e salva i plot
+# Generate and save plots for CVaR model
 fig1 = plot_fcr_profiles_and_bid(problem_cvar, builder_cvar, num_scenarios_to_plot=30, save_path=output_dir / "cvar_profiles_vs_bid.html")
 fig2 = plot_cvar_shortfall_distribution(problem_cvar, builder_cvar, save_path=output_dir / "cvar_shortfall_distribution.html")
 
-# Mostra nel browser (opzionale, utile per i test interattivi)
+# Show in browser (optional, useful for interactive testing)
 fig1.show(renderer="browser")
 fig2.show(renderer="browser")
 
-# %% ALSOX Model (Setup futuro)
-builder_alsox = ALSOXBuilder(epsilon=0.1)
+# %% ALSOX Model (future setup)
+builder_alsox = ALSOXBuilder(alpha=0.9)
 problem_alsox = LP_OptimizationProblem(builder_alsox)
 problem_alsox.run()
 
@@ -40,9 +41,9 @@ print(f"Optimal Bid (ALSO-X): {c_up_opt_alsox:.2f} kW")
 
 problem_alsox.model.write(str(output_dir / "step2_alsox.lp"))
 
-# Genera e salva il plot per ALSO-X
+# Generate and save plot for ALSO-X
 fig3 = plot_alsox_discarded_scenarios(problem_alsox, builder_alsox, save_path=output_dir / "alsox_discarded_scenarios.html")
 
-# Mostra nel browser
+# Show in browser
 fig3.show(renderer="browser")
 # %%
