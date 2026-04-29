@@ -178,26 +178,36 @@ class DayAheadTwoPriceBuilder:
         self.delta_down_nonneg = [f"delta_down_nonneg_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         
     def build_objective_coefficients(self):
-        """Build objective coefficients from data.
-
-        Imbalance contribution changes sign with system state:
-        - helps system -> earning (positive coefficient)
-        - hurts system -> cost (negative coefficient)
-        """
         obj_coeff = {}
+
         for hour in range(self.num_hours):
-            obj_coeff[f"p_DA_{hour+1}"] = sum(float(s.prices[hour] / self.num_scenarios) for s in self.scenario_list)
+
+            obj_coeff[f"p_DA_{hour+1}"] = sum(
+                float(s.prices[hour] / self.num_scenarios)
+                for s in self.scenario_list
+            )
+
             for count, w in enumerate(self.scenario_list):
-                exp_price_da = float(w.prices[hour] / self.num_scenarios)
-                # Delta is a linking variable only in the 2-price model objective.
+                da_price = float(w.prices[hour])
+                prob = 1 / self.num_scenarios
+                exp_price_da = prob * da_price
+
                 obj_coeff[f"delta_{hour+1}_{count+1}"] = 0.0
-                imbalance_sign = 1.0 if int(w.imbalance[hour]) == 1 else -1.0
-                if imbalance_sign == 1.0: # system has excess, upward imbalance is penalized, downward imbalance is rewarded
-                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
-                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
-                else: # system has deficit, upward imbalance is rewarded, downward imbalance is penalized
+
+                if int(w.imbalance[hour]) == 1:
+                    # System deficit: BP = 1.25 * DA
+                    # Upward deviation helps the system -> settled at DA
+                    # Downward deviation hurts the system -> settled at BP
                     obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
                     obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+
+                else:
+                    # System surplus: BP = 0.85 * DA
+                    # Upward deviation hurts the system -> settled at BP
+                    # Downward deviation helps the system -> settled at DA
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
+
         return obj_coeff
     
     def build_constraint_coefficients(self):
