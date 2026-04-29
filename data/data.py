@@ -163,10 +163,36 @@ def plot_prices(price_data, save_path: Optional[pathlib.Path] = None):
 
     return fig
 
+def plot_imbalance(imbalance_data, save_path: Optional[pathlib.Path] = None):
+    """Plot the imbalance flags for each scenario."""
+    hours = np.arange(1, 25)
+    imbalance_df = pd.DataFrame(imbalance_data.T, columns=[f"Scenario {i}" for i in range(imbalance_data.shape[0])])
+    imbalance_df["Hour"] = hours
+
+    fig = px.line(
+        imbalance_df,
+        x="Hour",
+        y=[col for col in imbalance_df.columns if col.startswith("Scenario")],
+        markers=True,
+    )
+    fig.update_layout(
+        xaxis_title="Hour",
+        yaxis_title="Imbalance flag",
+        template="plotly_white",
+        margin=dict(l=25, r=10, t=45, b=25),
+        width=1100,
+        height=550,
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.write_image(save_path)
+
+    return fig
+
 
 scenarios = build_scenarios(wind_forecast, electricity_prices, imbalance_data)
 
-
 if __name__ == "__main__":
-    output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "electricity_prices_full.pdf"
-    fig = plot_wind_sample(wind_forecast, sample_hours=len(wind_forecast), save_path=output_path.with_name("wind_forecast_sample.pdf"))
+    output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "imbalance_flags.pdf"
+    fig = plot_imbalance(imbalance_data, save_path=output_path)
