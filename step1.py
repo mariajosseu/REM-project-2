@@ -1,7 +1,7 @@
 #%%
 from pathlib import Path
 
-from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison
+from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison, plot_one_price_vs_two_price_offers
 from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 # %%
