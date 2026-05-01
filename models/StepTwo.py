@@ -1,16 +1,23 @@
 import numpy as np
+import pandas as pd
+import pathlib
 from gurobipy import GRB
 from models.OptimizationClasses import LP_InputData
 
-from data.data_step2 import generate_fcr_profiles
+# Load FCR profiles from CSV 
+csv_path = pathlib.Path(__file__).resolve().parent.parent / "data" / "fcr_flexibility_profiles.csv"
+if not csv_path.exists():
+    raise FileNotFoundError(f"FCR CSV not found: {csv_path}")
+_fcr_df = pd.read_csv(csv_path, index_col=0)
+# Keep first 100 scenarios by default
+FCR_FLEX = _fcr_df.values[:, :100]
 
 class CVaRBuilder:
     """Builder for FCR-D UP Offering Strategy using CVaR approximation"""
     
     def __init__(self, model_name="CVaR_Model", alpha=0.90):
-        # Upload data
-        data = generate_fcr_profiles()
-        self.f_up_in = data["f_up"][:, :100] # first 100 scenarios in sample (shape: 60x100)
+        # Use module-level loaded FCR profiles
+        self.f_up_in = FCR_FLEX
         
         self.num_minutes = 60
         self.num_scenarios = 100
@@ -125,9 +132,8 @@ class ALSOXBuilder:
     """Builder for FCR-D UP Offering Strategy using ALSOX approximation"""
     
     def __init__(self, model_name="ALSOX_Model", alpha=0.90):
-        # Upload data
-        data = generate_fcr_profiles()
-        self.f_up_in = data["f_up"][:, :100] # first 100 scenarios in sample (shape: 60x100)
+        # Use module-level loaded FCR profiles
+        self.f_up_in = FCR_FLEX
         
         self.num_minutes = 60
         self.num_scenarios = 100
