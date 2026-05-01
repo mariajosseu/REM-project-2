@@ -3,6 +3,9 @@ import plotly.express as px
 from zipp import Path
 from typing import Optional
 
+import numpy as np
+import plotly.graph_objects as go
+
 def plot_optimal_day_ahead_offers(problem, builder, save_path: Optional[Path] = None):
 	"""Plot the optimal day-ahead offer schedule."""
 	price_spread = [
@@ -138,186 +141,116 @@ def plot_in_sample_profit_distribution(problem, builder, save_path: Optional[Pat
 
 
 
-def plot_fcr_profiles_and_bid(problem, builder, num_scenarios_to_plot=20, save_path: Optional[Path] = None):
-    """Plot a subset of FCR-D UP scenarios against the optimal bid."""
-    c_up_opt = problem.results.variables.get('c_up', 0.0)
+
+
+def plot_fcr_spaghetti_violations(f_up_in, problem_cvar, problem_alsox, save_path: Optional[Path] = None):
+    """
+    Spaghetti plot of all 100 scenarios over 60 minutes.
+    Highlights the scenarios that violate the ALSO-X bid in red, 
+    proving visually that exactly ~10% of trajectories breach the threshold.
+    """
+    c_up_cvar = problem_cvar.results.variables['c_up']
+    c_up_alsox = problem_alsox.results.variables['c_up']
     
-    # just a few scenarios for better visualization
-    num_scenarios = min(num_scenarios_to_plot, builder.num_scenarios)
-    f_up_subset = builder.f_up_in[:, :num_scenarios]
+    num_minutes, num_scenarios = f_up_in.shape
     
-    
-    df_list = []
+    fig = go.Figure()
+
+    # Identify scenarios that violate ALSO-X (drop below the bid in at least one minute)
+    violated_scenarios = []
     for w in range(num_scenarios):
-        for m in range(builder.num_minutes):
-            df_list.append({
-                "Minute": m + 1,
-                "Scenario": f"Scenario {w+1}",
-                "F_up [MW]": float(f_up_subset[m, w])
-            })
-    
-    df = pd.DataFrame(df_list)
-    
-    # line plot w
-    fig = px.line(
-        df, 
-        x="Minute", 
-        y="F_up [MW]", 
-        color="Scenario",
-        color_discrete_sequence=px.colors.qualitative.Pastel
-    )
-    
-    # optimal bid line
-    fig.add_hline(
-        y=c_up_opt, 
-        line_dash="dash", 
-        line_color="red", 
-        line_width=3,
-        annotation_text=f"Optimal Bid (c_up): {c_up_opt:.2f} MW", 
-        annotation_position="bottom right"
-    )
-    
+        min_flex = np.min(f_up_in[:, w])
+        if min_flex < c_up_alsox - 1e-4: # Piccola tolleranza numerica
+            violated_scenarios.append(w)
+
+	# Plot safe scenarios first (light gray / light blue)
+    for w in range(num_scenarios):
+        if w not in violated_scenarios:
+            fig.add_trace(go.Scatter(
+                x=list(range(num_minutes)), y=f_up_in[:, w],
+                mode='lines', line=dict(color='rgba(142, 202, 230, 0.3)', width=1),
+                showlegend=False, hoverinfo='skip'
+            ))
+
+	# Then plot violated scenarios (bright red) to highlight them
+    for i, w in enumerate(violated_scenarios):
+        fig.add_trace(go.Scatter(
+            x=list(range(num_minutes)), y=f_up_in[:, w],
+            mode='lines', line=dict(color='rgba(228, 87, 46, 0.8)', width=1.5),
+            name="Violated Scenarios (P90)" if i == 0 else None,
+            showlegend=True if i == 0 else False
+        ))
+
+	# Add the bid lines
+    fig.add_hline(y=c_up_alsox, line_dash="dash", line_color="black", line_width=2,
+                  annotation_text=f"ALSO-X Bid ({c_up_alsox:.1f} kW)", annotation_position="bottom right")
+    fig.add_hline(y=c_up_cvar, line_dash="dot", line_color="green", line_width=2,
+                  annotation_text=f"CVaR Bid ({c_up_cvar:.1f} kW)", annotation_position="bottom right")
+
     fig.update_layout(
+        title=f"Flexibility Trajectories (Violations: {len(violated_scenarios)}/{num_scenarios})",
         xaxis_title="Minute",
-        yaxis_title="Reserve Requirement [MW]",
-        showlegend=False, 
+        yaxis_title="Available Flexibility [kW]",
         template="plotly_white",
-        margin=dict(l=5, r=5, t=10, b=10),
-        width=800,
-        height=400,
+        margin=dict(l=5, r=5, t=40, b=5),
+        width=800, height=450,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
 
     if save_path is not None:
         save_path.parent.mkdir(parents=True, exist_ok=True)
-        if save_path.suffix.lower() == ".html":
-            fig.write_html(str(save_path))
-        else:
-            fig.write_image(str(save_path))
+        fig.write_image(str(save_path)) if save_path.suffix != ".html" else fig.write_html(str(save_path))
 
     return fig
 
 
-def plot_cvar_shortfall_distribution(problem, builder, save_path: Optional[Path] = None):
-    """Plot the distribution of all reserve requirements and the optimal bid."""
-    c_up_opt = problem.results.variables.get('c_up', 0.0)
+def plot_bottleneck_cdf(f_up_in, problem_cvar, problem_alsox, save_path: Optional[Path] = None):
+    """
+    Plots the Empirical Cumulative Distribution Function (CDF) of the MINIMUM hourly flexibility.
+    Beautifully illustrates the statistical definition of CVaR vs ALSO-X (Chance Constraint).
+    """
+    c_up_cvar = problem_cvar.results.variables['c_up']
+    c_up_alsox = problem_alsox.results.variables['c_up']
     
-    # flatten the entire f_up matrix for histogram
-    f_up_flat = builder.f_up_in.flatten()
+    # Find the bottleneck (minimum) for each scenario
+    min_flex_per_scenario = np.min(f_up_in, axis=0)
     
-    df = pd.DataFrame({
-        "F_up [MW]": f_up_flat
-    })
-    
-    fig = px.histogram(
-        df, 
-        x="F_up [MW]", 
-        nbins=100,
-        histnorm="percent",
-        color_discrete_sequence=["#636EFA"]
+    fig = px.ecdf(
+        x=min_flex_per_scenario, 
+        markers=True, lines=True,
+        title="CDF of Hourly Bottlenecks (Minimum Flexibility)"
     )
     
-    # optimal bid line
-    fig.add_vline(
-        x=c_up_opt, 
-        line_dash="dash", 
-        line_color="red", 
-        line_width=3
-    )
+    fig.update_traces(line_color="#219EBC", marker=dict(size=4))
+
+    # Add the 10% threshold (P90)
+    fig.add_hline(y=0.10, line_dash="dash", line_color="gray", 
+                  annotation_text="10% Probability Threshold (P90)", annotation_position="top left")
+
+    # Add the bids as vertical lines
+    fig.add_vline(x=c_up_alsox, line_dash="solid", line_color="#E4572E",
+                  annotation_text=f"ALSO-X ({c_up_alsox:.1f} kW)", annotation_position="bottom right")
     
-    # Annotation
-    fig.add_annotation(
-        x=c_up_opt,
-        y=0.95,
-        yref="paper",
-        text=f"Optimal Bid: {c_up_opt:.2f} MW<br>Risk region is to the right",
-        showarrow=False,
-        xanchor="left",
-        xshift=10,
-        font=dict(color="red"),
-    )
-    
+    fig.add_vline(x=c_up_cvar, line_dash="solid", line_color="green",
+                  annotation_text=f"CVaR ({c_up_cvar:.1f} kW)", annotation_position="top left")
+
     fig.update_layout(
-        xaxis_title="Reserve Requirement F_up [MW]",
-        yaxis_title="Probability [%]",
+        xaxis_title="Minimum Hourly Flexibility [kW]",
+        yaxis_title="Cumulative Probability",
+        yaxis=dict(tickformat=".0%", range=[0, 1.05]),
         template="plotly_white",
-        margin=dict(l=5, r=5, t=10, b=10),
-        width=800,
-        height=400,
+        margin=dict(l=5, r=5, t=40, b=5),
+        width=800, height=450,
     )
+
+    # Shade the "Tail Risk" area handled by CVaR (points left of ALSO-X)
+    fig.add_vrect(x0=min_flex_per_scenario.min(), x1=c_up_alsox, 
+                  fillcolor="red", opacity=0.1, layer="below", line_width=0,
+                  annotation_text="Tail Risk Area", annotation_position="top left")
 
     if save_path is not None:
         save_path.parent.mkdir(parents=True, exist_ok=True)
-        if save_path.suffix.lower() == ".html":
-            fig.write_html(str(save_path))
-        else:
-            fig.write_image(str(save_path))
-
-    return fig
-
-
-
-def plot_alsox_discarded_scenarios(problem, builder, save_path: Optional[Path] = None):
-    """Plot all FCR-D UP requirements, highlighting the ones discarded by ALSO-X."""
-    c_up_opt = problem.results.variables.get('c_up', 0.0)
-    
-    df_list = []
-    
-    # extract y_{m,w} values 
-    for m in range(builder.num_minutes):
-        for w in range(builder.num_scenarios):
-            y_val = problem.results.variables.get(f"y_m{m+1}_w{w+1}", 0.0)
-            is_discarded = y_val > 0.5 
-            
-            df_list.append({
-                "Minute": m + 1,
-                "Scenario": w + 1,
-                "F_up [MW]": float(builder.f_up_in[m, w]),
-                "Status": "Discarded (y=1)" if is_discarded else "Kept (y=0)"
-            })
-            
-    df = pd.DataFrame(df_list)
-    
-    # Creiamo lo scatter plot
-    fig = px.scatter(
-        df, 
-        x="Minute", 
-        y="F_up [MW]", 
-        color="Status",
-        color_discrete_map={
-            "Discarded (y=1)": "#EF553B", 
-            "Kept (y=0)": "#636EFA"      
-        },
-        opacity=0.6,
-        hover_data=["Scenario"]
-    )
-    
-    # optimal bid line
-    fig.add_hline(
-        y=c_up_opt, 
-        line_dash="dash", 
-        line_color="black", 
-        line_width=2,
-        annotation_text=f"Optimal Bid (c_up): {c_up_opt:.2f} MW", 
-        annotation_position="top right"
-    )
-    
-    fig.update_layout(
-        title="ALSO-X: Kept vs Discarded Reserve Requirements",
-        xaxis_title="Minute",
-        yaxis_title="Reserve Requirement F_up [MW]",
-        template="plotly_white",
-        margin=dict(l=5, r=5, t=40, b=10),
-        width=900,
-        height=500,
-        legend_title="Scenario Status"
-    )
-
-    if save_path is not None:
-        save_path.parent.mkdir(parents=True, exist_ok=True)
-        if save_path.suffix.lower() == ".html":
-            fig.write_html(str(save_path))
-        else:
-            fig.write_image(str(save_path))
+        fig.write_image(str(save_path)) if save_path.suffix != ".html" else fig.write_html(str(save_path))
 
     return fig
 
