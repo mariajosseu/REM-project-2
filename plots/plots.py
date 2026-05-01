@@ -4,6 +4,8 @@ from zipp import Path
 from typing import Optional
 import numpy as np
 
+from utils import compute_one_price_profits, compute_two_price_profits
+
 def plot_optimal_day_ahead_offers(problem, builder, save_path: Optional[Path] = None):
 	"""Plot the optimal day-ahead offer schedule."""
 	price_spread = [
@@ -266,64 +268,6 @@ def plot_profit_distribution_comparison(
     save_path: Optional[Path] = None,
 ):
     """Compare in-sample profit distributions for one-price and two-price schemes."""
-
-    def compute_one_price_profits(problem, builder):
-        scenario_profits = []
-        variables = problem.results.variables
-
-        for w, scenario in enumerate(builder.scenario_list, start=1):
-            profit = 0.0
-
-            for hour in range(1, builder.num_hours + 1):
-                da_price = float(scenario.prices[hour - 1])
-                p_da = float(variables[f"p_DA_{hour}"])
-                delta = float(variables[f"delta_{hour}_{w}"])
-
-                balancing_price = (
-                    1.25 * da_price
-                    if int(scenario.imbalance[hour - 1]) == 1
-                    else 0.85 * da_price
-                )
-
-                profit += da_price * p_da
-                profit += balancing_price * delta
-
-            scenario_profits.append(profit)
-
-        return scenario_profits
-
-    def compute_two_price_profits(problem, builder):
-        scenario_profits = []
-        variables = problem.results.variables
-
-        for w, scenario in enumerate(builder.scenario_list, start=1):
-            profit = 0.0
-
-            for hour in range(1, builder.num_hours + 1):
-                da_price = float(scenario.prices[hour - 1])
-                p_da = float(variables[f"p_DA_{hour}"])
-                delta_up = float(variables[f"delta_up_{hour}_{w}"])
-                delta_down = float(variables[f"delta_down_{hour}_{w}"])
-
-                if int(scenario.imbalance[hour - 1]) == 1:
-                    # System deficit:
-                    # Upward deviation helps -> settled at DA
-                    # Downward deviation hurts -> settled at 1.25 * DA
-                    profit += da_price * p_da
-                    profit += da_price * delta_up
-                    profit -= 1.25 * da_price * delta_down
-
-                else:
-                    # System surplus:
-                    # Upward deviation hurts -> settled at 0.85 * DA
-                    # Downward deviation helps -> settled at DA
-                    profit += da_price * p_da
-                    profit += 0.85 * da_price * delta_up
-                    profit -= da_price * delta_down
-
-            scenario_profits.append(profit)
-
-        return scenario_profits
 
     one_price_profits = compute_one_price_profits(problem_one, builder_one)
     two_price_profits = compute_two_price_profits(problem_two, builder_two)
