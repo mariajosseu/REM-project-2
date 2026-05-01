@@ -1,7 +1,7 @@
 #%%
 from pathlib import Path
 
-from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_optimal_day_ahead_offers_with_avg_imbalance
+from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison
 from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 # %%
@@ -13,8 +13,6 @@ problem = LP_OptimizationProblem(builder)
 problem.run()
 results = problem.get_results()
 print([results["variables"][f"p_DA_{i}"] for i in range(1, builder.num_hours + 1)])
-
-# %%
 
 # %%
 output_dir = Path(__file__).resolve().parent / "outputs"
@@ -40,10 +38,7 @@ avg_imbalance = [
 print("Average imbalance by hour:")
 print(avg_imbalance)
 # %%
-fig2 = plot_optimal_day_ahead_offers(problem2, builder2, save_path=output_dir / "optimal_day_ahead_offers_two_price.html")
-fig2.show(renderer="browser")
-fig3 = plot_optimal_day_ahead_offers_with_avg_imbalance(problem2, builder2, save_path=output_dir / "optimal_day_ahead_offers_with_avg_imbalance.html")
-fig3.show(renderer="browser")
-
+fig2 = plot_one_price_vs_two_price_offers(problem, problem2, builder, save_path=output_dir / "one_price_vs_two_price_offers.pdf")
+fig2 = plot_profit_distribution_comparison(problem, builder, problem2, builder2, save_path=output_dir / "profit_distribution_comparison.pdf")
 problem2.model.write(str(output_dir / "step1_2.lp"))
 # %%

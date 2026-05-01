@@ -42,7 +42,7 @@ class LP_OptimizationProblem():
     def _build_variables(self):
         self.variables = {
             v: self.model.addVar(
-                lb=-GRB.INFINITY if v.startswith("theta") or v.startswith("delta_") else 0,
+                lb=-GRB.INFINITY if v.startswith("delta_") and not v.startswith("delta_up") and not v.startswith("delta_down") else 0,
                 name=f'{v}'
             )
             for v in self.data.VARIABLES
