@@ -193,7 +193,6 @@ def plot_imbalance(imbalance_data, save_path: Optional[pathlib.Path] = None):
 
 scenarios = build_scenarios(wind_forecast, electricity_prices, imbalance_data)
 
-
 if __name__ == "__main__":
     output_path = pathlib.Path(__file__).resolve().parent.parent / "plots" / "imbalance_flags.pdf"
     fig = plot_imbalance(imbalance_data, save_path=output_path)
