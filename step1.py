@@ -3,10 +3,10 @@ from data.data import scenarios
 from pathlib import Path
 import numpy as np
 
-from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison, plot_one_price_vs_two_price_offers
+from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison, plot_one_price_vs_two_price_offers, plot_expected_profit_vs_cvar
 from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder, RiskAverseOnePriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
-from utils import evaluate_one_price_profit, evaluate_two_price_profit
+from utils import evaluate_one_price_profit, evaluate_two_price_profit, compute_cvar
 
 
 all_scenarios = list(scenarios.values())
@@ -132,14 +132,21 @@ for fold_idx in range(k_folds):
     
     
 # %% Step 1.4 - Varying beta
-for beta in [0, 1.0]:
-    builder4 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (beta={beta})")
-    builder4.beta = beta
+beta_results = []
+
+for beta in [0,0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
+    builder4 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (beta={beta})", beta=beta)
     builder4.build_objective_coefficients()
 
     problem4 = LP_OptimizationProblem(builder4)
     problem4.run()
     results = problem4.get_results()
-    print(f"Beta: {beta}, VaR: {results['variables']['VaR']:.2f}")
-    fig = plot_in_sample_profit_distribution(problem4, builder4, save_path=output_dir / f"profit_distribution_beta_{beta}.pdf")
+
+    beta_results.append({
+        "beta": beta,
+        "expected_profit": float(results["objective_value"]),
+        "cvar": compute_cvar(problem4, builder4)
+    })
+
+fig = plot_expected_profit_vs_cvar(beta_results, save_path=output_dir / "expected_profit_vs_cvar.pdf")
 # %%

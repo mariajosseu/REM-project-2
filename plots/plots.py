@@ -365,3 +365,55 @@ def plot_profit_distribution_comparison(
             fig.write_image(str(save_path))
 
     return fig
+
+def plot_expected_profit_vs_cvar(beta_results, save_path=None):
+    """
+    beta_results should be a list of dictionaries like:
+    [
+        {
+            "beta": 0.0,
+            "expected_profit": ...,
+            "cvar": ...,
+        },
+        ...
+    ]
+    """
+
+    df = pd.DataFrame(
+        {
+            "Beta": [r["beta"] for r in beta_results],
+            "Expected profit [kEUR]": [r["expected_profit"] / 1000.0 for r in beta_results],
+            "CVaR [kEUR]": [r["cvar"] / 1000.0 for r in beta_results],
+        }
+    )
+    
+    # Sort by CVaR to ensure line plot connects points in the correct order
+    df = df.sort_values("CVaR [kEUR]")
+
+    fig = px.line(
+        df,
+        x="CVaR [kEUR]",
+        y="Expected profit [kEUR]",
+        text="Beta",
+        markers=True,
+    )
+
+    fig.update_traces(textposition="top center")
+
+    fig.update_layout(
+        xaxis_title="CVaR [kEUR]",
+        yaxis_title="Expected profit [kEUR]",
+        template="plotly_white",
+        width=800,
+        height=500,
+        margin=dict(l=5, r=5, t=30, b=85),
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+
+    return fig
