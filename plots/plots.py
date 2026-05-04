@@ -512,3 +512,85 @@ def plot_bottleneck_cdf(f_up_in, problem_cvar, problem_alsox, save_path: Optiona
             fig.write_image(str(save_path))
 
     return fig
+
+def plot_alsox_bid_vs_requirement(task23_df, save_path: Optional[Path] = None):
+    """Plot ALSO-X optimal in-sample bid as a function of the P-requirement."""
+
+    fig = px.line(
+        task23_df,
+        x="P_requirement",
+        y="alsox_bid_in_sample_kw",
+        markers=True,
+    )
+
+    fig.update_layout(
+        xaxis_title="Reliability requirement",
+        yaxis_title="Optimal ALSO-X bid [kW]",
+        template="plotly_white",
+        margin=dict(l=5, r=5, t=30, b=60),
+        width=800,
+        height=450,
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+
+    return fig
+
+
+def plot_alsox_shortfall_vs_requirement(task23_df, save_path: Optional[Path] = None):
+    """Plot out-of-sample expected shortfall and shortfall probability as a function of the P-requirement."""
+
+    fig = px.line(
+        task23_df,
+        x="P_requirement",
+        y="oos_expected_shortfall_kw",
+        markers=True,
+    )
+
+    fig.update_traces(
+        name="OOS expected shortfall [kW]",
+        showlegend=True
+    )
+
+    fig.add_scatter(
+        x=task23_df["P_requirement"],
+        y=100 * task23_df["oos_shortfall_probability"],
+        mode="lines+markers",
+        name="OOS shortfall probability [%]",
+        yaxis="y2",
+    )
+
+    fig.update_layout(
+        xaxis_title="Reliability requirement",
+        yaxis_title="OOS expected shortfall [kW]",
+        yaxis2=dict(
+            title="OOS shortfall probability [%]",
+            overlaying="y",
+            side="right",
+        ),
+        template="plotly_white",
+        margin=dict(l=5, r=5, t=30, b=80),
+        width=850,
+        height=450,
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=-0.2,
+            xanchor="center",
+            x=0.5,
+        ),
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+
+    return fig

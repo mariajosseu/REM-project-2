@@ -1,9 +1,15 @@
 #%%
 from pathlib import Path
+import numpy as np
 import pandas as pd
 from models.StepTwo import CVaRBuilder, ALSOXBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
-from plots.plots import plot_fcr_spaghetti_violations, plot_bottleneck_cdf
+from plots.plots import (
+    plot_fcr_spaghetti_violations,
+    plot_bottleneck_cdf,
+    plot_alsox_bid_vs_requirement,
+    plot_alsox_shortfall_vs_requirement,
+)
 #%% 
 builder_cvar = CVaRBuilder(alpha=0.90)
 
@@ -116,4 +122,93 @@ print(f"  Profile coverage:       {verification_alsox['profile_coverage']:.2%}")
 print(f"  Minute shortfall rate:  {verification_alsox['minute_shortfall_rate']:.2%}")
 print(f"  Minute coverage:        {verification_alsox['minute_coverage']:.2%}")
 print(f"  P90 requirement met:    {verification_alsox['p90_met']}")
+
+# %% Task 2.3 - Energinet perspective (ALSO-X sensitivity to P-threshold)
+def compute_shortfall_metrics(bid_kw: float, f_up_matrix: np.ndarray):
+    """Compute out-of-sample shortfall metrics for a fixed reserve bid."""
+    shortfall_kw = np.maximum(bid_kw - f_up_matrix, 0.0)
+    shortfall_mask = shortfall_kw > 0
+
+    expected_shortfall_kw = float(shortfall_kw.mean())
+    shortfall_probability = float(shortfall_mask.mean())
+
+    if shortfall_mask.any():
+        avg_shortfall_given_shortfall_kw = float(shortfall_kw[shortfall_mask].mean())
+    else:
+        avg_shortfall_given_shortfall_kw = 0.0
+
+    return {
+        "expected_shortfall_kw": expected_shortfall_kw,
+        "shortfall_probability": shortfall_probability,
+        "avg_shortfall_given_shortfall_kw": avg_shortfall_given_shortfall_kw,
+    }
+
+
+alpha_grid = np.linspace(0.80, 1.00, 11)
+task23_rows = []
+
+for alpha in alpha_grid:
+    builder_alsox_grid = ALSOXBuilder(alpha=float(alpha), model_name=f"ALSOX_P{int(round(alpha * 100))}")
+    problem_alsox_grid = LP_OptimizationProblem(builder_alsox_grid)
+    problem_alsox_grid.run()
+
+    bid_kw = float(problem_alsox_grid.results.variables.get("c_up", 0.0))
+    metrics = compute_shortfall_metrics(bid_kw, f_up_oos)
+
+    epsilon = max(0.0, 1.0 - float(alpha))
+    tol = 1e-9
+    task23_rows.append(
+        {
+            "P_requirement": f"P{int(round(alpha * 100))}",
+            "alpha": float(alpha),
+            "epsilon_allowed_shortfall": epsilon,
+            "alsox_bid_in_sample_kw": bid_kw,
+            "oos_expected_shortfall_kw": metrics["expected_shortfall_kw"],
+            "oos_shortfall_probability": metrics["shortfall_probability"],
+            "oos_avg_shortfall_given_shortfall_kw": metrics["avg_shortfall_given_shortfall_kw"],
+            "oos_requirement_met": metrics["shortfall_probability"] <= epsilon + tol,
+        }
+    )
+
+task23_df = pd.DataFrame(task23_rows)
+task23_df = task23_df.sort_values("alpha").reset_index(drop=True)
+task23_df.to_csv(output_dir / "task2_3_alsox_sensitivity.csv", index=False)
+
+print("\n" + "=" * 72)
+print("TASK 2.3 - ALSO-X Sensitivity (P80 to P100)")
+print("=" * 72)
+print(
+    task23_df[
+        [
+            "P_requirement",
+            "alsox_bid_in_sample_kw",
+            "oos_expected_shortfall_kw",
+            "oos_shortfall_probability",
+            "oos_requirement_met",
+        ]
+    ].to_string(index=False, float_format=lambda x: f"{x:.4f}")
+)
+
+bid_change = task23_df.iloc[-1]["alsox_bid_in_sample_kw"] - task23_df.iloc[0]["alsox_bid_in_sample_kw"]
+shortfall_change = task23_df.iloc[-1]["oos_expected_shortfall_kw"] - task23_df.iloc[0]["oos_expected_shortfall_kw"]
+
+print("\nTrade-off summary (P80 -> P100):")
+print(f"  In-sample optimal bid change: {bid_change:.2f} kW")
+print(f"  OOS expected shortfall change: {shortfall_change:.2f} kW")
+print(f"  Results saved to: {output_dir / 'task2_3_alsox_sensitivity.csv'}")
+# %%
+
+fig_bid_sensitivity = plot_alsox_bid_vs_requirement(
+    task23_df,
+    save_path=output_dir / "task2_3_alsox_bid_vs_requirement.pdf",
+)
+
+fig_shortfall_sensitivity = plot_alsox_shortfall_vs_requirement(
+    task23_df,
+    save_path=output_dir / "task2_3_alsox_shortfall_vs_requirement.pdf",
+)
+
+fig_bid_sensitivity.show(renderer="browser")
+fig_shortfall_sensitivity.show(renderer="browser")
+
 # %%
