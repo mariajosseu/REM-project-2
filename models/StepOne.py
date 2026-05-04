@@ -306,16 +306,16 @@ class DayAheadTwoPriceBuilder:
             model_name=self.model_name
         )
 
-class RiskAverseBuilder:
+class RiskAverseOnePriceBuilder:
     """Builder for Offering Strategy Under a One-price Balancing Scheme constraints and coefficients for 24 hour"""
-    def __init__(self, model_name="Day-Ahead One-Price Model"):
+    def __init__(self, scenario_list, model_name="Day-Ahead One-Price Model"):
         self.P_max = 500 # wind farm installed capacity [MW]
         self.num_hours = 24
         self.wind_scenarios = 20
         self.price_scenarios = 20
         self.imbalance_scenarios = 4
-        self.num_scenarios = 200
-        self.scenario_list = list(scenarios.values())[:200]
+        self.num_scenarios = len(scenario_list)
+        self.scenario_list = list(scenario_list)
         self.alpha = 0.90
         self.beta = 0.95
         self.model_name = model_name
@@ -334,8 +334,7 @@ class RiskAverseBuilder:
             )
         
         self.u_keys = [f"u_p_DA_{t+1}" for t in range(self.num_hours)] 
-        self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]
-        + [f"l_eta_{w+1}" for w in range(self.num_scenarios)]
+        self.l_keys = [f"l_p_DA_{i+1}" for i in range(self.num_hours)]+ [f"l_eta_{w+1}" for w in range(self.num_scenarios)]
         self.balance = [f"bal_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         self.max_eta = [f"max_eta_{w+1}" for w in range(self.num_scenarios)]
         
@@ -377,8 +376,8 @@ class RiskAverseBuilder:
                 avg_bp += bp / self.num_scenarios
 
             print(hour + 1, "E[DA] =", avg_da, "E[BP] =", avg_bp, "E[DA-BP] =", avg_da - avg_bp)
-        for w in self.scenario_list:
-            obj_coeff[f"eta_{w+1}"] = -self.beta * (1 / self.num_scenarios) * (1/(1-self.alpha))
+            for w in range(self.num_scenarios):
+                obj_coeff[f"eta_{w+1}"] = -self.beta * (1 / self.num_scenarios) * (1/(1-self.alpha))
         obj_coeff["VaR"] = self.beta
         return obj_coeff
     

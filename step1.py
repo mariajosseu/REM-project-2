@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 
 from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison, plot_one_price_vs_two_price_offers
-from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder
+from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder, RiskAverseOnePriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
 from utils import evaluate_one_price_profit, evaluate_two_price_profit
 
@@ -131,4 +131,15 @@ for fold_idx in range(k_folds):
     print("=" * 70)
     
     
-    # %% 
+# %% Step 1.4 - Varying beta
+for beta in [0, 1.0]:
+    builder4 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (beta={beta})")
+    builder4.beta = beta
+    builder4.build_objective_coefficients()
+
+    problem4 = LP_OptimizationProblem(builder4)
+    problem4.run()
+    results = problem4.get_results()
+    print(f"Beta: {beta}, VaR: {results['variables']['VaR']:.2f}")
+    fig = plot_in_sample_profit_distribution(problem4, builder4, save_path=output_dir / f"profit_distribution_beta_{beta}.pdf")
+# %%
