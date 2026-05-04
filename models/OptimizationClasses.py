@@ -42,7 +42,19 @@ class LP_OptimizationProblem():
     def _build_variables(self):
         self.variables = {
             v: self.model.addVar(
-                lb=-GRB.INFINITY if v.startswith("delta_") and not v.startswith("delta_up") and not v.startswith("delta_down") else 0,
+                lb=-GRB.INFINITY
+                if (
+                    v.startswith("theta")
+                    or v.startswith("zeta")
+                    or v.startswith("beta")
+                    or (
+                        v.startswith("delta_")
+                        and not v.startswith("delta_up")
+                        and not v.startswith("delta_down")
+                    )
+                )
+                else 0,
+                vtype=GRB.BINARY if v.startswith("y_") else GRB.CONTINUOUS,
                 name=f'{v}'
             )
             for v in self.data.VARIABLES
@@ -72,7 +84,12 @@ class LP_OptimizationProblem():
     def _save_results(self):
         self.results.objective_value = self.model.ObjVal
         self.results.variables = {v.VarName:v.x for v in self.model.getVars()}
-        self.results.optimal_duals = {f'{c.ConstrName}':c.Pi for c in self.model.getConstrs()}
+        # Try to retrieve duals; these are not available for MIP models
+        try:
+            self.results.optimal_duals = {f'{c.ConstrName}':c.Pi for c in self.model.getConstrs()}
+        except Exception:
+            # Duals unavailable (e.g. model contains integer/binary variables)
+            self.results.optimal_duals = {}
     
     def get_results(self):
         """Return optimization results as a dictionary"""
