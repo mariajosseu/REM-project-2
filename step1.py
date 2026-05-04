@@ -4,9 +4,9 @@ from pathlib import Path
 import numpy as np
 
 from plots.plots import plot_optimal_day_ahead_offers, plot_in_sample_profit_distribution, plot_profit_distribution_comparison, plot_one_price_vs_two_price_offers, plot_expected_profit_vs_cvar
-from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder, RiskAverseOnePriceBuilder
+from models.StepOne import DayAheadOnePriceBuilder, DayAheadTwoPriceBuilder, RiskAverseOnePriceBuilder, RiskAverseTwoPriceBuilder
 from models.OptimizationClasses import LP_OptimizationProblem
-from utils import evaluate_one_price_profit, evaluate_two_price_profit, compute_cvar
+from utils import compute_one_price_profits, compute_two_price_profits, evaluate_one_price_profit, evaluate_two_price_profit, compute_cvar
 
 
 all_scenarios = list(scenarios.values())
@@ -132,9 +132,9 @@ for fold_idx in range(k_folds):
     
     
 # %% Step 1.4 - Varying beta
-beta_results = []
+beta_results_one_price= []
 
-for beta in [0,0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
+for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
     builder4 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (beta={beta})", beta=beta)
     builder4.build_objective_coefficients()
 
@@ -142,11 +142,28 @@ for beta in [0,0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
     problem4.run()
     results = problem4.get_results()
 
-    beta_results.append({
+    beta_results_one_price.append({
         "beta": beta,
-        "expected_profit": float(results["objective_value"]),
+        "expected_profit": np.mean(compute_one_price_profits(problem4, builder4)),
         "cvar": compute_cvar(problem4, builder4)
     })
 
-fig = plot_expected_profit_vs_cvar(beta_results, save_path=output_dir / "expected_profit_vs_cvar.pdf")
+fig = plot_expected_profit_vs_cvar(beta_results_one_price, save_path=output_dir / "expected_profit_vs_cvar_1PriceScheme.pdf")
+# %%
+beta_results_two_price = []
+for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
+    builder5 = RiskAverseTwoPriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse Two-Price Model (beta={beta})", beta=beta)
+    builder5.build_objective_coefficients()
+
+    problem5 = LP_OptimizationProblem(builder5)
+    problem5.run()
+    results = problem5.get_results()
+
+    beta_results_two_price.append({
+        "beta": beta,
+        "expected_profit": np.mean(compute_two_price_profits(problem5, builder5)),
+        "cvar": compute_cvar(problem5, builder5)
+    })
+
+fig = plot_expected_profit_vs_cvar(beta_results_two_price, save_path=output_dir / "expected_profit_vs_cvar_2PriceScheme.pdf")
 # %%

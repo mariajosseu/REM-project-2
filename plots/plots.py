@@ -386,9 +386,6 @@ def plot_expected_profit_vs_cvar(beta_results, save_path=None):
             "CVaR [kEUR]": [r["cvar"] / 1000.0 for r in beta_results],
         }
     )
-    
-    # Sort by CVaR to ensure line plot connects points in the correct order
-    df = df.sort_values("CVaR [kEUR]")
 
     fig = px.line(
         df,

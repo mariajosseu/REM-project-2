@@ -363,19 +363,6 @@ class RiskAverseOnePriceBuilder:
                     balancing_price = 0.85 * da_price   # surplus (excess)
                 obj_coeff[f"delta_{hour+1}_{count+1}"] = (1-self.beta)*prob * balancing_price
                 count += 1
-        for hour in range(self.num_hours):
-            avg_da = sum(s.prices[hour] / self.num_scenarios for s in self.scenario_list)
-
-            avg_bp = 0
-            for w in self.scenario_list:
-                da_price = float(w.prices[hour])
-                if int(w.imbalance[hour]) == 1:
-                    bp = 1.25 * da_price
-                else:
-                    bp = 0.85 * da_price
-                avg_bp += bp / self.num_scenarios
-
-            print(hour + 1, "E[DA] =", avg_da, "E[BP] =", avg_bp, "E[DA-BP] =", avg_da - avg_bp)
 
         for w in range(self.num_scenarios):
             obj_coeff[f"eta_{w+1}"] = -self.beta * (1 / self.num_scenarios) * (1/(1-self.alpha))
@@ -514,13 +501,14 @@ class RiskAverseTwoPriceBuilder:
         self.delta_def = [f"delta_def_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         self.delta_up_nonneg = [f"delta_up_nonneg_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
         self.delta_down_nonneg = [f"delta_down_nonneg_{t+1}_{w+1}" for t in range(self.num_hours) for w in range(self.num_scenarios)]
+        self.max_eta = [f"max_eta_{w+1}" for w in range(self.num_scenarios)]
         
     def build_objective_coefficients(self):
         obj_coeff = {}
 
         for hour in range(self.num_hours):
 
-            obj_coeff[f"p_DA_{hour+1}"] = sum(
+            obj_coeff[f"p_DA_{hour+1}"] = (1-self.beta)*sum(
                 float(s.prices[hour] / self.num_scenarios)
                 for s in self.scenario_list
             )
@@ -536,16 +524,18 @@ class RiskAverseTwoPriceBuilder:
                     # System deficit: BP = 1.25 * DA
                     # Upward deviation helps the system -> settled at DA
                     # Downward deviation hurts the system -> settled at BP
-                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da
-                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = exp_price_da * (1-self.beta)
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -1.25 * exp_price_da * (1-self.beta)
 
                 else:
                     # System surplus: BP = 0.85 * DA
                     # Upward deviation hurts the system -> settled at BP
                     # Downward deviation helps the system -> settled at DA
-                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da
-                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da
-
+                    obj_coeff[f"delta_up_{hour+1}_{count+1}"] = 0.85 * exp_price_da * (1-self.beta)
+                    obj_coeff[f"delta_down_{hour+1}_{count+1}"] = -exp_price_da * (1-self.beta)
+        for w in range(self.num_scenarios):
+            obj_coeff[f"eta_{w+1}"] = -self.beta * (1 / self.num_scenarios) * (1/(1-self.alpha))
+        obj_coeff["VaR"] = self.beta
         return obj_coeff
     
     def build_constraint_coefficients(self):
@@ -558,7 +548,9 @@ class RiskAverseTwoPriceBuilder:
         # Lower bounds: -x <= 0
         for i in range(self.num_hours):
             coeff[self.l_keys[i]] = self._one_hot_vector(i, sign=-1)
-            
+        for w in range(self.num_scenarios):
+            coeff[f"l_eta_{w+1}"] = {f"eta_{w+1}": -1.0}
+
         # balancing: p_DA + delta = p_real
         for hour in range(self.num_hours):
             for w in range(self.num_scenarios):
@@ -583,6 +575,33 @@ class RiskAverseTwoPriceBuilder:
                 c_name_down = f"delta_down_nonneg_{hour+1}_{w+1}"
                 coeff[c_name_up] = {f"delta_up_{hour+1}_{w+1}": -1}
                 coeff[c_name_down] = {f"delta_down_{hour+1}_{w+1}": -1}
+        # -Profit + VaR - eta <= 0
+        for w in range(self.num_scenarios):
+            c_name = f"max_eta_{w+1}"
+            coeff[c_name] = {
+                "VaR": 1.0,
+                f"eta_{w+1}": -1.0,
+            }
+
+            for hour in range(self.num_hours):
+                da_price = float(self.scenario_list[w].prices[hour])
+
+                if int(self.scenario_list[w].imbalance[hour]) == 1:
+                    # System deficit: BP = 1.25 * DA
+                    # Upward deviation helps the system -> settled at DA
+                    # Downward deviation hurts the system -> settled at BP
+                    coeff[c_name][f"delta_up_{hour+1}_{w+1}"] = -da_price
+                    coeff[c_name][f"delta_down_{hour+1}_{w+1}"] = +1.25 * da_price
+
+                else:
+                    # System surplus: BP = 0.85 * DA
+                    # Upward deviation hurts the system -> settled at BP
+                    # Downward deviation helps the system -> settled at DA
+                    coeff[c_name][f"delta_up_{hour+1}_{w+1}"] = -0.85 * da_price
+                    coeff[c_name][f"delta_down_{hour+1}_{w+1}"] = +da_price
+
+                coeff[c_name][f"p_DA_{hour+1}"] = -da_price
+
         return coeff
     
     def build_constraint_rhs(self):
@@ -594,8 +613,8 @@ class RiskAverseTwoPriceBuilder:
             rhs[self.u_keys[t]] = self.P_max
 
         # lower bounds
-        for t in range(self.num_hours):
-            rhs[self.l_keys[t]] = 0
+        for key in self.l_keys:
+            rhs[key] = 0
 
         # balance constraints
         for t in range(self.num_hours):
@@ -612,15 +631,19 @@ class RiskAverseTwoPriceBuilder:
             for w in range(self.num_scenarios):
                 rhs[f"delta_up_nonneg_{hour+1}_{w+1}"] = 0
                 rhs[f"delta_down_nonneg_{hour+1}_{w+1}"] = 0
+        # -Profit + VaR - eta <= 0
+        for w in range(self.num_scenarios):
+            rhs[f"max_eta_{w+1}"] = 0
         return rhs
     
     def build_constraint_sense(self):
         """Build constraint senses"""
         sense = {}
-        for key in self.u_keys + self.l_keys + self.delta_up_nonneg + self.delta_down_nonneg:
+        for key in self.u_keys + self.l_keys + self.delta_up_nonneg + self.delta_down_nonneg + self.max_eta:
             sense[key] = GRB.LESS_EQUAL
         for key in self.balance + self.delta_def:
             sense[key] = GRB.EQUAL
+
         return sense
     
     def _one_hot_vector(self, idx, sign=1):
@@ -633,7 +656,7 @@ class RiskAverseTwoPriceBuilder:
         """Build complete LP_InputData object"""
         return LP_InputData(
             VARIABLES=self.variables,
-            CONSTRAINTS=self.u_keys + self.l_keys + self.balance + self.delta_def + self.delta_up_nonneg + self.delta_down_nonneg,
+            CONSTRAINTS=self.u_keys + self.l_keys + self.balance + self.delta_def + self.delta_up_nonneg + self.delta_down_nonneg + self.max_eta,
             objective_coeff=self.build_objective_coefficients(),
             constraints_coeff=self.build_constraint_coefficients(),
             constraints_rhs=self.build_constraint_rhs(),
