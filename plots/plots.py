@@ -3,6 +3,7 @@ import plotly.express as px
 from zipp import Path
 from typing import Optional
 import numpy as np
+import plotly.graph_objects as go
 
 from utils import compute_one_price_profits, compute_two_price_profits
 
@@ -67,6 +68,60 @@ def plot_optimal_day_ahead_offers(problem, builder, save_path: Optional[Path] = 
         else:
             fig.write_image(str(save_path))
 
+    return fig
+
+def plot_profit_distributions_by_beta(beta_profits_dict, title="Profit Distribution by Beta", save_path=None):
+    """
+    Plot overlaid histograms showing profit distributions for different beta values.
+    
+    Args:
+        beta_profits_dict: Dictionary with beta as key and list of profits as value
+        title: Plot title
+        save_path: Optional path to save the plot
+    """
+    # Select key beta values for visualization
+    key_betas = sorted([b for b in beta_profits_dict.keys() if b in [0.0, 1.0]])
+    
+    # Create figure with plotly
+    fig = go.Figure()
+    
+    colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+    
+    for i, beta in enumerate(key_betas):
+        profits_keur = [p / 1000.0 for p in beta_profits_dict[beta]]
+        fig.add_trace(go.Histogram(
+            x=profits_keur,
+            name=f"β = {beta}",
+            opacity=0.6,
+            nbinsx=50,
+            marker=dict(color=colors[i % len(colors)]),
+        ))
+    
+    fig.update_layout(
+        title=title,
+        xaxis_title="Profit [kEUR]",
+        yaxis_title="Frequency",
+        barmode="overlay",
+        template="plotly_white",
+        width=1000,
+        height=600,
+        margin=dict(l=5, r=5, t=40, b=85),
+        legend=dict(
+            orientation="v",
+            yanchor="top",
+            y=0.99,
+            xanchor="left",
+            x=0.01,
+        ),
+    )
+    
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+    
     return fig
 
 
