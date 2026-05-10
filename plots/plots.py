@@ -106,6 +106,7 @@ def plot_profit_distributions_by_beta(beta_profits_dict, title="Profit Distribut
         width=1000,
         height=600,
         margin=dict(l=5, r=5, t=40, b=85),
+        xaxis=dict(range=[-100, None]),
         legend=dict(
             orientation="v",
             yanchor="top",
