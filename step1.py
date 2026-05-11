@@ -54,15 +54,15 @@ problem2.model.write(str(output_dir / "step1_2.lp"))
 
 # %% Solve optimization problem 1.3 (cross-validation)
 all_scenarios = list(scenarios.values())[:1600]
-
+all_scenarios_shuffled = list(all_scenarios)
 np.random.seed(42)
-np.random.shuffle(all_scenarios)
+np.random.shuffle(all_scenarios_shuffled)
 
 k_folds = 8
 n_in_sample = 200
 
 folds = [
-    all_scenarios[i * n_in_sample:(i + 1) * n_in_sample]
+    all_scenarios_shuffled[i * n_in_sample:(i + 1) * n_in_sample]
     for i in range(k_folds)
 ]
 
@@ -139,10 +139,12 @@ for fold_idx in range(k_folds):
     
     
 # %% Step 1.4 - Varying beta
+# Use a shuffled copy for this section only, don't modify all_scenarios globally
+all_scenarios_shuffled = list(all_scenarios)
 np.random.seed(42)
-np.random.shuffle(all_scenarios)
+np.random.shuffle(all_scenarios_shuffled)
 
-subset_200 = all_scenarios[:200]
+subset_200 = all_scenarios_shuffled[:200]
 
 beta_results_one_price= []
 beta_profits_one_price = {}
