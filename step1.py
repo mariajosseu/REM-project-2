@@ -139,7 +139,7 @@ for fold_idx in range(k_folds):
     
     
 # %% Step 1.4 - Varying beta
-# Use a shuffled copy for this section only, don't modify all_scenarios globally
+# Use a shuffled copy for this section only
 all_scenarios_shuffled = list(all_scenarios)
 np.random.seed(42)
 np.random.shuffle(all_scenarios_shuffled)

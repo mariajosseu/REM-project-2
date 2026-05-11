@@ -1,0 +1,13 @@
+# Core numerical/data packages
+numpy>=1.24
+pandas>=2.0
+
+# Optimization solver Python API
+gurobipy>=11.0
+
+# Plotting and static image export
+plotly>=5.20
+kaleido>=0.2.1
+
+# Used in plots/plots.py (from zipp import Path)
+zipp>=3.17
