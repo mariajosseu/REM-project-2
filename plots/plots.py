@@ -3,6 +3,7 @@ import plotly.express as px
 from zipp import Path
 from typing import Optional
 import numpy as np
+import plotly.graph_objects as go
 
 from utils import compute_one_price_profits, compute_two_price_profits
 
@@ -10,198 +11,253 @@ import numpy as np
 import plotly.graph_objects as go
 
 def plot_optimal_day_ahead_offers(problem, builder, save_path: Optional[Path] = None):
-	"""Plot the optimal day-ahead offer schedule."""
-	price_spread = [
-		sum(
-			float(s.prices[hour]) - (1.25 * float(s.prices[hour]) if int(s.imbalance[hour]) == 1 else 0.85 * float(s.prices[hour]))
-			for s in builder.scenario_list
-		) / len(builder.scenario_list)
-		for hour in range(builder.num_hours)
-	]
+    """Plot the optimal day-ahead offer schedule."""
+    price_spread = [
+        sum(
+            float(s.prices[hour]) - (1.25 * float(s.prices[hour]) if int(s.imbalance[hour]) == 1 else 0.85 * float(s.prices[hour]))
+            for s in builder.scenario_list
+        ) / len(builder.scenario_list)
+        for hour in range(builder.num_hours)
+    ]
 
-	offers = pd.DataFrame(
-		{
-			"Hour": list(range(1, builder.num_hours + 1)),
-			"Offer [MW]": [problem.results.variables[f"p_DA_{hour}"] for hour in range(1, builder.num_hours + 1)],
-			"E[λ_DA - λ_B]": price_spread,
-		}
-	)
+    offers = pd.DataFrame(
+        {
+            "Hour": list(range(1, builder.num_hours + 1)),
+            "Offer [MW]": [problem.results.variables[f"p_DA_{hour}"] for hour in range(1, builder.num_hours + 1)],
+            "E[λ_DA - λ_B]": price_spread,
+        }
+    )
 
-	fig = px.bar(
-		offers,
-		x="Hour",
-		y="Offer [MW]"
-	)
-	fig.add_scatter(
-		x=offers["Hour"],
-		y=offers["E[λ_DA - λ_B]"],
-		mode="lines+markers",
-		name="E[λ_DA - λ_B]",
-		yaxis="y2",
-		line=dict(color="#E4572E", width=2),
-	)
-	fig.update_layout(
-		xaxis_title="Hour",
-		xaxis=dict(tickmode="linear", dtick=1),
-		yaxis_title="Offer [MW]",
-		legend=dict(
-			orientation="h",
-			yanchor="top",
-			y=-0.2,
-			xanchor="center",
-			x=0.5,
-		),
-		yaxis2=dict(
-			title="E[λ_DA - λ_B] [EUR/MWh]",
-			overlaying="y",
-			side="right",
-		),
-		template="plotly_white",
-		margin=dict(l=5, r=5, t=5, b=85),
-		width=700,
-		height=350,
-	)
+    fig = px.bar(
+        offers,
+        x="Hour",
+        y="Offer [MW]"
+    )
+    fig.add_scatter(
+        x=offers["Hour"],
+        y=offers["E[λ_DA - λ_B]"],
+        mode="lines+markers",
+        name="E[λ_DA - λ_B]",
+        yaxis="y2",
+        line=dict(color="#E4572E", width=2),
+    )
+    fig.update_layout(
+        xaxis_title="Hour",
+        xaxis=dict(tickmode="linear", dtick=1),
+        yaxis_title="Offer [MW]",
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=-0.2,
+            xanchor="center",
+            x=0.5,
+        ),
+        yaxis2=dict(
+            title="E[λ_DA - λ_B] [EUR/MWh]",
+            overlaying="y",
+            side="right",
+        ),
+        template="plotly_white",
+        margin=dict(l=5, r=5, t=5, b=85),
+        width=700,
+        height=350,
+    )
 
-	if save_path is not None:
-		save_path.parent.mkdir(parents=True, exist_ok=True)
-		if save_path.suffix.lower() == ".html":
-			fig.write_html(str(save_path))
-		else:
-			fig.write_image(str(save_path))
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
 
-	return fig
+    return fig
+
+def plot_profit_distributions_by_beta(beta_profits_dict, title="Profit Distribution by Beta", save_path=None):
+    """
+    Plot overlaid histograms showing profit distributions for different beta values.
+    
+    Args:
+        beta_profits_dict: Dictionary with beta as key and list of profits as value
+        title: Plot title
+        save_path: Optional path to save the plot
+    """
+    # Select key beta values for visualization
+    key_betas = sorted([b for b in beta_profits_dict.keys() if b in [0.0, 1.0]])
+    
+    # Create figure with plotly
+    fig = go.Figure()
+    
+    colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+    
+    for i, beta in enumerate(key_betas):
+        profits_keur = [p / 1000.0 for p in beta_profits_dict[beta]]
+        fig.add_trace(go.Histogram(
+            x=profits_keur,
+            name=f"β = {beta}",
+            opacity=0.6,
+            nbinsx=50,
+            marker=dict(color=colors[i % len(colors)]),
+        ))
+    
+    fig.update_layout(
+        title=title,
+        xaxis_title="Profit [kEUR]",
+        yaxis_title="Frequency",
+        barmode="overlay",
+        template="plotly_white",
+        width=1000,
+        height=600,
+        margin=dict(l=5, r=5, t=40, b=85),
+        xaxis=dict(range=[-100, None]),
+        legend=dict(
+            orientation="v",
+            yanchor="top",
+            y=0.99,
+            xanchor="left",
+            x=0.01,
+        ),
+    )
+    
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+    
+    return fig
 
 
 def plot_optimal_day_ahead_offers_with_avg_imbalance(problem, builder, save_path: Optional[Path] = None):
-	"""Plot the optimal day-ahead offer schedule with average imbalance per hour."""
-	avg_imbalance = [
-		sum(float(s.imbalance[hour]) for s in builder.scenario_list) / len(builder.scenario_list)
-		for hour in range(builder.num_hours)
-	]
+    """Plot the optimal day-ahead offer schedule with average imbalance per hour."""
+    avg_imbalance = [
+        sum(float(s.imbalance[hour]) for s in builder.scenario_list) / len(builder.scenario_list)
+        for hour in range(builder.num_hours)
+    ]
 
-	offers = pd.DataFrame(
-		{
-			"Hour": list(range(1, builder.num_hours + 1)),
-			"Offer [MW]": [problem.results.variables[f"p_DA_{hour}"] for hour in range(1, builder.num_hours + 1)],
-			"Avg imbalance": avg_imbalance,
-		}
-	)
+    offers = pd.DataFrame(
+        {
+            "Hour": list(range(1, builder.num_hours + 1)),
+            "Offer [MW]": [problem.results.variables[f"p_DA_{hour}"] for hour in range(1, builder.num_hours + 1)],
+            "Avg imbalance": avg_imbalance,
+        }
+    )
 
-	fig = px.bar(
-		offers,
-		x="Hour",
-		y="Offer [MW]"
-	)
-	fig.add_scatter(
-		x=offers["Hour"],
-		y=offers["Avg imbalance"],
-		mode="lines+markers",
-		name="Avg imbalance",
-		yaxis="y2",
-		line=dict(color="#E4572E", width=2),
-	)
-	fig.update_layout(
-		xaxis_title="Hour",
-		xaxis=dict(tickmode="linear", dtick=1),
-		yaxis_title="Offer [MW]",
-		legend=dict(
-			orientation="h",
-			yanchor="top",
-			y=-0.2,
-			xanchor="center",
-			x=0.5,
-		),
-		yaxis2=dict(
-			title="Avg imbalance [0/1]",
-			overlaying="y",
-			side="right",
-			range=[0, 1],
-		),
-		template="plotly_white",
-		margin=dict(l=5, r=5, t=5, b=85),
-		width=700,
-		height=350,
-	)
+    fig = px.bar(
+        offers,
+        x="Hour",
+        y="Offer [MW]"
+    )
+    fig.add_scatter(
+        x=offers["Hour"],
+        y=offers["Avg imbalance"],
+        mode="lines+markers",
+        name="Avg imbalance",
+        yaxis="y2",
+        line=dict(color="#E4572E", width=2),
+    )
+    fig.update_layout(
+        xaxis_title="Hour",
+        xaxis=dict(tickmode="linear", dtick=1),
+        yaxis_title="Offer [MW]",
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=-0.2,
+            xanchor="center",
+            x=0.5,
+        ),
+        yaxis2=dict(
+            title="Avg imbalance [0/1]",
+            overlaying="y",
+            side="right",
+            range=[0, 1],
+        ),
+        template="plotly_white",
+        margin=dict(l=5, r=5, t=5, b=85),
+        width=700,
+        height=350,
+    )
 
-	if save_path is not None:
-		save_path.parent.mkdir(parents=True, exist_ok=True)
-		if save_path.suffix.lower() == ".html":
-			fig.write_html(str(save_path))
-		else:
-			fig.write_image(str(save_path))
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
 
-	return fig
+    return fig
 
 
 def plot_in_sample_profit_distribution(problem, builder, save_path: Optional[Path] = None):
-	"""Plot in-sample scenario profit distribution with expected profit marker."""
-	scenario_profits = []
-	variables = problem.results.variables
+    """Plot in-sample scenario profit distribution with expected profit marker."""
+    scenario_profits = []
+    variables = problem.results.variables
 
-	for w, scenario in enumerate(builder.scenario_list, start=1):
-		profit = 0.0
-		for hour in range(1, builder.num_hours + 1):
-			da_price = float(scenario.prices[hour - 1])
-			p_da = float(variables[f"p_DA_{hour}"])
+    for w, scenario in enumerate(builder.scenario_list, start=1):
+        profit = 0.0
+        for hour in range(1, builder.num_hours + 1):
+            da_price = float(scenario.prices[hour - 1])
+            p_da = float(variables[f"p_DA_{hour}"])
 
-			profit += da_price * p_da
+            profit += da_price * p_da
 
-			delta_key = f"delta_{hour}_{w}"
-			balancing_price = 1.25 * da_price if int(scenario.imbalance[hour - 1]) == 1 else 0.85 * da_price
-			profit += balancing_price * float(variables[delta_key])
+            delta_key = f"delta_{hour}_{w}"
+            balancing_price = 1.25 * da_price if int(scenario.imbalance[hour - 1]) == 1 else 0.85 * da_price
+            profit += balancing_price * float(variables[delta_key])
 
-		scenario_profits.append(profit)
+        scenario_profits.append(profit)
 
-	expected_profit_eur = float(problem.results.objective_value)
-	expected_profit_100keur = float(problem.results.objective_value) / 100000.0
+    expected_profit_eur = float(problem.results.objective_value)
+    expected_profit_100keur = float(problem.results.objective_value) / 100000.0
 
-	profits = pd.DataFrame(
-		{
-			"Scenario": list(range(1, len(scenario_profits) + 1)),
-			"Profit [100 kEUR]": [p / 100000.0 for p in scenario_profits],
-		}
-	)
+    profits = pd.DataFrame(
+        {
+            "Scenario": list(range(1, len(scenario_profits) + 1)),
+            "Profit [100 kEUR]": [p / 100000.0 for p in scenario_profits],
+        }
+    )
 
-	fig = px.histogram(
-		profits,
-		x="Profit [100 kEUR]",
-		nbins=300,
-		histnorm="percent",
-	)
-	fig.add_vline(
-		x=expected_profit_100keur,
-		line_color="red",
-		line_width=2,
-		line_dash="dash",
-	)
-	fig.add_annotation(
-		x=expected_profit_100keur,
-		y=0.95,
-		yref="paper",
-		text=f"Expected profit: {expected_profit_eur:,.0f} EUR",
-		showarrow=False,
-		xanchor="left",
-		xshift=8,
-		font=dict(color="red"),
-	)
-	fig.update_layout(
-		xaxis_title="Profit [100 kEUR]",
-		xaxis=dict(range=[min(profits["Profit [100 kEUR]"]), 3]),
-		yaxis_title="Probability [%]",
-		template="plotly_white",
-		margin=dict(l=5, r=5, t=5, b=85),
-		width=900,
-		height=450,
-	)
+    fig = px.histogram(
+        profits,
+        x="Profit [100 kEUR]",
+        nbins=300,
+        histnorm="percent",
+    )
+    fig.add_vline(
+        x=expected_profit_100keur,
+        line_color="red",
+        line_width=2,
+        line_dash="dash",
+    )
+    fig.add_annotation(
+        x=expected_profit_100keur,
+        y=0.95,
+        yref="paper",
+        text=f"Expected profit: {expected_profit_eur:,.0f} EUR",
+        showarrow=False,
+        xanchor="left",
+        xshift=8,
+        font=dict(color="red"),
+    )
+    fig.update_layout(
+        xaxis_title="Profit [100 kEUR]",
+        xaxis=dict(range=[min(profits["Profit [100 kEUR]"]), 3]),
+        yaxis_title="Probability [%]",
+        template="plotly_white",
+        margin=dict(l=5, r=5, t=5, b=85),
+        width=900,
+        height=450,
+    )
 
-	if save_path is not None:
-		save_path.parent.mkdir(parents=True, exist_ok=True)
-		if save_path.suffix.lower() == ".html":
-			fig.write_html(str(save_path))
-		else:
-			fig.write_image(str(save_path))
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
 
-	return fig
+    return fig
 
 def plot_one_price_vs_two_price_offers(problem_one, problem_two, builder, save_path: Optional[Path] = None):
     """Plot and compare optimal day-ahead offers under one-price and two-price schemes."""
@@ -261,7 +317,6 @@ def plot_one_price_vs_two_price_offers(problem_one, problem_two, builder, save_p
             fig.write_image(str(save_path))
 
     return fig
-
 
 def plot_profit_distribution_comparison(
     problem_one,
@@ -584,6 +639,55 @@ def plot_alsox_shortfall_vs_requirement(task23_df, save_path: Optional[Path] = N
             xanchor="center",
             x=0.5,
         ),
+    )
+
+    if save_path is not None:
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        if save_path.suffix.lower() == ".html":
+            fig.write_html(str(save_path))
+        else:
+            fig.write_image(str(save_path))
+
+    return fig
+
+def plot_expected_profit_vs_cvar(beta_results, save_path=None):
+    """
+    beta_results should be a list of dictionaries like:
+    [
+        {
+            "beta": 0.0,
+            "expected_profit": ...,
+            "cvar": ...,
+        },
+        ...
+    ]
+    """
+
+    df = pd.DataFrame(
+        {
+            "Beta": [r["beta"] for r in beta_results],
+            "Expected profit [kEUR]": [r["expected_profit"] / 1000.0 for r in beta_results],
+            "CVaR [kEUR]": [r["cvar"] / 1000.0 for r in beta_results],
+        }
+    )
+
+    fig = px.line(
+        df,
+        x="CVaR [kEUR]",
+        y="Expected profit [kEUR]",
+        text="Beta",
+        markers=True,
+    )
+
+    fig.update_traces(textposition="top center")
+
+    fig.update_layout(
+        xaxis_title="CVaR [kEUR]",
+        yaxis_title="Expected profit [kEUR]",
+        template="plotly_white",
+        width=800,
+        height=500,
+        margin=dict(l=5, r=5, t=30, b=85),
     )
 
     if save_path is not None:

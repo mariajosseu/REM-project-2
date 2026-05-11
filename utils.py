@@ -118,3 +118,11 @@ def evaluate_two_price_profit(p_da, scenarios_to_evaluate):
         scenario_profits.append(profit)
 
     return scenario_profits
+
+def compute_cvar(problem, builder):
+    alpha = builder.alpha
+    VaR = float(problem.results.variables["VaR"])
+    eta_list = [float(problem.results.variables[f"eta_{w}"]) for w in range(1, builder.num_scenarios + 1)]
+    # CVaR = VaR - 1/(1-alpha) * (1/N) * sum(eta_w)
+    cvar = VaR - (1 / (1 - alpha)) * (sum(eta_list) / builder.num_scenarios)
+    return cvar

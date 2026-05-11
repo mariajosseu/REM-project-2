@@ -47,6 +47,7 @@ class LP_OptimizationProblem():
                     v.startswith("theta")
                     or v.startswith("zeta")
                     or v.startswith("beta")
+                    or v.startswith("VaR")
                     or (
                         v.startswith("delta_")
                         and not v.startswith("delta_up")
