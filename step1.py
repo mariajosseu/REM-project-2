@@ -135,18 +135,23 @@ for fold_idx in range(k_folds):
     
     
 # %% Step 1.4 - Varying beta
+np.random.seed(42)
+np.random.shuffle(all_scenarios)
+
+subset_200 = all_scenarios[:200]
+
 beta_results_one_price= []
 beta_profits_one_price = {}
 
 for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
-    builder4 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (beta={beta})", beta=beta)
+    builder4 = RiskAverseOnePriceBuilder(scenario_list=subset_200, model_name=f"Risk-Averse One-Price Model (beta={beta})", beta=beta)
     builder4.build_objective_coefficients()
 
     problem4 = LP_OptimizationProblem(builder4)
     problem4.run()
     results = problem4.get_results()
-
-    profits = compute_one_price_profits(problem4, builder4)
+    p_da = [results["variables"][f"p_DA_{hour}"] for hour in range(1, builder4.num_hours + 1)]
+    profits = evaluate_one_price_profit(p_da, subset_200)
     beta_profits_one_price[beta] = profits
 
     beta_results_one_price.append({
@@ -155,21 +160,22 @@ for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
         "cvar": compute_cvar(problem4, builder4)
     })
 
-print("Min profits one-price:", min(min(profits) for profits in beta_profits_one_price.values()))
 fig = plot_expected_profit_vs_cvar(beta_results_one_price, save_path=output_dir / "expected_profit_vs_cvar_1PriceScheme.pdf")
-# %% 
+
+
 beta_results_two_price = []
 beta_profits_two_price = {}
 
 for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
-    builder5 = RiskAverseTwoPriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse Two-Price Model (beta={beta})", beta=beta)
+    builder5 = RiskAverseTwoPriceBuilder(scenario_list=subset_200, model_name=f"Risk-Averse Two-Price Model (beta={beta})", beta=beta)
     builder5.build_objective_coefficients()
 
     problem5 = LP_OptimizationProblem(builder5)
     problem5.run()
     results = problem5.get_results()
 
-    profits = compute_two_price_profits(problem5, builder5)
+    p_da = [results["variables"][f"p_DA_{hour}"] for hour in range(1, builder5.num_hours + 1)]
+    profits = evaluate_two_price_profit(p_da, subset_200)
     beta_profits_two_price[beta] = profits
 
     beta_results_two_price.append({
@@ -178,9 +184,26 @@ for beta in [0, 0.2, 0.4, 0.6, 0.8, 1.0]:
         "cvar": compute_cvar(problem5, builder5)
     })
 
-print("Min profits two-price:", min(min(profits) for profits in beta_profits_two_price.values()))
-
 fig2 = plot_expected_profit_vs_cvar(beta_results_two_price, save_path=output_dir / "expected_profit_vs_cvar_2PriceScheme.pdf")
+
+#Compute profits for the full 1600-scenario case (beta=0)
+builder6 = RiskAverseTwoPriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse Two-Price Model (1600 scenarios)", beta=0)
+builder6.build_objective_coefficients()
+problem6 = LP_OptimizationProblem(builder6)
+problem6.run()
+results = problem6.get_results()
+p_da = [results["variables"][f"p_DA_{hour}"] for hour in range(1, builder6.num_hours + 1)]
+profits = evaluate_two_price_profit(p_da, all_scenarios)
+print("Min profits two-price:", min(profits))
+builder7 = RiskAverseOnePriceBuilder(scenario_list=all_scenarios, model_name=f"Risk-Averse One-Price Model (1600 scenarios)", beta=0)
+builder7.build_objective_coefficients()
+problem7 = LP_OptimizationProblem(builder7)
+problem7.run()
+results = problem7.get_results()
+p_da = [results["variables"][f"p_DA_{hour}"] for hour in range(1, builder7.num_hours + 1)]
+profits = evaluate_one_price_profit(p_da, all_scenarios)
+print("Min profits one-price:", min(profits))
+
 # %%
 # Plot profit distribution for selected beta values
 fig_dist_one = plot_profit_distributions_by_beta(
