@@ -16,6 +16,7 @@ builder.build_objective_coefficients()
 # %% Solve optimization problem 1.1
 problem = LP_OptimizationProblem(builder)
 problem.run()
+problem.display_computational_aspects()
 results = problem.get_results()
 print([results["variables"][f"p_DA_{i}"] for i in range(1, builder.num_hours + 1)])
 
@@ -34,6 +35,7 @@ builder2.build_objective_coefficients()
 
 problem2 = LP_OptimizationProblem(builder2)
 problem2.run()
+problem2.display_computational_aspects()
 problem2_results = problem2.get_results()
 print([problem2_results["variables"][f"p_DA_{i}"] for i in range(1, builder2.num_hours + 1)])
 avg_imbalance = [
@@ -82,6 +84,7 @@ for fold_idx in range(k_folds):
 
     problem_one_cv = LP_OptimizationProblem(builder_one_cv)
     problem_one_cv.run()
+    problem_one_cv.display_computational_aspects()
 
     p_da_one = [
         problem_one_cv.results.variables[f"p_DA_{hour}"]
@@ -99,6 +102,7 @@ for fold_idx in range(k_folds):
 
     problem_two_cv = LP_OptimizationProblem(builder_two_cv)
     problem_two_cv.run()
+    problem_two_cv.display_computational_aspects()
 
     p_da_two = [
         problem_two_cv.results.variables[f"p_DA_{hour}"]

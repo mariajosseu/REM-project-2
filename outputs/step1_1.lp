@@ -1,6 +1,6 @@
 \ Model Day-Ahead One-Price Model
 \ LP format - for model browsing. Use MPS format to capture full model detail.
-\ Signature: 0xa0e4bba12afe3d68
+\ Signature: 0xa0e4bba12afdada7
 Maximize
   28.86466 p_DA_1 + 24.53844000000002 p_DA_2 + 23.54506 p_DA_3
    + 23.5989 p_DA_4 + 25.00731999999996 p_DA_5 + 32.29112 p_DA_6

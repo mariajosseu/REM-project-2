@@ -16,6 +16,7 @@ builder_cvar = CVaRBuilder(alpha=0.90)
 # %% Solve optimization problem
 problem_cvar = LP_OptimizationProblem(builder_cvar)
 problem_cvar.run()
+problem_cvar.display_computational_aspects()
 
 # %% Print Results
 c_up_opt = problem_cvar.results.variables.get('c_up', 0.0)
@@ -32,6 +33,7 @@ problem_cvar.model.write(str(output_dir / "step2_cvar.lp"))
 builder_alsox = ALSOXBuilder(alpha=0.9)
 problem_alsox = LP_OptimizationProblem(builder_alsox)
 problem_alsox.run()
+problem_alsox.display_computational_aspects()
 
 # Print ALSO-X Results
 c_up_opt_alsox = problem_alsox.results.variables.get('c_up', 0.0)
@@ -151,6 +153,7 @@ for alpha in alpha_grid:
     builder_alsox_grid = ALSOXBuilder(alpha=float(alpha), model_name=f"ALSOX_P{int(round(alpha * 100))}")
     problem_alsox_grid = LP_OptimizationProblem(builder_alsox_grid)
     problem_alsox_grid.run()
+    problem_alsox_grid.display_computational_aspects()
 
     bid_kw = float(problem_alsox_grid.results.variables.get("c_up", 0.0))
     metrics = compute_shortfall_metrics(bid_kw, f_up_oos)

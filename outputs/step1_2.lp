@@ -1,6 +1,6 @@
-\ Model Day-Ahead One-Price Model
+\ Model Day-Ahead Two-Price Model
 \ LP format - for model browsing. Use MPS format to capture full model detail.
-\ Signature: 0x5eef02622f7217a8
+\ Signature: 0x5eef02622f7187e7
 Maximize
   28.86466 p_DA_1 + 24.53844000000002 p_DA_2 + 23.54506 p_DA_3
    + 23.5989 p_DA_4 + 25.00731999999996 p_DA_5 + 32.29112 p_DA_6
@@ -15,9 +15,9 @@ Maximize
    + 0.373175 delta_up_1_2 + 0.373175 delta_up_1_3
    + 0.31719875 delta_up_1_4 + 0.22408125 delta_up_1_5
    + 0.263625 delta_up_1_6 + 0.263625 delta_up_1_7
-   + 0.22408125 delta_up_1_8 + 0.5308674999999999 delta_up_1_9
+   + 0.22408125 delta_up_1_8 + 0.5308675 delta_up_1_9
    + 0.62455 delta_up_1_10 + 0.62455 delta_up_1_11
-   + 0.5308674999999999 delta_up_1_12 + 0.01374875 delta_up_1_13
+   + 0.5308675 delta_up_1_12 + 0.01374875 delta_up_1_13
    + 0.016175 delta_up_1_14 + 0.016175 delta_up_1_15
    + 0.01374875 delta_up_1_16 + 0.07380125 delta_up_1_17
    + 0.086825 delta_up_1_18 + 0.086825 delta_up_1_19
@@ -54,8 +54,8 @@ Maximize
    + 0.373175 delta_up_1_83 + 0.31719875 delta_up_1_84
    + 0.22408125 delta_up_1_85 + 0.263625 delta_up_1_86
    + 0.263625 delta_up_1_87 + 0.22408125 delta_up_1_88
-   + 0.5308674999999999 delta_up_1_89 + 0.62455 delta_up_1_90
-   + 0.62455 delta_up_1_91 + 0.5308674999999999 delta_up_1_92
+   + 0.5308675 delta_up_1_89 + 0.62455 delta_up_1_90
+   + 0.62455 delta_up_1_91 + 0.5308675 delta_up_1_92
    + 0.01374875 delta_up_1_93 + 0.016175 delta_up_1_94
    + 0.016175 delta_up_1_95 + 0.01374875 delta_up_1_96
    + 0.07380125 delta_up_1_97 + 0.086825 delta_up_1_98
@@ -93,9 +93,9 @@ Maximize
    + 0.373175 delta_up_1_162 + 0.373175 delta_up_1_163
    + 0.31719875 delta_up_1_164 + 0.22408125 delta_up_1_165
    + 0.263625 delta_up_1_166 + 0.263625 delta_up_1_167
-   + 0.22408125 delta_up_1_168 + 0.5308674999999999 delta_up_1_169
+   + 0.22408125 delta_up_1_168 + 0.5308675 delta_up_1_169
    + 0.62455 delta_up_1_170 + 0.62455 delta_up_1_171
-   + 0.5308674999999999 delta_up_1_172 + 0.01374875 delta_up_1_173
+   + 0.5308675 delta_up_1_172 + 0.01374875 delta_up_1_173
    + 0.016175 delta_up_1_174 + 0.016175 delta_up_1_175
    + 0.01374875 delta_up_1_176 + 0.07380125 delta_up_1_177
    + 0.086825 delta_up_1_178 + 0.086825 delta_up_1_179
@@ -305,9 +305,8 @@ Maximize
    + 0.180275 delta_up_3_195 + 0.180275 delta_up_3_196
    + 0.08157875 delta_up_3_197 + 0.08157875 delta_up_3_198
    + 0.095975 delta_up_3_199 + 0.095975 delta_up_3_200
-   + 0.42035 delta_up_4_1 + 0.42035 delta_up_4_2
-   + 0.3572974999999999 delta_up_4_3 + 0.3572974999999999 delta_up_4_4
-   + 0.278915 delta_up_4_5 + 0.278915 delta_up_4_6
+   + 0.42035 delta_up_4_1 + 0.42035 delta_up_4_2 + 0.3572975 delta_up_4_3
+   + 0.3572975 delta_up_4_4 + 0.278915 delta_up_4_5 + 0.278915 delta_up_4_6
    + 0.23707775 delta_up_4_7 + 0.23707775 delta_up_4_8
    + 0.16385 delta_up_4_9 + 0.16385 delta_up_4_10 + 0.1392725 delta_up_4_11
    + 0.1392725 delta_up_4_12 + 0.010875 delta_up_4_13
@@ -344,8 +343,8 @@ Maximize
    + 0.00852125 delta_up_4_76 + 0.125475 delta_up_4_77
    + 0.125475 delta_up_4_78 + 0.10665375 delta_up_4_79
    + 0.10665375 delta_up_4_80 + 0.42035 delta_up_4_81
-   + 0.42035 delta_up_4_82 + 0.3572974999999999 delta_up_4_83
-   + 0.3572974999999999 delta_up_4_84 + 0.278915 delta_up_4_85
+   + 0.42035 delta_up_4_82 + 0.3572975 delta_up_4_83
+   + 0.3572975 delta_up_4_84 + 0.278915 delta_up_4_85
    + 0.278915 delta_up_4_86 + 0.23707775 delta_up_4_87
    + 0.23707775 delta_up_4_88 + 0.16385 delta_up_4_89
    + 0.16385 delta_up_4_90 + 0.1392725 delta_up_4_91
@@ -384,8 +383,8 @@ Maximize
    + 0.00852125 delta_up_4_156 + 0.125475 delta_up_4_157
    + 0.125475 delta_up_4_158 + 0.10665375 delta_up_4_159
    + 0.10665375 delta_up_4_160 + 0.42035 delta_up_4_161
-   + 0.42035 delta_up_4_162 + 0.3572974999999999 delta_up_4_163
-   + 0.3572974999999999 delta_up_4_164 + 0.278915 delta_up_4_165
+   + 0.42035 delta_up_4_162 + 0.3572975 delta_up_4_163
+   + 0.3572975 delta_up_4_164 + 0.278915 delta_up_4_165
    + 0.278915 delta_up_4_166 + 0.23707775 delta_up_4_167
    + 0.23707775 delta_up_4_168 + 0.16385 delta_up_4_169
    + 0.16385 delta_up_4_170 + 0.1392725 delta_up_4_171
@@ -502,7 +501,7 @@ Maximize
    + 0.16211625 delta_up_5_194 + 0.16211625 delta_up_5_195
    + 0.16211625 delta_up_5_196 + 0.08803025 delta_up_5_197
    + 0.08803025 delta_up_5_198 + 0.08803025 delta_up_5_199
-   + 0.08803025 delta_up_5_200 + 0.4371762499999999 delta_up_6_1
+   + 0.08803025 delta_up_5_200 + 0.43717625 delta_up_6_1
    + 0.514325 delta_up_6_2 + 0.514325 delta_up_6_3 + 0.514325 delta_up_6_4
    + 0.38642275 delta_up_6_5 + 0.454615 delta_up_6_6
    + 0.454615 delta_up_6_7 + 0.454615 delta_up_6_8 + 0.0987275 delta_up_6_9
@@ -537,7 +536,7 @@ Maximize
    + 0.022315 delta_up_6_74 + 0.022315 delta_up_6_75
    + 0.022315 delta_up_6_76 + 0.25641525 delta_up_6_77
    + 0.301665 delta_up_6_78 + 0.301665 delta_up_6_79
-   + 0.301665 delta_up_6_80 + 0.4371762499999999 delta_up_6_81
+   + 0.301665 delta_up_6_80 + 0.43717625 delta_up_6_81
    + 0.514325 delta_up_6_82 + 0.514325 delta_up_6_83
    + 0.514325 delta_up_6_84 + 0.38642275 delta_up_6_85
    + 0.454615 delta_up_6_86 + 0.454615 delta_up_6_87
@@ -576,7 +575,7 @@ Maximize
    + 0.022315 delta_up_6_154 + 0.022315 delta_up_6_155
    + 0.022315 delta_up_6_156 + 0.25641525 delta_up_6_157
    + 0.301665 delta_up_6_158 + 0.301665 delta_up_6_159
-   + 0.301665 delta_up_6_160 + 0.4371762499999999 delta_up_6_161
+   + 0.301665 delta_up_6_160 + 0.43717625 delta_up_6_161
    + 0.514325 delta_up_6_162 + 0.514325 delta_up_6_163
    + 0.514325 delta_up_6_164 + 0.38642275 delta_up_6_165
    + 0.454615 delta_up_6_166 + 0.454615 delta_up_6_167
@@ -1087,8 +1086,8 @@ Maximize
    + 0.19084 delta_up_11_199 + 0.162214 delta_up_11_200
    + 0.38005 delta_up_12_1 + 0.3230425 delta_up_12_2
    + 0.3230425 delta_up_12_3 + 0.3230425 delta_up_12_4
-   + 0.49519 delta_up_12_5 + 0.4209114999999999 delta_up_12_6
-   + 0.4209114999999999 delta_up_12_7 + 0.4209114999999999 delta_up_12_8
+   + 0.49519 delta_up_12_5 + 0.4209115 delta_up_12_6
+   + 0.4209115 delta_up_12_7 + 0.4209115 delta_up_12_8
    + 0.113875 delta_up_12_9 + 0.09679375 delta_up_12_10
    + 0.09679375 delta_up_12_11 + 0.09679375 delta_up_12_12
    + 0.03399 delta_up_12_13 + 0.0288915 delta_up_12_14
@@ -1127,8 +1126,8 @@ Maximize
    + 0.10580375 delta_up_12_80 + 0.38005 delta_up_12_81
    + 0.3230425 delta_up_12_82 + 0.3230425 delta_up_12_83
    + 0.3230425 delta_up_12_84 + 0.49519 delta_up_12_85
-   + 0.4209114999999999 delta_up_12_86 + 0.4209114999999999 delta_up_12_87
-   + 0.4209114999999999 delta_up_12_88 + 0.113875 delta_up_12_89
+   + 0.4209115 delta_up_12_86 + 0.4209115 delta_up_12_87
+   + 0.4209115 delta_up_12_88 + 0.113875 delta_up_12_89
    + 0.09679375 delta_up_12_90 + 0.09679375 delta_up_12_91
    + 0.09679375 delta_up_12_92 + 0.03399 delta_up_12_93
    + 0.0288915 delta_up_12_94 + 0.0288915 delta_up_12_95
@@ -1168,9 +1167,8 @@ Maximize
    + 0.10580375 delta_up_12_160 + 0.38005 delta_up_12_161
    + 0.3230425 delta_up_12_162 + 0.3230425 delta_up_12_163
    + 0.3230425 delta_up_12_164 + 0.49519 delta_up_12_165
-   + 0.4209114999999999 delta_up_12_166
-   + 0.4209114999999999 delta_up_12_167
-   + 0.4209114999999999 delta_up_12_168 + 0.113875 delta_up_12_169
+   + 0.4209115 delta_up_12_166 + 0.4209115 delta_up_12_167
+   + 0.4209115 delta_up_12_168 + 0.113875 delta_up_12_169
    + 0.09679375 delta_up_12_170 + 0.09679375 delta_up_12_171
    + 0.09679375 delta_up_12_172 + 0.03399 delta_up_12_173
    + 0.0288915 delta_up_12_174 + 0.0288915 delta_up_12_175
@@ -1596,7 +1594,7 @@ Maximize
    + 0.102325 delta_up_17_27 + 0.102325 delta_up_17_28
    + 0.169715 delta_up_17_29 + 0.14425775 delta_up_17_30
    + 0.169715 delta_up_17_31 + 0.169715 delta_up_17_32
-   + 0.570725 delta_up_17_33 + 0.4851162499999999 delta_up_17_34
+   + 0.570725 delta_up_17_33 + 0.48511625 delta_up_17_34
    + 0.570725 delta_up_17_35 + 0.570725 delta_up_17_36
    + 0.162825 delta_up_17_37 + 0.13840125 delta_up_17_38
    + 0.162825 delta_up_17_39 + 0.162825 delta_up_17_40
@@ -1635,7 +1633,7 @@ Maximize
    + 0.102325 delta_up_17_108 + 0.169715 delta_up_17_109
    + 0.14425775 delta_up_17_110 + 0.169715 delta_up_17_111
    + 0.169715 delta_up_17_112 + 0.570725 delta_up_17_113
-   + 0.4851162499999999 delta_up_17_114 + 0.570725 delta_up_17_115
+   + 0.48511625 delta_up_17_114 + 0.570725 delta_up_17_115
    + 0.570725 delta_up_17_116 + 0.162825 delta_up_17_117
    + 0.13840125 delta_up_17_118 + 0.162825 delta_up_17_119
    + 0.162825 delta_up_17_120 + 0.213725 delta_up_17_121
@@ -1675,7 +1673,7 @@ Maximize
    + 0.102325 delta_up_17_188 + 0.169715 delta_up_17_189
    + 0.14425775 delta_up_17_190 + 0.169715 delta_up_17_191
    + 0.169715 delta_up_17_192 + 0.570725 delta_up_17_193
-   + 0.4851162499999999 delta_up_17_194 + 0.570725 delta_up_17_195
+   + 0.48511625 delta_up_17_194 + 0.570725 delta_up_17_195
    + 0.570725 delta_up_17_196 + 0.162825 delta_up_17_197
    + 0.13840125 delta_up_17_198 + 0.162825 delta_up_17_199
    + 0.162825 delta_up_17_200 + 0.38327775 delta_up_18_1
@@ -1694,9 +1692,9 @@ Maximize
    + 0.08442625 delta_up_18_26 + 0.08442625 delta_up_18_27
    + 0.08442625 delta_up_18_28 + 0.1427575 delta_up_18_29
    + 0.1427575 delta_up_18_30 + 0.1427575 delta_up_18_31
-   + 0.1427575 delta_up_18_32 + 0.6297564999999999 delta_up_18_33
-   + 0.6297564999999999 delta_up_18_34 + 0.6297564999999999 delta_up_18_35
-   + 0.6297564999999999 delta_up_18_36 + 0.12529 delta_up_18_37
+   + 0.1427575 delta_up_18_32 + 0.6297565000000001 delta_up_18_33
+   + 0.6297565000000001 delta_up_18_34 + 0.6297565000000001 delta_up_18_35
+   + 0.6297565000000001 delta_up_18_36 + 0.12529 delta_up_18_37
    + 0.12529 delta_up_18_38 + 0.12529 delta_up_18_39
    + 0.12529 delta_up_18_40 + 0.13954025 delta_up_18_41
    + 0.13954025 delta_up_18_42 + 0.13954025 delta_up_18_43
@@ -1734,10 +1732,10 @@ Maximize
    + 0.08442625 delta_up_18_106 + 0.08442625 delta_up_18_107
    + 0.08442625 delta_up_18_108 + 0.1427575 delta_up_18_109
    + 0.1427575 delta_up_18_110 + 0.1427575 delta_up_18_111
-   + 0.1427575 delta_up_18_112 + 0.6297564999999999 delta_up_18_113
-   + 0.6297564999999999 delta_up_18_114
-   + 0.6297564999999999 delta_up_18_115
-   + 0.6297564999999999 delta_up_18_116 + 0.12529 delta_up_18_117
+   + 0.1427575 delta_up_18_112 + 0.6297565000000001 delta_up_18_113
+   + 0.6297565000000001 delta_up_18_114
+   + 0.6297565000000001 delta_up_18_115
+   + 0.6297565000000001 delta_up_18_116 + 0.12529 delta_up_18_117
    + 0.12529 delta_up_18_118 + 0.12529 delta_up_18_119
    + 0.12529 delta_up_18_120 + 0.13954025 delta_up_18_121
    + 0.13954025 delta_up_18_122 + 0.13954025 delta_up_18_123
@@ -1777,10 +1775,10 @@ Maximize
    + 0.08442625 delta_up_18_186 + 0.08442625 delta_up_18_187
    + 0.08442625 delta_up_18_188 + 0.1427575 delta_up_18_189
    + 0.1427575 delta_up_18_190 + 0.1427575 delta_up_18_191
-   + 0.1427575 delta_up_18_192 + 0.6297564999999999 delta_up_18_193
-   + 0.6297564999999999 delta_up_18_194
-   + 0.6297564999999999 delta_up_18_195
-   + 0.6297564999999999 delta_up_18_196 + 0.12529 delta_up_18_197
+   + 0.1427575 delta_up_18_192 + 0.6297565000000001 delta_up_18_193
+   + 0.6297565000000001 delta_up_18_194
+   + 0.6297565000000001 delta_up_18_195
+   + 0.6297565000000001 delta_up_18_196 + 0.12529 delta_up_18_197
    + 0.12529 delta_up_18_198 + 0.12529 delta_up_18_199
    + 0.12529 delta_up_18_200 + 0.40341 delta_up_19_1 + 0.4746 delta_up_19_2
    + 0.40341 delta_up_19_3 + 0.4746 delta_up_19_4 + 0.6304025 delta_up_19_5
@@ -1992,7 +1990,7 @@ Maximize
    + 0.151265 delta_up_21_30 + 0.151265 delta_up_21_31
    + 0.12857525 delta_up_21_32 + 0.38139 delta_up_21_33
    + 0.38139 delta_up_21_34 + 0.38139 delta_up_21_35
-   + 0.3241815 delta_up_21_36 + 0.122475 delta_up_21_37
+   + 0.3241815000000001 delta_up_21_36 + 0.122475 delta_up_21_37
    + 0.122475 delta_up_21_38 + 0.122475 delta_up_21_39
    + 0.10410375 delta_up_21_40 + 0.116125 delta_up_21_41
    + 0.116125 delta_up_21_42 + 0.116125 delta_up_21_43
@@ -2031,7 +2029,7 @@ Maximize
    + 0.151265 delta_up_21_109 + 0.151265 delta_up_21_110
    + 0.151265 delta_up_21_111 + 0.12857525 delta_up_21_112
    + 0.38139 delta_up_21_113 + 0.38139 delta_up_21_114
-   + 0.38139 delta_up_21_115 + 0.3241815 delta_up_21_116
+   + 0.38139 delta_up_21_115 + 0.3241815000000001 delta_up_21_116
    + 0.122475 delta_up_21_117 + 0.122475 delta_up_21_118
    + 0.122475 delta_up_21_119 + 0.10410375 delta_up_21_120
    + 0.116125 delta_up_21_121 + 0.116125 delta_up_21_122
@@ -2071,7 +2069,7 @@ Maximize
    + 0.151265 delta_up_21_189 + 0.151265 delta_up_21_190
    + 0.151265 delta_up_21_191 + 0.12857525 delta_up_21_192
    + 0.38139 delta_up_21_193 + 0.38139 delta_up_21_194
-   + 0.38139 delta_up_21_195 + 0.3241815 delta_up_21_196
+   + 0.38139 delta_up_21_195 + 0.3241815000000001 delta_up_21_196
    + 0.122475 delta_up_21_197 + 0.122475 delta_up_21_198
    + 0.122475 delta_up_21_199 + 0.10410375 delta_up_21_200
    + 0.31714775 delta_up_22_1 + 0.31714775 delta_up_22_2
@@ -2374,8 +2372,8 @@ Maximize
    - 0.46646875 delta_down_1_3 - 0.373175 delta_down_1_4
    - 0.263625 delta_down_1_5 - 0.32953125 delta_down_1_6
    - 0.32953125 delta_down_1_7 - 0.263625 delta_down_1_8
-   - 0.62455 delta_down_1_9 - 0.7806875 delta_down_1_10
-   - 0.7806875 delta_down_1_11 - 0.62455 delta_down_1_12
+   - 0.62455 delta_down_1_9 - 0.7806875000000001 delta_down_1_10
+   - 0.7806875000000001 delta_down_1_11 - 0.62455 delta_down_1_12
    - 0.016175 delta_down_1_13 - 0.02021875 delta_down_1_14
    - 0.02021875 delta_down_1_15 - 0.016175 delta_down_1_16
    - 0.086825 delta_down_1_17 - 0.10853125 delta_down_1_18
@@ -2414,8 +2412,8 @@ Maximize
    - 0.46646875 delta_down_1_83 - 0.373175 delta_down_1_84
    - 0.263625 delta_down_1_85 - 0.32953125 delta_down_1_86
    - 0.32953125 delta_down_1_87 - 0.263625 delta_down_1_88
-   - 0.62455 delta_down_1_89 - 0.7806875 delta_down_1_90
-   - 0.7806875 delta_down_1_91 - 0.62455 delta_down_1_92
+   - 0.62455 delta_down_1_89 - 0.7806875000000001 delta_down_1_90
+   - 0.7806875000000001 delta_down_1_91 - 0.62455 delta_down_1_92
    - 0.016175 delta_down_1_93 - 0.02021875 delta_down_1_94
    - 0.02021875 delta_down_1_95 - 0.016175 delta_down_1_96
    - 0.086825 delta_down_1_97 - 0.10853125 delta_down_1_98
@@ -2454,8 +2452,8 @@ Maximize
    - 0.46646875 delta_down_1_163 - 0.373175 delta_down_1_164
    - 0.263625 delta_down_1_165 - 0.32953125 delta_down_1_166
    - 0.32953125 delta_down_1_167 - 0.263625 delta_down_1_168
-   - 0.62455 delta_down_1_169 - 0.7806875 delta_down_1_170
-   - 0.7806875 delta_down_1_171 - 0.62455 delta_down_1_172
+   - 0.62455 delta_down_1_169 - 0.7806875000000001 delta_down_1_170
+   - 0.7806875000000001 delta_down_1_171 - 0.62455 delta_down_1_172
    - 0.016175 delta_down_1_173 - 0.02021875 delta_down_1_174
    - 0.02021875 delta_down_1_175 - 0.016175 delta_down_1_176
    - 0.086825 delta_down_1_177 - 0.10853125 delta_down_1_178
@@ -2670,7 +2668,7 @@ Maximize
    - 0.22534375 delta_down_3_195 - 0.22534375 delta_down_3_196
    - 0.095975 delta_down_3_197 - 0.095975 delta_down_3_198
    - 0.11996875 delta_down_3_199 - 0.11996875 delta_down_3_200
-   - 0.5254374999999999 delta_down_4_1 - 0.5254374999999999 delta_down_4_2
+   - 0.5254375 delta_down_4_1 - 0.5254375 delta_down_4_2
    - 0.42035 delta_down_4_3 - 0.42035 delta_down_4_4
    - 0.34864375 delta_down_4_5 - 0.34864375 delta_down_4_6
    - 0.278915 delta_down_4_7 - 0.278915 delta_down_4_8
@@ -2710,408 +2708,405 @@ Maximize
    - 0.010025 delta_down_4_75 - 0.010025 delta_down_4_76
    - 0.15684375 delta_down_4_77 - 0.15684375 delta_down_4_78
    - 0.125475 delta_down_4_79 - 0.125475 delta_down_4_80
-   - 0.5254374999999999 delta_down_4_81
-   - 0.5254374999999999 delta_down_4_82 - 0.42035 delta_down_4_83
-   - 0.42035 delta_down_4_84 - 0.34864375 delta_down_4_85
-   - 0.34864375 delta_down_4_86 - 0.278915 delta_down_4_87
-   - 0.278915 delta_down_4_88 - 0.2048125 delta_down_4_89
-   - 0.2048125 delta_down_4_90 - 0.16385 delta_down_4_91
-   - 0.16385 delta_down_4_92 - 0.01359375 delta_down_4_93
-   - 0.01359375 delta_down_4_94 - 0.010875 delta_down_4_95
-   - 0.010875 delta_down_4_96 - 0.1248125 delta_down_4_97
-   - 0.1248125 delta_down_4_98 - 0.09985 delta_down_4_99
-   - 0.09985 delta_down_4_100 - 0.10858125 delta_down_4_101
-   - 0.10858125 delta_down_4_102 - 0.086865 delta_down_4_103
-   - 0.086865 delta_down_4_104 - 0.10439375 delta_down_4_105
-   - 0.10439375 delta_down_4_106 - 0.083515 delta_down_4_107
-   - 0.083515 delta_down_4_108 - 0.11840625 delta_down_4_109
-   - 0.11840625 delta_down_4_110 - 0.094725 delta_down_4_111
-   - 0.094725 delta_down_4_112 - 0.22620625 delta_down_4_113
-   - 0.22620625 delta_down_4_114 - 0.180965 delta_down_4_115
-   - 0.180965 delta_down_4_116 - 0.12328125 delta_down_4_117
-   - 0.12328125 delta_down_4_118 - 0.098625 delta_down_4_119
-   - 0.098625 delta_down_4_120 - 0.16205 delta_down_4_121
-   - 0.16205 delta_down_4_122 - 0.12964 delta_down_4_123
-   - 0.12964 delta_down_4_124 - 0.0404375 delta_down_4_125
-   - 0.0404375 delta_down_4_126 - 0.03235 delta_down_4_127
-   - 0.03235 delta_down_4_128 - 0.0121875 delta_down_4_129
-   - 0.0121875 delta_down_4_130 - 0.00975 delta_down_4_131
-   - 0.00975 delta_down_4_132 - 0.03351875 delta_down_4_133
-   - 0.03351875 delta_down_4_134 - 0.026815 delta_down_4_135
-   - 0.026815 delta_down_4_136 - 0.202375 delta_down_4_137
-   - 0.202375 delta_down_4_138 - 0.1619 delta_down_4_139
-   - 0.1619 delta_down_4_140 - 0.10083125 delta_down_4_141
-   - 0.10083125 delta_down_4_142 - 0.080665 delta_down_4_143
-   - 0.080665 delta_down_4_144 - 0.11645625 delta_down_4_145
-   - 0.11645625 delta_down_4_146 - 0.093165 delta_down_4_147
-   - 0.093165 delta_down_4_148 - 0.00284375 delta_down_4_149
-   - 0.00284375 delta_down_4_150 - 0.002275 delta_down_4_151
-   - 0.002275 delta_down_4_152 - 0.01253125 delta_down_4_153
-   - 0.01253125 delta_down_4_154 - 0.010025 delta_down_4_155
-   - 0.010025 delta_down_4_156 - 0.15684375 delta_down_4_157
-   - 0.15684375 delta_down_4_158 - 0.125475 delta_down_4_159
-   - 0.125475 delta_down_4_160 - 0.5254374999999999 delta_down_4_161
-   - 0.5254374999999999 delta_down_4_162 - 0.42035 delta_down_4_163
-   - 0.42035 delta_down_4_164 - 0.34864375 delta_down_4_165
-   - 0.34864375 delta_down_4_166 - 0.278915 delta_down_4_167
-   - 0.278915 delta_down_4_168 - 0.2048125 delta_down_4_169
-   - 0.2048125 delta_down_4_170 - 0.16385 delta_down_4_171
-   - 0.16385 delta_down_4_172 - 0.01359375 delta_down_4_173
-   - 0.01359375 delta_down_4_174 - 0.010875 delta_down_4_175
-   - 0.010875 delta_down_4_176 - 0.1248125 delta_down_4_177
-   - 0.1248125 delta_down_4_178 - 0.09985 delta_down_4_179
-   - 0.09985 delta_down_4_180 - 0.10858125 delta_down_4_181
-   - 0.10858125 delta_down_4_182 - 0.086865 delta_down_4_183
-   - 0.086865 delta_down_4_184 - 0.10439375 delta_down_4_185
-   - 0.10439375 delta_down_4_186 - 0.083515 delta_down_4_187
-   - 0.083515 delta_down_4_188 - 0.11840625 delta_down_4_189
-   - 0.11840625 delta_down_4_190 - 0.094725 delta_down_4_191
-   - 0.094725 delta_down_4_192 - 0.22620625 delta_down_4_193
-   - 0.22620625 delta_down_4_194 - 0.180965 delta_down_4_195
-   - 0.180965 delta_down_4_196 - 0.12328125 delta_down_4_197
-   - 0.12328125 delta_down_4_198 - 0.098625 delta_down_4_199
-   - 0.098625 delta_down_4_200 - 0.437365 delta_down_5_1
-   - 0.437365 delta_down_5_2 - 0.437365 delta_down_5_3
-   - 0.437365 delta_down_5_4 - 0.32164 delta_down_5_5
-   - 0.32164 delta_down_5_6 - 0.32164 delta_down_5_7
-   - 0.32164 delta_down_5_8 - 0.124115 delta_down_5_9
-   - 0.124115 delta_down_5_10 - 0.124115 delta_down_5_11
-   - 0.124115 delta_down_5_12 - 0.014075 delta_down_5_13
-   - 0.014075 delta_down_5_14 - 0.014075 delta_down_5_15
-   - 0.014075 delta_down_5_16 - 0.11659 delta_down_5_17
-   - 0.11659 delta_down_5_18 - 0.11659 delta_down_5_19
-   - 0.11659 delta_down_5_20 - 0.077665 delta_down_5_21
-   - 0.077665 delta_down_5_22 - 0.077665 delta_down_5_23
-   - 0.077665 delta_down_5_24 - 0.09584 delta_down_5_25
-   - 0.09584 delta_down_5_26 - 0.09584 delta_down_5_27
-   - 0.09584 delta_down_5_28 - 0.09729 delta_down_5_29
-   - 0.09729 delta_down_5_30 - 0.09729 delta_down_5_31
-   - 0.09729 delta_down_5_32 - 0.190725 delta_down_5_33
-   - 0.190725 delta_down_5_34 - 0.190725 delta_down_5_35
-   - 0.190725 delta_down_5_36 - 0.103565 delta_down_5_37
-   - 0.103565 delta_down_5_38 - 0.103565 delta_down_5_39
-   - 0.103565 delta_down_5_40 - 0.13864 delta_down_5_41
-   - 0.13864 delta_down_5_42 - 0.13864 delta_down_5_43
-   - 0.13864 delta_down_5_44 - 0.03824 delta_down_5_45
-   - 0.03824 delta_down_5_46 - 0.03824 delta_down_5_47
-   - 0.03824 delta_down_5_48 - 0.0097 delta_down_5_49
-   - 0.0097 delta_down_5_50 - 0.0097 delta_down_5_51
-   - 0.0097 delta_down_5_52 - 0.041525 delta_down_5_53
-   - 0.041525 delta_down_5_54 - 0.041525 delta_down_5_55
-   - 0.041525 delta_down_5_56 - 0.16974 delta_down_5_57
-   - 0.16974 delta_down_5_58 - 0.16974 delta_down_5_59
-   - 0.16974 delta_down_5_60 - 0.09165 delta_down_5_61
-   - 0.09165 delta_down_5_62 - 0.09165 delta_down_5_63
-   - 0.09165 delta_down_5_64 - 0.098725 delta_down_5_65
-   - 0.098725 delta_down_5_66 - 0.098725 delta_down_5_67
-   - 0.098725 delta_down_5_68 - 0.0082 delta_down_5_69
-   - 0.0082 delta_down_5_70 - 0.0082 delta_down_5_71
-   - 0.0082 delta_down_5_72 - 0.011165 delta_down_5_73
-   - 0.011165 delta_down_5_74 - 0.011165 delta_down_5_75
-   - 0.011165 delta_down_5_76 - 0.150025 delta_down_5_77
-   - 0.150025 delta_down_5_78 - 0.150025 delta_down_5_79
-   - 0.150025 delta_down_5_80 - 0.437365 delta_down_5_81
-   - 0.437365 delta_down_5_82 - 0.437365 delta_down_5_83
-   - 0.437365 delta_down_5_84 - 0.32164 delta_down_5_85
-   - 0.32164 delta_down_5_86 - 0.32164 delta_down_5_87
-   - 0.32164 delta_down_5_88 - 0.124115 delta_down_5_89
-   - 0.124115 delta_down_5_90 - 0.124115 delta_down_5_91
-   - 0.124115 delta_down_5_92 - 0.014075 delta_down_5_93
-   - 0.014075 delta_down_5_94 - 0.014075 delta_down_5_95
-   - 0.014075 delta_down_5_96 - 0.11659 delta_down_5_97
-   - 0.11659 delta_down_5_98 - 0.11659 delta_down_5_99
-   - 0.11659 delta_down_5_100 - 0.077665 delta_down_5_101
-   - 0.077665 delta_down_5_102 - 0.077665 delta_down_5_103
-   - 0.077665 delta_down_5_104 - 0.09584 delta_down_5_105
-   - 0.09584 delta_down_5_106 - 0.09584 delta_down_5_107
-   - 0.09584 delta_down_5_108 - 0.09729 delta_down_5_109
-   - 0.09729 delta_down_5_110 - 0.09729 delta_down_5_111
-   - 0.09729 delta_down_5_112 - 0.190725 delta_down_5_113
-   - 0.190725 delta_down_5_114 - 0.190725 delta_down_5_115
-   - 0.190725 delta_down_5_116 - 0.103565 delta_down_5_117
-   - 0.103565 delta_down_5_118 - 0.103565 delta_down_5_119
-   - 0.103565 delta_down_5_120 - 0.13864 delta_down_5_121
-   - 0.13864 delta_down_5_122 - 0.13864 delta_down_5_123
-   - 0.13864 delta_down_5_124 - 0.03824 delta_down_5_125
-   - 0.03824 delta_down_5_126 - 0.03824 delta_down_5_127
-   - 0.03824 delta_down_5_128 - 0.0097 delta_down_5_129
-   - 0.0097 delta_down_5_130 - 0.0097 delta_down_5_131
-   - 0.0097 delta_down_5_132 - 0.041525 delta_down_5_133
-   - 0.041525 delta_down_5_134 - 0.041525 delta_down_5_135
-   - 0.041525 delta_down_5_136 - 0.16974 delta_down_5_137
-   - 0.16974 delta_down_5_138 - 0.16974 delta_down_5_139
-   - 0.16974 delta_down_5_140 - 0.09165 delta_down_5_141
-   - 0.09165 delta_down_5_142 - 0.09165 delta_down_5_143
-   - 0.09165 delta_down_5_144 - 0.098725 delta_down_5_145
-   - 0.098725 delta_down_5_146 - 0.098725 delta_down_5_147
-   - 0.098725 delta_down_5_148 - 0.0082 delta_down_5_149
-   - 0.0082 delta_down_5_150 - 0.0082 delta_down_5_151
-   - 0.0082 delta_down_5_152 - 0.011165 delta_down_5_153
-   - 0.011165 delta_down_5_154 - 0.011165 delta_down_5_155
-   - 0.011165 delta_down_5_156 - 0.150025 delta_down_5_157
-   - 0.150025 delta_down_5_158 - 0.150025 delta_down_5_159
-   - 0.150025 delta_down_5_160 - 0.437365 delta_down_5_161
-   - 0.437365 delta_down_5_162 - 0.437365 delta_down_5_163
-   - 0.437365 delta_down_5_164 - 0.32164 delta_down_5_165
-   - 0.32164 delta_down_5_166 - 0.32164 delta_down_5_167
-   - 0.32164 delta_down_5_168 - 0.124115 delta_down_5_169
-   - 0.124115 delta_down_5_170 - 0.124115 delta_down_5_171
-   - 0.124115 delta_down_5_172 - 0.014075 delta_down_5_173
-   - 0.014075 delta_down_5_174 - 0.014075 delta_down_5_175
-   - 0.014075 delta_down_5_176 - 0.11659 delta_down_5_177
-   - 0.11659 delta_down_5_178 - 0.11659 delta_down_5_179
-   - 0.11659 delta_down_5_180 - 0.077665 delta_down_5_181
-   - 0.077665 delta_down_5_182 - 0.077665 delta_down_5_183
-   - 0.077665 delta_down_5_184 - 0.09584 delta_down_5_185
-   - 0.09584 delta_down_5_186 - 0.09584 delta_down_5_187
-   - 0.09584 delta_down_5_188 - 0.09729 delta_down_5_189
-   - 0.09729 delta_down_5_190 - 0.09729 delta_down_5_191
-   - 0.09729 delta_down_5_192 - 0.190725 delta_down_5_193
-   - 0.190725 delta_down_5_194 - 0.190725 delta_down_5_195
-   - 0.190725 delta_down_5_196 - 0.103565 delta_down_5_197
-   - 0.103565 delta_down_5_198 - 0.103565 delta_down_5_199
-   - 0.103565 delta_down_5_200 - 0.514325 delta_down_6_1
-   - 0.6429062499999999 delta_down_6_2 - 0.6429062499999999 delta_down_6_3
-   - 0.6429062499999999 delta_down_6_4 - 0.454615 delta_down_6_5
-   - 0.56826875 delta_down_6_6 - 0.56826875 delta_down_6_7
-   - 0.56826875 delta_down_6_8 - 0.11615 delta_down_6_9
-   - 0.1451875 delta_down_6_10 - 0.1451875 delta_down_6_11
-   - 0.1451875 delta_down_6_12 - 0.017425 delta_down_6_13
-   - 0.02178125 delta_down_6_14 - 0.02178125 delta_down_6_15
-   - 0.02178125 delta_down_6_16 - 0.195015 delta_down_6_17
-   - 0.24376875 delta_down_6_18 - 0.24376875 delta_down_6_19
-   - 0.24376875 delta_down_6_20 - 0.081425 delta_down_6_21
-   - 0.10178125 delta_down_6_22 - 0.10178125 delta_down_6_23
-   - 0.10178125 delta_down_6_24 - 0.1018 delta_down_6_25
-   - 0.12725 delta_down_6_26 - 0.12725 delta_down_6_27
-   - 0.12725 delta_down_6_28 - 0.10194 delta_down_6_29
-   - 0.127425 delta_down_6_30 - 0.127425 delta_down_6_31
-   - 0.127425 delta_down_6_32 - 0.219965 delta_down_6_33
-   - 0.27495625 delta_down_6_34 - 0.27495625 delta_down_6_35
-   - 0.27495625 delta_down_6_36 - 0.16964 delta_down_6_37
-   - 0.21205 delta_down_6_38 - 0.21205 delta_down_6_39
-   - 0.21205 delta_down_6_40 - 0.17525 delta_down_6_41
-   - 0.2190625 delta_down_6_42 - 0.2190625 delta_down_6_43
-   - 0.2190625 delta_down_6_44 - 0.07544 delta_down_6_45
-   - 0.0943 delta_down_6_46 - 0.0943 delta_down_6_47
-   - 0.0943 delta_down_6_48 - 0.012125 delta_down_6_49
-   - 0.01515625 delta_down_6_50 - 0.01515625 delta_down_6_51
-   - 0.01515625 delta_down_6_52 - 0.049775 delta_down_6_53
-   - 0.06221875 delta_down_6_54 - 0.06221875 delta_down_6_55
-   - 0.06221875 delta_down_6_56 - 0.18595 delta_down_6_57
-   - 0.2324375 delta_down_6_58 - 0.2324375 delta_down_6_59
-   - 0.2324375 delta_down_6_60 - 0.118965 delta_down_6_61
-   - 0.14870625 delta_down_6_62 - 0.14870625 delta_down_6_63
-   - 0.14870625 delta_down_6_64 - 0.126315 delta_down_6_65
-   - 0.15789375 delta_down_6_66 - 0.15789375 delta_down_6_67
-   - 0.15789375 delta_down_6_68 - 0.01014 delta_down_6_69
-   - 0.012675 delta_down_6_70 - 0.012675 delta_down_6_71
-   - 0.012675 delta_down_6_72 - 0.022315 delta_down_6_73
-   - 0.02789375 delta_down_6_74 - 0.02789375 delta_down_6_75
-   - 0.02789375 delta_down_6_76 - 0.301665 delta_down_6_77
-   - 0.37708125 delta_down_6_78 - 0.37708125 delta_down_6_79
-   - 0.37708125 delta_down_6_80 - 0.514325 delta_down_6_81
-   - 0.6429062499999999 delta_down_6_82
-   - 0.6429062499999999 delta_down_6_83
-   - 0.6429062499999999 delta_down_6_84 - 0.454615 delta_down_6_85
-   - 0.56826875 delta_down_6_86 - 0.56826875 delta_down_6_87
-   - 0.56826875 delta_down_6_88 - 0.11615 delta_down_6_89
-   - 0.1451875 delta_down_6_90 - 0.1451875 delta_down_6_91
-   - 0.1451875 delta_down_6_92 - 0.017425 delta_down_6_93
-   - 0.02178125 delta_down_6_94 - 0.02178125 delta_down_6_95
-   - 0.02178125 delta_down_6_96 - 0.195015 delta_down_6_97
-   - 0.24376875 delta_down_6_98 - 0.24376875 delta_down_6_99
-   - 0.24376875 delta_down_6_100 - 0.081425 delta_down_6_101
-   - 0.10178125 delta_down_6_102 - 0.10178125 delta_down_6_103
-   - 0.10178125 delta_down_6_104 - 0.1018 delta_down_6_105
-   - 0.12725 delta_down_6_106 - 0.12725 delta_down_6_107
-   - 0.12725 delta_down_6_108 - 0.10194 delta_down_6_109
-   - 0.127425 delta_down_6_110 - 0.127425 delta_down_6_111
-   - 0.127425 delta_down_6_112 - 0.219965 delta_down_6_113
-   - 0.27495625 delta_down_6_114 - 0.27495625 delta_down_6_115
-   - 0.27495625 delta_down_6_116 - 0.16964 delta_down_6_117
-   - 0.21205 delta_down_6_118 - 0.21205 delta_down_6_119
-   - 0.21205 delta_down_6_120 - 0.17525 delta_down_6_121
-   - 0.2190625 delta_down_6_122 - 0.2190625 delta_down_6_123
-   - 0.2190625 delta_down_6_124 - 0.07544 delta_down_6_125
-   - 0.0943 delta_down_6_126 - 0.0943 delta_down_6_127
-   - 0.0943 delta_down_6_128 - 0.012125 delta_down_6_129
-   - 0.01515625 delta_down_6_130 - 0.01515625 delta_down_6_131
-   - 0.01515625 delta_down_6_132 - 0.049775 delta_down_6_133
-   - 0.06221875 delta_down_6_134 - 0.06221875 delta_down_6_135
-   - 0.06221875 delta_down_6_136 - 0.18595 delta_down_6_137
-   - 0.2324375 delta_down_6_138 - 0.2324375 delta_down_6_139
-   - 0.2324375 delta_down_6_140 - 0.118965 delta_down_6_141
-   - 0.14870625 delta_down_6_142 - 0.14870625 delta_down_6_143
-   - 0.14870625 delta_down_6_144 - 0.126315 delta_down_6_145
-   - 0.15789375 delta_down_6_146 - 0.15789375 delta_down_6_147
-   - 0.15789375 delta_down_6_148 - 0.01014 delta_down_6_149
-   - 0.012675 delta_down_6_150 - 0.012675 delta_down_6_151
-   - 0.012675 delta_down_6_152 - 0.022315 delta_down_6_153
-   - 0.02789375 delta_down_6_154 - 0.02789375 delta_down_6_155
-   - 0.02789375 delta_down_6_156 - 0.301665 delta_down_6_157
-   - 0.37708125 delta_down_6_158 - 0.37708125 delta_down_6_159
-   - 0.37708125 delta_down_6_160 - 0.514325 delta_down_6_161
-   - 0.6429062499999999 delta_down_6_162
-   - 0.6429062499999999 delta_down_6_163
-   - 0.6429062499999999 delta_down_6_164 - 0.454615 delta_down_6_165
-   - 0.56826875 delta_down_6_166 - 0.56826875 delta_down_6_167
-   - 0.56826875 delta_down_6_168 - 0.11615 delta_down_6_169
-   - 0.1451875 delta_down_6_170 - 0.1451875 delta_down_6_171
-   - 0.1451875 delta_down_6_172 - 0.017425 delta_down_6_173
-   - 0.02178125 delta_down_6_174 - 0.02178125 delta_down_6_175
-   - 0.02178125 delta_down_6_176 - 0.195015 delta_down_6_177
-   - 0.24376875 delta_down_6_178 - 0.24376875 delta_down_6_179
-   - 0.24376875 delta_down_6_180 - 0.081425 delta_down_6_181
-   - 0.10178125 delta_down_6_182 - 0.10178125 delta_down_6_183
-   - 0.10178125 delta_down_6_184 - 0.1018 delta_down_6_185
-   - 0.12725 delta_down_6_186 - 0.12725 delta_down_6_187
-   - 0.12725 delta_down_6_188 - 0.10194 delta_down_6_189
-   - 0.127425 delta_down_6_190 - 0.127425 delta_down_6_191
-   - 0.127425 delta_down_6_192 - 0.219965 delta_down_6_193
-   - 0.27495625 delta_down_6_194 - 0.27495625 delta_down_6_195
-   - 0.27495625 delta_down_6_196 - 0.16964 delta_down_6_197
-   - 0.21205 delta_down_6_198 - 0.21205 delta_down_6_199
-   - 0.21205 delta_down_6_200 - 0.57521875 delta_down_7_1
-   - 0.460175 delta_down_7_2 - 0.57521875 delta_down_7_3
-   - 0.460175 delta_down_7_4 - 0.56564375 delta_down_7_5
-   - 0.452515 delta_down_7_6 - 0.56564375 delta_down_7_7
-   - 0.452515 delta_down_7_8 - 0.11559375 delta_down_7_9
-   - 0.092475 delta_down_7_10 - 0.11559375 delta_down_7_11
-   - 0.092475 delta_down_7_12 - 0.031625 delta_down_7_13
-   - 0.0253 delta_down_7_14 - 0.031625 delta_down_7_15
-   - 0.0253 delta_down_7_16 - 0.2577375 delta_down_7_17
-   - 0.20619 delta_down_7_18 - 0.2577375 delta_down_7_19
-   - 0.20619 delta_down_7_20 - 0.09328125 delta_down_7_21
-   - 0.074625 delta_down_7_22 - 0.09328125 delta_down_7_23
-   - 0.074625 delta_down_7_24 - 0.14108125 delta_down_7_25
-   - 0.112865 delta_down_7_26 - 0.14108125 delta_down_7_27
-   - 0.112865 delta_down_7_28 - 0.13053125 delta_down_7_29
-   - 0.104425 delta_down_7_30 - 0.13053125 delta_down_7_31
-   - 0.104425 delta_down_7_32 - 0.3765625 delta_down_7_33
-   - 0.30125 delta_down_7_34 - 0.3765625 delta_down_7_35
-   - 0.30125 delta_down_7_36 - 0.2574875 delta_down_7_37
-   - 0.20599 delta_down_7_38 - 0.2574875 delta_down_7_39
-   - 0.20599 delta_down_7_40 - 0.2432375 delta_down_7_41
-   - 0.19459 delta_down_7_42 - 0.2432375 delta_down_7_43
-   - 0.19459 delta_down_7_44 - 0.113675 delta_down_7_45
-   - 0.09094 delta_down_7_46 - 0.113675 delta_down_7_47
-   - 0.09094 delta_down_7_48 - 0.02371875 delta_down_7_49
-   - 0.018975 delta_down_7_50 - 0.02371875 delta_down_7_51
-   - 0.018975 delta_down_7_52 - 0.06708125 delta_down_7_53
-   - 0.053665 delta_down_7_54 - 0.06708125 delta_down_7_55
-   - 0.053665 delta_down_7_56 - 0.22501875 delta_down_7_57
-   - 0.180015 delta_down_7_58 - 0.22501875 delta_down_7_59
-   - 0.180015 delta_down_7_60 - 0.1881875 delta_down_7_61
-   - 0.15055 delta_down_7_62 - 0.1881875 delta_down_7_63
-   - 0.15055 delta_down_7_64 - 0.23565625 delta_down_7_65
-   - 0.188525 delta_down_7_66 - 0.23565625 delta_down_7_67
-   - 0.188525 delta_down_7_68 - 0.02925 delta_down_7_69
-   - 0.0234 delta_down_7_70 - 0.02925 delta_down_7_71
-   - 0.0234 delta_down_7_72 - 0.03628125 delta_down_7_73
-   - 0.029025 delta_down_7_74 - 0.03628125 delta_down_7_75
-   - 0.029025 delta_down_7_76 - 0.57475 delta_down_7_77
-   - 0.4598 delta_down_7_78 - 0.57475 delta_down_7_79
-   - 0.4598 delta_down_7_80 - 0.57521875 delta_down_7_81
-   - 0.460175 delta_down_7_82 - 0.57521875 delta_down_7_83
-   - 0.460175 delta_down_7_84 - 0.56564375 delta_down_7_85
-   - 0.452515 delta_down_7_86 - 0.56564375 delta_down_7_87
-   - 0.452515 delta_down_7_88 - 0.11559375 delta_down_7_89
-   - 0.092475 delta_down_7_90 - 0.11559375 delta_down_7_91
-   - 0.092475 delta_down_7_92 - 0.031625 delta_down_7_93
-   - 0.0253 delta_down_7_94 - 0.031625 delta_down_7_95
-   - 0.0253 delta_down_7_96 - 0.2577375 delta_down_7_97
-   - 0.20619 delta_down_7_98 - 0.2577375 delta_down_7_99
-   - 0.20619 delta_down_7_100 - 0.09328125 delta_down_7_101
-   - 0.074625 delta_down_7_102 - 0.09328125 delta_down_7_103
-   - 0.074625 delta_down_7_104 - 0.14108125 delta_down_7_105
-   - 0.112865 delta_down_7_106 - 0.14108125 delta_down_7_107
-   - 0.112865 delta_down_7_108 - 0.13053125 delta_down_7_109
-   - 0.104425 delta_down_7_110 - 0.13053125 delta_down_7_111
-   - 0.104425 delta_down_7_112 - 0.3765625 delta_down_7_113
-   - 0.30125 delta_down_7_114 - 0.3765625 delta_down_7_115
-   - 0.30125 delta_down_7_116 - 0.2574875 delta_down_7_117
-   - 0.20599 delta_down_7_118 - 0.2574875 delta_down_7_119
-   - 0.20599 delta_down_7_120 - 0.2432375 delta_down_7_121
-   - 0.19459 delta_down_7_122 - 0.2432375 delta_down_7_123
-   - 0.19459 delta_down_7_124 - 0.113675 delta_down_7_125
-   - 0.09094 delta_down_7_126 - 0.113675 delta_down_7_127
-   - 0.09094 delta_down_7_128 - 0.02371875 delta_down_7_129
-   - 0.018975 delta_down_7_130 - 0.02371875 delta_down_7_131
-   - 0.018975 delta_down_7_132 - 0.06708125 delta_down_7_133
-   - 0.053665 delta_down_7_134 - 0.06708125 delta_down_7_135
-   - 0.053665 delta_down_7_136 - 0.22501875 delta_down_7_137
-   - 0.180015 delta_down_7_138 - 0.22501875 delta_down_7_139
-   - 0.180015 delta_down_7_140 - 0.1881875 delta_down_7_141
-   - 0.15055 delta_down_7_142 - 0.1881875 delta_down_7_143
-   - 0.15055 delta_down_7_144 - 0.23565625 delta_down_7_145
-   - 0.188525 delta_down_7_146 - 0.23565625 delta_down_7_147
-   - 0.188525 delta_down_7_148 - 0.02925 delta_down_7_149
-   - 0.0234 delta_down_7_150 - 0.02925 delta_down_7_151
-   - 0.0234 delta_down_7_152 - 0.03628125 delta_down_7_153
-   - 0.029025 delta_down_7_154 - 0.03628125 delta_down_7_155
-   - 0.029025 delta_down_7_156 - 0.57475 delta_down_7_157
-   - 0.4598 delta_down_7_158 - 0.57475 delta_down_7_159
-   - 0.4598 delta_down_7_160 - 0.57521875 delta_down_7_161
-   - 0.460175 delta_down_7_162 - 0.57521875 delta_down_7_163
-   - 0.460175 delta_down_7_164 - 0.56564375 delta_down_7_165
-   - 0.452515 delta_down_7_166 - 0.56564375 delta_down_7_167
-   - 0.452515 delta_down_7_168 - 0.11559375 delta_down_7_169
-   - 0.092475 delta_down_7_170 - 0.11559375 delta_down_7_171
-   - 0.092475 delta_down_7_172 - 0.031625 delta_down_7_173
-   - 0.0253 delta_down_7_174 - 0.031625 delta_down_7_175
-   - 0.0253 delta_down_7_176 - 0.2577375 delta_down_7_177
-   - 0.20619 delta_down_7_178 - 0.2577375 delta_down_7_179
-   - 0.20619 delta_down_7_180 - 0.09328125 delta_down_7_181
-   - 0.074625 delta_down_7_182 - 0.09328125 delta_down_7_183
-   - 0.074625 delta_down_7_184 - 0.14108125 delta_down_7_185
-   - 0.112865 delta_down_7_186 - 0.14108125 delta_down_7_187
-   - 0.112865 delta_down_7_188 - 0.13053125 delta_down_7_189
-   - 0.104425 delta_down_7_190 - 0.13053125 delta_down_7_191
-   - 0.104425 delta_down_7_192 - 0.3765625 delta_down_7_193
-   - 0.30125 delta_down_7_194 - 0.3765625 delta_down_7_195
-   - 0.30125 delta_down_7_196 - 0.2574875 delta_down_7_197
-   - 0.20599 delta_down_7_198 - 0.2574875 delta_down_7_199
-   - 0.20599 delta_down_7_200 - 0.37925 delta_down_8_1
-   - 0.37925 delta_down_8_2 - 0.4740624999999999 delta_down_8_3
-   - 0.4740624999999999 delta_down_8_4 - 0.623225 delta_down_8_5
-   - 0.623225 delta_down_8_6 - 0.7790312500000001 delta_down_8_7
-   - 0.7790312500000001 delta_down_8_8 - 0.150865 delta_down_8_9
-   - 0.150865 delta_down_8_10 - 0.18858125 delta_down_8_11
-   - 0.18858125 delta_down_8_12 - 0.02795 delta_down_8_13
-   - 0.02795 delta_down_8_14 - 0.0349375 delta_down_8_15
-   - 0.0349375 delta_down_8_16 - 0.46089 delta_down_8_17
-   - 0.46089 delta_down_8_18 - 0.5761124999999999 delta_down_8_19
-   - 0.5761124999999999 delta_down_8_20 - 0.089665 delta_down_8_21
-   - 0.089665 delta_down_8_22 - 0.11208125 delta_down_8_23
-   - 0.11208125 delta_down_8_24 - 0.11944 delta_down_8_25
-   - 0.11944 delta_down_8_26 - 0.1493 delta_down_8_27
-   - 0.1493 delta_down_8_28 - 0.12749 delta_down_8_29
-   - 0.12749 delta_down_8_30 - 0.1593625 delta_down_8_31
-   - 0.1593625 delta_down_8_32 - 0.3631 delta_down_8_33
-   - 0.3631 delta_down_8_34 - 0.453875 delta_down_8_35
-   - 0.453875 delta_down_8_36 - 0.275 delta_down_8_37
-   - 0.275 delta_down_8_38 - 0.34375 delta_down_8_39
-   - 0.34375 delta_down_8_40 - 0.23954 delta_down_8_41
-   - 0.23954 delta_down_8_42 - 0.299425 delta_down_8_43
-   - 0.299425 delta_down_8_44 - 0.114075 delta_down_8_45
-   - 0.114075 delta_down_8_46 - 0.14259375 delta_down_8_47
-   - 0.14259375 delta_down_8_48 - 0.024915 delta_down_8_49
-   - 0.024915 delta_down_8_50 - 0.03114375 delta_down_8_51
-   - 0.03114375 delta_down_8_52 - 0.06369 delta_down_8_53
-   - 0.06369 delta_down_8_54 - 0.0796125 delta_down_8_55
-   - 0.0796125 delta_down_8_56 - 0.18894 delta_down_8_57
-   - 0.18894 delta_down_8_58 - 0.236175 delta_down_8_59
-   - 0.236175 delta_down_8_60 - 0.212 delta_down_8_61
-   - 0.212 delta_down_8_62 - 0.265 delta_down_8_63 - 0.265 delta_down_8_64
-   - 0.274175 delta_down_8_65 - 0.274175 delta_down_8_66
-   - 0.34271875 delta_down_8_67 - 0.34271875 delta_down_8_68
-   - 0.022115 delta_down_8_69 - 0.022115 delta_down_8_70
-   - 0.02764375 delta_down_8_71 - 0.02764375 delta_down_8_72
-   - 0.046065 delta_down_8_73 - 0.046065 delta_down_8_74
-   - 0.05758125 delta_down_8_75 - 0.05758125 delta_down_8_76
-   - 0.505165 delta_down_8_77 - 0.505165 delta_down_8_78
-   - 0.6314562499999999 delta_down_8_79
+   - 0.5254375 delta_down_4_81 - 0.5254375 delta_down_4_82
+   - 0.42035 delta_down_4_83 - 0.42035 delta_down_4_84
+   - 0.34864375 delta_down_4_85 - 0.34864375 delta_down_4_86
+   - 0.278915 delta_down_4_87 - 0.278915 delta_down_4_88
+   - 0.2048125 delta_down_4_89 - 0.2048125 delta_down_4_90
+   - 0.16385 delta_down_4_91 - 0.16385 delta_down_4_92
+   - 0.01359375 delta_down_4_93 - 0.01359375 delta_down_4_94
+   - 0.010875 delta_down_4_95 - 0.010875 delta_down_4_96
+   - 0.1248125 delta_down_4_97 - 0.1248125 delta_down_4_98
+   - 0.09985 delta_down_4_99 - 0.09985 delta_down_4_100
+   - 0.10858125 delta_down_4_101 - 0.10858125 delta_down_4_102
+   - 0.086865 delta_down_4_103 - 0.086865 delta_down_4_104
+   - 0.10439375 delta_down_4_105 - 0.10439375 delta_down_4_106
+   - 0.083515 delta_down_4_107 - 0.083515 delta_down_4_108
+   - 0.11840625 delta_down_4_109 - 0.11840625 delta_down_4_110
+   - 0.094725 delta_down_4_111 - 0.094725 delta_down_4_112
+   - 0.22620625 delta_down_4_113 - 0.22620625 delta_down_4_114
+   - 0.180965 delta_down_4_115 - 0.180965 delta_down_4_116
+   - 0.12328125 delta_down_4_117 - 0.12328125 delta_down_4_118
+   - 0.098625 delta_down_4_119 - 0.098625 delta_down_4_120
+   - 0.16205 delta_down_4_121 - 0.16205 delta_down_4_122
+   - 0.12964 delta_down_4_123 - 0.12964 delta_down_4_124
+   - 0.0404375 delta_down_4_125 - 0.0404375 delta_down_4_126
+   - 0.03235 delta_down_4_127 - 0.03235 delta_down_4_128
+   - 0.0121875 delta_down_4_129 - 0.0121875 delta_down_4_130
+   - 0.00975 delta_down_4_131 - 0.00975 delta_down_4_132
+   - 0.03351875 delta_down_4_133 - 0.03351875 delta_down_4_134
+   - 0.026815 delta_down_4_135 - 0.026815 delta_down_4_136
+   - 0.202375 delta_down_4_137 - 0.202375 delta_down_4_138
+   - 0.1619 delta_down_4_139 - 0.1619 delta_down_4_140
+   - 0.10083125 delta_down_4_141 - 0.10083125 delta_down_4_142
+   - 0.080665 delta_down_4_143 - 0.080665 delta_down_4_144
+   - 0.11645625 delta_down_4_145 - 0.11645625 delta_down_4_146
+   - 0.093165 delta_down_4_147 - 0.093165 delta_down_4_148
+   - 0.00284375 delta_down_4_149 - 0.00284375 delta_down_4_150
+   - 0.002275 delta_down_4_151 - 0.002275 delta_down_4_152
+   - 0.01253125 delta_down_4_153 - 0.01253125 delta_down_4_154
+   - 0.010025 delta_down_4_155 - 0.010025 delta_down_4_156
+   - 0.15684375 delta_down_4_157 - 0.15684375 delta_down_4_158
+   - 0.125475 delta_down_4_159 - 0.125475 delta_down_4_160
+   - 0.5254375 delta_down_4_161 - 0.5254375 delta_down_4_162
+   - 0.42035 delta_down_4_163 - 0.42035 delta_down_4_164
+   - 0.34864375 delta_down_4_165 - 0.34864375 delta_down_4_166
+   - 0.278915 delta_down_4_167 - 0.278915 delta_down_4_168
+   - 0.2048125 delta_down_4_169 - 0.2048125 delta_down_4_170
+   - 0.16385 delta_down_4_171 - 0.16385 delta_down_4_172
+   - 0.01359375 delta_down_4_173 - 0.01359375 delta_down_4_174
+   - 0.010875 delta_down_4_175 - 0.010875 delta_down_4_176
+   - 0.1248125 delta_down_4_177 - 0.1248125 delta_down_4_178
+   - 0.09985 delta_down_4_179 - 0.09985 delta_down_4_180
+   - 0.10858125 delta_down_4_181 - 0.10858125 delta_down_4_182
+   - 0.086865 delta_down_4_183 - 0.086865 delta_down_4_184
+   - 0.10439375 delta_down_4_185 - 0.10439375 delta_down_4_186
+   - 0.083515 delta_down_4_187 - 0.083515 delta_down_4_188
+   - 0.11840625 delta_down_4_189 - 0.11840625 delta_down_4_190
+   - 0.094725 delta_down_4_191 - 0.094725 delta_down_4_192
+   - 0.22620625 delta_down_4_193 - 0.22620625 delta_down_4_194
+   - 0.180965 delta_down_4_195 - 0.180965 delta_down_4_196
+   - 0.12328125 delta_down_4_197 - 0.12328125 delta_down_4_198
+   - 0.098625 delta_down_4_199 - 0.098625 delta_down_4_200
+   - 0.437365 delta_down_5_1 - 0.437365 delta_down_5_2
+   - 0.437365 delta_down_5_3 - 0.437365 delta_down_5_4
+   - 0.32164 delta_down_5_5 - 0.32164 delta_down_5_6
+   - 0.32164 delta_down_5_7 - 0.32164 delta_down_5_8
+   - 0.124115 delta_down_5_9 - 0.124115 delta_down_5_10
+   - 0.124115 delta_down_5_11 - 0.124115 delta_down_5_12
+   - 0.014075 delta_down_5_13 - 0.014075 delta_down_5_14
+   - 0.014075 delta_down_5_15 - 0.014075 delta_down_5_16
+   - 0.11659 delta_down_5_17 - 0.11659 delta_down_5_18
+   - 0.11659 delta_down_5_19 - 0.11659 delta_down_5_20
+   - 0.077665 delta_down_5_21 - 0.077665 delta_down_5_22
+   - 0.077665 delta_down_5_23 - 0.077665 delta_down_5_24
+   - 0.09584 delta_down_5_25 - 0.09584 delta_down_5_26
+   - 0.09584 delta_down_5_27 - 0.09584 delta_down_5_28
+   - 0.09729 delta_down_5_29 - 0.09729 delta_down_5_30
+   - 0.09729 delta_down_5_31 - 0.09729 delta_down_5_32
+   - 0.190725 delta_down_5_33 - 0.190725 delta_down_5_34
+   - 0.190725 delta_down_5_35 - 0.190725 delta_down_5_36
+   - 0.103565 delta_down_5_37 - 0.103565 delta_down_5_38
+   - 0.103565 delta_down_5_39 - 0.103565 delta_down_5_40
+   - 0.13864 delta_down_5_41 - 0.13864 delta_down_5_42
+   - 0.13864 delta_down_5_43 - 0.13864 delta_down_5_44
+   - 0.03824 delta_down_5_45 - 0.03824 delta_down_5_46
+   - 0.03824 delta_down_5_47 - 0.03824 delta_down_5_48
+   - 0.0097 delta_down_5_49 - 0.0097 delta_down_5_50
+   - 0.0097 delta_down_5_51 - 0.0097 delta_down_5_52
+   - 0.041525 delta_down_5_53 - 0.041525 delta_down_5_54
+   - 0.041525 delta_down_5_55 - 0.041525 delta_down_5_56
+   - 0.16974 delta_down_5_57 - 0.16974 delta_down_5_58
+   - 0.16974 delta_down_5_59 - 0.16974 delta_down_5_60
+   - 0.09165 delta_down_5_61 - 0.09165 delta_down_5_62
+   - 0.09165 delta_down_5_63 - 0.09165 delta_down_5_64
+   - 0.098725 delta_down_5_65 - 0.098725 delta_down_5_66
+   - 0.098725 delta_down_5_67 - 0.098725 delta_down_5_68
+   - 0.0082 delta_down_5_69 - 0.0082 delta_down_5_70
+   - 0.0082 delta_down_5_71 - 0.0082 delta_down_5_72
+   - 0.011165 delta_down_5_73 - 0.011165 delta_down_5_74
+   - 0.011165 delta_down_5_75 - 0.011165 delta_down_5_76
+   - 0.150025 delta_down_5_77 - 0.150025 delta_down_5_78
+   - 0.150025 delta_down_5_79 - 0.150025 delta_down_5_80
+   - 0.437365 delta_down_5_81 - 0.437365 delta_down_5_82
+   - 0.437365 delta_down_5_83 - 0.437365 delta_down_5_84
+   - 0.32164 delta_down_5_85 - 0.32164 delta_down_5_86
+   - 0.32164 delta_down_5_87 - 0.32164 delta_down_5_88
+   - 0.124115 delta_down_5_89 - 0.124115 delta_down_5_90
+   - 0.124115 delta_down_5_91 - 0.124115 delta_down_5_92
+   - 0.014075 delta_down_5_93 - 0.014075 delta_down_5_94
+   - 0.014075 delta_down_5_95 - 0.014075 delta_down_5_96
+   - 0.11659 delta_down_5_97 - 0.11659 delta_down_5_98
+   - 0.11659 delta_down_5_99 - 0.11659 delta_down_5_100
+   - 0.077665 delta_down_5_101 - 0.077665 delta_down_5_102
+   - 0.077665 delta_down_5_103 - 0.077665 delta_down_5_104
+   - 0.09584 delta_down_5_105 - 0.09584 delta_down_5_106
+   - 0.09584 delta_down_5_107 - 0.09584 delta_down_5_108
+   - 0.09729 delta_down_5_109 - 0.09729 delta_down_5_110
+   - 0.09729 delta_down_5_111 - 0.09729 delta_down_5_112
+   - 0.190725 delta_down_5_113 - 0.190725 delta_down_5_114
+   - 0.190725 delta_down_5_115 - 0.190725 delta_down_5_116
+   - 0.103565 delta_down_5_117 - 0.103565 delta_down_5_118
+   - 0.103565 delta_down_5_119 - 0.103565 delta_down_5_120
+   - 0.13864 delta_down_5_121 - 0.13864 delta_down_5_122
+   - 0.13864 delta_down_5_123 - 0.13864 delta_down_5_124
+   - 0.03824 delta_down_5_125 - 0.03824 delta_down_5_126
+   - 0.03824 delta_down_5_127 - 0.03824 delta_down_5_128
+   - 0.0097 delta_down_5_129 - 0.0097 delta_down_5_130
+   - 0.0097 delta_down_5_131 - 0.0097 delta_down_5_132
+   - 0.041525 delta_down_5_133 - 0.041525 delta_down_5_134
+   - 0.041525 delta_down_5_135 - 0.041525 delta_down_5_136
+   - 0.16974 delta_down_5_137 - 0.16974 delta_down_5_138
+   - 0.16974 delta_down_5_139 - 0.16974 delta_down_5_140
+   - 0.09165 delta_down_5_141 - 0.09165 delta_down_5_142
+   - 0.09165 delta_down_5_143 - 0.09165 delta_down_5_144
+   - 0.098725 delta_down_5_145 - 0.098725 delta_down_5_146
+   - 0.098725 delta_down_5_147 - 0.098725 delta_down_5_148
+   - 0.0082 delta_down_5_149 - 0.0082 delta_down_5_150
+   - 0.0082 delta_down_5_151 - 0.0082 delta_down_5_152
+   - 0.011165 delta_down_5_153 - 0.011165 delta_down_5_154
+   - 0.011165 delta_down_5_155 - 0.011165 delta_down_5_156
+   - 0.150025 delta_down_5_157 - 0.150025 delta_down_5_158
+   - 0.150025 delta_down_5_159 - 0.150025 delta_down_5_160
+   - 0.437365 delta_down_5_161 - 0.437365 delta_down_5_162
+   - 0.437365 delta_down_5_163 - 0.437365 delta_down_5_164
+   - 0.32164 delta_down_5_165 - 0.32164 delta_down_5_166
+   - 0.32164 delta_down_5_167 - 0.32164 delta_down_5_168
+   - 0.124115 delta_down_5_169 - 0.124115 delta_down_5_170
+   - 0.124115 delta_down_5_171 - 0.124115 delta_down_5_172
+   - 0.014075 delta_down_5_173 - 0.014075 delta_down_5_174
+   - 0.014075 delta_down_5_175 - 0.014075 delta_down_5_176
+   - 0.11659 delta_down_5_177 - 0.11659 delta_down_5_178
+   - 0.11659 delta_down_5_179 - 0.11659 delta_down_5_180
+   - 0.077665 delta_down_5_181 - 0.077665 delta_down_5_182
+   - 0.077665 delta_down_5_183 - 0.077665 delta_down_5_184
+   - 0.09584 delta_down_5_185 - 0.09584 delta_down_5_186
+   - 0.09584 delta_down_5_187 - 0.09584 delta_down_5_188
+   - 0.09729 delta_down_5_189 - 0.09729 delta_down_5_190
+   - 0.09729 delta_down_5_191 - 0.09729 delta_down_5_192
+   - 0.190725 delta_down_5_193 - 0.190725 delta_down_5_194
+   - 0.190725 delta_down_5_195 - 0.190725 delta_down_5_196
+   - 0.103565 delta_down_5_197 - 0.103565 delta_down_5_198
+   - 0.103565 delta_down_5_199 - 0.103565 delta_down_5_200
+   - 0.514325 delta_down_6_1 - 0.64290625 delta_down_6_2
+   - 0.64290625 delta_down_6_3 - 0.64290625 delta_down_6_4
+   - 0.454615 delta_down_6_5 - 0.56826875 delta_down_6_6
+   - 0.56826875 delta_down_6_7 - 0.56826875 delta_down_6_8
+   - 0.11615 delta_down_6_9 - 0.1451875 delta_down_6_10
+   - 0.1451875 delta_down_6_11 - 0.1451875 delta_down_6_12
+   - 0.017425 delta_down_6_13 - 0.02178125 delta_down_6_14
+   - 0.02178125 delta_down_6_15 - 0.02178125 delta_down_6_16
+   - 0.195015 delta_down_6_17 - 0.24376875 delta_down_6_18
+   - 0.24376875 delta_down_6_19 - 0.24376875 delta_down_6_20
+   - 0.081425 delta_down_6_21 - 0.10178125 delta_down_6_22
+   - 0.10178125 delta_down_6_23 - 0.10178125 delta_down_6_24
+   - 0.1018 delta_down_6_25 - 0.12725 delta_down_6_26
+   - 0.12725 delta_down_6_27 - 0.12725 delta_down_6_28
+   - 0.10194 delta_down_6_29 - 0.127425 delta_down_6_30
+   - 0.127425 delta_down_6_31 - 0.127425 delta_down_6_32
+   - 0.219965 delta_down_6_33 - 0.27495625 delta_down_6_34
+   - 0.27495625 delta_down_6_35 - 0.27495625 delta_down_6_36
+   - 0.16964 delta_down_6_37 - 0.21205 delta_down_6_38
+   - 0.21205 delta_down_6_39 - 0.21205 delta_down_6_40
+   - 0.17525 delta_down_6_41 - 0.2190625 delta_down_6_42
+   - 0.2190625 delta_down_6_43 - 0.2190625 delta_down_6_44
+   - 0.07544 delta_down_6_45 - 0.0943 delta_down_6_46
+   - 0.0943 delta_down_6_47 - 0.0943 delta_down_6_48
+   - 0.012125 delta_down_6_49 - 0.01515625 delta_down_6_50
+   - 0.01515625 delta_down_6_51 - 0.01515625 delta_down_6_52
+   - 0.049775 delta_down_6_53 - 0.06221875 delta_down_6_54
+   - 0.06221875 delta_down_6_55 - 0.06221875 delta_down_6_56
+   - 0.18595 delta_down_6_57 - 0.2324375 delta_down_6_58
+   - 0.2324375 delta_down_6_59 - 0.2324375 delta_down_6_60
+   - 0.118965 delta_down_6_61 - 0.14870625 delta_down_6_62
+   - 0.14870625 delta_down_6_63 - 0.14870625 delta_down_6_64
+   - 0.126315 delta_down_6_65 - 0.15789375 delta_down_6_66
+   - 0.15789375 delta_down_6_67 - 0.15789375 delta_down_6_68
+   - 0.01014 delta_down_6_69 - 0.012675 delta_down_6_70
+   - 0.012675 delta_down_6_71 - 0.012675 delta_down_6_72
+   - 0.022315 delta_down_6_73 - 0.02789375 delta_down_6_74
+   - 0.02789375 delta_down_6_75 - 0.02789375 delta_down_6_76
+   - 0.301665 delta_down_6_77 - 0.37708125 delta_down_6_78
+   - 0.37708125 delta_down_6_79 - 0.37708125 delta_down_6_80
+   - 0.514325 delta_down_6_81 - 0.64290625 delta_down_6_82
+   - 0.64290625 delta_down_6_83 - 0.64290625 delta_down_6_84
+   - 0.454615 delta_down_6_85 - 0.56826875 delta_down_6_86
+   - 0.56826875 delta_down_6_87 - 0.56826875 delta_down_6_88
+   - 0.11615 delta_down_6_89 - 0.1451875 delta_down_6_90
+   - 0.1451875 delta_down_6_91 - 0.1451875 delta_down_6_92
+   - 0.017425 delta_down_6_93 - 0.02178125 delta_down_6_94
+   - 0.02178125 delta_down_6_95 - 0.02178125 delta_down_6_96
+   - 0.195015 delta_down_6_97 - 0.24376875 delta_down_6_98
+   - 0.24376875 delta_down_6_99 - 0.24376875 delta_down_6_100
+   - 0.081425 delta_down_6_101 - 0.10178125 delta_down_6_102
+   - 0.10178125 delta_down_6_103 - 0.10178125 delta_down_6_104
+   - 0.1018 delta_down_6_105 - 0.12725 delta_down_6_106
+   - 0.12725 delta_down_6_107 - 0.12725 delta_down_6_108
+   - 0.10194 delta_down_6_109 - 0.127425 delta_down_6_110
+   - 0.127425 delta_down_6_111 - 0.127425 delta_down_6_112
+   - 0.219965 delta_down_6_113 - 0.27495625 delta_down_6_114
+   - 0.27495625 delta_down_6_115 - 0.27495625 delta_down_6_116
+   - 0.16964 delta_down_6_117 - 0.21205 delta_down_6_118
+   - 0.21205 delta_down_6_119 - 0.21205 delta_down_6_120
+   - 0.17525 delta_down_6_121 - 0.2190625 delta_down_6_122
+   - 0.2190625 delta_down_6_123 - 0.2190625 delta_down_6_124
+   - 0.07544 delta_down_6_125 - 0.0943 delta_down_6_126
+   - 0.0943 delta_down_6_127 - 0.0943 delta_down_6_128
+   - 0.012125 delta_down_6_129 - 0.01515625 delta_down_6_130
+   - 0.01515625 delta_down_6_131 - 0.01515625 delta_down_6_132
+   - 0.049775 delta_down_6_133 - 0.06221875 delta_down_6_134
+   - 0.06221875 delta_down_6_135 - 0.06221875 delta_down_6_136
+   - 0.18595 delta_down_6_137 - 0.2324375 delta_down_6_138
+   - 0.2324375 delta_down_6_139 - 0.2324375 delta_down_6_140
+   - 0.118965 delta_down_6_141 - 0.14870625 delta_down_6_142
+   - 0.14870625 delta_down_6_143 - 0.14870625 delta_down_6_144
+   - 0.126315 delta_down_6_145 - 0.15789375 delta_down_6_146
+   - 0.15789375 delta_down_6_147 - 0.15789375 delta_down_6_148
+   - 0.01014 delta_down_6_149 - 0.012675 delta_down_6_150
+   - 0.012675 delta_down_6_151 - 0.012675 delta_down_6_152
+   - 0.022315 delta_down_6_153 - 0.02789375 delta_down_6_154
+   - 0.02789375 delta_down_6_155 - 0.02789375 delta_down_6_156
+   - 0.301665 delta_down_6_157 - 0.37708125 delta_down_6_158
+   - 0.37708125 delta_down_6_159 - 0.37708125 delta_down_6_160
+   - 0.514325 delta_down_6_161 - 0.64290625 delta_down_6_162
+   - 0.64290625 delta_down_6_163 - 0.64290625 delta_down_6_164
+   - 0.454615 delta_down_6_165 - 0.56826875 delta_down_6_166
+   - 0.56826875 delta_down_6_167 - 0.56826875 delta_down_6_168
+   - 0.11615 delta_down_6_169 - 0.1451875 delta_down_6_170
+   - 0.1451875 delta_down_6_171 - 0.1451875 delta_down_6_172
+   - 0.017425 delta_down_6_173 - 0.02178125 delta_down_6_174
+   - 0.02178125 delta_down_6_175 - 0.02178125 delta_down_6_176
+   - 0.195015 delta_down_6_177 - 0.24376875 delta_down_6_178
+   - 0.24376875 delta_down_6_179 - 0.24376875 delta_down_6_180
+   - 0.081425 delta_down_6_181 - 0.10178125 delta_down_6_182
+   - 0.10178125 delta_down_6_183 - 0.10178125 delta_down_6_184
+   - 0.1018 delta_down_6_185 - 0.12725 delta_down_6_186
+   - 0.12725 delta_down_6_187 - 0.12725 delta_down_6_188
+   - 0.10194 delta_down_6_189 - 0.127425 delta_down_6_190
+   - 0.127425 delta_down_6_191 - 0.127425 delta_down_6_192
+   - 0.219965 delta_down_6_193 - 0.27495625 delta_down_6_194
+   - 0.27495625 delta_down_6_195 - 0.27495625 delta_down_6_196
+   - 0.16964 delta_down_6_197 - 0.21205 delta_down_6_198
+   - 0.21205 delta_down_6_199 - 0.21205 delta_down_6_200
+   - 0.57521875 delta_down_7_1 - 0.460175 delta_down_7_2
+   - 0.57521875 delta_down_7_3 - 0.460175 delta_down_7_4
+   - 0.56564375 delta_down_7_5 - 0.452515 delta_down_7_6
+   - 0.56564375 delta_down_7_7 - 0.452515 delta_down_7_8
+   - 0.11559375 delta_down_7_9 - 0.092475 delta_down_7_10
+   - 0.11559375 delta_down_7_11 - 0.092475 delta_down_7_12
+   - 0.031625 delta_down_7_13 - 0.0253 delta_down_7_14
+   - 0.031625 delta_down_7_15 - 0.0253 delta_down_7_16
+   - 0.2577375 delta_down_7_17 - 0.20619 delta_down_7_18
+   - 0.2577375 delta_down_7_19 - 0.20619 delta_down_7_20
+   - 0.09328125 delta_down_7_21 - 0.074625 delta_down_7_22
+   - 0.09328125 delta_down_7_23 - 0.074625 delta_down_7_24
+   - 0.14108125 delta_down_7_25 - 0.112865 delta_down_7_26
+   - 0.14108125 delta_down_7_27 - 0.112865 delta_down_7_28
+   - 0.13053125 delta_down_7_29 - 0.104425 delta_down_7_30
+   - 0.13053125 delta_down_7_31 - 0.104425 delta_down_7_32
+   - 0.3765625 delta_down_7_33 - 0.30125 delta_down_7_34
+   - 0.3765625 delta_down_7_35 - 0.30125 delta_down_7_36
+   - 0.2574875 delta_down_7_37 - 0.20599 delta_down_7_38
+   - 0.2574875 delta_down_7_39 - 0.20599 delta_down_7_40
+   - 0.2432375 delta_down_7_41 - 0.19459 delta_down_7_42
+   - 0.2432375 delta_down_7_43 - 0.19459 delta_down_7_44
+   - 0.113675 delta_down_7_45 - 0.09094 delta_down_7_46
+   - 0.113675 delta_down_7_47 - 0.09094 delta_down_7_48
+   - 0.02371875 delta_down_7_49 - 0.018975 delta_down_7_50
+   - 0.02371875 delta_down_7_51 - 0.018975 delta_down_7_52
+   - 0.06708125 delta_down_7_53 - 0.053665 delta_down_7_54
+   - 0.06708125 delta_down_7_55 - 0.053665 delta_down_7_56
+   - 0.22501875 delta_down_7_57 - 0.180015 delta_down_7_58
+   - 0.22501875 delta_down_7_59 - 0.180015 delta_down_7_60
+   - 0.1881875 delta_down_7_61 - 0.15055 delta_down_7_62
+   - 0.1881875 delta_down_7_63 - 0.15055 delta_down_7_64
+   - 0.23565625 delta_down_7_65 - 0.188525 delta_down_7_66
+   - 0.23565625 delta_down_7_67 - 0.188525 delta_down_7_68
+   - 0.02925 delta_down_7_69 - 0.0234 delta_down_7_70
+   - 0.02925 delta_down_7_71 - 0.0234 delta_down_7_72
+   - 0.03628125 delta_down_7_73 - 0.029025 delta_down_7_74
+   - 0.03628125 delta_down_7_75 - 0.029025 delta_down_7_76
+   - 0.57475 delta_down_7_77 - 0.4598 delta_down_7_78
+   - 0.57475 delta_down_7_79 - 0.4598 delta_down_7_80
+   - 0.57521875 delta_down_7_81 - 0.460175 delta_down_7_82
+   - 0.57521875 delta_down_7_83 - 0.460175 delta_down_7_84
+   - 0.56564375 delta_down_7_85 - 0.452515 delta_down_7_86
+   - 0.56564375 delta_down_7_87 - 0.452515 delta_down_7_88
+   - 0.11559375 delta_down_7_89 - 0.092475 delta_down_7_90
+   - 0.11559375 delta_down_7_91 - 0.092475 delta_down_7_92
+   - 0.031625 delta_down_7_93 - 0.0253 delta_down_7_94
+   - 0.031625 delta_down_7_95 - 0.0253 delta_down_7_96
+   - 0.2577375 delta_down_7_97 - 0.20619 delta_down_7_98
+   - 0.2577375 delta_down_7_99 - 0.20619 delta_down_7_100
+   - 0.09328125 delta_down_7_101 - 0.074625 delta_down_7_102
+   - 0.09328125 delta_down_7_103 - 0.074625 delta_down_7_104
+   - 0.14108125 delta_down_7_105 - 0.112865 delta_down_7_106
+   - 0.14108125 delta_down_7_107 - 0.112865 delta_down_7_108
+   - 0.13053125 delta_down_7_109 - 0.104425 delta_down_7_110
+   - 0.13053125 delta_down_7_111 - 0.104425 delta_down_7_112
+   - 0.3765625 delta_down_7_113 - 0.30125 delta_down_7_114
+   - 0.3765625 delta_down_7_115 - 0.30125 delta_down_7_116
+   - 0.2574875 delta_down_7_117 - 0.20599 delta_down_7_118
+   - 0.2574875 delta_down_7_119 - 0.20599 delta_down_7_120
+   - 0.2432375 delta_down_7_121 - 0.19459 delta_down_7_122
+   - 0.2432375 delta_down_7_123 - 0.19459 delta_down_7_124
+   - 0.113675 delta_down_7_125 - 0.09094 delta_down_7_126
+   - 0.113675 delta_down_7_127 - 0.09094 delta_down_7_128
+   - 0.02371875 delta_down_7_129 - 0.018975 delta_down_7_130
+   - 0.02371875 delta_down_7_131 - 0.018975 delta_down_7_132
+   - 0.06708125 delta_down_7_133 - 0.053665 delta_down_7_134
+   - 0.06708125 delta_down_7_135 - 0.053665 delta_down_7_136
+   - 0.22501875 delta_down_7_137 - 0.180015 delta_down_7_138
+   - 0.22501875 delta_down_7_139 - 0.180015 delta_down_7_140
+   - 0.1881875 delta_down_7_141 - 0.15055 delta_down_7_142
+   - 0.1881875 delta_down_7_143 - 0.15055 delta_down_7_144
+   - 0.23565625 delta_down_7_145 - 0.188525 delta_down_7_146
+   - 0.23565625 delta_down_7_147 - 0.188525 delta_down_7_148
+   - 0.02925 delta_down_7_149 - 0.0234 delta_down_7_150
+   - 0.02925 delta_down_7_151 - 0.0234 delta_down_7_152
+   - 0.03628125 delta_down_7_153 - 0.029025 delta_down_7_154
+   - 0.03628125 delta_down_7_155 - 0.029025 delta_down_7_156
+   - 0.57475 delta_down_7_157 - 0.4598 delta_down_7_158
+   - 0.57475 delta_down_7_159 - 0.4598 delta_down_7_160
+   - 0.57521875 delta_down_7_161 - 0.460175 delta_down_7_162
+   - 0.57521875 delta_down_7_163 - 0.460175 delta_down_7_164
+   - 0.56564375 delta_down_7_165 - 0.452515 delta_down_7_166
+   - 0.56564375 delta_down_7_167 - 0.452515 delta_down_7_168
+   - 0.11559375 delta_down_7_169 - 0.092475 delta_down_7_170
+   - 0.11559375 delta_down_7_171 - 0.092475 delta_down_7_172
+   - 0.031625 delta_down_7_173 - 0.0253 delta_down_7_174
+   - 0.031625 delta_down_7_175 - 0.0253 delta_down_7_176
+   - 0.2577375 delta_down_7_177 - 0.20619 delta_down_7_178
+   - 0.2577375 delta_down_7_179 - 0.20619 delta_down_7_180
+   - 0.09328125 delta_down_7_181 - 0.074625 delta_down_7_182
+   - 0.09328125 delta_down_7_183 - 0.074625 delta_down_7_184
+   - 0.14108125 delta_down_7_185 - 0.112865 delta_down_7_186
+   - 0.14108125 delta_down_7_187 - 0.112865 delta_down_7_188
+   - 0.13053125 delta_down_7_189 - 0.104425 delta_down_7_190
+   - 0.13053125 delta_down_7_191 - 0.104425 delta_down_7_192
+   - 0.3765625 delta_down_7_193 - 0.30125 delta_down_7_194
+   - 0.3765625 delta_down_7_195 - 0.30125 delta_down_7_196
+   - 0.2574875 delta_down_7_197 - 0.20599 delta_down_7_198
+   - 0.2574875 delta_down_7_199 - 0.20599 delta_down_7_200
+   - 0.37925 delta_down_8_1 - 0.37925 delta_down_8_2
+   - 0.4740624999999999 delta_down_8_3 - 0.4740624999999999 delta_down_8_4
+   - 0.623225 delta_down_8_5 - 0.623225 delta_down_8_6
+   - 0.7790312500000001 delta_down_8_7 - 0.7790312500000001 delta_down_8_8
+   - 0.150865 delta_down_8_9 - 0.150865 delta_down_8_10
+   - 0.18858125 delta_down_8_11 - 0.18858125 delta_down_8_12
+   - 0.02795 delta_down_8_13 - 0.02795 delta_down_8_14
+   - 0.0349375 delta_down_8_15 - 0.0349375 delta_down_8_16
+   - 0.46089 delta_down_8_17 - 0.46089 delta_down_8_18
+   - 0.5761125 delta_down_8_19 - 0.5761125 delta_down_8_20
+   - 0.089665 delta_down_8_21 - 0.089665 delta_down_8_22
+   - 0.11208125 delta_down_8_23 - 0.11208125 delta_down_8_24
+   - 0.11944 delta_down_8_25 - 0.11944 delta_down_8_26
+   - 0.1493 delta_down_8_27 - 0.1493 delta_down_8_28
+   - 0.12749 delta_down_8_29 - 0.12749 delta_down_8_30
+   - 0.1593625 delta_down_8_31 - 0.1593625 delta_down_8_32
+   - 0.3631 delta_down_8_33 - 0.3631 delta_down_8_34
+   - 0.453875 delta_down_8_35 - 0.453875 delta_down_8_36
+   - 0.275 delta_down_8_37 - 0.275 delta_down_8_38
+   - 0.34375 delta_down_8_39 - 0.34375 delta_down_8_40
+   - 0.23954 delta_down_8_41 - 0.23954 delta_down_8_42
+   - 0.299425 delta_down_8_43 - 0.299425 delta_down_8_44
+   - 0.114075 delta_down_8_45 - 0.114075 delta_down_8_46
+   - 0.14259375 delta_down_8_47 - 0.14259375 delta_down_8_48
+   - 0.024915 delta_down_8_49 - 0.024915 delta_down_8_50
+   - 0.03114375 delta_down_8_51 - 0.03114375 delta_down_8_52
+   - 0.06369 delta_down_8_53 - 0.06369 delta_down_8_54
+   - 0.0796125 delta_down_8_55 - 0.0796125 delta_down_8_56
+   - 0.18894 delta_down_8_57 - 0.18894 delta_down_8_58
+   - 0.236175 delta_down_8_59 - 0.236175 delta_down_8_60
+   - 0.212 delta_down_8_61 - 0.212 delta_down_8_62 - 0.265 delta_down_8_63
+   - 0.265 delta_down_8_64 - 0.274175 delta_down_8_65
+   - 0.274175 delta_down_8_66 - 0.34271875 delta_down_8_67
+   - 0.34271875 delta_down_8_68 - 0.022115 delta_down_8_69
+   - 0.022115 delta_down_8_70 - 0.02764375 delta_down_8_71
+   - 0.02764375 delta_down_8_72 - 0.046065 delta_down_8_73
+   - 0.046065 delta_down_8_74 - 0.05758125 delta_down_8_75
+   - 0.05758125 delta_down_8_76 - 0.505165 delta_down_8_77
+   - 0.505165 delta_down_8_78 - 0.6314562499999999 delta_down_8_79
    - 0.6314562499999999 delta_down_8_80 - 0.37925 delta_down_8_81
    - 0.37925 delta_down_8_82 - 0.4740624999999999 delta_down_8_83
    - 0.4740624999999999 delta_down_8_84 - 0.623225 delta_down_8_85
@@ -3121,8 +3116,8 @@ Maximize
    - 0.18858125 delta_down_8_92 - 0.02795 delta_down_8_93
    - 0.02795 delta_down_8_94 - 0.0349375 delta_down_8_95
    - 0.0349375 delta_down_8_96 - 0.46089 delta_down_8_97
-   - 0.46089 delta_down_8_98 - 0.5761124999999999 delta_down_8_99
-   - 0.5761124999999999 delta_down_8_100 - 0.089665 delta_down_8_101
+   - 0.46089 delta_down_8_98 - 0.5761125 delta_down_8_99
+   - 0.5761125 delta_down_8_100 - 0.089665 delta_down_8_101
    - 0.089665 delta_down_8_102 - 0.11208125 delta_down_8_103
    - 0.11208125 delta_down_8_104 - 0.11944 delta_down_8_105
    - 0.11944 delta_down_8_106 - 0.1493 delta_down_8_107
@@ -3161,8 +3156,8 @@ Maximize
    - 0.18858125 delta_down_8_172 - 0.02795 delta_down_8_173
    - 0.02795 delta_down_8_174 - 0.0349375 delta_down_8_175
    - 0.0349375 delta_down_8_176 - 0.46089 delta_down_8_177
-   - 0.46089 delta_down_8_178 - 0.5761124999999999 delta_down_8_179
-   - 0.5761124999999999 delta_down_8_180 - 0.089665 delta_down_8_181
+   - 0.46089 delta_down_8_178 - 0.5761125 delta_down_8_179
+   - 0.5761125 delta_down_8_180 - 0.089665 delta_down_8_181
    - 0.089665 delta_down_8_182 - 0.11208125 delta_down_8_183
    - 0.11208125 delta_down_8_184 - 0.11944 delta_down_8_185
    - 0.11944 delta_down_8_186 - 0.1493 delta_down_8_187
@@ -3475,9 +3470,9 @@ Maximize
    - 0.49814375 delta_down_11_195 - 0.398515 delta_down_11_196
    - 0.23855 delta_down_11_197 - 0.23855 delta_down_11_198
    - 0.23855 delta_down_11_199 - 0.19084 delta_down_11_200
-   - 0.4750625 delta_down_12_1 - 0.38005 delta_down_12_2
+   - 0.4750625000000001 delta_down_12_1 - 0.38005 delta_down_12_2
    - 0.38005 delta_down_12_3 - 0.38005 delta_down_12_4
-   - 0.6189874999999999 delta_down_12_5 - 0.49519 delta_down_12_6
+   - 0.6189875 delta_down_12_5 - 0.49519 delta_down_12_6
    - 0.49519 delta_down_12_7 - 0.49519 delta_down_12_8
    - 0.14234375 delta_down_12_9 - 0.113875 delta_down_12_10
    - 0.113875 delta_down_12_11 - 0.113875 delta_down_12_12
@@ -3515,9 +3510,9 @@ Maximize
    - 0.040825 delta_down_12_75 - 0.040825 delta_down_12_76
    - 0.15559375 delta_down_12_77 - 0.124475 delta_down_12_78
    - 0.124475 delta_down_12_79 - 0.124475 delta_down_12_80
-   - 0.4750625 delta_down_12_81 - 0.38005 delta_down_12_82
+   - 0.4750625000000001 delta_down_12_81 - 0.38005 delta_down_12_82
    - 0.38005 delta_down_12_83 - 0.38005 delta_down_12_84
-   - 0.6189874999999999 delta_down_12_85 - 0.49519 delta_down_12_86
+   - 0.6189875 delta_down_12_85 - 0.49519 delta_down_12_86
    - 0.49519 delta_down_12_87 - 0.49519 delta_down_12_88
    - 0.14234375 delta_down_12_89 - 0.113875 delta_down_12_90
    - 0.113875 delta_down_12_91 - 0.113875 delta_down_12_92
@@ -3555,9 +3550,9 @@ Maximize
    - 0.040825 delta_down_12_155 - 0.040825 delta_down_12_156
    - 0.15559375 delta_down_12_157 - 0.124475 delta_down_12_158
    - 0.124475 delta_down_12_159 - 0.124475 delta_down_12_160
-   - 0.4750625 delta_down_12_161 - 0.38005 delta_down_12_162
+   - 0.4750625000000001 delta_down_12_161 - 0.38005 delta_down_12_162
    - 0.38005 delta_down_12_163 - 0.38005 delta_down_12_164
-   - 0.6189874999999999 delta_down_12_165 - 0.49519 delta_down_12_166
+   - 0.6189875 delta_down_12_165 - 0.49519 delta_down_12_166
    - 0.49519 delta_down_12_167 - 0.49519 delta_down_12_168
    - 0.14234375 delta_down_12_169 - 0.113875 delta_down_12_170
    - 0.113875 delta_down_12_171 - 0.113875 delta_down_12_172
@@ -3577,423 +3572,425 @@ Maximize
    - 0.199465 delta_down_12_199 - 0.199465 delta_down_12_200
    - 0.41204 delta_down_13_1 - 0.51505 delta_down_13_2
    - 0.51505 delta_down_13_3 - 0.51505 delta_down_13_4
-   - 0.48545 delta_down_13_5 - 0.6068125 delta_down_13_6
-   - 0.6068125 delta_down_13_7 - 0.6068125 delta_down_13_8
-   - 0.1098 delta_down_13_9 - 0.13725 delta_down_13_10
-   - 0.13725 delta_down_13_11 - 0.13725 delta_down_13_12
-   - 0.0381 delta_down_13_13 - 0.047625 delta_down_13_14
-   - 0.047625 delta_down_13_15 - 0.047625 delta_down_13_16
-   - 0.289475 delta_down_13_17 - 0.36184375 delta_down_13_18
-   - 0.36184375 delta_down_13_19 - 0.36184375 delta_down_13_20
-   - 0.128715 delta_down_13_21 - 0.16089375 delta_down_13_22
-   - 0.16089375 delta_down_13_23 - 0.16089375 delta_down_13_24
-   - 0.11829 delta_down_13_25 - 0.1478625 delta_down_13_26
-   - 0.1478625 delta_down_13_27 - 0.1478625 delta_down_13_28
-   - 0.12704 delta_down_13_29 - 0.1588 delta_down_13_30
-   - 0.1588 delta_down_13_31 - 0.1588 delta_down_13_32
-   - 0.324065 delta_down_13_33 - 0.40508125 delta_down_13_34
-   - 0.40508125 delta_down_13_35 - 0.40508125 delta_down_13_36
-   - 0.19385 delta_down_13_37 - 0.2423125 delta_down_13_38
-   - 0.2423125 delta_down_13_39 - 0.2423125 delta_down_13_40
-   - 0.15034 delta_down_13_41 - 0.187925 delta_down_13_42
-   - 0.187925 delta_down_13_43 - 0.187925 delta_down_13_44
-   - 0.0487 delta_down_13_45 - 0.060875 delta_down_13_46
-   - 0.060875 delta_down_13_47 - 0.060875 delta_down_13_48
-   - 0.01 delta_down_13_49 - 0.0125 delta_down_13_50
-   - 0.0125 delta_down_13_51 - 0.0125 delta_down_13_52
-   - 0.100015 delta_down_13_53 - 0.12501875 delta_down_13_54
-   - 0.12501875 delta_down_13_55 - 0.12501875 delta_down_13_56
-   - 0.19939 delta_down_13_57 - 0.2492375 delta_down_13_58
-   - 0.2492375 delta_down_13_59 - 0.2492375 delta_down_13_60
-   - 0.08309 delta_down_13_61 - 0.1038625 delta_down_13_62
-   - 0.1038625 delta_down_13_63 - 0.1038625 delta_down_13_64
-   - 0.1041 delta_down_13_65 - 0.130125 delta_down_13_66
-   - 0.130125 delta_down_13_67 - 0.130125 delta_down_13_68
-   - 0.012225 delta_down_13_69 - 0.01528125 delta_down_13_70
-   - 0.01528125 delta_down_13_71 - 0.01528125 delta_down_13_72
-   - 0.0357 delta_down_13_73 - 0.044625 delta_down_13_74
-   - 0.044625 delta_down_13_75 - 0.044625 delta_down_13_76
-   - 0.121675 delta_down_13_77 - 0.15209375 delta_down_13_78
-   - 0.15209375 delta_down_13_79 - 0.15209375 delta_down_13_80
-   - 0.41204 delta_down_13_81 - 0.51505 delta_down_13_82
-   - 0.51505 delta_down_13_83 - 0.51505 delta_down_13_84
-   - 0.48545 delta_down_13_85 - 0.6068125 delta_down_13_86
-   - 0.6068125 delta_down_13_87 - 0.6068125 delta_down_13_88
-   - 0.1098 delta_down_13_89 - 0.13725 delta_down_13_90
-   - 0.13725 delta_down_13_91 - 0.13725 delta_down_13_92
-   - 0.0381 delta_down_13_93 - 0.047625 delta_down_13_94
-   - 0.047625 delta_down_13_95 - 0.047625 delta_down_13_96
-   - 0.289475 delta_down_13_97 - 0.36184375 delta_down_13_98
-   - 0.36184375 delta_down_13_99 - 0.36184375 delta_down_13_100
-   - 0.128715 delta_down_13_101 - 0.16089375 delta_down_13_102
-   - 0.16089375 delta_down_13_103 - 0.16089375 delta_down_13_104
-   - 0.11829 delta_down_13_105 - 0.1478625 delta_down_13_106
-   - 0.1478625 delta_down_13_107 - 0.1478625 delta_down_13_108
-   - 0.12704 delta_down_13_109 - 0.1588 delta_down_13_110
-   - 0.1588 delta_down_13_111 - 0.1588 delta_down_13_112
-   - 0.324065 delta_down_13_113 - 0.40508125 delta_down_13_114
-   - 0.40508125 delta_down_13_115 - 0.40508125 delta_down_13_116
-   - 0.19385 delta_down_13_117 - 0.2423125 delta_down_13_118
-   - 0.2423125 delta_down_13_119 - 0.2423125 delta_down_13_120
-   - 0.15034 delta_down_13_121 - 0.187925 delta_down_13_122
-   - 0.187925 delta_down_13_123 - 0.187925 delta_down_13_124
-   - 0.0487 delta_down_13_125 - 0.060875 delta_down_13_126
-   - 0.060875 delta_down_13_127 - 0.060875 delta_down_13_128
-   - 0.01 delta_down_13_129 - 0.0125 delta_down_13_130
-   - 0.0125 delta_down_13_131 - 0.0125 delta_down_13_132
-   - 0.100015 delta_down_13_133 - 0.12501875 delta_down_13_134
-   - 0.12501875 delta_down_13_135 - 0.12501875 delta_down_13_136
-   - 0.19939 delta_down_13_137 - 0.2492375 delta_down_13_138
-   - 0.2492375 delta_down_13_139 - 0.2492375 delta_down_13_140
-   - 0.08309 delta_down_13_141 - 0.1038625 delta_down_13_142
-   - 0.1038625 delta_down_13_143 - 0.1038625 delta_down_13_144
-   - 0.1041 delta_down_13_145 - 0.130125 delta_down_13_146
-   - 0.130125 delta_down_13_147 - 0.130125 delta_down_13_148
-   - 0.012225 delta_down_13_149 - 0.01528125 delta_down_13_150
-   - 0.01528125 delta_down_13_151 - 0.01528125 delta_down_13_152
-   - 0.0357 delta_down_13_153 - 0.044625 delta_down_13_154
-   - 0.044625 delta_down_13_155 - 0.044625 delta_down_13_156
-   - 0.121675 delta_down_13_157 - 0.15209375 delta_down_13_158
-   - 0.15209375 delta_down_13_159 - 0.15209375 delta_down_13_160
-   - 0.41204 delta_down_13_161 - 0.51505 delta_down_13_162
-   - 0.51505 delta_down_13_163 - 0.51505 delta_down_13_164
-   - 0.48545 delta_down_13_165 - 0.6068125 delta_down_13_166
-   - 0.6068125 delta_down_13_167 - 0.6068125 delta_down_13_168
-   - 0.1098 delta_down_13_169 - 0.13725 delta_down_13_170
-   - 0.13725 delta_down_13_171 - 0.13725 delta_down_13_172
-   - 0.0381 delta_down_13_173 - 0.047625 delta_down_13_174
-   - 0.047625 delta_down_13_175 - 0.047625 delta_down_13_176
-   - 0.289475 delta_down_13_177 - 0.36184375 delta_down_13_178
-   - 0.36184375 delta_down_13_179 - 0.36184375 delta_down_13_180
-   - 0.128715 delta_down_13_181 - 0.16089375 delta_down_13_182
-   - 0.16089375 delta_down_13_183 - 0.16089375 delta_down_13_184
-   - 0.11829 delta_down_13_185 - 0.1478625 delta_down_13_186
-   - 0.1478625 delta_down_13_187 - 0.1478625 delta_down_13_188
-   - 0.12704 delta_down_13_189 - 0.1588 delta_down_13_190
-   - 0.1588 delta_down_13_191 - 0.1588 delta_down_13_192
-   - 0.324065 delta_down_13_193 - 0.40508125 delta_down_13_194
-   - 0.40508125 delta_down_13_195 - 0.40508125 delta_down_13_196
-   - 0.19385 delta_down_13_197 - 0.2423125 delta_down_13_198
-   - 0.2423125 delta_down_13_199 - 0.2423125 delta_down_13_200
-   - 0.44185 delta_down_14_1 - 0.5523125 delta_down_14_2
-   - 0.44185 delta_down_14_3 - 0.44185 delta_down_14_4
-   - 0.458725 delta_down_14_5 - 0.5734062500000001 delta_down_14_6
-   - 0.458725 delta_down_14_7 - 0.458725 delta_down_14_8
-   - 0.102115 delta_down_14_9 - 0.12764375 delta_down_14_10
-   - 0.102115 delta_down_14_11 - 0.102115 delta_down_14_12
-   - 0.035665 delta_down_14_13 - 0.04458125 delta_down_14_14
-   - 0.035665 delta_down_14_15 - 0.035665 delta_down_14_16
-   - 0.29104 delta_down_14_17 - 0.3638 delta_down_14_18
-   - 0.29104 delta_down_14_19 - 0.29104 delta_down_14_20
-   - 0.124625 delta_down_14_21 - 0.15578125 delta_down_14_22
-   - 0.124625 delta_down_14_23 - 0.124625 delta_down_14_24
-   - 0.109915 delta_down_14_25 - 0.13739375 delta_down_14_26
-   - 0.109915 delta_down_14_27 - 0.109915 delta_down_14_28
-   - 0.13725 delta_down_14_29 - 0.1715625 delta_down_14_30
-   - 0.13725 delta_down_14_31 - 0.13725 delta_down_14_32
-   - 0.30879 delta_down_14_33 - 0.3859875 delta_down_14_34
-   - 0.30879 delta_down_14_35 - 0.30879 delta_down_14_36
-   - 0.18194 delta_down_14_37 - 0.227425 delta_down_14_38
-   - 0.18194 delta_down_14_39 - 0.18194 delta_down_14_40
-   - 0.14184 delta_down_14_41 - 0.1773 delta_down_14_42
-   - 0.14184 delta_down_14_43 - 0.14184 delta_down_14_44
-   - 0.048825 delta_down_14_45 - 0.06103125 delta_down_14_46
-   - 0.048825 delta_down_14_47 - 0.048825 delta_down_14_48
-   - 0.0103 delta_down_14_49 - 0.012875 delta_down_14_50
-   - 0.0103 delta_down_14_51 - 0.0103 delta_down_14_52
-   - 0.1015 delta_down_14_53 - 0.126875 delta_down_14_54
-   - 0.1015 delta_down_14_55 - 0.1015 delta_down_14_56
-   - 0.153265 delta_down_14_57 - 0.19158125 delta_down_14_58
-   - 0.153265 delta_down_14_59 - 0.153265 delta_down_14_60
-   - 0.0906 delta_down_14_61 - 0.11325 delta_down_14_62
-   - 0.0906 delta_down_14_63 - 0.0906 delta_down_14_64
-   - 0.0747 delta_down_14_65 - 0.093375 delta_down_14_66
-   - 0.0747 delta_down_14_67 - 0.0747 delta_down_14_68
-   - 0.013015 delta_down_14_69 - 0.01626875 delta_down_14_70
-   - 0.013015 delta_down_14_71 - 0.013015 delta_down_14_72
-   - 0.039175 delta_down_14_73 - 0.04896875 delta_down_14_74
-   - 0.039175 delta_down_14_75 - 0.039175 delta_down_14_76
-   - 0.086565 delta_down_14_77 - 0.10820625 delta_down_14_78
-   - 0.086565 delta_down_14_79 - 0.086565 delta_down_14_80
-   - 0.44185 delta_down_14_81 - 0.5523125 delta_down_14_82
-   - 0.44185 delta_down_14_83 - 0.44185 delta_down_14_84
-   - 0.458725 delta_down_14_85 - 0.5734062500000001 delta_down_14_86
-   - 0.458725 delta_down_14_87 - 0.458725 delta_down_14_88
-   - 0.102115 delta_down_14_89 - 0.12764375 delta_down_14_90
-   - 0.102115 delta_down_14_91 - 0.102115 delta_down_14_92
-   - 0.035665 delta_down_14_93 - 0.04458125 delta_down_14_94
-   - 0.035665 delta_down_14_95 - 0.035665 delta_down_14_96
-   - 0.29104 delta_down_14_97 - 0.3638 delta_down_14_98
-   - 0.29104 delta_down_14_99 - 0.29104 delta_down_14_100
-   - 0.124625 delta_down_14_101 - 0.15578125 delta_down_14_102
-   - 0.124625 delta_down_14_103 - 0.124625 delta_down_14_104
-   - 0.109915 delta_down_14_105 - 0.13739375 delta_down_14_106
-   - 0.109915 delta_down_14_107 - 0.109915 delta_down_14_108
-   - 0.13725 delta_down_14_109 - 0.1715625 delta_down_14_110
-   - 0.13725 delta_down_14_111 - 0.13725 delta_down_14_112
-   - 0.30879 delta_down_14_113 - 0.3859875 delta_down_14_114
-   - 0.30879 delta_down_14_115 - 0.30879 delta_down_14_116
-   - 0.18194 delta_down_14_117 - 0.227425 delta_down_14_118
-   - 0.18194 delta_down_14_119 - 0.18194 delta_down_14_120
-   - 0.14184 delta_down_14_121 - 0.1773 delta_down_14_122
-   - 0.14184 delta_down_14_123 - 0.14184 delta_down_14_124
-   - 0.048825 delta_down_14_125 - 0.06103125 delta_down_14_126
-   - 0.048825 delta_down_14_127 - 0.048825 delta_down_14_128
-   - 0.0103 delta_down_14_129 - 0.012875 delta_down_14_130
-   - 0.0103 delta_down_14_131 - 0.0103 delta_down_14_132
-   - 0.1015 delta_down_14_133 - 0.126875 delta_down_14_134
-   - 0.1015 delta_down_14_135 - 0.1015 delta_down_14_136
-   - 0.153265 delta_down_14_137 - 0.19158125 delta_down_14_138
-   - 0.153265 delta_down_14_139 - 0.153265 delta_down_14_140
-   - 0.0906 delta_down_14_141 - 0.11325 delta_down_14_142
-   - 0.0906 delta_down_14_143 - 0.0906 delta_down_14_144
-   - 0.0747 delta_down_14_145 - 0.093375 delta_down_14_146
-   - 0.0747 delta_down_14_147 - 0.0747 delta_down_14_148
-   - 0.013015 delta_down_14_149 - 0.01626875 delta_down_14_150
-   - 0.013015 delta_down_14_151 - 0.013015 delta_down_14_152
-   - 0.039175 delta_down_14_153 - 0.04896875 delta_down_14_154
-   - 0.039175 delta_down_14_155 - 0.039175 delta_down_14_156
-   - 0.086565 delta_down_14_157 - 0.10820625 delta_down_14_158
-   - 0.086565 delta_down_14_159 - 0.086565 delta_down_14_160
-   - 0.44185 delta_down_14_161 - 0.5523125 delta_down_14_162
-   - 0.44185 delta_down_14_163 - 0.44185 delta_down_14_164
-   - 0.458725 delta_down_14_165 - 0.5734062500000001 delta_down_14_166
-   - 0.458725 delta_down_14_167 - 0.458725 delta_down_14_168
-   - 0.102115 delta_down_14_169 - 0.12764375 delta_down_14_170
-   - 0.102115 delta_down_14_171 - 0.102115 delta_down_14_172
-   - 0.035665 delta_down_14_173 - 0.04458125 delta_down_14_174
-   - 0.035665 delta_down_14_175 - 0.035665 delta_down_14_176
-   - 0.29104 delta_down_14_177 - 0.3638 delta_down_14_178
-   - 0.29104 delta_down_14_179 - 0.29104 delta_down_14_180
-   - 0.124625 delta_down_14_181 - 0.15578125 delta_down_14_182
-   - 0.124625 delta_down_14_183 - 0.124625 delta_down_14_184
-   - 0.109915 delta_down_14_185 - 0.13739375 delta_down_14_186
-   - 0.109915 delta_down_14_187 - 0.109915 delta_down_14_188
-   - 0.13725 delta_down_14_189 - 0.1715625 delta_down_14_190
-   - 0.13725 delta_down_14_191 - 0.13725 delta_down_14_192
-   - 0.30879 delta_down_14_193 - 0.3859875 delta_down_14_194
-   - 0.30879 delta_down_14_195 - 0.30879 delta_down_14_196
-   - 0.18194 delta_down_14_197 - 0.227425 delta_down_14_198
-   - 0.18194 delta_down_14_199 - 0.18194 delta_down_14_200
-   - 0.492175 delta_down_15_1 - 0.492175 delta_down_15_2
-   - 0.39374 delta_down_15_3 - 0.39374 delta_down_15_4
-   - 0.7113625 delta_down_15_5 - 0.7113625 delta_down_15_6
-   - 0.56909 delta_down_15_7 - 0.56909 delta_down_15_8
-   - 0.12021875 delta_down_15_9 - 0.12021875 delta_down_15_10
-   - 0.096175 delta_down_15_11 - 0.096175 delta_down_15_12
-   - 0.045625 delta_down_15_13 - 0.045625 delta_down_15_14
-   - 0.0365 delta_down_15_15 - 0.0365 delta_down_15_16
-   - 0.38278125 delta_down_15_17 - 0.38278125 delta_down_15_18
-   - 0.306225 delta_down_15_19 - 0.306225 delta_down_15_20
-   - 0.12533125 delta_down_15_21 - 0.12533125 delta_down_15_22
-   - 0.100265 delta_down_15_23 - 0.100265 delta_down_15_24
-   - 0.14008125 delta_down_15_25 - 0.14008125 delta_down_15_26
-   - 0.112065 delta_down_15_27 - 0.112065 delta_down_15_28
-   - 0.1839875 delta_down_15_29 - 0.1839875 delta_down_15_30
-   - 0.14719 delta_down_15_31 - 0.14719 delta_down_15_32
-   - 0.47326875 delta_down_15_33 - 0.47326875 delta_down_15_34
-   - 0.378615 delta_down_15_35 - 0.378615 delta_down_15_36
-   - 0.21234375 delta_down_15_37 - 0.21234375 delta_down_15_38
-   - 0.169875 delta_down_15_39 - 0.169875 delta_down_15_40
-   - 0.210375 delta_down_15_41 - 0.210375 delta_down_15_42
-   - 0.1683 delta_down_15_43 - 0.1683 delta_down_15_44
-   - 0.052375 delta_down_15_45 - 0.052375 delta_down_15_46
-   - 0.0419 delta_down_15_47 - 0.0419 delta_down_15_48
-   - 0.0141125 delta_down_15_49 - 0.0141125 delta_down_15_50
-   - 0.01129 delta_down_15_51 - 0.01129 delta_down_15_52
-   - 0.14440625 delta_down_15_53 - 0.14440625 delta_down_15_54
-   - 0.115525 delta_down_15_55 - 0.115525 delta_down_15_56
-   - 0.20255 delta_down_15_57 - 0.20255 delta_down_15_58
-   - 0.16204 delta_down_15_59 - 0.16204 delta_down_15_60
-   - 0.20464375 delta_down_15_61 - 0.20464375 delta_down_15_62
-   - 0.163715 delta_down_15_63 - 0.163715 delta_down_15_64
-   - 0.10771875 delta_down_15_65 - 0.10771875 delta_down_15_66
-   - 0.086175 delta_down_15_67 - 0.086175 delta_down_15_68
-   - 0.01821875 delta_down_15_69 - 0.01821875 delta_down_15_70
-   - 0.014575 delta_down_15_71 - 0.014575 delta_down_15_72
-   - 0.05034375 delta_down_15_73 - 0.05034375 delta_down_15_74
-   - 0.040275 delta_down_15_75 - 0.040275 delta_down_15_76
-   - 0.12684375 delta_down_15_77 - 0.12684375 delta_down_15_78
-   - 0.101475 delta_down_15_79 - 0.101475 delta_down_15_80
-   - 0.492175 delta_down_15_81 - 0.492175 delta_down_15_82
-   - 0.39374 delta_down_15_83 - 0.39374 delta_down_15_84
-   - 0.7113625 delta_down_15_85 - 0.7113625 delta_down_15_86
-   - 0.56909 delta_down_15_87 - 0.56909 delta_down_15_88
-   - 0.12021875 delta_down_15_89 - 0.12021875 delta_down_15_90
-   - 0.096175 delta_down_15_91 - 0.096175 delta_down_15_92
-   - 0.045625 delta_down_15_93 - 0.045625 delta_down_15_94
-   - 0.0365 delta_down_15_95 - 0.0365 delta_down_15_96
-   - 0.38278125 delta_down_15_97 - 0.38278125 delta_down_15_98
-   - 0.306225 delta_down_15_99 - 0.306225 delta_down_15_100
-   - 0.12533125 delta_down_15_101 - 0.12533125 delta_down_15_102
-   - 0.100265 delta_down_15_103 - 0.100265 delta_down_15_104
-   - 0.14008125 delta_down_15_105 - 0.14008125 delta_down_15_106
-   - 0.112065 delta_down_15_107 - 0.112065 delta_down_15_108
-   - 0.1839875 delta_down_15_109 - 0.1839875 delta_down_15_110
-   - 0.14719 delta_down_15_111 - 0.14719 delta_down_15_112
-   - 0.47326875 delta_down_15_113 - 0.47326875 delta_down_15_114
-   - 0.378615 delta_down_15_115 - 0.378615 delta_down_15_116
-   - 0.21234375 delta_down_15_117 - 0.21234375 delta_down_15_118
-   - 0.169875 delta_down_15_119 - 0.169875 delta_down_15_120
-   - 0.210375 delta_down_15_121 - 0.210375 delta_down_15_122
-   - 0.1683 delta_down_15_123 - 0.1683 delta_down_15_124
-   - 0.052375 delta_down_15_125 - 0.052375 delta_down_15_126
-   - 0.0419 delta_down_15_127 - 0.0419 delta_down_15_128
-   - 0.0141125 delta_down_15_129 - 0.0141125 delta_down_15_130
-   - 0.01129 delta_down_15_131 - 0.01129 delta_down_15_132
-   - 0.14440625 delta_down_15_133 - 0.14440625 delta_down_15_134
-   - 0.115525 delta_down_15_135 - 0.115525 delta_down_15_136
-   - 0.20255 delta_down_15_137 - 0.20255 delta_down_15_138
-   - 0.16204 delta_down_15_139 - 0.16204 delta_down_15_140
-   - 0.20464375 delta_down_15_141 - 0.20464375 delta_down_15_142
-   - 0.163715 delta_down_15_143 - 0.163715 delta_down_15_144
-   - 0.10771875 delta_down_15_145 - 0.10771875 delta_down_15_146
-   - 0.086175 delta_down_15_147 - 0.086175 delta_down_15_148
-   - 0.01821875 delta_down_15_149 - 0.01821875 delta_down_15_150
-   - 0.014575 delta_down_15_151 - 0.014575 delta_down_15_152
-   - 0.05034375 delta_down_15_153 - 0.05034375 delta_down_15_154
-   - 0.040275 delta_down_15_155 - 0.040275 delta_down_15_156
-   - 0.12684375 delta_down_15_157 - 0.12684375 delta_down_15_158
-   - 0.101475 delta_down_15_159 - 0.101475 delta_down_15_160
-   - 0.492175 delta_down_15_161 - 0.492175 delta_down_15_162
-   - 0.39374 delta_down_15_163 - 0.39374 delta_down_15_164
-   - 0.7113625 delta_down_15_165 - 0.7113625 delta_down_15_166
-   - 0.56909 delta_down_15_167 - 0.56909 delta_down_15_168
-   - 0.12021875 delta_down_15_169 - 0.12021875 delta_down_15_170
-   - 0.096175 delta_down_15_171 - 0.096175 delta_down_15_172
-   - 0.045625 delta_down_15_173 - 0.045625 delta_down_15_174
-   - 0.0365 delta_down_15_175 - 0.0365 delta_down_15_176
-   - 0.38278125 delta_down_15_177 - 0.38278125 delta_down_15_178
-   - 0.306225 delta_down_15_179 - 0.306225 delta_down_15_180
-   - 0.12533125 delta_down_15_181 - 0.12533125 delta_down_15_182
-   - 0.100265 delta_down_15_183 - 0.100265 delta_down_15_184
-   - 0.14008125 delta_down_15_185 - 0.14008125 delta_down_15_186
-   - 0.112065 delta_down_15_187 - 0.112065 delta_down_15_188
-   - 0.1839875 delta_down_15_189 - 0.1839875 delta_down_15_190
-   - 0.14719 delta_down_15_191 - 0.14719 delta_down_15_192
-   - 0.47326875 delta_down_15_193 - 0.47326875 delta_down_15_194
-   - 0.378615 delta_down_15_195 - 0.378615 delta_down_15_196
-   - 0.21234375 delta_down_15_197 - 0.21234375 delta_down_15_198
-   - 0.169875 delta_down_15_199 - 0.169875 delta_down_15_200
-   - 0.45176875 delta_down_16_1 - 0.361415 delta_down_16_2
-   - 0.45176875 delta_down_16_3 - 0.45176875 delta_down_16_4
-   - 0.52364375 delta_down_16_5 - 0.418915 delta_down_16_6
-   - 0.52364375 delta_down_16_7 - 0.52364375 delta_down_16_8
-   - 0.1205625 delta_down_16_9 - 0.09645 delta_down_16_10
-   - 0.1205625 delta_down_16_11 - 0.1205625 delta_down_16_12
-   - 0.0515 delta_down_16_13 - 0.0412 delta_down_16_14
-   - 0.0515 delta_down_16_15 - 0.0515 delta_down_16_16
-   - 0.551675 delta_down_16_17 - 0.44134 delta_down_16_18
-   - 0.551675 delta_down_16_19 - 0.551675 delta_down_16_20
-   - 0.123 delta_down_16_21 - 0.0984 delta_down_16_22
-   - 0.123 delta_down_16_23 - 0.123 delta_down_16_24
-   - 0.13195625 delta_down_16_25 - 0.105565 delta_down_16_26
-   - 0.13195625 delta_down_16_27 - 0.13195625 delta_down_16_28
-   - 0.2011875 delta_down_16_29 - 0.16095 delta_down_16_30
-   - 0.2011875 delta_down_16_31 - 0.2011875 delta_down_16_32
-   - 0.5889875 delta_down_16_33 - 0.47119 delta_down_16_34
-   - 0.5889875 delta_down_16_35 - 0.5889875 delta_down_16_36
-   - 0.20625 delta_down_16_37 - 0.165 delta_down_16_38
-   - 0.20625 delta_down_16_39 - 0.20625 delta_down_16_40
-   - 0.278125 delta_down_16_41 - 0.2225 delta_down_16_42
-   - 0.278125 delta_down_16_43 - 0.278125 delta_down_16_44
-   - 0.0408125 delta_down_16_45 - 0.03265 delta_down_16_46
-   - 0.0408125 delta_down_16_47 - 0.0408125 delta_down_16_48
-   - 0.02151875 delta_down_16_49 - 0.017215 delta_down_16_50
-   - 0.02151875 delta_down_16_51 - 0.02151875 delta_down_16_52
-   - 0.1781875 delta_down_16_53 - 0.14255 delta_down_16_54
-   - 0.1781875 delta_down_16_55 - 0.1781875 delta_down_16_56
-   - 0.27159375 delta_down_16_57 - 0.217275 delta_down_16_58
-   - 0.27159375 delta_down_16_59 - 0.27159375 delta_down_16_60
-   - 0.23309375 delta_down_16_61 - 0.186475 delta_down_16_62
-   - 0.23309375 delta_down_16_63 - 0.23309375 delta_down_16_64
-   - 0.1562375 delta_down_16_65 - 0.12499 delta_down_16_66
-   - 0.1562375 delta_down_16_67 - 0.1562375 delta_down_16_68
-   - 0.0311875 delta_down_16_69 - 0.02495 delta_down_16_70
-   - 0.0311875 delta_down_16_71 - 0.0311875 delta_down_16_72
-   - 0.05776875 delta_down_16_73 - 0.046215 delta_down_16_74
-   - 0.05776875 delta_down_16_75 - 0.05776875 delta_down_16_76
-   - 0.16421875 delta_down_16_77 - 0.131375 delta_down_16_78
-   - 0.16421875 delta_down_16_79 - 0.16421875 delta_down_16_80
-   - 0.45176875 delta_down_16_81 - 0.361415 delta_down_16_82
-   - 0.45176875 delta_down_16_83 - 0.45176875 delta_down_16_84
-   - 0.52364375 delta_down_16_85 - 0.418915 delta_down_16_86
-   - 0.52364375 delta_down_16_87 - 0.52364375 delta_down_16_88
-   - 0.1205625 delta_down_16_89 - 0.09645 delta_down_16_90
-   - 0.1205625 delta_down_16_91 - 0.1205625 delta_down_16_92
-   - 0.0515 delta_down_16_93 - 0.0412 delta_down_16_94
-   - 0.0515 delta_down_16_95 - 0.0515 delta_down_16_96
-   - 0.551675 delta_down_16_97 - 0.44134 delta_down_16_98
-   - 0.551675 delta_down_16_99 - 0.551675 delta_down_16_100
-   - 0.123 delta_down_16_101 - 0.0984 delta_down_16_102
-   - 0.123 delta_down_16_103 - 0.123 delta_down_16_104
-   - 0.13195625 delta_down_16_105 - 0.105565 delta_down_16_106
-   - 0.13195625 delta_down_16_107 - 0.13195625 delta_down_16_108
-   - 0.2011875 delta_down_16_109 - 0.16095 delta_down_16_110
-   - 0.2011875 delta_down_16_111 - 0.2011875 delta_down_16_112
-   - 0.5889875 delta_down_16_113 - 0.47119 delta_down_16_114
-   - 0.5889875 delta_down_16_115 - 0.5889875 delta_down_16_116
-   - 0.20625 delta_down_16_117 - 0.165 delta_down_16_118
-   - 0.20625 delta_down_16_119 - 0.20625 delta_down_16_120
-   - 0.278125 delta_down_16_121 - 0.2225 delta_down_16_122
-   - 0.278125 delta_down_16_123 - 0.278125 delta_down_16_124
-   - 0.0408125 delta_down_16_125 - 0.03265 delta_down_16_126
-   - 0.0408125 delta_down_16_127 - 0.0408125 delta_down_16_128
-   - 0.02151875 delta_down_16_129 - 0.017215 delta_down_16_130
-   - 0.02151875 delta_down_16_131 - 0.02151875 delta_down_16_132
-   - 0.1781875 delta_down_16_133 - 0.14255 delta_down_16_134
-   - 0.1781875 delta_down_16_135 - 0.1781875 delta_down_16_136
-   - 0.27159375 delta_down_16_137 - 0.217275 delta_down_16_138
-   - 0.27159375 delta_down_16_139 - 0.27159375 delta_down_16_140
-   - 0.23309375 delta_down_16_141 - 0.186475 delta_down_16_142
-   - 0.23309375 delta_down_16_143 - 0.23309375 delta_down_16_144
-   - 0.1562375 delta_down_16_145 - 0.12499 delta_down_16_146
-   - 0.1562375 delta_down_16_147 - 0.1562375 delta_down_16_148
-   - 0.0311875 delta_down_16_149 - 0.02495 delta_down_16_150
-   - 0.0311875 delta_down_16_151 - 0.0311875 delta_down_16_152
-   - 0.05776875 delta_down_16_153 - 0.046215 delta_down_16_154
-   - 0.05776875 delta_down_16_155 - 0.05776875 delta_down_16_156
-   - 0.16421875 delta_down_16_157 - 0.131375 delta_down_16_158
-   - 0.16421875 delta_down_16_159 - 0.16421875 delta_down_16_160
-   - 0.45176875 delta_down_16_161 - 0.361415 delta_down_16_162
-   - 0.45176875 delta_down_16_163 - 0.45176875 delta_down_16_164
-   - 0.52364375 delta_down_16_165 - 0.418915 delta_down_16_166
-   - 0.52364375 delta_down_16_167 - 0.52364375 delta_down_16_168
-   - 0.1205625 delta_down_16_169 - 0.09645 delta_down_16_170
-   - 0.1205625 delta_down_16_171 - 0.1205625 delta_down_16_172
-   - 0.0515 delta_down_16_173 - 0.0412 delta_down_16_174
-   - 0.0515 delta_down_16_175 - 0.0515 delta_down_16_176
-   - 0.551675 delta_down_16_177 - 0.44134 delta_down_16_178
-   - 0.551675 delta_down_16_179 - 0.551675 delta_down_16_180
-   - 0.123 delta_down_16_181 - 0.0984 delta_down_16_182
-   - 0.123 delta_down_16_183 - 0.123 delta_down_16_184
-   - 0.13195625 delta_down_16_185 - 0.105565 delta_down_16_186
-   - 0.13195625 delta_down_16_187 - 0.13195625 delta_down_16_188
-   - 0.2011875 delta_down_16_189 - 0.16095 delta_down_16_190
-   - 0.2011875 delta_down_16_191 - 0.2011875 delta_down_16_192
-   - 0.5889875 delta_down_16_193 - 0.47119 delta_down_16_194
-   - 0.5889875 delta_down_16_195 - 0.5889875 delta_down_16_196
-   - 0.20625 delta_down_16_197 - 0.165 delta_down_16_198
-   - 0.20625 delta_down_16_199 - 0.20625 delta_down_16_200
-   - 0.48540625 delta_down_17_1 - 0.388325 delta_down_17_2
-   - 0.48540625 delta_down_17_3 - 0.48540625 delta_down_17_4
-   - 0.62496875 delta_down_17_5 - 0.499975 delta_down_17_6
-   - 0.62496875 delta_down_17_7 - 0.62496875 delta_down_17_8
-   - 0.1199375 delta_down_17_9 - 0.09595 delta_down_17_10
-   - 0.1199375 delta_down_17_11 - 0.1199375 delta_down_17_12
-   - 0.03501875 delta_down_17_13 - 0.028015 delta_down_17_14
-   - 0.03501875 delta_down_17_15 - 0.03501875 delta_down_17_16
-   - 0.563 delta_down_17_17 - 0.4504 delta_down_17_18
-   - 0.563 delta_down_17_19 - 0.563 delta_down_17_20
-   - 0.117125 delta_down_17_21 - 0.0937 delta_down_17_22
-   - 0.117125 delta_down_17_23 - 0.117125 delta_down_17_24
-   - 0.12790625 delta_down_17_25 - 0.102325 delta_down_17_26
-   - 0.12790625 delta_down_17_27 - 0.12790625 delta_down_17_28
-   - 0.21214375 delta_down_17_29 - 0.169715 delta_down_17_30
-   - 0.21214375 delta_down_17_31 - 0.21214375 delta_down_17_32
-   - 0.7134062499999999 delta_down_17_33 - 0.570725 delta_down_17_34
-   - 0.7134062499999999 delta_down_17_35
-   - 0.7134062499999999 delta_down_17_36 - 0.20353125 delta_down_17_37
+   - 0.48545 delta_down_13_5 - 0.6068125000000001 delta_down_13_6
+   - 0.6068125000000001 delta_down_13_7
+   - 0.6068125000000001 delta_down_13_8 - 0.1098 delta_down_13_9
+   - 0.13725 delta_down_13_10 - 0.13725 delta_down_13_11
+   - 0.13725 delta_down_13_12 - 0.0381 delta_down_13_13
+   - 0.047625 delta_down_13_14 - 0.047625 delta_down_13_15
+   - 0.047625 delta_down_13_16 - 0.289475 delta_down_13_17
+   - 0.36184375 delta_down_13_18 - 0.36184375 delta_down_13_19
+   - 0.36184375 delta_down_13_20 - 0.128715 delta_down_13_21
+   - 0.16089375 delta_down_13_22 - 0.16089375 delta_down_13_23
+   - 0.16089375 delta_down_13_24 - 0.11829 delta_down_13_25
+   - 0.1478625 delta_down_13_26 - 0.1478625 delta_down_13_27
+   - 0.1478625 delta_down_13_28 - 0.12704 delta_down_13_29
+   - 0.1588 delta_down_13_30 - 0.1588 delta_down_13_31
+   - 0.1588 delta_down_13_32 - 0.324065 delta_down_13_33
+   - 0.40508125 delta_down_13_34 - 0.40508125 delta_down_13_35
+   - 0.40508125 delta_down_13_36 - 0.19385 delta_down_13_37
+   - 0.2423125 delta_down_13_38 - 0.2423125 delta_down_13_39
+   - 0.2423125 delta_down_13_40 - 0.15034 delta_down_13_41
+   - 0.187925 delta_down_13_42 - 0.187925 delta_down_13_43
+   - 0.187925 delta_down_13_44 - 0.0487 delta_down_13_45
+   - 0.060875 delta_down_13_46 - 0.060875 delta_down_13_47
+   - 0.060875 delta_down_13_48 - 0.01 delta_down_13_49
+   - 0.0125 delta_down_13_50 - 0.0125 delta_down_13_51
+   - 0.0125 delta_down_13_52 - 0.100015 delta_down_13_53
+   - 0.12501875 delta_down_13_54 - 0.12501875 delta_down_13_55
+   - 0.12501875 delta_down_13_56 - 0.19939 delta_down_13_57
+   - 0.2492375 delta_down_13_58 - 0.2492375 delta_down_13_59
+   - 0.2492375 delta_down_13_60 - 0.08309 delta_down_13_61
+   - 0.1038625 delta_down_13_62 - 0.1038625 delta_down_13_63
+   - 0.1038625 delta_down_13_64 - 0.1041 delta_down_13_65
+   - 0.130125 delta_down_13_66 - 0.130125 delta_down_13_67
+   - 0.130125 delta_down_13_68 - 0.012225 delta_down_13_69
+   - 0.01528125 delta_down_13_70 - 0.01528125 delta_down_13_71
+   - 0.01528125 delta_down_13_72 - 0.0357 delta_down_13_73
+   - 0.044625 delta_down_13_74 - 0.044625 delta_down_13_75
+   - 0.044625 delta_down_13_76 - 0.121675 delta_down_13_77
+   - 0.15209375 delta_down_13_78 - 0.15209375 delta_down_13_79
+   - 0.15209375 delta_down_13_80 - 0.41204 delta_down_13_81
+   - 0.51505 delta_down_13_82 - 0.51505 delta_down_13_83
+   - 0.51505 delta_down_13_84 - 0.48545 delta_down_13_85
+   - 0.6068125000000001 delta_down_13_86
+   - 0.6068125000000001 delta_down_13_87
+   - 0.6068125000000001 delta_down_13_88 - 0.1098 delta_down_13_89
+   - 0.13725 delta_down_13_90 - 0.13725 delta_down_13_91
+   - 0.13725 delta_down_13_92 - 0.0381 delta_down_13_93
+   - 0.047625 delta_down_13_94 - 0.047625 delta_down_13_95
+   - 0.047625 delta_down_13_96 - 0.289475 delta_down_13_97
+   - 0.36184375 delta_down_13_98 - 0.36184375 delta_down_13_99
+   - 0.36184375 delta_down_13_100 - 0.128715 delta_down_13_101
+   - 0.16089375 delta_down_13_102 - 0.16089375 delta_down_13_103
+   - 0.16089375 delta_down_13_104 - 0.11829 delta_down_13_105
+   - 0.1478625 delta_down_13_106 - 0.1478625 delta_down_13_107
+   - 0.1478625 delta_down_13_108 - 0.12704 delta_down_13_109
+   - 0.1588 delta_down_13_110 - 0.1588 delta_down_13_111
+   - 0.1588 delta_down_13_112 - 0.324065 delta_down_13_113
+   - 0.40508125 delta_down_13_114 - 0.40508125 delta_down_13_115
+   - 0.40508125 delta_down_13_116 - 0.19385 delta_down_13_117
+   - 0.2423125 delta_down_13_118 - 0.2423125 delta_down_13_119
+   - 0.2423125 delta_down_13_120 - 0.15034 delta_down_13_121
+   - 0.187925 delta_down_13_122 - 0.187925 delta_down_13_123
+   - 0.187925 delta_down_13_124 - 0.0487 delta_down_13_125
+   - 0.060875 delta_down_13_126 - 0.060875 delta_down_13_127
+   - 0.060875 delta_down_13_128 - 0.01 delta_down_13_129
+   - 0.0125 delta_down_13_130 - 0.0125 delta_down_13_131
+   - 0.0125 delta_down_13_132 - 0.100015 delta_down_13_133
+   - 0.12501875 delta_down_13_134 - 0.12501875 delta_down_13_135
+   - 0.12501875 delta_down_13_136 - 0.19939 delta_down_13_137
+   - 0.2492375 delta_down_13_138 - 0.2492375 delta_down_13_139
+   - 0.2492375 delta_down_13_140 - 0.08309 delta_down_13_141
+   - 0.1038625 delta_down_13_142 - 0.1038625 delta_down_13_143
+   - 0.1038625 delta_down_13_144 - 0.1041 delta_down_13_145
+   - 0.130125 delta_down_13_146 - 0.130125 delta_down_13_147
+   - 0.130125 delta_down_13_148 - 0.012225 delta_down_13_149
+   - 0.01528125 delta_down_13_150 - 0.01528125 delta_down_13_151
+   - 0.01528125 delta_down_13_152 - 0.0357 delta_down_13_153
+   - 0.044625 delta_down_13_154 - 0.044625 delta_down_13_155
+   - 0.044625 delta_down_13_156 - 0.121675 delta_down_13_157
+   - 0.15209375 delta_down_13_158 - 0.15209375 delta_down_13_159
+   - 0.15209375 delta_down_13_160 - 0.41204 delta_down_13_161
+   - 0.51505 delta_down_13_162 - 0.51505 delta_down_13_163
+   - 0.51505 delta_down_13_164 - 0.48545 delta_down_13_165
+   - 0.6068125000000001 delta_down_13_166
+   - 0.6068125000000001 delta_down_13_167
+   - 0.6068125000000001 delta_down_13_168 - 0.1098 delta_down_13_169
+   - 0.13725 delta_down_13_170 - 0.13725 delta_down_13_171
+   - 0.13725 delta_down_13_172 - 0.0381 delta_down_13_173
+   - 0.047625 delta_down_13_174 - 0.047625 delta_down_13_175
+   - 0.047625 delta_down_13_176 - 0.289475 delta_down_13_177
+   - 0.36184375 delta_down_13_178 - 0.36184375 delta_down_13_179
+   - 0.36184375 delta_down_13_180 - 0.128715 delta_down_13_181
+   - 0.16089375 delta_down_13_182 - 0.16089375 delta_down_13_183
+   - 0.16089375 delta_down_13_184 - 0.11829 delta_down_13_185
+   - 0.1478625 delta_down_13_186 - 0.1478625 delta_down_13_187
+   - 0.1478625 delta_down_13_188 - 0.12704 delta_down_13_189
+   - 0.1588 delta_down_13_190 - 0.1588 delta_down_13_191
+   - 0.1588 delta_down_13_192 - 0.324065 delta_down_13_193
+   - 0.40508125 delta_down_13_194 - 0.40508125 delta_down_13_195
+   - 0.40508125 delta_down_13_196 - 0.19385 delta_down_13_197
+   - 0.2423125 delta_down_13_198 - 0.2423125 delta_down_13_199
+   - 0.2423125 delta_down_13_200 - 0.44185 delta_down_14_1
+   - 0.5523125 delta_down_14_2 - 0.44185 delta_down_14_3
+   - 0.44185 delta_down_14_4 - 0.458725 delta_down_14_5
+   - 0.5734062500000001 delta_down_14_6 - 0.458725 delta_down_14_7
+   - 0.458725 delta_down_14_8 - 0.102115 delta_down_14_9
+   - 0.12764375 delta_down_14_10 - 0.102115 delta_down_14_11
+   - 0.102115 delta_down_14_12 - 0.035665 delta_down_14_13
+   - 0.04458125 delta_down_14_14 - 0.035665 delta_down_14_15
+   - 0.035665 delta_down_14_16 - 0.29104 delta_down_14_17
+   - 0.3638 delta_down_14_18 - 0.29104 delta_down_14_19
+   - 0.29104 delta_down_14_20 - 0.124625 delta_down_14_21
+   - 0.15578125 delta_down_14_22 - 0.124625 delta_down_14_23
+   - 0.124625 delta_down_14_24 - 0.109915 delta_down_14_25
+   - 0.13739375 delta_down_14_26 - 0.109915 delta_down_14_27
+   - 0.109915 delta_down_14_28 - 0.13725 delta_down_14_29
+   - 0.1715625 delta_down_14_30 - 0.13725 delta_down_14_31
+   - 0.13725 delta_down_14_32 - 0.30879 delta_down_14_33
+   - 0.3859875 delta_down_14_34 - 0.30879 delta_down_14_35
+   - 0.30879 delta_down_14_36 - 0.18194 delta_down_14_37
+   - 0.227425 delta_down_14_38 - 0.18194 delta_down_14_39
+   - 0.18194 delta_down_14_40 - 0.14184 delta_down_14_41
+   - 0.1773 delta_down_14_42 - 0.14184 delta_down_14_43
+   - 0.14184 delta_down_14_44 - 0.048825 delta_down_14_45
+   - 0.06103125 delta_down_14_46 - 0.048825 delta_down_14_47
+   - 0.048825 delta_down_14_48 - 0.0103 delta_down_14_49
+   - 0.012875 delta_down_14_50 - 0.0103 delta_down_14_51
+   - 0.0103 delta_down_14_52 - 0.1015 delta_down_14_53
+   - 0.126875 delta_down_14_54 - 0.1015 delta_down_14_55
+   - 0.1015 delta_down_14_56 - 0.153265 delta_down_14_57
+   - 0.19158125 delta_down_14_58 - 0.153265 delta_down_14_59
+   - 0.153265 delta_down_14_60 - 0.0906 delta_down_14_61
+   - 0.11325 delta_down_14_62 - 0.0906 delta_down_14_63
+   - 0.0906 delta_down_14_64 - 0.0747 delta_down_14_65
+   - 0.093375 delta_down_14_66 - 0.0747 delta_down_14_67
+   - 0.0747 delta_down_14_68 - 0.013015 delta_down_14_69
+   - 0.01626875 delta_down_14_70 - 0.013015 delta_down_14_71
+   - 0.013015 delta_down_14_72 - 0.039175 delta_down_14_73
+   - 0.04896875 delta_down_14_74 - 0.039175 delta_down_14_75
+   - 0.039175 delta_down_14_76 - 0.086565 delta_down_14_77
+   - 0.10820625 delta_down_14_78 - 0.086565 delta_down_14_79
+   - 0.086565 delta_down_14_80 - 0.44185 delta_down_14_81
+   - 0.5523125 delta_down_14_82 - 0.44185 delta_down_14_83
+   - 0.44185 delta_down_14_84 - 0.458725 delta_down_14_85
+   - 0.5734062500000001 delta_down_14_86 - 0.458725 delta_down_14_87
+   - 0.458725 delta_down_14_88 - 0.102115 delta_down_14_89
+   - 0.12764375 delta_down_14_90 - 0.102115 delta_down_14_91
+   - 0.102115 delta_down_14_92 - 0.035665 delta_down_14_93
+   - 0.04458125 delta_down_14_94 - 0.035665 delta_down_14_95
+   - 0.035665 delta_down_14_96 - 0.29104 delta_down_14_97
+   - 0.3638 delta_down_14_98 - 0.29104 delta_down_14_99
+   - 0.29104 delta_down_14_100 - 0.124625 delta_down_14_101
+   - 0.15578125 delta_down_14_102 - 0.124625 delta_down_14_103
+   - 0.124625 delta_down_14_104 - 0.109915 delta_down_14_105
+   - 0.13739375 delta_down_14_106 - 0.109915 delta_down_14_107
+   - 0.109915 delta_down_14_108 - 0.13725 delta_down_14_109
+   - 0.1715625 delta_down_14_110 - 0.13725 delta_down_14_111
+   - 0.13725 delta_down_14_112 - 0.30879 delta_down_14_113
+   - 0.3859875 delta_down_14_114 - 0.30879 delta_down_14_115
+   - 0.30879 delta_down_14_116 - 0.18194 delta_down_14_117
+   - 0.227425 delta_down_14_118 - 0.18194 delta_down_14_119
+   - 0.18194 delta_down_14_120 - 0.14184 delta_down_14_121
+   - 0.1773 delta_down_14_122 - 0.14184 delta_down_14_123
+   - 0.14184 delta_down_14_124 - 0.048825 delta_down_14_125
+   - 0.06103125 delta_down_14_126 - 0.048825 delta_down_14_127
+   - 0.048825 delta_down_14_128 - 0.0103 delta_down_14_129
+   - 0.012875 delta_down_14_130 - 0.0103 delta_down_14_131
+   - 0.0103 delta_down_14_132 - 0.1015 delta_down_14_133
+   - 0.126875 delta_down_14_134 - 0.1015 delta_down_14_135
+   - 0.1015 delta_down_14_136 - 0.153265 delta_down_14_137
+   - 0.19158125 delta_down_14_138 - 0.153265 delta_down_14_139
+   - 0.153265 delta_down_14_140 - 0.0906 delta_down_14_141
+   - 0.11325 delta_down_14_142 - 0.0906 delta_down_14_143
+   - 0.0906 delta_down_14_144 - 0.0747 delta_down_14_145
+   - 0.093375 delta_down_14_146 - 0.0747 delta_down_14_147
+   - 0.0747 delta_down_14_148 - 0.013015 delta_down_14_149
+   - 0.01626875 delta_down_14_150 - 0.013015 delta_down_14_151
+   - 0.013015 delta_down_14_152 - 0.039175 delta_down_14_153
+   - 0.04896875 delta_down_14_154 - 0.039175 delta_down_14_155
+   - 0.039175 delta_down_14_156 - 0.086565 delta_down_14_157
+   - 0.10820625 delta_down_14_158 - 0.086565 delta_down_14_159
+   - 0.086565 delta_down_14_160 - 0.44185 delta_down_14_161
+   - 0.5523125 delta_down_14_162 - 0.44185 delta_down_14_163
+   - 0.44185 delta_down_14_164 - 0.458725 delta_down_14_165
+   - 0.5734062500000001 delta_down_14_166 - 0.458725 delta_down_14_167
+   - 0.458725 delta_down_14_168 - 0.102115 delta_down_14_169
+   - 0.12764375 delta_down_14_170 - 0.102115 delta_down_14_171
+   - 0.102115 delta_down_14_172 - 0.035665 delta_down_14_173
+   - 0.04458125 delta_down_14_174 - 0.035665 delta_down_14_175
+   - 0.035665 delta_down_14_176 - 0.29104 delta_down_14_177
+   - 0.3638 delta_down_14_178 - 0.29104 delta_down_14_179
+   - 0.29104 delta_down_14_180 - 0.124625 delta_down_14_181
+   - 0.15578125 delta_down_14_182 - 0.124625 delta_down_14_183
+   - 0.124625 delta_down_14_184 - 0.109915 delta_down_14_185
+   - 0.13739375 delta_down_14_186 - 0.109915 delta_down_14_187
+   - 0.109915 delta_down_14_188 - 0.13725 delta_down_14_189
+   - 0.1715625 delta_down_14_190 - 0.13725 delta_down_14_191
+   - 0.13725 delta_down_14_192 - 0.30879 delta_down_14_193
+   - 0.3859875 delta_down_14_194 - 0.30879 delta_down_14_195
+   - 0.30879 delta_down_14_196 - 0.18194 delta_down_14_197
+   - 0.227425 delta_down_14_198 - 0.18194 delta_down_14_199
+   - 0.18194 delta_down_14_200 - 0.492175 delta_down_15_1
+   - 0.492175 delta_down_15_2 - 0.39374 delta_down_15_3
+   - 0.39374 delta_down_15_4 - 0.7113625 delta_down_15_5
+   - 0.7113625 delta_down_15_6 - 0.56909 delta_down_15_7
+   - 0.56909 delta_down_15_8 - 0.12021875 delta_down_15_9
+   - 0.12021875 delta_down_15_10 - 0.096175 delta_down_15_11
+   - 0.096175 delta_down_15_12 - 0.045625 delta_down_15_13
+   - 0.045625 delta_down_15_14 - 0.0365 delta_down_15_15
+   - 0.0365 delta_down_15_16 - 0.38278125 delta_down_15_17
+   - 0.38278125 delta_down_15_18 - 0.306225 delta_down_15_19
+   - 0.306225 delta_down_15_20 - 0.12533125 delta_down_15_21
+   - 0.12533125 delta_down_15_22 - 0.100265 delta_down_15_23
+   - 0.100265 delta_down_15_24 - 0.14008125 delta_down_15_25
+   - 0.14008125 delta_down_15_26 - 0.112065 delta_down_15_27
+   - 0.112065 delta_down_15_28 - 0.1839875 delta_down_15_29
+   - 0.1839875 delta_down_15_30 - 0.14719 delta_down_15_31
+   - 0.14719 delta_down_15_32 - 0.47326875 delta_down_15_33
+   - 0.47326875 delta_down_15_34 - 0.378615 delta_down_15_35
+   - 0.378615 delta_down_15_36 - 0.21234375 delta_down_15_37
+   - 0.21234375 delta_down_15_38 - 0.169875 delta_down_15_39
+   - 0.169875 delta_down_15_40 - 0.210375 delta_down_15_41
+   - 0.210375 delta_down_15_42 - 0.1683 delta_down_15_43
+   - 0.1683 delta_down_15_44 - 0.052375 delta_down_15_45
+   - 0.052375 delta_down_15_46 - 0.0419 delta_down_15_47
+   - 0.0419 delta_down_15_48 - 0.0141125 delta_down_15_49
+   - 0.0141125 delta_down_15_50 - 0.01129 delta_down_15_51
+   - 0.01129 delta_down_15_52 - 0.14440625 delta_down_15_53
+   - 0.14440625 delta_down_15_54 - 0.115525 delta_down_15_55
+   - 0.115525 delta_down_15_56 - 0.20255 delta_down_15_57
+   - 0.20255 delta_down_15_58 - 0.16204 delta_down_15_59
+   - 0.16204 delta_down_15_60 - 0.20464375 delta_down_15_61
+   - 0.20464375 delta_down_15_62 - 0.163715 delta_down_15_63
+   - 0.163715 delta_down_15_64 - 0.10771875 delta_down_15_65
+   - 0.10771875 delta_down_15_66 - 0.086175 delta_down_15_67
+   - 0.086175 delta_down_15_68 - 0.01821875 delta_down_15_69
+   - 0.01821875 delta_down_15_70 - 0.014575 delta_down_15_71
+   - 0.014575 delta_down_15_72 - 0.05034375 delta_down_15_73
+   - 0.05034375 delta_down_15_74 - 0.040275 delta_down_15_75
+   - 0.040275 delta_down_15_76 - 0.12684375 delta_down_15_77
+   - 0.12684375 delta_down_15_78 - 0.101475 delta_down_15_79
+   - 0.101475 delta_down_15_80 - 0.492175 delta_down_15_81
+   - 0.492175 delta_down_15_82 - 0.39374 delta_down_15_83
+   - 0.39374 delta_down_15_84 - 0.7113625 delta_down_15_85
+   - 0.7113625 delta_down_15_86 - 0.56909 delta_down_15_87
+   - 0.56909 delta_down_15_88 - 0.12021875 delta_down_15_89
+   - 0.12021875 delta_down_15_90 - 0.096175 delta_down_15_91
+   - 0.096175 delta_down_15_92 - 0.045625 delta_down_15_93
+   - 0.045625 delta_down_15_94 - 0.0365 delta_down_15_95
+   - 0.0365 delta_down_15_96 - 0.38278125 delta_down_15_97
+   - 0.38278125 delta_down_15_98 - 0.306225 delta_down_15_99
+   - 0.306225 delta_down_15_100 - 0.12533125 delta_down_15_101
+   - 0.12533125 delta_down_15_102 - 0.100265 delta_down_15_103
+   - 0.100265 delta_down_15_104 - 0.14008125 delta_down_15_105
+   - 0.14008125 delta_down_15_106 - 0.112065 delta_down_15_107
+   - 0.112065 delta_down_15_108 - 0.1839875 delta_down_15_109
+   - 0.1839875 delta_down_15_110 - 0.14719 delta_down_15_111
+   - 0.14719 delta_down_15_112 - 0.47326875 delta_down_15_113
+   - 0.47326875 delta_down_15_114 - 0.378615 delta_down_15_115
+   - 0.378615 delta_down_15_116 - 0.21234375 delta_down_15_117
+   - 0.21234375 delta_down_15_118 - 0.169875 delta_down_15_119
+   - 0.169875 delta_down_15_120 - 0.210375 delta_down_15_121
+   - 0.210375 delta_down_15_122 - 0.1683 delta_down_15_123
+   - 0.1683 delta_down_15_124 - 0.052375 delta_down_15_125
+   - 0.052375 delta_down_15_126 - 0.0419 delta_down_15_127
+   - 0.0419 delta_down_15_128 - 0.0141125 delta_down_15_129
+   - 0.0141125 delta_down_15_130 - 0.01129 delta_down_15_131
+   - 0.01129 delta_down_15_132 - 0.14440625 delta_down_15_133
+   - 0.14440625 delta_down_15_134 - 0.115525 delta_down_15_135
+   - 0.115525 delta_down_15_136 - 0.20255 delta_down_15_137
+   - 0.20255 delta_down_15_138 - 0.16204 delta_down_15_139
+   - 0.16204 delta_down_15_140 - 0.20464375 delta_down_15_141
+   - 0.20464375 delta_down_15_142 - 0.163715 delta_down_15_143
+   - 0.163715 delta_down_15_144 - 0.10771875 delta_down_15_145
+   - 0.10771875 delta_down_15_146 - 0.086175 delta_down_15_147
+   - 0.086175 delta_down_15_148 - 0.01821875 delta_down_15_149
+   - 0.01821875 delta_down_15_150 - 0.014575 delta_down_15_151
+   - 0.014575 delta_down_15_152 - 0.05034375 delta_down_15_153
+   - 0.05034375 delta_down_15_154 - 0.040275 delta_down_15_155
+   - 0.040275 delta_down_15_156 - 0.12684375 delta_down_15_157
+   - 0.12684375 delta_down_15_158 - 0.101475 delta_down_15_159
+   - 0.101475 delta_down_15_160 - 0.492175 delta_down_15_161
+   - 0.492175 delta_down_15_162 - 0.39374 delta_down_15_163
+   - 0.39374 delta_down_15_164 - 0.7113625 delta_down_15_165
+   - 0.7113625 delta_down_15_166 - 0.56909 delta_down_15_167
+   - 0.56909 delta_down_15_168 - 0.12021875 delta_down_15_169
+   - 0.12021875 delta_down_15_170 - 0.096175 delta_down_15_171
+   - 0.096175 delta_down_15_172 - 0.045625 delta_down_15_173
+   - 0.045625 delta_down_15_174 - 0.0365 delta_down_15_175
+   - 0.0365 delta_down_15_176 - 0.38278125 delta_down_15_177
+   - 0.38278125 delta_down_15_178 - 0.306225 delta_down_15_179
+   - 0.306225 delta_down_15_180 - 0.12533125 delta_down_15_181
+   - 0.12533125 delta_down_15_182 - 0.100265 delta_down_15_183
+   - 0.100265 delta_down_15_184 - 0.14008125 delta_down_15_185
+   - 0.14008125 delta_down_15_186 - 0.112065 delta_down_15_187
+   - 0.112065 delta_down_15_188 - 0.1839875 delta_down_15_189
+   - 0.1839875 delta_down_15_190 - 0.14719 delta_down_15_191
+   - 0.14719 delta_down_15_192 - 0.47326875 delta_down_15_193
+   - 0.47326875 delta_down_15_194 - 0.378615 delta_down_15_195
+   - 0.378615 delta_down_15_196 - 0.21234375 delta_down_15_197
+   - 0.21234375 delta_down_15_198 - 0.169875 delta_down_15_199
+   - 0.169875 delta_down_15_200 - 0.45176875 delta_down_16_1
+   - 0.361415 delta_down_16_2 - 0.45176875 delta_down_16_3
+   - 0.45176875 delta_down_16_4 - 0.5236437500000001 delta_down_16_5
+   - 0.418915 delta_down_16_6 - 0.5236437500000001 delta_down_16_7
+   - 0.5236437500000001 delta_down_16_8 - 0.1205625 delta_down_16_9
+   - 0.09645 delta_down_16_10 - 0.1205625 delta_down_16_11
+   - 0.1205625 delta_down_16_12 - 0.0515 delta_down_16_13
+   - 0.0412 delta_down_16_14 - 0.0515 delta_down_16_15
+   - 0.0515 delta_down_16_16 - 0.551675 delta_down_16_17
+   - 0.44134 delta_down_16_18 - 0.551675 delta_down_16_19
+   - 0.551675 delta_down_16_20 - 0.123 delta_down_16_21
+   - 0.0984 delta_down_16_22 - 0.123 delta_down_16_23
+   - 0.123 delta_down_16_24 - 0.13195625 delta_down_16_25
+   - 0.105565 delta_down_16_26 - 0.13195625 delta_down_16_27
+   - 0.13195625 delta_down_16_28 - 0.2011875 delta_down_16_29
+   - 0.16095 delta_down_16_30 - 0.2011875 delta_down_16_31
+   - 0.2011875 delta_down_16_32 - 0.5889875 delta_down_16_33
+   - 0.47119 delta_down_16_34 - 0.5889875 delta_down_16_35
+   - 0.5889875 delta_down_16_36 - 0.20625 delta_down_16_37
+   - 0.165 delta_down_16_38 - 0.20625 delta_down_16_39
+   - 0.20625 delta_down_16_40 - 0.278125 delta_down_16_41
+   - 0.2225 delta_down_16_42 - 0.278125 delta_down_16_43
+   - 0.278125 delta_down_16_44 - 0.0408125 delta_down_16_45
+   - 0.03265 delta_down_16_46 - 0.0408125 delta_down_16_47
+   - 0.0408125 delta_down_16_48 - 0.02151875 delta_down_16_49
+   - 0.017215 delta_down_16_50 - 0.02151875 delta_down_16_51
+   - 0.02151875 delta_down_16_52 - 0.1781875 delta_down_16_53
+   - 0.14255 delta_down_16_54 - 0.1781875 delta_down_16_55
+   - 0.1781875 delta_down_16_56 - 0.27159375 delta_down_16_57
+   - 0.217275 delta_down_16_58 - 0.27159375 delta_down_16_59
+   - 0.27159375 delta_down_16_60 - 0.23309375 delta_down_16_61
+   - 0.186475 delta_down_16_62 - 0.23309375 delta_down_16_63
+   - 0.23309375 delta_down_16_64 - 0.1562375 delta_down_16_65
+   - 0.12499 delta_down_16_66 - 0.1562375 delta_down_16_67
+   - 0.1562375 delta_down_16_68 - 0.0311875 delta_down_16_69
+   - 0.02495 delta_down_16_70 - 0.0311875 delta_down_16_71
+   - 0.0311875 delta_down_16_72 - 0.05776875 delta_down_16_73
+   - 0.046215 delta_down_16_74 - 0.05776875 delta_down_16_75
+   - 0.05776875 delta_down_16_76 - 0.16421875 delta_down_16_77
+   - 0.131375 delta_down_16_78 - 0.16421875 delta_down_16_79
+   - 0.16421875 delta_down_16_80 - 0.45176875 delta_down_16_81
+   - 0.361415 delta_down_16_82 - 0.45176875 delta_down_16_83
+   - 0.45176875 delta_down_16_84 - 0.5236437500000001 delta_down_16_85
+   - 0.418915 delta_down_16_86 - 0.5236437500000001 delta_down_16_87
+   - 0.5236437500000001 delta_down_16_88 - 0.1205625 delta_down_16_89
+   - 0.09645 delta_down_16_90 - 0.1205625 delta_down_16_91
+   - 0.1205625 delta_down_16_92 - 0.0515 delta_down_16_93
+   - 0.0412 delta_down_16_94 - 0.0515 delta_down_16_95
+   - 0.0515 delta_down_16_96 - 0.551675 delta_down_16_97
+   - 0.44134 delta_down_16_98 - 0.551675 delta_down_16_99
+   - 0.551675 delta_down_16_100 - 0.123 delta_down_16_101
+   - 0.0984 delta_down_16_102 - 0.123 delta_down_16_103
+   - 0.123 delta_down_16_104 - 0.13195625 delta_down_16_105
+   - 0.105565 delta_down_16_106 - 0.13195625 delta_down_16_107
+   - 0.13195625 delta_down_16_108 - 0.2011875 delta_down_16_109
+   - 0.16095 delta_down_16_110 - 0.2011875 delta_down_16_111
+   - 0.2011875 delta_down_16_112 - 0.5889875 delta_down_16_113
+   - 0.47119 delta_down_16_114 - 0.5889875 delta_down_16_115
+   - 0.5889875 delta_down_16_116 - 0.20625 delta_down_16_117
+   - 0.165 delta_down_16_118 - 0.20625 delta_down_16_119
+   - 0.20625 delta_down_16_120 - 0.278125 delta_down_16_121
+   - 0.2225 delta_down_16_122 - 0.278125 delta_down_16_123
+   - 0.278125 delta_down_16_124 - 0.0408125 delta_down_16_125
+   - 0.03265 delta_down_16_126 - 0.0408125 delta_down_16_127
+   - 0.0408125 delta_down_16_128 - 0.02151875 delta_down_16_129
+   - 0.017215 delta_down_16_130 - 0.02151875 delta_down_16_131
+   - 0.02151875 delta_down_16_132 - 0.1781875 delta_down_16_133
+   - 0.14255 delta_down_16_134 - 0.1781875 delta_down_16_135
+   - 0.1781875 delta_down_16_136 - 0.27159375 delta_down_16_137
+   - 0.217275 delta_down_16_138 - 0.27159375 delta_down_16_139
+   - 0.27159375 delta_down_16_140 - 0.23309375 delta_down_16_141
+   - 0.186475 delta_down_16_142 - 0.23309375 delta_down_16_143
+   - 0.23309375 delta_down_16_144 - 0.1562375 delta_down_16_145
+   - 0.12499 delta_down_16_146 - 0.1562375 delta_down_16_147
+   - 0.1562375 delta_down_16_148 - 0.0311875 delta_down_16_149
+   - 0.02495 delta_down_16_150 - 0.0311875 delta_down_16_151
+   - 0.0311875 delta_down_16_152 - 0.05776875 delta_down_16_153
+   - 0.046215 delta_down_16_154 - 0.05776875 delta_down_16_155
+   - 0.05776875 delta_down_16_156 - 0.16421875 delta_down_16_157
+   - 0.131375 delta_down_16_158 - 0.16421875 delta_down_16_159
+   - 0.16421875 delta_down_16_160 - 0.45176875 delta_down_16_161
+   - 0.361415 delta_down_16_162 - 0.45176875 delta_down_16_163
+   - 0.45176875 delta_down_16_164 - 0.5236437500000001 delta_down_16_165
+   - 0.418915 delta_down_16_166 - 0.5236437500000001 delta_down_16_167
+   - 0.5236437500000001 delta_down_16_168 - 0.1205625 delta_down_16_169
+   - 0.09645 delta_down_16_170 - 0.1205625 delta_down_16_171
+   - 0.1205625 delta_down_16_172 - 0.0515 delta_down_16_173
+   - 0.0412 delta_down_16_174 - 0.0515 delta_down_16_175
+   - 0.0515 delta_down_16_176 - 0.551675 delta_down_16_177
+   - 0.44134 delta_down_16_178 - 0.551675 delta_down_16_179
+   - 0.551675 delta_down_16_180 - 0.123 delta_down_16_181
+   - 0.0984 delta_down_16_182 - 0.123 delta_down_16_183
+   - 0.123 delta_down_16_184 - 0.13195625 delta_down_16_185
+   - 0.105565 delta_down_16_186 - 0.13195625 delta_down_16_187
+   - 0.13195625 delta_down_16_188 - 0.2011875 delta_down_16_189
+   - 0.16095 delta_down_16_190 - 0.2011875 delta_down_16_191
+   - 0.2011875 delta_down_16_192 - 0.5889875 delta_down_16_193
+   - 0.47119 delta_down_16_194 - 0.5889875 delta_down_16_195
+   - 0.5889875 delta_down_16_196 - 0.20625 delta_down_16_197
+   - 0.165 delta_down_16_198 - 0.20625 delta_down_16_199
+   - 0.20625 delta_down_16_200 - 0.48540625 delta_down_17_1
+   - 0.388325 delta_down_17_2 - 0.48540625 delta_down_17_3
+   - 0.48540625 delta_down_17_4 - 0.6249687500000001 delta_down_17_5
+   - 0.499975 delta_down_17_6 - 0.6249687500000001 delta_down_17_7
+   - 0.6249687500000001 delta_down_17_8 - 0.1199375 delta_down_17_9
+   - 0.09595 delta_down_17_10 - 0.1199375 delta_down_17_11
+   - 0.1199375 delta_down_17_12 - 0.03501875 delta_down_17_13
+   - 0.028015 delta_down_17_14 - 0.03501875 delta_down_17_15
+   - 0.03501875 delta_down_17_16 - 0.563 delta_down_17_17
+   - 0.4504 delta_down_17_18 - 0.563 delta_down_17_19
+   - 0.563 delta_down_17_20 - 0.117125 delta_down_17_21
+   - 0.0937 delta_down_17_22 - 0.117125 delta_down_17_23
+   - 0.117125 delta_down_17_24 - 0.12790625 delta_down_17_25
+   - 0.102325 delta_down_17_26 - 0.12790625 delta_down_17_27
+   - 0.12790625 delta_down_17_28 - 0.21214375 delta_down_17_29
+   - 0.169715 delta_down_17_30 - 0.21214375 delta_down_17_31
+   - 0.21214375 delta_down_17_32 - 0.71340625 delta_down_17_33
+   - 0.570725 delta_down_17_34 - 0.71340625 delta_down_17_35
+   - 0.71340625 delta_down_17_36 - 0.20353125 delta_down_17_37
    - 0.162825 delta_down_17_38 - 0.20353125 delta_down_17_39
    - 0.20353125 delta_down_17_40 - 0.26715625 delta_down_17_41
    - 0.213725 delta_down_17_42 - 0.26715625 delta_down_17_43
@@ -4017,9 +4014,9 @@ Maximize
    - 0.162425 delta_down_17_78 - 0.20303125 delta_down_17_79
    - 0.20303125 delta_down_17_80 - 0.48540625 delta_down_17_81
    - 0.388325 delta_down_17_82 - 0.48540625 delta_down_17_83
-   - 0.48540625 delta_down_17_84 - 0.62496875 delta_down_17_85
-   - 0.499975 delta_down_17_86 - 0.62496875 delta_down_17_87
-   - 0.62496875 delta_down_17_88 - 0.1199375 delta_down_17_89
+   - 0.48540625 delta_down_17_84 - 0.6249687500000001 delta_down_17_85
+   - 0.499975 delta_down_17_86 - 0.6249687500000001 delta_down_17_87
+   - 0.6249687500000001 delta_down_17_88 - 0.1199375 delta_down_17_89
    - 0.09595 delta_down_17_90 - 0.1199375 delta_down_17_91
    - 0.1199375 delta_down_17_92 - 0.03501875 delta_down_17_93
    - 0.028015 delta_down_17_94 - 0.03501875 delta_down_17_95
@@ -4031,9 +4028,9 @@ Maximize
    - 0.102325 delta_down_17_106 - 0.12790625 delta_down_17_107
    - 0.12790625 delta_down_17_108 - 0.21214375 delta_down_17_109
    - 0.169715 delta_down_17_110 - 0.21214375 delta_down_17_111
-   - 0.21214375 delta_down_17_112 - 0.7134062499999999 delta_down_17_113
-   - 0.570725 delta_down_17_114 - 0.7134062499999999 delta_down_17_115
-   - 0.7134062499999999 delta_down_17_116 - 0.20353125 delta_down_17_117
+   - 0.21214375 delta_down_17_112 - 0.71340625 delta_down_17_113
+   - 0.570725 delta_down_17_114 - 0.71340625 delta_down_17_115
+   - 0.71340625 delta_down_17_116 - 0.20353125 delta_down_17_117
    - 0.162825 delta_down_17_118 - 0.20353125 delta_down_17_119
    - 0.20353125 delta_down_17_120 - 0.26715625 delta_down_17_121
    - 0.213725 delta_down_17_122 - 0.26715625 delta_down_17_123
@@ -4057,9 +4054,9 @@ Maximize
    - 0.162425 delta_down_17_158 - 0.20303125 delta_down_17_159
    - 0.20303125 delta_down_17_160 - 0.48540625 delta_down_17_161
    - 0.388325 delta_down_17_162 - 0.48540625 delta_down_17_163
-   - 0.48540625 delta_down_17_164 - 0.62496875 delta_down_17_165
-   - 0.499975 delta_down_17_166 - 0.62496875 delta_down_17_167
-   - 0.62496875 delta_down_17_168 - 0.1199375 delta_down_17_169
+   - 0.48540625 delta_down_17_164 - 0.6249687500000001 delta_down_17_165
+   - 0.499975 delta_down_17_166 - 0.6249687500000001 delta_down_17_167
+   - 0.6249687500000001 delta_down_17_168 - 0.1199375 delta_down_17_169
    - 0.09595 delta_down_17_170 - 0.1199375 delta_down_17_171
    - 0.1199375 delta_down_17_172 - 0.03501875 delta_down_17_173
    - 0.028015 delta_down_17_174 - 0.03501875 delta_down_17_175
@@ -4071,9 +4068,9 @@ Maximize
    - 0.102325 delta_down_17_186 - 0.12790625 delta_down_17_187
    - 0.12790625 delta_down_17_188 - 0.21214375 delta_down_17_189
    - 0.169715 delta_down_17_190 - 0.21214375 delta_down_17_191
-   - 0.21214375 delta_down_17_192 - 0.7134062499999999 delta_down_17_193
-   - 0.570725 delta_down_17_194 - 0.7134062499999999 delta_down_17_195
-   - 0.7134062499999999 delta_down_17_196 - 0.20353125 delta_down_17_197
+   - 0.21214375 delta_down_17_192 - 0.71340625 delta_down_17_193
+   - 0.570725 delta_down_17_194 - 0.71340625 delta_down_17_195
+   - 0.71340625 delta_down_17_196 - 0.20353125 delta_down_17_197
    - 0.162825 delta_down_17_198 - 0.20353125 delta_down_17_199
    - 0.20353125 delta_down_17_200 - 0.450915 delta_down_18_1
    - 0.450915 delta_down_18_2 - 0.450915 delta_down_18_3
@@ -4390,391 +4387,393 @@ Maximize
    - 0.06309375 delta_down_21_26 - 0.06309375 delta_down_21_27
    - 0.050475 delta_down_21_28 - 0.18908125 delta_down_21_29
    - 0.18908125 delta_down_21_30 - 0.18908125 delta_down_21_31
-   - 0.151265 delta_down_21_32 - 0.4767375 delta_down_21_33
-   - 0.4767375 delta_down_21_34 - 0.4767375 delta_down_21_35
-   - 0.38139 delta_down_21_36 - 0.15309375 delta_down_21_37
-   - 0.15309375 delta_down_21_38 - 0.15309375 delta_down_21_39
-   - 0.122475 delta_down_21_40 - 0.14515625 delta_down_21_41
-   - 0.14515625 delta_down_21_42 - 0.14515625 delta_down_21_43
-   - 0.116125 delta_down_21_44 - 0.03901875 delta_down_21_45
-   - 0.03901875 delta_down_21_46 - 0.03901875 delta_down_21_47
-   - 0.031215 delta_down_21_48 - 0.044875 delta_down_21_49
-   - 0.044875 delta_down_21_50 - 0.044875 delta_down_21_51
-   - 0.0359 delta_down_21_52 - 0.18075 delta_down_21_53
-   - 0.18075 delta_down_21_54 - 0.18075 delta_down_21_55
-   - 0.1446 delta_down_21_56 - 0.25001875 delta_down_21_57
-   - 0.25001875 delta_down_21_58 - 0.25001875 delta_down_21_59
-   - 0.200015 delta_down_21_60 - 0.13521875 delta_down_21_61
-   - 0.13521875 delta_down_21_62 - 0.13521875 delta_down_21_63
-   - 0.108175 delta_down_21_64 - 0.02683125 delta_down_21_65
-   - 0.02683125 delta_down_21_66 - 0.02683125 delta_down_21_67
-   - 0.021465 delta_down_21_68 - 0.0211125 delta_down_21_69
-   - 0.0211125 delta_down_21_70 - 0.0211125 delta_down_21_71
-   - 0.01689 delta_down_21_72 - 0.09239375 delta_down_21_73
-   - 0.09239375 delta_down_21_74 - 0.09239375 delta_down_21_75
-   - 0.073915 delta_down_21_76 - 0.07808125 delta_down_21_77
-   - 0.07808125 delta_down_21_78 - 0.07808125 delta_down_21_79
-   - 0.062465 delta_down_21_80 - 0.4624375 delta_down_21_81
-   - 0.4624375 delta_down_21_82 - 0.4624375 delta_down_21_83
-   - 0.36995 delta_down_21_84 - 0.61908125 delta_down_21_85
-   - 0.61908125 delta_down_21_86 - 0.61908125 delta_down_21_87
-   - 0.495265 delta_down_21_88 - 0.0788625 delta_down_21_89
-   - 0.0788625 delta_down_21_90 - 0.0788625 delta_down_21_91
-   - 0.06309 delta_down_21_92 - 0.10159375 delta_down_21_93
-   - 0.10159375 delta_down_21_94 - 0.10159375 delta_down_21_95
-   - 0.081275 delta_down_21_96 - 0.4127375 delta_down_21_97
-   - 0.4127375 delta_down_21_98 - 0.4127375 delta_down_21_99
-   - 0.33019 delta_down_21_100 - 0.06520625 delta_down_21_101
-   - 0.06520625 delta_down_21_102 - 0.06520625 delta_down_21_103
-   - 0.052165 delta_down_21_104 - 0.06309375 delta_down_21_105
-   - 0.06309375 delta_down_21_106 - 0.06309375 delta_down_21_107
-   - 0.050475 delta_down_21_108 - 0.18908125 delta_down_21_109
-   - 0.18908125 delta_down_21_110 - 0.18908125 delta_down_21_111
-   - 0.151265 delta_down_21_112 - 0.4767375 delta_down_21_113
-   - 0.4767375 delta_down_21_114 - 0.4767375 delta_down_21_115
-   - 0.38139 delta_down_21_116 - 0.15309375 delta_down_21_117
-   - 0.15309375 delta_down_21_118 - 0.15309375 delta_down_21_119
-   - 0.122475 delta_down_21_120 - 0.14515625 delta_down_21_121
-   - 0.14515625 delta_down_21_122 - 0.14515625 delta_down_21_123
-   - 0.116125 delta_down_21_124 - 0.03901875 delta_down_21_125
-   - 0.03901875 delta_down_21_126 - 0.03901875 delta_down_21_127
-   - 0.031215 delta_down_21_128 - 0.044875 delta_down_21_129
-   - 0.044875 delta_down_21_130 - 0.044875 delta_down_21_131
-   - 0.0359 delta_down_21_132 - 0.18075 delta_down_21_133
-   - 0.18075 delta_down_21_134 - 0.18075 delta_down_21_135
-   - 0.1446 delta_down_21_136 - 0.25001875 delta_down_21_137
-   - 0.25001875 delta_down_21_138 - 0.25001875 delta_down_21_139
-   - 0.200015 delta_down_21_140 - 0.13521875 delta_down_21_141
-   - 0.13521875 delta_down_21_142 - 0.13521875 delta_down_21_143
-   - 0.108175 delta_down_21_144 - 0.02683125 delta_down_21_145
-   - 0.02683125 delta_down_21_146 - 0.02683125 delta_down_21_147
-   - 0.021465 delta_down_21_148 - 0.0211125 delta_down_21_149
-   - 0.0211125 delta_down_21_150 - 0.0211125 delta_down_21_151
-   - 0.01689 delta_down_21_152 - 0.09239375 delta_down_21_153
-   - 0.09239375 delta_down_21_154 - 0.09239375 delta_down_21_155
-   - 0.073915 delta_down_21_156 - 0.07808125 delta_down_21_157
-   - 0.07808125 delta_down_21_158 - 0.07808125 delta_down_21_159
-   - 0.062465 delta_down_21_160 - 0.4624375 delta_down_21_161
-   - 0.4624375 delta_down_21_162 - 0.4624375 delta_down_21_163
-   - 0.36995 delta_down_21_164 - 0.61908125 delta_down_21_165
-   - 0.61908125 delta_down_21_166 - 0.61908125 delta_down_21_167
-   - 0.495265 delta_down_21_168 - 0.0788625 delta_down_21_169
-   - 0.0788625 delta_down_21_170 - 0.0788625 delta_down_21_171
-   - 0.06309 delta_down_21_172 - 0.10159375 delta_down_21_173
-   - 0.10159375 delta_down_21_174 - 0.10159375 delta_down_21_175
-   - 0.081275 delta_down_21_176 - 0.4127375 delta_down_21_177
-   - 0.4127375 delta_down_21_178 - 0.4127375 delta_down_21_179
-   - 0.33019 delta_down_21_180 - 0.06520625 delta_down_21_181
-   - 0.06520625 delta_down_21_182 - 0.06520625 delta_down_21_183
-   - 0.052165 delta_down_21_184 - 0.06309375 delta_down_21_185
-   - 0.06309375 delta_down_21_186 - 0.06309375 delta_down_21_187
-   - 0.050475 delta_down_21_188 - 0.18908125 delta_down_21_189
-   - 0.18908125 delta_down_21_190 - 0.18908125 delta_down_21_191
-   - 0.151265 delta_down_21_192 - 0.4767375 delta_down_21_193
-   - 0.4767375 delta_down_21_194 - 0.4767375 delta_down_21_195
-   - 0.38139 delta_down_21_196 - 0.15309375 delta_down_21_197
-   - 0.15309375 delta_down_21_198 - 0.15309375 delta_down_21_199
-   - 0.122475 delta_down_21_200 - 0.373115 delta_down_22_1
-   - 0.373115 delta_down_22_2 - 0.4663937500000001 delta_down_22_3
-   - 0.373115 delta_down_22_4 - 0.677915 delta_down_22_5
-   - 0.677915 delta_down_22_6 - 0.8473937500000001 delta_down_22_7
-   - 0.677915 delta_down_22_8 - 0.05349 delta_down_22_9
-   - 0.05349 delta_down_22_10 - 0.0668625 delta_down_22_11
-   - 0.05349 delta_down_22_12 - 0.175 delta_down_22_13
-   - 0.175 delta_down_22_14 - 0.21875 delta_down_22_15
-   - 0.175 delta_down_22_16 - 0.330065 delta_down_22_17
-   - 0.330065 delta_down_22_18 - 0.4125812500000001 delta_down_22_19
-   - 0.330065 delta_down_22_20 - 0.06514 delta_down_22_21
-   - 0.06514 delta_down_22_22 - 0.081425 delta_down_22_23
-   - 0.06514 delta_down_22_24 - 0.061965 delta_down_22_25
-   - 0.061965 delta_down_22_26 - 0.07745625 delta_down_22_27
-   - 0.061965 delta_down_22_28 - 0.176165 delta_down_22_29
-   - 0.176165 delta_down_22_30 - 0.22020625 delta_down_22_31
-   - 0.176165 delta_down_22_32 - 0.231325 delta_down_22_33
-   - 0.231325 delta_down_22_34 - 0.28915625 delta_down_22_35
-   - 0.231325 delta_down_22_36 - 0.12449 delta_down_22_37
-   - 0.12449 delta_down_22_38 - 0.1556125 delta_down_22_39
-   - 0.12449 delta_down_22_40 - 0.1102 delta_down_22_41
-   - 0.1102 delta_down_22_42 - 0.13775 delta_down_22_43
-   - 0.1102 delta_down_22_44 - 0.02415 delta_down_22_45
-   - 0.02415 delta_down_22_46 - 0.0301875 delta_down_22_47
-   - 0.02415 delta_down_22_48 - 0.034065 delta_down_22_49
-   - 0.034065 delta_down_22_50 - 0.04258125 delta_down_22_51
-   - 0.034065 delta_down_22_52 - 0.149765 delta_down_22_53
-   - 0.149765 delta_down_22_54 - 0.18720625 delta_down_22_55
-   - 0.149765 delta_down_22_56 - 0.1805 delta_down_22_57
-   - 0.1805 delta_down_22_58 - 0.225625 delta_down_22_59
-   - 0.1805 delta_down_22_60 - 0.08999 delta_down_22_61
-   - 0.08999 delta_down_22_62 - 0.1124875 delta_down_22_63
-   - 0.08999 delta_down_22_64 - 0.015825 delta_down_22_65
-   - 0.015825 delta_down_22_66 - 0.01978125 delta_down_22_67
-   - 0.015825 delta_down_22_68 - 0.01275 delta_down_22_69
-   - 0.01275 delta_down_22_70 - 0.0159375 delta_down_22_71
-   - 0.01275 delta_down_22_72 - 0.085115 delta_down_22_73
-   - 0.085115 delta_down_22_74 - 0.10639375 delta_down_22_75
-   - 0.085115 delta_down_22_76 - 0.05104 delta_down_22_77
-   - 0.05104 delta_down_22_78 - 0.0638 delta_down_22_79
-   - 0.05104 delta_down_22_80 - 0.373115 delta_down_22_81
-   - 0.373115 delta_down_22_82 - 0.4663937500000001 delta_down_22_83
-   - 0.373115 delta_down_22_84 - 0.677915 delta_down_22_85
-   - 0.677915 delta_down_22_86 - 0.8473937500000001 delta_down_22_87
-   - 0.677915 delta_down_22_88 - 0.05349 delta_down_22_89
-   - 0.05349 delta_down_22_90 - 0.0668625 delta_down_22_91
-   - 0.05349 delta_down_22_92 - 0.175 delta_down_22_93
-   - 0.175 delta_down_22_94 - 0.21875 delta_down_22_95
-   - 0.175 delta_down_22_96 - 0.330065 delta_down_22_97
-   - 0.330065 delta_down_22_98 - 0.4125812500000001 delta_down_22_99
-   - 0.330065 delta_down_22_100 - 0.06514 delta_down_22_101
-   - 0.06514 delta_down_22_102 - 0.081425 delta_down_22_103
-   - 0.06514 delta_down_22_104 - 0.061965 delta_down_22_105
-   - 0.061965 delta_down_22_106 - 0.07745625 delta_down_22_107
-   - 0.061965 delta_down_22_108 - 0.176165 delta_down_22_109
-   - 0.176165 delta_down_22_110 - 0.22020625 delta_down_22_111
-   - 0.176165 delta_down_22_112 - 0.231325 delta_down_22_113
-   - 0.231325 delta_down_22_114 - 0.28915625 delta_down_22_115
-   - 0.231325 delta_down_22_116 - 0.12449 delta_down_22_117
-   - 0.12449 delta_down_22_118 - 0.1556125 delta_down_22_119
-   - 0.12449 delta_down_22_120 - 0.1102 delta_down_22_121
-   - 0.1102 delta_down_22_122 - 0.13775 delta_down_22_123
-   - 0.1102 delta_down_22_124 - 0.02415 delta_down_22_125
-   - 0.02415 delta_down_22_126 - 0.0301875 delta_down_22_127
-   - 0.02415 delta_down_22_128 - 0.034065 delta_down_22_129
-   - 0.034065 delta_down_22_130 - 0.04258125 delta_down_22_131
-   - 0.034065 delta_down_22_132 - 0.149765 delta_down_22_133
-   - 0.149765 delta_down_22_134 - 0.18720625 delta_down_22_135
-   - 0.149765 delta_down_22_136 - 0.1805 delta_down_22_137
-   - 0.1805 delta_down_22_138 - 0.225625 delta_down_22_139
-   - 0.1805 delta_down_22_140 - 0.08999 delta_down_22_141
-   - 0.08999 delta_down_22_142 - 0.1124875 delta_down_22_143
-   - 0.08999 delta_down_22_144 - 0.015825 delta_down_22_145
-   - 0.015825 delta_down_22_146 - 0.01978125 delta_down_22_147
-   - 0.015825 delta_down_22_148 - 0.01275 delta_down_22_149
-   - 0.01275 delta_down_22_150 - 0.0159375 delta_down_22_151
-   - 0.01275 delta_down_22_152 - 0.085115 delta_down_22_153
-   - 0.085115 delta_down_22_154 - 0.10639375 delta_down_22_155
-   - 0.085115 delta_down_22_156 - 0.05104 delta_down_22_157
-   - 0.05104 delta_down_22_158 - 0.0638 delta_down_22_159
-   - 0.05104 delta_down_22_160 - 0.373115 delta_down_22_161
-   - 0.373115 delta_down_22_162 - 0.4663937500000001 delta_down_22_163
-   - 0.373115 delta_down_22_164 - 0.677915 delta_down_22_165
-   - 0.677915 delta_down_22_166 - 0.8473937500000001 delta_down_22_167
-   - 0.677915 delta_down_22_168 - 0.05349 delta_down_22_169
-   - 0.05349 delta_down_22_170 - 0.0668625 delta_down_22_171
-   - 0.05349 delta_down_22_172 - 0.175 delta_down_22_173
-   - 0.175 delta_down_22_174 - 0.21875 delta_down_22_175
-   - 0.175 delta_down_22_176 - 0.330065 delta_down_22_177
-   - 0.330065 delta_down_22_178 - 0.4125812500000001 delta_down_22_179
-   - 0.330065 delta_down_22_180 - 0.06514 delta_down_22_181
-   - 0.06514 delta_down_22_182 - 0.081425 delta_down_22_183
-   - 0.06514 delta_down_22_184 - 0.061965 delta_down_22_185
-   - 0.061965 delta_down_22_186 - 0.07745625 delta_down_22_187
-   - 0.061965 delta_down_22_188 - 0.176165 delta_down_22_189
-   - 0.176165 delta_down_22_190 - 0.22020625 delta_down_22_191
-   - 0.176165 delta_down_22_192 - 0.231325 delta_down_22_193
-   - 0.231325 delta_down_22_194 - 0.28915625 delta_down_22_195
-   - 0.231325 delta_down_22_196 - 0.12449 delta_down_22_197
-   - 0.12449 delta_down_22_198 - 0.1556125 delta_down_22_199
-   - 0.12449 delta_down_22_200 - 0.39901875 delta_down_23_1
-   - 0.39901875 delta_down_23_2 - 0.319215 delta_down_23_3
-   - 0.319215 delta_down_23_4 - 0.6188 delta_down_23_5
-   - 0.6188 delta_down_23_6 - 0.49504 delta_down_23_7
-   - 0.49504 delta_down_23_8 - 0.04275 delta_down_23_9
-   - 0.04275 delta_down_23_10 - 0.0342 delta_down_23_11
-   - 0.0342 delta_down_23_12 - 0.21253125 delta_down_23_13
-   - 0.21253125 delta_down_23_14 - 0.170025 delta_down_23_15
-   - 0.170025 delta_down_23_16 - 0.24446875 delta_down_23_17
-   - 0.24446875 delta_down_23_18 - 0.195575 delta_down_23_19
-   - 0.195575 delta_down_23_20 - 0.075375 delta_down_23_21
-   - 0.075375 delta_down_23_22 - 0.0603 delta_down_23_23
-   - 0.0603 delta_down_23_24 - 0.0661875 delta_down_23_25
-   - 0.0661875 delta_down_23_26 - 0.05295 delta_down_23_27
-   - 0.05295 delta_down_23_28 - 0.23758125 delta_down_23_29
-   - 0.23758125 delta_down_23_30 - 0.190065 delta_down_23_31
-   - 0.190065 delta_down_23_32 - 0.2232375 delta_down_23_33
-   - 0.2232375 delta_down_23_34 - 0.17859 delta_down_23_35
-   - 0.17859 delta_down_23_36 - 0.151125 delta_down_23_37
-   - 0.151125 delta_down_23_38 - 0.1209 delta_down_23_39
-   - 0.1209 delta_down_23_40 - 0.13114375 delta_down_23_41
-   - 0.13114375 delta_down_23_42 - 0.104915 delta_down_23_43
-   - 0.104915 delta_down_23_44 - 0.02151875 delta_down_23_45
-   - 0.02151875 delta_down_23_46 - 0.017215 delta_down_23_47
-   - 0.017215 delta_down_23_48 - 0.03758125 delta_down_23_49
-   - 0.03758125 delta_down_23_50 - 0.030065 delta_down_23_51
-   - 0.030065 delta_down_23_52 - 0.1988 delta_down_23_53
-   - 0.1988 delta_down_23_54 - 0.15904 delta_down_23_55
-   - 0.15904 delta_down_23_56 - 0.20575 delta_down_23_57
-   - 0.20575 delta_down_23_58 - 0.1646 delta_down_23_59
-   - 0.1646 delta_down_23_60 - 0.11214375 delta_down_23_61
-   - 0.11214375 delta_down_23_62 - 0.089715 delta_down_23_63
-   - 0.089715 delta_down_23_64 - 0.011875 delta_down_23_65
-   - 0.011875 delta_down_23_66 - 0.0095 delta_down_23_67
-   - 0.0095 delta_down_23_68 - 0.0123125 delta_down_23_69
-   - 0.0123125 delta_down_23_70 - 0.00985 delta_down_23_71
-   - 0.00985 delta_down_23_72 - 0.09853125 delta_down_23_73
-   - 0.09853125 delta_down_23_74 - 0.078825 delta_down_23_75
-   - 0.078825 delta_down_23_76 - 0.06871875 delta_down_23_77
-   - 0.06871875 delta_down_23_78 - 0.054975 delta_down_23_79
-   - 0.054975 delta_down_23_80 - 0.39901875 delta_down_23_81
-   - 0.39901875 delta_down_23_82 - 0.319215 delta_down_23_83
-   - 0.319215 delta_down_23_84 - 0.6188 delta_down_23_85
-   - 0.6188 delta_down_23_86 - 0.49504 delta_down_23_87
-   - 0.49504 delta_down_23_88 - 0.04275 delta_down_23_89
-   - 0.04275 delta_down_23_90 - 0.0342 delta_down_23_91
-   - 0.0342 delta_down_23_92 - 0.21253125 delta_down_23_93
-   - 0.21253125 delta_down_23_94 - 0.170025 delta_down_23_95
-   - 0.170025 delta_down_23_96 - 0.24446875 delta_down_23_97
-   - 0.24446875 delta_down_23_98 - 0.195575 delta_down_23_99
-   - 0.195575 delta_down_23_100 - 0.075375 delta_down_23_101
-   - 0.075375 delta_down_23_102 - 0.0603 delta_down_23_103
-   - 0.0603 delta_down_23_104 - 0.0661875 delta_down_23_105
-   - 0.0661875 delta_down_23_106 - 0.05295 delta_down_23_107
-   - 0.05295 delta_down_23_108 - 0.23758125 delta_down_23_109
-   - 0.23758125 delta_down_23_110 - 0.190065 delta_down_23_111
-   - 0.190065 delta_down_23_112 - 0.2232375 delta_down_23_113
-   - 0.2232375 delta_down_23_114 - 0.17859 delta_down_23_115
-   - 0.17859 delta_down_23_116 - 0.151125 delta_down_23_117
-   - 0.151125 delta_down_23_118 - 0.1209 delta_down_23_119
-   - 0.1209 delta_down_23_120 - 0.13114375 delta_down_23_121
-   - 0.13114375 delta_down_23_122 - 0.104915 delta_down_23_123
-   - 0.104915 delta_down_23_124 - 0.02151875 delta_down_23_125
-   - 0.02151875 delta_down_23_126 - 0.017215 delta_down_23_127
-   - 0.017215 delta_down_23_128 - 0.03758125 delta_down_23_129
-   - 0.03758125 delta_down_23_130 - 0.030065 delta_down_23_131
-   - 0.030065 delta_down_23_132 - 0.1988 delta_down_23_133
-   - 0.1988 delta_down_23_134 - 0.15904 delta_down_23_135
-   - 0.15904 delta_down_23_136 - 0.20575 delta_down_23_137
-   - 0.20575 delta_down_23_138 - 0.1646 delta_down_23_139
-   - 0.1646 delta_down_23_140 - 0.11214375 delta_down_23_141
-   - 0.11214375 delta_down_23_142 - 0.089715 delta_down_23_143
-   - 0.089715 delta_down_23_144 - 0.011875 delta_down_23_145
-   - 0.011875 delta_down_23_146 - 0.0095 delta_down_23_147
-   - 0.0095 delta_down_23_148 - 0.0123125 delta_down_23_149
-   - 0.0123125 delta_down_23_150 - 0.00985 delta_down_23_151
-   - 0.00985 delta_down_23_152 - 0.09853125 delta_down_23_153
-   - 0.09853125 delta_down_23_154 - 0.078825 delta_down_23_155
-   - 0.078825 delta_down_23_156 - 0.06871875 delta_down_23_157
-   - 0.06871875 delta_down_23_158 - 0.054975 delta_down_23_159
-   - 0.054975 delta_down_23_160 - 0.39901875 delta_down_23_161
-   - 0.39901875 delta_down_23_162 - 0.319215 delta_down_23_163
-   - 0.319215 delta_down_23_164 - 0.6188 delta_down_23_165
-   - 0.6188 delta_down_23_166 - 0.49504 delta_down_23_167
-   - 0.49504 delta_down_23_168 - 0.04275 delta_down_23_169
-   - 0.04275 delta_down_23_170 - 0.0342 delta_down_23_171
-   - 0.0342 delta_down_23_172 - 0.21253125 delta_down_23_173
-   - 0.21253125 delta_down_23_174 - 0.170025 delta_down_23_175
-   - 0.170025 delta_down_23_176 - 0.24446875 delta_down_23_177
-   - 0.24446875 delta_down_23_178 - 0.195575 delta_down_23_179
-   - 0.195575 delta_down_23_180 - 0.075375 delta_down_23_181
-   - 0.075375 delta_down_23_182 - 0.0603 delta_down_23_183
-   - 0.0603 delta_down_23_184 - 0.0661875 delta_down_23_185
-   - 0.0661875 delta_down_23_186 - 0.05295 delta_down_23_187
-   - 0.05295 delta_down_23_188 - 0.23758125 delta_down_23_189
-   - 0.23758125 delta_down_23_190 - 0.190065 delta_down_23_191
-   - 0.190065 delta_down_23_192 - 0.2232375 delta_down_23_193
-   - 0.2232375 delta_down_23_194 - 0.17859 delta_down_23_195
-   - 0.17859 delta_down_23_196 - 0.151125 delta_down_23_197
-   - 0.151125 delta_down_23_198 - 0.1209 delta_down_23_199
-   - 0.1209 delta_down_23_200 - 0.3048 delta_down_24_1
-   - 0.3048 delta_down_24_2 - 0.381 delta_down_24_3 - 0.381 delta_down_24_4
+   - 0.151265 delta_down_21_32 - 0.4767375000000001 delta_down_21_33
+   - 0.4767375000000001 delta_down_21_34
+   - 0.4767375000000001 delta_down_21_35 - 0.38139 delta_down_21_36
+   - 0.15309375 delta_down_21_37 - 0.15309375 delta_down_21_38
+   - 0.15309375 delta_down_21_39 - 0.122475 delta_down_21_40
+   - 0.14515625 delta_down_21_41 - 0.14515625 delta_down_21_42
+   - 0.14515625 delta_down_21_43 - 0.116125 delta_down_21_44
+   - 0.03901875 delta_down_21_45 - 0.03901875 delta_down_21_46
+   - 0.03901875 delta_down_21_47 - 0.031215 delta_down_21_48
+   - 0.044875 delta_down_21_49 - 0.044875 delta_down_21_50
+   - 0.044875 delta_down_21_51 - 0.0359 delta_down_21_52
+   - 0.18075 delta_down_21_53 - 0.18075 delta_down_21_54
+   - 0.18075 delta_down_21_55 - 0.1446 delta_down_21_56
+   - 0.25001875 delta_down_21_57 - 0.25001875 delta_down_21_58
+   - 0.25001875 delta_down_21_59 - 0.200015 delta_down_21_60
+   - 0.13521875 delta_down_21_61 - 0.13521875 delta_down_21_62
+   - 0.13521875 delta_down_21_63 - 0.108175 delta_down_21_64
+   - 0.02683125 delta_down_21_65 - 0.02683125 delta_down_21_66
+   - 0.02683125 delta_down_21_67 - 0.021465 delta_down_21_68
+   - 0.0211125 delta_down_21_69 - 0.0211125 delta_down_21_70
+   - 0.0211125 delta_down_21_71 - 0.01689 delta_down_21_72
+   - 0.09239375 delta_down_21_73 - 0.09239375 delta_down_21_74
+   - 0.09239375 delta_down_21_75 - 0.073915 delta_down_21_76
+   - 0.07808125 delta_down_21_77 - 0.07808125 delta_down_21_78
+   - 0.07808125 delta_down_21_79 - 0.062465 delta_down_21_80
+   - 0.4624375 delta_down_21_81 - 0.4624375 delta_down_21_82
+   - 0.4624375 delta_down_21_83 - 0.36995 delta_down_21_84
+   - 0.61908125 delta_down_21_85 - 0.61908125 delta_down_21_86
+   - 0.61908125 delta_down_21_87 - 0.495265 delta_down_21_88
+   - 0.0788625 delta_down_21_89 - 0.0788625 delta_down_21_90
+   - 0.0788625 delta_down_21_91 - 0.06309 delta_down_21_92
+   - 0.10159375 delta_down_21_93 - 0.10159375 delta_down_21_94
+   - 0.10159375 delta_down_21_95 - 0.081275 delta_down_21_96
+   - 0.4127375 delta_down_21_97 - 0.4127375 delta_down_21_98
+   - 0.4127375 delta_down_21_99 - 0.33019 delta_down_21_100
+   - 0.06520625 delta_down_21_101 - 0.06520625 delta_down_21_102
+   - 0.06520625 delta_down_21_103 - 0.052165 delta_down_21_104
+   - 0.06309375 delta_down_21_105 - 0.06309375 delta_down_21_106
+   - 0.06309375 delta_down_21_107 - 0.050475 delta_down_21_108
+   - 0.18908125 delta_down_21_109 - 0.18908125 delta_down_21_110
+   - 0.18908125 delta_down_21_111 - 0.151265 delta_down_21_112
+   - 0.4767375000000001 delta_down_21_113
+   - 0.4767375000000001 delta_down_21_114
+   - 0.4767375000000001 delta_down_21_115 - 0.38139 delta_down_21_116
+   - 0.15309375 delta_down_21_117 - 0.15309375 delta_down_21_118
+   - 0.15309375 delta_down_21_119 - 0.122475 delta_down_21_120
+   - 0.14515625 delta_down_21_121 - 0.14515625 delta_down_21_122
+   - 0.14515625 delta_down_21_123 - 0.116125 delta_down_21_124
+   - 0.03901875 delta_down_21_125 - 0.03901875 delta_down_21_126
+   - 0.03901875 delta_down_21_127 - 0.031215 delta_down_21_128
+   - 0.044875 delta_down_21_129 - 0.044875 delta_down_21_130
+   - 0.044875 delta_down_21_131 - 0.0359 delta_down_21_132
+   - 0.18075 delta_down_21_133 - 0.18075 delta_down_21_134
+   - 0.18075 delta_down_21_135 - 0.1446 delta_down_21_136
+   - 0.25001875 delta_down_21_137 - 0.25001875 delta_down_21_138
+   - 0.25001875 delta_down_21_139 - 0.200015 delta_down_21_140
+   - 0.13521875 delta_down_21_141 - 0.13521875 delta_down_21_142
+   - 0.13521875 delta_down_21_143 - 0.108175 delta_down_21_144
+   - 0.02683125 delta_down_21_145 - 0.02683125 delta_down_21_146
+   - 0.02683125 delta_down_21_147 - 0.021465 delta_down_21_148
+   - 0.0211125 delta_down_21_149 - 0.0211125 delta_down_21_150
+   - 0.0211125 delta_down_21_151 - 0.01689 delta_down_21_152
+   - 0.09239375 delta_down_21_153 - 0.09239375 delta_down_21_154
+   - 0.09239375 delta_down_21_155 - 0.073915 delta_down_21_156
+   - 0.07808125 delta_down_21_157 - 0.07808125 delta_down_21_158
+   - 0.07808125 delta_down_21_159 - 0.062465 delta_down_21_160
+   - 0.4624375 delta_down_21_161 - 0.4624375 delta_down_21_162
+   - 0.4624375 delta_down_21_163 - 0.36995 delta_down_21_164
+   - 0.61908125 delta_down_21_165 - 0.61908125 delta_down_21_166
+   - 0.61908125 delta_down_21_167 - 0.495265 delta_down_21_168
+   - 0.0788625 delta_down_21_169 - 0.0788625 delta_down_21_170
+   - 0.0788625 delta_down_21_171 - 0.06309 delta_down_21_172
+   - 0.10159375 delta_down_21_173 - 0.10159375 delta_down_21_174
+   - 0.10159375 delta_down_21_175 - 0.081275 delta_down_21_176
+   - 0.4127375 delta_down_21_177 - 0.4127375 delta_down_21_178
+   - 0.4127375 delta_down_21_179 - 0.33019 delta_down_21_180
+   - 0.06520625 delta_down_21_181 - 0.06520625 delta_down_21_182
+   - 0.06520625 delta_down_21_183 - 0.052165 delta_down_21_184
+   - 0.06309375 delta_down_21_185 - 0.06309375 delta_down_21_186
+   - 0.06309375 delta_down_21_187 - 0.050475 delta_down_21_188
+   - 0.18908125 delta_down_21_189 - 0.18908125 delta_down_21_190
+   - 0.18908125 delta_down_21_191 - 0.151265 delta_down_21_192
+   - 0.4767375000000001 delta_down_21_193
+   - 0.4767375000000001 delta_down_21_194
+   - 0.4767375000000001 delta_down_21_195 - 0.38139 delta_down_21_196
+   - 0.15309375 delta_down_21_197 - 0.15309375 delta_down_21_198
+   - 0.15309375 delta_down_21_199 - 0.122475 delta_down_21_200
+   - 0.373115 delta_down_22_1 - 0.373115 delta_down_22_2
+   - 0.4663937500000001 delta_down_22_3 - 0.373115 delta_down_22_4
+   - 0.677915 delta_down_22_5 - 0.677915 delta_down_22_6
+   - 0.8473937500000001 delta_down_22_7 - 0.677915 delta_down_22_8
+   - 0.05349 delta_down_22_9 - 0.05349 delta_down_22_10
+   - 0.0668625 delta_down_22_11 - 0.05349 delta_down_22_12
+   - 0.175 delta_down_22_13 - 0.175 delta_down_22_14
+   - 0.21875 delta_down_22_15 - 0.175 delta_down_22_16
+   - 0.330065 delta_down_22_17 - 0.330065 delta_down_22_18
+   - 0.4125812500000001 delta_down_22_19 - 0.330065 delta_down_22_20
+   - 0.06514 delta_down_22_21 - 0.06514 delta_down_22_22
+   - 0.081425 delta_down_22_23 - 0.06514 delta_down_22_24
+   - 0.061965 delta_down_22_25 - 0.061965 delta_down_22_26
+   - 0.07745625 delta_down_22_27 - 0.061965 delta_down_22_28
+   - 0.176165 delta_down_22_29 - 0.176165 delta_down_22_30
+   - 0.22020625 delta_down_22_31 - 0.176165 delta_down_22_32
+   - 0.231325 delta_down_22_33 - 0.231325 delta_down_22_34
+   - 0.28915625 delta_down_22_35 - 0.231325 delta_down_22_36
+   - 0.12449 delta_down_22_37 - 0.12449 delta_down_22_38
+   - 0.1556125 delta_down_22_39 - 0.12449 delta_down_22_40
+   - 0.1102 delta_down_22_41 - 0.1102 delta_down_22_42
+   - 0.13775 delta_down_22_43 - 0.1102 delta_down_22_44
+   - 0.02415 delta_down_22_45 - 0.02415 delta_down_22_46
+   - 0.0301875 delta_down_22_47 - 0.02415 delta_down_22_48
+   - 0.034065 delta_down_22_49 - 0.034065 delta_down_22_50
+   - 0.04258125 delta_down_22_51 - 0.034065 delta_down_22_52
+   - 0.149765 delta_down_22_53 - 0.149765 delta_down_22_54
+   - 0.18720625 delta_down_22_55 - 0.149765 delta_down_22_56
+   - 0.1805 delta_down_22_57 - 0.1805 delta_down_22_58
+   - 0.225625 delta_down_22_59 - 0.1805 delta_down_22_60
+   - 0.08999 delta_down_22_61 - 0.08999 delta_down_22_62
+   - 0.1124875 delta_down_22_63 - 0.08999 delta_down_22_64
+   - 0.015825 delta_down_22_65 - 0.015825 delta_down_22_66
+   - 0.01978125 delta_down_22_67 - 0.015825 delta_down_22_68
+   - 0.01275 delta_down_22_69 - 0.01275 delta_down_22_70
+   - 0.0159375 delta_down_22_71 - 0.01275 delta_down_22_72
+   - 0.085115 delta_down_22_73 - 0.085115 delta_down_22_74
+   - 0.10639375 delta_down_22_75 - 0.085115 delta_down_22_76
+   - 0.05104 delta_down_22_77 - 0.05104 delta_down_22_78
+   - 0.0638 delta_down_22_79 - 0.05104 delta_down_22_80
+   - 0.373115 delta_down_22_81 - 0.373115 delta_down_22_82
+   - 0.4663937500000001 delta_down_22_83 - 0.373115 delta_down_22_84
+   - 0.677915 delta_down_22_85 - 0.677915 delta_down_22_86
+   - 0.8473937500000001 delta_down_22_87 - 0.677915 delta_down_22_88
+   - 0.05349 delta_down_22_89 - 0.05349 delta_down_22_90
+   - 0.0668625 delta_down_22_91 - 0.05349 delta_down_22_92
+   - 0.175 delta_down_22_93 - 0.175 delta_down_22_94
+   - 0.21875 delta_down_22_95 - 0.175 delta_down_22_96
+   - 0.330065 delta_down_22_97 - 0.330065 delta_down_22_98
+   - 0.4125812500000001 delta_down_22_99 - 0.330065 delta_down_22_100
+   - 0.06514 delta_down_22_101 - 0.06514 delta_down_22_102
+   - 0.081425 delta_down_22_103 - 0.06514 delta_down_22_104
+   - 0.061965 delta_down_22_105 - 0.061965 delta_down_22_106
+   - 0.07745625 delta_down_22_107 - 0.061965 delta_down_22_108
+   - 0.176165 delta_down_22_109 - 0.176165 delta_down_22_110
+   - 0.22020625 delta_down_22_111 - 0.176165 delta_down_22_112
+   - 0.231325 delta_down_22_113 - 0.231325 delta_down_22_114
+   - 0.28915625 delta_down_22_115 - 0.231325 delta_down_22_116
+   - 0.12449 delta_down_22_117 - 0.12449 delta_down_22_118
+   - 0.1556125 delta_down_22_119 - 0.12449 delta_down_22_120
+   - 0.1102 delta_down_22_121 - 0.1102 delta_down_22_122
+   - 0.13775 delta_down_22_123 - 0.1102 delta_down_22_124
+   - 0.02415 delta_down_22_125 - 0.02415 delta_down_22_126
+   - 0.0301875 delta_down_22_127 - 0.02415 delta_down_22_128
+   - 0.034065 delta_down_22_129 - 0.034065 delta_down_22_130
+   - 0.04258125 delta_down_22_131 - 0.034065 delta_down_22_132
+   - 0.149765 delta_down_22_133 - 0.149765 delta_down_22_134
+   - 0.18720625 delta_down_22_135 - 0.149765 delta_down_22_136
+   - 0.1805 delta_down_22_137 - 0.1805 delta_down_22_138
+   - 0.225625 delta_down_22_139 - 0.1805 delta_down_22_140
+   - 0.08999 delta_down_22_141 - 0.08999 delta_down_22_142
+   - 0.1124875 delta_down_22_143 - 0.08999 delta_down_22_144
+   - 0.015825 delta_down_22_145 - 0.015825 delta_down_22_146
+   - 0.01978125 delta_down_22_147 - 0.015825 delta_down_22_148
+   - 0.01275 delta_down_22_149 - 0.01275 delta_down_22_150
+   - 0.0159375 delta_down_22_151 - 0.01275 delta_down_22_152
+   - 0.085115 delta_down_22_153 - 0.085115 delta_down_22_154
+   - 0.10639375 delta_down_22_155 - 0.085115 delta_down_22_156
+   - 0.05104 delta_down_22_157 - 0.05104 delta_down_22_158
+   - 0.0638 delta_down_22_159 - 0.05104 delta_down_22_160
+   - 0.373115 delta_down_22_161 - 0.373115 delta_down_22_162
+   - 0.4663937500000001 delta_down_22_163 - 0.373115 delta_down_22_164
+   - 0.677915 delta_down_22_165 - 0.677915 delta_down_22_166
+   - 0.8473937500000001 delta_down_22_167 - 0.677915 delta_down_22_168
+   - 0.05349 delta_down_22_169 - 0.05349 delta_down_22_170
+   - 0.0668625 delta_down_22_171 - 0.05349 delta_down_22_172
+   - 0.175 delta_down_22_173 - 0.175 delta_down_22_174
+   - 0.21875 delta_down_22_175 - 0.175 delta_down_22_176
+   - 0.330065 delta_down_22_177 - 0.330065 delta_down_22_178
+   - 0.4125812500000001 delta_down_22_179 - 0.330065 delta_down_22_180
+   - 0.06514 delta_down_22_181 - 0.06514 delta_down_22_182
+   - 0.081425 delta_down_22_183 - 0.06514 delta_down_22_184
+   - 0.061965 delta_down_22_185 - 0.061965 delta_down_22_186
+   - 0.07745625 delta_down_22_187 - 0.061965 delta_down_22_188
+   - 0.176165 delta_down_22_189 - 0.176165 delta_down_22_190
+   - 0.22020625 delta_down_22_191 - 0.176165 delta_down_22_192
+   - 0.231325 delta_down_22_193 - 0.231325 delta_down_22_194
+   - 0.28915625 delta_down_22_195 - 0.231325 delta_down_22_196
+   - 0.12449 delta_down_22_197 - 0.12449 delta_down_22_198
+   - 0.1556125 delta_down_22_199 - 0.12449 delta_down_22_200
+   - 0.39901875 delta_down_23_1 - 0.39901875 delta_down_23_2
+   - 0.319215 delta_down_23_3 - 0.319215 delta_down_23_4
+   - 0.6188 delta_down_23_5 - 0.6188 delta_down_23_6
+   - 0.49504 delta_down_23_7 - 0.49504 delta_down_23_8
+   - 0.04275 delta_down_23_9 - 0.04275 delta_down_23_10
+   - 0.0342 delta_down_23_11 - 0.0342 delta_down_23_12
+   - 0.21253125 delta_down_23_13 - 0.21253125 delta_down_23_14
+   - 0.170025 delta_down_23_15 - 0.170025 delta_down_23_16
+   - 0.24446875 delta_down_23_17 - 0.24446875 delta_down_23_18
+   - 0.195575 delta_down_23_19 - 0.195575 delta_down_23_20
+   - 0.075375 delta_down_23_21 - 0.075375 delta_down_23_22
+   - 0.0603 delta_down_23_23 - 0.0603 delta_down_23_24
+   - 0.0661875 delta_down_23_25 - 0.0661875 delta_down_23_26
+   - 0.05295 delta_down_23_27 - 0.05295 delta_down_23_28
+   - 0.23758125 delta_down_23_29 - 0.23758125 delta_down_23_30
+   - 0.190065 delta_down_23_31 - 0.190065 delta_down_23_32
+   - 0.2232375 delta_down_23_33 - 0.2232375 delta_down_23_34
+   - 0.17859 delta_down_23_35 - 0.17859 delta_down_23_36
+   - 0.151125 delta_down_23_37 - 0.151125 delta_down_23_38
+   - 0.1209 delta_down_23_39 - 0.1209 delta_down_23_40
+   - 0.13114375 delta_down_23_41 - 0.13114375 delta_down_23_42
+   - 0.104915 delta_down_23_43 - 0.104915 delta_down_23_44
+   - 0.02151875 delta_down_23_45 - 0.02151875 delta_down_23_46
+   - 0.017215 delta_down_23_47 - 0.017215 delta_down_23_48
+   - 0.03758125 delta_down_23_49 - 0.03758125 delta_down_23_50
+   - 0.030065 delta_down_23_51 - 0.030065 delta_down_23_52
+   - 0.1988 delta_down_23_53 - 0.1988 delta_down_23_54
+   - 0.15904 delta_down_23_55 - 0.15904 delta_down_23_56
+   - 0.20575 delta_down_23_57 - 0.20575 delta_down_23_58
+   - 0.1646 delta_down_23_59 - 0.1646 delta_down_23_60
+   - 0.11214375 delta_down_23_61 - 0.11214375 delta_down_23_62
+   - 0.089715 delta_down_23_63 - 0.089715 delta_down_23_64
+   - 0.011875 delta_down_23_65 - 0.011875 delta_down_23_66
+   - 0.0095 delta_down_23_67 - 0.0095 delta_down_23_68
+   - 0.0123125 delta_down_23_69 - 0.0123125 delta_down_23_70
+   - 0.00985 delta_down_23_71 - 0.00985 delta_down_23_72
+   - 0.09853125 delta_down_23_73 - 0.09853125 delta_down_23_74
+   - 0.078825 delta_down_23_75 - 0.078825 delta_down_23_76
+   - 0.06871875 delta_down_23_77 - 0.06871875 delta_down_23_78
+   - 0.054975 delta_down_23_79 - 0.054975 delta_down_23_80
+   - 0.39901875 delta_down_23_81 - 0.39901875 delta_down_23_82
+   - 0.319215 delta_down_23_83 - 0.319215 delta_down_23_84
+   - 0.6188 delta_down_23_85 - 0.6188 delta_down_23_86
+   - 0.49504 delta_down_23_87 - 0.49504 delta_down_23_88
+   - 0.04275 delta_down_23_89 - 0.04275 delta_down_23_90
+   - 0.0342 delta_down_23_91 - 0.0342 delta_down_23_92
+   - 0.21253125 delta_down_23_93 - 0.21253125 delta_down_23_94
+   - 0.170025 delta_down_23_95 - 0.170025 delta_down_23_96
+   - 0.24446875 delta_down_23_97 - 0.24446875 delta_down_23_98
+   - 0.195575 delta_down_23_99 - 0.195575 delta_down_23_100
+   - 0.075375 delta_down_23_101 - 0.075375 delta_down_23_102
+   - 0.0603 delta_down_23_103 - 0.0603 delta_down_23_104
+   - 0.0661875 delta_down_23_105 - 0.0661875 delta_down_23_106
+   - 0.05295 delta_down_23_107 - 0.05295 delta_down_23_108
+   - 0.23758125 delta_down_23_109 - 0.23758125 delta_down_23_110
+   - 0.190065 delta_down_23_111 - 0.190065 delta_down_23_112
+   - 0.2232375 delta_down_23_113 - 0.2232375 delta_down_23_114
+   - 0.17859 delta_down_23_115 - 0.17859 delta_down_23_116
+   - 0.151125 delta_down_23_117 - 0.151125 delta_down_23_118
+   - 0.1209 delta_down_23_119 - 0.1209 delta_down_23_120
+   - 0.13114375 delta_down_23_121 - 0.13114375 delta_down_23_122
+   - 0.104915 delta_down_23_123 - 0.104915 delta_down_23_124
+   - 0.02151875 delta_down_23_125 - 0.02151875 delta_down_23_126
+   - 0.017215 delta_down_23_127 - 0.017215 delta_down_23_128
+   - 0.03758125 delta_down_23_129 - 0.03758125 delta_down_23_130
+   - 0.030065 delta_down_23_131 - 0.030065 delta_down_23_132
+   - 0.1988 delta_down_23_133 - 0.1988 delta_down_23_134
+   - 0.15904 delta_down_23_135 - 0.15904 delta_down_23_136
+   - 0.20575 delta_down_23_137 - 0.20575 delta_down_23_138
+   - 0.1646 delta_down_23_139 - 0.1646 delta_down_23_140
+   - 0.11214375 delta_down_23_141 - 0.11214375 delta_down_23_142
+   - 0.089715 delta_down_23_143 - 0.089715 delta_down_23_144
+   - 0.011875 delta_down_23_145 - 0.011875 delta_down_23_146
+   - 0.0095 delta_down_23_147 - 0.0095 delta_down_23_148
+   - 0.0123125 delta_down_23_149 - 0.0123125 delta_down_23_150
+   - 0.00985 delta_down_23_151 - 0.00985 delta_down_23_152
+   - 0.09853125 delta_down_23_153 - 0.09853125 delta_down_23_154
+   - 0.078825 delta_down_23_155 - 0.078825 delta_down_23_156
+   - 0.06871875 delta_down_23_157 - 0.06871875 delta_down_23_158
+   - 0.054975 delta_down_23_159 - 0.054975 delta_down_23_160
+   - 0.39901875 delta_down_23_161 - 0.39901875 delta_down_23_162
+   - 0.319215 delta_down_23_163 - 0.319215 delta_down_23_164
+   - 0.6188 delta_down_23_165 - 0.6188 delta_down_23_166
+   - 0.49504 delta_down_23_167 - 0.49504 delta_down_23_168
+   - 0.04275 delta_down_23_169 - 0.04275 delta_down_23_170
+   - 0.0342 delta_down_23_171 - 0.0342 delta_down_23_172
+   - 0.21253125 delta_down_23_173 - 0.21253125 delta_down_23_174
+   - 0.170025 delta_down_23_175 - 0.170025 delta_down_23_176
+   - 0.24446875 delta_down_23_177 - 0.24446875 delta_down_23_178
+   - 0.195575 delta_down_23_179 - 0.195575 delta_down_23_180
+   - 0.075375 delta_down_23_181 - 0.075375 delta_down_23_182
+   - 0.0603 delta_down_23_183 - 0.0603 delta_down_23_184
+   - 0.0661875 delta_down_23_185 - 0.0661875 delta_down_23_186
+   - 0.05295 delta_down_23_187 - 0.05295 delta_down_23_188
+   - 0.23758125 delta_down_23_189 - 0.23758125 delta_down_23_190
+   - 0.190065 delta_down_23_191 - 0.190065 delta_down_23_192
+   - 0.2232375 delta_down_23_193 - 0.2232375 delta_down_23_194
+   - 0.17859 delta_down_23_195 - 0.17859 delta_down_23_196
+   - 0.151125 delta_down_23_197 - 0.151125 delta_down_23_198
+   - 0.1209 delta_down_23_199 - 0.1209 delta_down_23_200
+   - 0.3048 delta_down_24_1 - 0.3048 delta_down_24_2
+   - 0.381 delta_down_24_3 - 0.381 delta_down_24_4
    - 0.356275 delta_down_24_5 - 0.356275 delta_down_24_6
-   - 0.4453437499999999 delta_down_24_7
-   - 0.4453437499999999 delta_down_24_8 - 0.035875 delta_down_24_9
-   - 0.035875 delta_down_24_10 - 0.04484375 delta_down_24_11
-   - 0.04484375 delta_down_24_12 - 0.07974 delta_down_24_13
-   - 0.07974 delta_down_24_14 - 0.099675 delta_down_24_15
-   - 0.099675 delta_down_24_16 - 0.10544 delta_down_24_17
-   - 0.10544 delta_down_24_18 - 0.1318 delta_down_24_19
-   - 0.1318 delta_down_24_20 - 0.047565 delta_down_24_21
-   - 0.047565 delta_down_24_22 - 0.05945625 delta_down_24_23
-   - 0.05945625 delta_down_24_24 - 0.0427 delta_down_24_25
-   - 0.0427 delta_down_24_26 - 0.053375 delta_down_24_27
-   - 0.053375 delta_down_24_28 - 0.185625 delta_down_24_29
-   - 0.185625 delta_down_24_30 - 0.23203125 delta_down_24_31
-   - 0.23203125 delta_down_24_32 - 0.15344 delta_down_24_33
-   - 0.15344 delta_down_24_34 - 0.1918 delta_down_24_35
-   - 0.1918 delta_down_24_36 - 0.125 delta_down_24_37
-   - 0.125 delta_down_24_38 - 0.15625 delta_down_24_39
-   - 0.15625 delta_down_24_40 - 0.07294 delta_down_24_41
-   - 0.07294 delta_down_24_42 - 0.091175 delta_down_24_43
-   - 0.091175 delta_down_24_44 - 0.014675 delta_down_24_45
-   - 0.014675 delta_down_24_46 - 0.01834375 delta_down_24_47
-   - 0.01834375 delta_down_24_48 - 0.02675 delta_down_24_49
-   - 0.02675 delta_down_24_50 - 0.0334375 delta_down_24_51
-   - 0.0334375 delta_down_24_52 - 0.143825 delta_down_24_53
-   - 0.143825 delta_down_24_54 - 0.17978125 delta_down_24_55
-   - 0.17978125 delta_down_24_56 - 0.141765 delta_down_24_57
-   - 0.141765 delta_down_24_58 - 0.17720625 delta_down_24_59
-   - 0.17720625 delta_down_24_60 - 0.105175 delta_down_24_61
-   - 0.105175 delta_down_24_62 - 0.13146875 delta_down_24_63
-   - 0.13146875 delta_down_24_64 - 0.001575 delta_down_24_65
-   - 0.001575 delta_down_24_66 - 0.00196875 delta_down_24_67
-   - 0.00196875 delta_down_24_68 - 0.008965 delta_down_24_69
-   - 0.008965 delta_down_24_70 - 0.01120625 delta_down_24_71
-   - 0.01120625 delta_down_24_72 - 0.07169 delta_down_24_73
-   - 0.07169 delta_down_24_74 - 0.0896125 delta_down_24_75
-   - 0.0896125 delta_down_24_76 - 0.05705 delta_down_24_77
-   - 0.05705 delta_down_24_78 - 0.0713125 delta_down_24_79
-   - 0.0713125 delta_down_24_80 - 0.3048 delta_down_24_81
-   - 0.3048 delta_down_24_82 - 0.381 delta_down_24_83
-   - 0.381 delta_down_24_84 - 0.356275 delta_down_24_85
-   - 0.356275 delta_down_24_86 - 0.4453437499999999 delta_down_24_87
-   - 0.4453437499999999 delta_down_24_88 - 0.035875 delta_down_24_89
-   - 0.035875 delta_down_24_90 - 0.04484375 delta_down_24_91
-   - 0.04484375 delta_down_24_92 - 0.07974 delta_down_24_93
-   - 0.07974 delta_down_24_94 - 0.099675 delta_down_24_95
-   - 0.099675 delta_down_24_96 - 0.10544 delta_down_24_97
-   - 0.10544 delta_down_24_98 - 0.1318 delta_down_24_99
-   - 0.1318 delta_down_24_100 - 0.047565 delta_down_24_101
-   - 0.047565 delta_down_24_102 - 0.05945625 delta_down_24_103
-   - 0.05945625 delta_down_24_104 - 0.0427 delta_down_24_105
-   - 0.0427 delta_down_24_106 - 0.053375 delta_down_24_107
-   - 0.053375 delta_down_24_108 - 0.185625 delta_down_24_109
-   - 0.185625 delta_down_24_110 - 0.23203125 delta_down_24_111
-   - 0.23203125 delta_down_24_112 - 0.15344 delta_down_24_113
-   - 0.15344 delta_down_24_114 - 0.1918 delta_down_24_115
-   - 0.1918 delta_down_24_116 - 0.125 delta_down_24_117
-   - 0.125 delta_down_24_118 - 0.15625 delta_down_24_119
-   - 0.15625 delta_down_24_120 - 0.07294 delta_down_24_121
-   - 0.07294 delta_down_24_122 - 0.091175 delta_down_24_123
-   - 0.091175 delta_down_24_124 - 0.014675 delta_down_24_125
-   - 0.014675 delta_down_24_126 - 0.01834375 delta_down_24_127
-   - 0.01834375 delta_down_24_128 - 0.02675 delta_down_24_129
-   - 0.02675 delta_down_24_130 - 0.0334375 delta_down_24_131
-   - 0.0334375 delta_down_24_132 - 0.143825 delta_down_24_133
-   - 0.143825 delta_down_24_134 - 0.17978125 delta_down_24_135
-   - 0.17978125 delta_down_24_136 - 0.141765 delta_down_24_137
-   - 0.141765 delta_down_24_138 - 0.17720625 delta_down_24_139
-   - 0.17720625 delta_down_24_140 - 0.105175 delta_down_24_141
-   - 0.105175 delta_down_24_142 - 0.13146875 delta_down_24_143
-   - 0.13146875 delta_down_24_144 - 0.001575 delta_down_24_145
-   - 0.001575 delta_down_24_146 - 0.00196875 delta_down_24_147
-   - 0.00196875 delta_down_24_148 - 0.008965 delta_down_24_149
-   - 0.008965 delta_down_24_150 - 0.01120625 delta_down_24_151
-   - 0.01120625 delta_down_24_152 - 0.07169 delta_down_24_153
-   - 0.07169 delta_down_24_154 - 0.0896125 delta_down_24_155
-   - 0.0896125 delta_down_24_156 - 0.05705 delta_down_24_157
-   - 0.05705 delta_down_24_158 - 0.0713125 delta_down_24_159
-   - 0.0713125 delta_down_24_160 - 0.3048 delta_down_24_161
-   - 0.3048 delta_down_24_162 - 0.381 delta_down_24_163
-   - 0.381 delta_down_24_164 - 0.356275 delta_down_24_165
-   - 0.356275 delta_down_24_166 - 0.4453437499999999 delta_down_24_167
-   - 0.4453437499999999 delta_down_24_168 - 0.035875 delta_down_24_169
-   - 0.035875 delta_down_24_170 - 0.04484375 delta_down_24_171
-   - 0.04484375 delta_down_24_172 - 0.07974 delta_down_24_173
-   - 0.07974 delta_down_24_174 - 0.099675 delta_down_24_175
-   - 0.099675 delta_down_24_176 - 0.10544 delta_down_24_177
-   - 0.10544 delta_down_24_178 - 0.1318 delta_down_24_179
-   - 0.1318 delta_down_24_180 - 0.047565 delta_down_24_181
-   - 0.047565 delta_down_24_182 - 0.05945625 delta_down_24_183
-   - 0.05945625 delta_down_24_184 - 0.0427 delta_down_24_185
-   - 0.0427 delta_down_24_186 - 0.053375 delta_down_24_187
-   - 0.053375 delta_down_24_188 - 0.185625 delta_down_24_189
-   - 0.185625 delta_down_24_190 - 0.23203125 delta_down_24_191
-   - 0.23203125 delta_down_24_192 - 0.15344 delta_down_24_193
-   - 0.15344 delta_down_24_194 - 0.1918 delta_down_24_195
-   - 0.1918 delta_down_24_196 - 0.125 delta_down_24_197
-   - 0.125 delta_down_24_198 - 0.15625 delta_down_24_199
-   - 0.15625 delta_down_24_200
+   - 0.44534375 delta_down_24_7 - 0.44534375 delta_down_24_8
+   - 0.035875 delta_down_24_9 - 0.035875 delta_down_24_10
+   - 0.04484375 delta_down_24_11 - 0.04484375 delta_down_24_12
+   - 0.07974 delta_down_24_13 - 0.07974 delta_down_24_14
+   - 0.099675 delta_down_24_15 - 0.099675 delta_down_24_16
+   - 0.10544 delta_down_24_17 - 0.10544 delta_down_24_18
+   - 0.1318 delta_down_24_19 - 0.1318 delta_down_24_20
+   - 0.047565 delta_down_24_21 - 0.047565 delta_down_24_22
+   - 0.05945625 delta_down_24_23 - 0.05945625 delta_down_24_24
+   - 0.0427 delta_down_24_25 - 0.0427 delta_down_24_26
+   - 0.053375 delta_down_24_27 - 0.053375 delta_down_24_28
+   - 0.185625 delta_down_24_29 - 0.185625 delta_down_24_30
+   - 0.23203125 delta_down_24_31 - 0.23203125 delta_down_24_32
+   - 0.15344 delta_down_24_33 - 0.15344 delta_down_24_34
+   - 0.1918 delta_down_24_35 - 0.1918 delta_down_24_36
+   - 0.125 delta_down_24_37 - 0.125 delta_down_24_38
+   - 0.15625 delta_down_24_39 - 0.15625 delta_down_24_40
+   - 0.07294 delta_down_24_41 - 0.07294 delta_down_24_42
+   - 0.091175 delta_down_24_43 - 0.091175 delta_down_24_44
+   - 0.014675 delta_down_24_45 - 0.014675 delta_down_24_46
+   - 0.01834375 delta_down_24_47 - 0.01834375 delta_down_24_48
+   - 0.02675 delta_down_24_49 - 0.02675 delta_down_24_50
+   - 0.0334375 delta_down_24_51 - 0.0334375 delta_down_24_52
+   - 0.143825 delta_down_24_53 - 0.143825 delta_down_24_54
+   - 0.17978125 delta_down_24_55 - 0.17978125 delta_down_24_56
+   - 0.141765 delta_down_24_57 - 0.141765 delta_down_24_58
+   - 0.17720625 delta_down_24_59 - 0.17720625 delta_down_24_60
+   - 0.105175 delta_down_24_61 - 0.105175 delta_down_24_62
+   - 0.13146875 delta_down_24_63 - 0.13146875 delta_down_24_64
+   - 0.001575 delta_down_24_65 - 0.001575 delta_down_24_66
+   - 0.00196875 delta_down_24_67 - 0.00196875 delta_down_24_68
+   - 0.008965 delta_down_24_69 - 0.008965 delta_down_24_70
+   - 0.01120625 delta_down_24_71 - 0.01120625 delta_down_24_72
+   - 0.07169 delta_down_24_73 - 0.07169 delta_down_24_74
+   - 0.0896125 delta_down_24_75 - 0.0896125 delta_down_24_76
+   - 0.05705 delta_down_24_77 - 0.05705 delta_down_24_78
+   - 0.0713125 delta_down_24_79 - 0.0713125 delta_down_24_80
+   - 0.3048 delta_down_24_81 - 0.3048 delta_down_24_82
+   - 0.381 delta_down_24_83 - 0.381 delta_down_24_84
+   - 0.356275 delta_down_24_85 - 0.356275 delta_down_24_86
+   - 0.44534375 delta_down_24_87 - 0.44534375 delta_down_24_88
+   - 0.035875 delta_down_24_89 - 0.035875 delta_down_24_90
+   - 0.04484375 delta_down_24_91 - 0.04484375 delta_down_24_92
+   - 0.07974 delta_down_24_93 - 0.07974 delta_down_24_94
+   - 0.099675 delta_down_24_95 - 0.099675 delta_down_24_96
+   - 0.10544 delta_down_24_97 - 0.10544 delta_down_24_98
+   - 0.1318 delta_down_24_99 - 0.1318 delta_down_24_100
+   - 0.047565 delta_down_24_101 - 0.047565 delta_down_24_102
+   - 0.05945625 delta_down_24_103 - 0.05945625 delta_down_24_104
+   - 0.0427 delta_down_24_105 - 0.0427 delta_down_24_106
+   - 0.053375 delta_down_24_107 - 0.053375 delta_down_24_108
+   - 0.185625 delta_down_24_109 - 0.185625 delta_down_24_110
+   - 0.23203125 delta_down_24_111 - 0.23203125 delta_down_24_112
+   - 0.15344 delta_down_24_113 - 0.15344 delta_down_24_114
+   - 0.1918 delta_down_24_115 - 0.1918 delta_down_24_116
+   - 0.125 delta_down_24_117 - 0.125 delta_down_24_118
+   - 0.15625 delta_down_24_119 - 0.15625 delta_down_24_120
+   - 0.07294 delta_down_24_121 - 0.07294 delta_down_24_122
+   - 0.091175 delta_down_24_123 - 0.091175 delta_down_24_124
+   - 0.014675 delta_down_24_125 - 0.014675 delta_down_24_126
+   - 0.01834375 delta_down_24_127 - 0.01834375 delta_down_24_128
+   - 0.02675 delta_down_24_129 - 0.02675 delta_down_24_130
+   - 0.0334375 delta_down_24_131 - 0.0334375 delta_down_24_132
+   - 0.143825 delta_down_24_133 - 0.143825 delta_down_24_134
+   - 0.17978125 delta_down_24_135 - 0.17978125 delta_down_24_136
+   - 0.141765 delta_down_24_137 - 0.141765 delta_down_24_138
+   - 0.17720625 delta_down_24_139 - 0.17720625 delta_down_24_140
+   - 0.105175 delta_down_24_141 - 0.105175 delta_down_24_142
+   - 0.13146875 delta_down_24_143 - 0.13146875 delta_down_24_144
+   - 0.001575 delta_down_24_145 - 0.001575 delta_down_24_146
+   - 0.00196875 delta_down_24_147 - 0.00196875 delta_down_24_148
+   - 0.008965 delta_down_24_149 - 0.008965 delta_down_24_150
+   - 0.01120625 delta_down_24_151 - 0.01120625 delta_down_24_152
+   - 0.07169 delta_down_24_153 - 0.07169 delta_down_24_154
+   - 0.0896125 delta_down_24_155 - 0.0896125 delta_down_24_156
+   - 0.05705 delta_down_24_157 - 0.05705 delta_down_24_158
+   - 0.0713125 delta_down_24_159 - 0.0713125 delta_down_24_160
+   - 0.3048 delta_down_24_161 - 0.3048 delta_down_24_162
+   - 0.381 delta_down_24_163 - 0.381 delta_down_24_164
+   - 0.356275 delta_down_24_165 - 0.356275 delta_down_24_166
+   - 0.44534375 delta_down_24_167 - 0.44534375 delta_down_24_168
+   - 0.035875 delta_down_24_169 - 0.035875 delta_down_24_170
+   - 0.04484375 delta_down_24_171 - 0.04484375 delta_down_24_172
+   - 0.07974 delta_down_24_173 - 0.07974 delta_down_24_174
+   - 0.099675 delta_down_24_175 - 0.099675 delta_down_24_176
+   - 0.10544 delta_down_24_177 - 0.10544 delta_down_24_178
+   - 0.1318 delta_down_24_179 - 0.1318 delta_down_24_180
+   - 0.047565 delta_down_24_181 - 0.047565 delta_down_24_182
+   - 0.05945625 delta_down_24_183 - 0.05945625 delta_down_24_184
+   - 0.0427 delta_down_24_185 - 0.0427 delta_down_24_186
+   - 0.053375 delta_down_24_187 - 0.053375 delta_down_24_188
+   - 0.185625 delta_down_24_189 - 0.185625 delta_down_24_190
+   - 0.23203125 delta_down_24_191 - 0.23203125 delta_down_24_192
+   - 0.15344 delta_down_24_193 - 0.15344 delta_down_24_194
+   - 0.1918 delta_down_24_195 - 0.1918 delta_down_24_196
+   - 0.125 delta_down_24_197 - 0.125 delta_down_24_198
+   - 0.15625 delta_down_24_199 - 0.15625 delta_down_24_200
 Subject To
  u_p_DA_1: p_DA_1 <= 500
  u_p_DA_2: p_DA_2 <= 500
@@ -28825,9604 +28824,4 @@ Bounds
  delta_24_198 free
  delta_24_199 free
  delta_24_200 free
- delta_up_1_1 free
- delta_up_1_2 free
- delta_up_1_3 free
- delta_up_1_4 free
- delta_up_1_5 free
- delta_up_1_6 free
- delta_up_1_7 free
- delta_up_1_8 free
- delta_up_1_9 free
- delta_up_1_10 free
- delta_up_1_11 free
- delta_up_1_12 free
- delta_up_1_13 free
- delta_up_1_14 free
- delta_up_1_15 free
- delta_up_1_16 free
- delta_up_1_17 free
- delta_up_1_18 free
- delta_up_1_19 free
- delta_up_1_20 free
- delta_up_1_21 free
- delta_up_1_22 free
- delta_up_1_23 free
- delta_up_1_24 free
- delta_up_1_25 free
- delta_up_1_26 free
- delta_up_1_27 free
- delta_up_1_28 free
- delta_up_1_29 free
- delta_up_1_30 free
- delta_up_1_31 free
- delta_up_1_32 free
- delta_up_1_33 free
- delta_up_1_34 free
- delta_up_1_35 free
- delta_up_1_36 free
- delta_up_1_37 free
- delta_up_1_38 free
- delta_up_1_39 free
- delta_up_1_40 free
- delta_up_1_41 free
- delta_up_1_42 free
- delta_up_1_43 free
- delta_up_1_44 free
- delta_up_1_45 free
- delta_up_1_46 free
- delta_up_1_47 free
- delta_up_1_48 free
- delta_up_1_49 free
- delta_up_1_50 free
- delta_up_1_51 free
- delta_up_1_52 free
- delta_up_1_53 free
- delta_up_1_54 free
- delta_up_1_55 free
- delta_up_1_56 free
- delta_up_1_57 free
- delta_up_1_58 free
- delta_up_1_59 free
- delta_up_1_60 free
- delta_up_1_61 free
- delta_up_1_62 free
- delta_up_1_63 free
- delta_up_1_64 free
- delta_up_1_65 free
- delta_up_1_66 free
- delta_up_1_67 free
- delta_up_1_68 free
- delta_up_1_69 free
- delta_up_1_70 free
- delta_up_1_71 free
- delta_up_1_72 free
- delta_up_1_73 free
- delta_up_1_74 free
- delta_up_1_75 free
- delta_up_1_76 free
- delta_up_1_77 free
- delta_up_1_78 free
- delta_up_1_79 free
- delta_up_1_80 free
- delta_up_1_81 free
- delta_up_1_82 free
- delta_up_1_83 free
- delta_up_1_84 free
- delta_up_1_85 free
- delta_up_1_86 free
- delta_up_1_87 free
- delta_up_1_88 free
- delta_up_1_89 free
- delta_up_1_90 free
- delta_up_1_91 free
- delta_up_1_92 free
- delta_up_1_93 free
- delta_up_1_94 free
- delta_up_1_95 free
- delta_up_1_96 free
- delta_up_1_97 free
- delta_up_1_98 free
- delta_up_1_99 free
- delta_up_1_100 free
- delta_up_1_101 free
- delta_up_1_102 free
- delta_up_1_103 free
- delta_up_1_104 free
- delta_up_1_105 free
- delta_up_1_106 free
- delta_up_1_107 free
- delta_up_1_108 free
- delta_up_1_109 free
- delta_up_1_110 free
- delta_up_1_111 free
- delta_up_1_112 free
- delta_up_1_113 free
- delta_up_1_114 free
- delta_up_1_115 free
- delta_up_1_116 free
- delta_up_1_117 free
- delta_up_1_118 free
- delta_up_1_119 free
- delta_up_1_120 free
- delta_up_1_121 free
- delta_up_1_122 free
- delta_up_1_123 free
- delta_up_1_124 free
- delta_up_1_125 free
- delta_up_1_126 free
- delta_up_1_127 free
- delta_up_1_128 free
- delta_up_1_129 free
- delta_up_1_130 free
- delta_up_1_131 free
- delta_up_1_132 free
- delta_up_1_133 free
- delta_up_1_134 free
- delta_up_1_135 free
- delta_up_1_136 free
- delta_up_1_137 free
- delta_up_1_138 free
- delta_up_1_139 free
- delta_up_1_140 free
- delta_up_1_141 free
- delta_up_1_142 free
- delta_up_1_143 free
- delta_up_1_144 free
- delta_up_1_145 free
- delta_up_1_146 free
- delta_up_1_147 free
- delta_up_1_148 free
- delta_up_1_149 free
- delta_up_1_150 free
- delta_up_1_151 free
- delta_up_1_152 free
- delta_up_1_153 free
- delta_up_1_154 free
- delta_up_1_155 free
- delta_up_1_156 free
- delta_up_1_157 free
- delta_up_1_158 free
- delta_up_1_159 free
- delta_up_1_160 free
- delta_up_1_161 free
- delta_up_1_162 free
- delta_up_1_163 free
- delta_up_1_164 free
- delta_up_1_165 free
- delta_up_1_166 free
- delta_up_1_167 free
- delta_up_1_168 free
- delta_up_1_169 free
- delta_up_1_170 free
- delta_up_1_171 free
- delta_up_1_172 free
- delta_up_1_173 free
- delta_up_1_174 free
- delta_up_1_175 free
- delta_up_1_176 free
- delta_up_1_177 free
- delta_up_1_178 free
- delta_up_1_179 free
- delta_up_1_180 free
- delta_up_1_181 free
- delta_up_1_182 free
- delta_up_1_183 free
- delta_up_1_184 free
- delta_up_1_185 free
- delta_up_1_186 free
- delta_up_1_187 free
- delta_up_1_188 free
- delta_up_1_189 free
- delta_up_1_190 free
- delta_up_1_191 free
- delta_up_1_192 free
- delta_up_1_193 free
- delta_up_1_194 free
- delta_up_1_195 free
- delta_up_1_196 free
- delta_up_1_197 free
- delta_up_1_198 free
- delta_up_1_199 free
- delta_up_1_200 free
- delta_up_2_1 free
- delta_up_2_2 free
- delta_up_2_3 free
- delta_up_2_4 free
- delta_up_2_5 free
- delta_up_2_6 free
- delta_up_2_7 free
- delta_up_2_8 free
- delta_up_2_9 free
- delta_up_2_10 free
- delta_up_2_11 free
- delta_up_2_12 free
- delta_up_2_13 free
- delta_up_2_14 free
- delta_up_2_15 free
- delta_up_2_16 free
- delta_up_2_17 free
- delta_up_2_18 free
- delta_up_2_19 free
- delta_up_2_20 free
- delta_up_2_21 free
- delta_up_2_22 free
- delta_up_2_23 free
- delta_up_2_24 free
- delta_up_2_25 free
- delta_up_2_26 free
- delta_up_2_27 free
- delta_up_2_28 free
- delta_up_2_29 free
- delta_up_2_30 free
- delta_up_2_31 free
- delta_up_2_32 free
- delta_up_2_33 free
- delta_up_2_34 free
- delta_up_2_35 free
- delta_up_2_36 free
- delta_up_2_37 free
- delta_up_2_38 free
- delta_up_2_39 free
- delta_up_2_40 free
- delta_up_2_41 free
- delta_up_2_42 free
- delta_up_2_43 free
- delta_up_2_44 free
- delta_up_2_45 free
- delta_up_2_46 free
- delta_up_2_47 free
- delta_up_2_48 free
- delta_up_2_49 free
- delta_up_2_50 free
- delta_up_2_51 free
- delta_up_2_52 free
- delta_up_2_53 free
- delta_up_2_54 free
- delta_up_2_55 free
- delta_up_2_56 free
- delta_up_2_57 free
- delta_up_2_58 free
- delta_up_2_59 free
- delta_up_2_60 free
- delta_up_2_61 free
- delta_up_2_62 free
- delta_up_2_63 free
- delta_up_2_64 free
- delta_up_2_65 free
- delta_up_2_66 free
- delta_up_2_67 free
- delta_up_2_68 free
- delta_up_2_69 free
- delta_up_2_70 free
- delta_up_2_71 free
- delta_up_2_72 free
- delta_up_2_73 free
- delta_up_2_74 free
- delta_up_2_75 free
- delta_up_2_76 free
- delta_up_2_77 free
- delta_up_2_78 free
- delta_up_2_79 free
- delta_up_2_80 free
- delta_up_2_81 free
- delta_up_2_82 free
- delta_up_2_83 free
- delta_up_2_84 free
- delta_up_2_85 free
- delta_up_2_86 free
- delta_up_2_87 free
- delta_up_2_88 free
- delta_up_2_89 free
- delta_up_2_90 free
- delta_up_2_91 free
- delta_up_2_92 free
- delta_up_2_93 free
- delta_up_2_94 free
- delta_up_2_95 free
- delta_up_2_96 free
- delta_up_2_97 free
- delta_up_2_98 free
- delta_up_2_99 free
- delta_up_2_100 free
- delta_up_2_101 free
- delta_up_2_102 free
- delta_up_2_103 free
- delta_up_2_104 free
- delta_up_2_105 free
- delta_up_2_106 free
- delta_up_2_107 free
- delta_up_2_108 free
- delta_up_2_109 free
- delta_up_2_110 free
- delta_up_2_111 free
- delta_up_2_112 free
- delta_up_2_113 free
- delta_up_2_114 free
- delta_up_2_115 free
- delta_up_2_116 free
- delta_up_2_117 free
- delta_up_2_118 free
- delta_up_2_119 free
- delta_up_2_120 free
- delta_up_2_121 free
- delta_up_2_122 free
- delta_up_2_123 free
- delta_up_2_124 free
- delta_up_2_125 free
- delta_up_2_126 free
- delta_up_2_127 free
- delta_up_2_128 free
- delta_up_2_129 free
- delta_up_2_130 free
- delta_up_2_131 free
- delta_up_2_132 free
- delta_up_2_133 free
- delta_up_2_134 free
- delta_up_2_135 free
- delta_up_2_136 free
- delta_up_2_137 free
- delta_up_2_138 free
- delta_up_2_139 free
- delta_up_2_140 free
- delta_up_2_141 free
- delta_up_2_142 free
- delta_up_2_143 free
- delta_up_2_144 free
- delta_up_2_145 free
- delta_up_2_146 free
- delta_up_2_147 free
- delta_up_2_148 free
- delta_up_2_149 free
- delta_up_2_150 free
- delta_up_2_151 free
- delta_up_2_152 free
- delta_up_2_153 free
- delta_up_2_154 free
- delta_up_2_155 free
- delta_up_2_156 free
- delta_up_2_157 free
- delta_up_2_158 free
- delta_up_2_159 free
- delta_up_2_160 free
- delta_up_2_161 free
- delta_up_2_162 free
- delta_up_2_163 free
- delta_up_2_164 free
- delta_up_2_165 free
- delta_up_2_166 free
- delta_up_2_167 free
- delta_up_2_168 free
- delta_up_2_169 free
- delta_up_2_170 free
- delta_up_2_171 free
- delta_up_2_172 free
- delta_up_2_173 free
- delta_up_2_174 free
- delta_up_2_175 free
- delta_up_2_176 free
- delta_up_2_177 free
- delta_up_2_178 free
- delta_up_2_179 free
- delta_up_2_180 free
- delta_up_2_181 free
- delta_up_2_182 free
- delta_up_2_183 free
- delta_up_2_184 free
- delta_up_2_185 free
- delta_up_2_186 free
- delta_up_2_187 free
- delta_up_2_188 free
- delta_up_2_189 free
- delta_up_2_190 free
- delta_up_2_191 free
- delta_up_2_192 free
- delta_up_2_193 free
- delta_up_2_194 free
- delta_up_2_195 free
- delta_up_2_196 free
- delta_up_2_197 free
- delta_up_2_198 free
- delta_up_2_199 free
- delta_up_2_200 free
- delta_up_3_1 free
- delta_up_3_2 free
- delta_up_3_3 free
- delta_up_3_4 free
- delta_up_3_5 free
- delta_up_3_6 free
- delta_up_3_7 free
- delta_up_3_8 free
- delta_up_3_9 free
- delta_up_3_10 free
- delta_up_3_11 free
- delta_up_3_12 free
- delta_up_3_13 free
- delta_up_3_14 free
- delta_up_3_15 free
- delta_up_3_16 free
- delta_up_3_17 free
- delta_up_3_18 free
- delta_up_3_19 free
- delta_up_3_20 free
- delta_up_3_21 free
- delta_up_3_22 free
- delta_up_3_23 free
- delta_up_3_24 free
- delta_up_3_25 free
- delta_up_3_26 free
- delta_up_3_27 free
- delta_up_3_28 free
- delta_up_3_29 free
- delta_up_3_30 free
- delta_up_3_31 free
- delta_up_3_32 free
- delta_up_3_33 free
- delta_up_3_34 free
- delta_up_3_35 free
- delta_up_3_36 free
- delta_up_3_37 free
- delta_up_3_38 free
- delta_up_3_39 free
- delta_up_3_40 free
- delta_up_3_41 free
- delta_up_3_42 free
- delta_up_3_43 free
- delta_up_3_44 free
- delta_up_3_45 free
- delta_up_3_46 free
- delta_up_3_47 free
- delta_up_3_48 free
- delta_up_3_49 free
- delta_up_3_50 free
- delta_up_3_51 free
- delta_up_3_52 free
- delta_up_3_53 free
- delta_up_3_54 free
- delta_up_3_55 free
- delta_up_3_56 free
- delta_up_3_57 free
- delta_up_3_58 free
- delta_up_3_59 free
- delta_up_3_60 free
- delta_up_3_61 free
- delta_up_3_62 free
- delta_up_3_63 free
- delta_up_3_64 free
- delta_up_3_65 free
- delta_up_3_66 free
- delta_up_3_67 free
- delta_up_3_68 free
- delta_up_3_69 free
- delta_up_3_70 free
- delta_up_3_71 free
- delta_up_3_72 free
- delta_up_3_73 free
- delta_up_3_74 free
- delta_up_3_75 free
- delta_up_3_76 free
- delta_up_3_77 free
- delta_up_3_78 free
- delta_up_3_79 free
- delta_up_3_80 free
- delta_up_3_81 free
- delta_up_3_82 free
- delta_up_3_83 free
- delta_up_3_84 free
- delta_up_3_85 free
- delta_up_3_86 free
- delta_up_3_87 free
- delta_up_3_88 free
- delta_up_3_89 free
- delta_up_3_90 free
- delta_up_3_91 free
- delta_up_3_92 free
- delta_up_3_93 free
- delta_up_3_94 free
- delta_up_3_95 free
- delta_up_3_96 free
- delta_up_3_97 free
- delta_up_3_98 free
- delta_up_3_99 free
- delta_up_3_100 free
- delta_up_3_101 free
- delta_up_3_102 free
- delta_up_3_103 free
- delta_up_3_104 free
- delta_up_3_105 free
- delta_up_3_106 free
- delta_up_3_107 free
- delta_up_3_108 free
- delta_up_3_109 free
- delta_up_3_110 free
- delta_up_3_111 free
- delta_up_3_112 free
- delta_up_3_113 free
- delta_up_3_114 free
- delta_up_3_115 free
- delta_up_3_116 free
- delta_up_3_117 free
- delta_up_3_118 free
- delta_up_3_119 free
- delta_up_3_120 free
- delta_up_3_121 free
- delta_up_3_122 free
- delta_up_3_123 free
- delta_up_3_124 free
- delta_up_3_125 free
- delta_up_3_126 free
- delta_up_3_127 free
- delta_up_3_128 free
- delta_up_3_129 free
- delta_up_3_130 free
- delta_up_3_131 free
- delta_up_3_132 free
- delta_up_3_133 free
- delta_up_3_134 free
- delta_up_3_135 free
- delta_up_3_136 free
- delta_up_3_137 free
- delta_up_3_138 free
- delta_up_3_139 free
- delta_up_3_140 free
- delta_up_3_141 free
- delta_up_3_142 free
- delta_up_3_143 free
- delta_up_3_144 free
- delta_up_3_145 free
- delta_up_3_146 free
- delta_up_3_147 free
- delta_up_3_148 free
- delta_up_3_149 free
- delta_up_3_150 free
- delta_up_3_151 free
- delta_up_3_152 free
- delta_up_3_153 free
- delta_up_3_154 free
- delta_up_3_155 free
- delta_up_3_156 free
- delta_up_3_157 free
- delta_up_3_158 free
- delta_up_3_159 free
- delta_up_3_160 free
- delta_up_3_161 free
- delta_up_3_162 free
- delta_up_3_163 free
- delta_up_3_164 free
- delta_up_3_165 free
- delta_up_3_166 free
- delta_up_3_167 free
- delta_up_3_168 free
- delta_up_3_169 free
- delta_up_3_170 free
- delta_up_3_171 free
- delta_up_3_172 free
- delta_up_3_173 free
- delta_up_3_174 free
- delta_up_3_175 free
- delta_up_3_176 free
- delta_up_3_177 free
- delta_up_3_178 free
- delta_up_3_179 free
- delta_up_3_180 free
- delta_up_3_181 free
- delta_up_3_182 free
- delta_up_3_183 free
- delta_up_3_184 free
- delta_up_3_185 free
- delta_up_3_186 free
- delta_up_3_187 free
- delta_up_3_188 free
- delta_up_3_189 free
- delta_up_3_190 free
- delta_up_3_191 free
- delta_up_3_192 free
- delta_up_3_193 free
- delta_up_3_194 free
- delta_up_3_195 free
- delta_up_3_196 free
- delta_up_3_197 free
- delta_up_3_198 free
- delta_up_3_199 free
- delta_up_3_200 free
- delta_up_4_1 free
- delta_up_4_2 free
- delta_up_4_3 free
- delta_up_4_4 free
- delta_up_4_5 free
- delta_up_4_6 free
- delta_up_4_7 free
- delta_up_4_8 free
- delta_up_4_9 free
- delta_up_4_10 free
- delta_up_4_11 free
- delta_up_4_12 free
- delta_up_4_13 free
- delta_up_4_14 free
- delta_up_4_15 free
- delta_up_4_16 free
- delta_up_4_17 free
- delta_up_4_18 free
- delta_up_4_19 free
- delta_up_4_20 free
- delta_up_4_21 free
- delta_up_4_22 free
- delta_up_4_23 free
- delta_up_4_24 free
- delta_up_4_25 free
- delta_up_4_26 free
- delta_up_4_27 free
- delta_up_4_28 free
- delta_up_4_29 free
- delta_up_4_30 free
- delta_up_4_31 free
- delta_up_4_32 free
- delta_up_4_33 free
- delta_up_4_34 free
- delta_up_4_35 free
- delta_up_4_36 free
- delta_up_4_37 free
- delta_up_4_38 free
- delta_up_4_39 free
- delta_up_4_40 free
- delta_up_4_41 free
- delta_up_4_42 free
- delta_up_4_43 free
- delta_up_4_44 free
- delta_up_4_45 free
- delta_up_4_46 free
- delta_up_4_47 free
- delta_up_4_48 free
- delta_up_4_49 free
- delta_up_4_50 free
- delta_up_4_51 free
- delta_up_4_52 free
- delta_up_4_53 free
- delta_up_4_54 free
- delta_up_4_55 free
- delta_up_4_56 free
- delta_up_4_57 free
- delta_up_4_58 free
- delta_up_4_59 free
- delta_up_4_60 free
- delta_up_4_61 free
- delta_up_4_62 free
- delta_up_4_63 free
- delta_up_4_64 free
- delta_up_4_65 free
- delta_up_4_66 free
- delta_up_4_67 free
- delta_up_4_68 free
- delta_up_4_69 free
- delta_up_4_70 free
- delta_up_4_71 free
- delta_up_4_72 free
- delta_up_4_73 free
- delta_up_4_74 free
- delta_up_4_75 free
- delta_up_4_76 free
- delta_up_4_77 free
- delta_up_4_78 free
- delta_up_4_79 free
- delta_up_4_80 free
- delta_up_4_81 free
- delta_up_4_82 free
- delta_up_4_83 free
- delta_up_4_84 free
- delta_up_4_85 free
- delta_up_4_86 free
- delta_up_4_87 free
- delta_up_4_88 free
- delta_up_4_89 free
- delta_up_4_90 free
- delta_up_4_91 free
- delta_up_4_92 free
- delta_up_4_93 free
- delta_up_4_94 free
- delta_up_4_95 free
- delta_up_4_96 free
- delta_up_4_97 free
- delta_up_4_98 free
- delta_up_4_99 free
- delta_up_4_100 free
- delta_up_4_101 free
- delta_up_4_102 free
- delta_up_4_103 free
- delta_up_4_104 free
- delta_up_4_105 free
- delta_up_4_106 free
- delta_up_4_107 free
- delta_up_4_108 free
- delta_up_4_109 free
- delta_up_4_110 free
- delta_up_4_111 free
- delta_up_4_112 free
- delta_up_4_113 free
- delta_up_4_114 free
- delta_up_4_115 free
- delta_up_4_116 free
- delta_up_4_117 free
- delta_up_4_118 free
- delta_up_4_119 free
- delta_up_4_120 free
- delta_up_4_121 free
- delta_up_4_122 free
- delta_up_4_123 free
- delta_up_4_124 free
- delta_up_4_125 free
- delta_up_4_126 free
- delta_up_4_127 free
- delta_up_4_128 free
- delta_up_4_129 free
- delta_up_4_130 free
- delta_up_4_131 free
- delta_up_4_132 free
- delta_up_4_133 free
- delta_up_4_134 free
- delta_up_4_135 free
- delta_up_4_136 free
- delta_up_4_137 free
- delta_up_4_138 free
- delta_up_4_139 free
- delta_up_4_140 free
- delta_up_4_141 free
- delta_up_4_142 free
- delta_up_4_143 free
- delta_up_4_144 free
- delta_up_4_145 free
- delta_up_4_146 free
- delta_up_4_147 free
- delta_up_4_148 free
- delta_up_4_149 free
- delta_up_4_150 free
- delta_up_4_151 free
- delta_up_4_152 free
- delta_up_4_153 free
- delta_up_4_154 free
- delta_up_4_155 free
- delta_up_4_156 free
- delta_up_4_157 free
- delta_up_4_158 free
- delta_up_4_159 free
- delta_up_4_160 free
- delta_up_4_161 free
- delta_up_4_162 free
- delta_up_4_163 free
- delta_up_4_164 free
- delta_up_4_165 free
- delta_up_4_166 free
- delta_up_4_167 free
- delta_up_4_168 free
- delta_up_4_169 free
- delta_up_4_170 free
- delta_up_4_171 free
- delta_up_4_172 free
- delta_up_4_173 free
- delta_up_4_174 free
- delta_up_4_175 free
- delta_up_4_176 free
- delta_up_4_177 free
- delta_up_4_178 free
- delta_up_4_179 free
- delta_up_4_180 free
- delta_up_4_181 free
- delta_up_4_182 free
- delta_up_4_183 free
- delta_up_4_184 free
- delta_up_4_185 free
- delta_up_4_186 free
- delta_up_4_187 free
- delta_up_4_188 free
- delta_up_4_189 free
- delta_up_4_190 free
- delta_up_4_191 free
- delta_up_4_192 free
- delta_up_4_193 free
- delta_up_4_194 free
- delta_up_4_195 free
- delta_up_4_196 free
- delta_up_4_197 free
- delta_up_4_198 free
- delta_up_4_199 free
- delta_up_4_200 free
- delta_up_5_1 free
- delta_up_5_2 free
- delta_up_5_3 free
- delta_up_5_4 free
- delta_up_5_5 free
- delta_up_5_6 free
- delta_up_5_7 free
- delta_up_5_8 free
- delta_up_5_9 free
- delta_up_5_10 free
- delta_up_5_11 free
- delta_up_5_12 free
- delta_up_5_13 free
- delta_up_5_14 free
- delta_up_5_15 free
- delta_up_5_16 free
- delta_up_5_17 free
- delta_up_5_18 free
- delta_up_5_19 free
- delta_up_5_20 free
- delta_up_5_21 free
- delta_up_5_22 free
- delta_up_5_23 free
- delta_up_5_24 free
- delta_up_5_25 free
- delta_up_5_26 free
- delta_up_5_27 free
- delta_up_5_28 free
- delta_up_5_29 free
- delta_up_5_30 free
- delta_up_5_31 free
- delta_up_5_32 free
- delta_up_5_33 free
- delta_up_5_34 free
- delta_up_5_35 free
- delta_up_5_36 free
- delta_up_5_37 free
- delta_up_5_38 free
- delta_up_5_39 free
- delta_up_5_40 free
- delta_up_5_41 free
- delta_up_5_42 free
- delta_up_5_43 free
- delta_up_5_44 free
- delta_up_5_45 free
- delta_up_5_46 free
- delta_up_5_47 free
- delta_up_5_48 free
- delta_up_5_49 free
- delta_up_5_50 free
- delta_up_5_51 free
- delta_up_5_52 free
- delta_up_5_53 free
- delta_up_5_54 free
- delta_up_5_55 free
- delta_up_5_56 free
- delta_up_5_57 free
- delta_up_5_58 free
- delta_up_5_59 free
- delta_up_5_60 free
- delta_up_5_61 free
- delta_up_5_62 free
- delta_up_5_63 free
- delta_up_5_64 free
- delta_up_5_65 free
- delta_up_5_66 free
- delta_up_5_67 free
- delta_up_5_68 free
- delta_up_5_69 free
- delta_up_5_70 free
- delta_up_5_71 free
- delta_up_5_72 free
- delta_up_5_73 free
- delta_up_5_74 free
- delta_up_5_75 free
- delta_up_5_76 free
- delta_up_5_77 free
- delta_up_5_78 free
- delta_up_5_79 free
- delta_up_5_80 free
- delta_up_5_81 free
- delta_up_5_82 free
- delta_up_5_83 free
- delta_up_5_84 free
- delta_up_5_85 free
- delta_up_5_86 free
- delta_up_5_87 free
- delta_up_5_88 free
- delta_up_5_89 free
- delta_up_5_90 free
- delta_up_5_91 free
- delta_up_5_92 free
- delta_up_5_93 free
- delta_up_5_94 free
- delta_up_5_95 free
- delta_up_5_96 free
- delta_up_5_97 free
- delta_up_5_98 free
- delta_up_5_99 free
- delta_up_5_100 free
- delta_up_5_101 free
- delta_up_5_102 free
- delta_up_5_103 free
- delta_up_5_104 free
- delta_up_5_105 free
- delta_up_5_106 free
- delta_up_5_107 free
- delta_up_5_108 free
- delta_up_5_109 free
- delta_up_5_110 free
- delta_up_5_111 free
- delta_up_5_112 free
- delta_up_5_113 free
- delta_up_5_114 free
- delta_up_5_115 free
- delta_up_5_116 free
- delta_up_5_117 free
- delta_up_5_118 free
- delta_up_5_119 free
- delta_up_5_120 free
- delta_up_5_121 free
- delta_up_5_122 free
- delta_up_5_123 free
- delta_up_5_124 free
- delta_up_5_125 free
- delta_up_5_126 free
- delta_up_5_127 free
- delta_up_5_128 free
- delta_up_5_129 free
- delta_up_5_130 free
- delta_up_5_131 free
- delta_up_5_132 free
- delta_up_5_133 free
- delta_up_5_134 free
- delta_up_5_135 free
- delta_up_5_136 free
- delta_up_5_137 free
- delta_up_5_138 free
- delta_up_5_139 free
- delta_up_5_140 free
- delta_up_5_141 free
- delta_up_5_142 free
- delta_up_5_143 free
- delta_up_5_144 free
- delta_up_5_145 free
- delta_up_5_146 free
- delta_up_5_147 free
- delta_up_5_148 free
- delta_up_5_149 free
- delta_up_5_150 free
- delta_up_5_151 free
- delta_up_5_152 free
- delta_up_5_153 free
- delta_up_5_154 free
- delta_up_5_155 free
- delta_up_5_156 free
- delta_up_5_157 free
- delta_up_5_158 free
- delta_up_5_159 free
- delta_up_5_160 free
- delta_up_5_161 free
- delta_up_5_162 free
- delta_up_5_163 free
- delta_up_5_164 free
- delta_up_5_165 free
- delta_up_5_166 free
- delta_up_5_167 free
- delta_up_5_168 free
- delta_up_5_169 free
- delta_up_5_170 free
- delta_up_5_171 free
- delta_up_5_172 free
- delta_up_5_173 free
- delta_up_5_174 free
- delta_up_5_175 free
- delta_up_5_176 free
- delta_up_5_177 free
- delta_up_5_178 free
- delta_up_5_179 free
- delta_up_5_180 free
- delta_up_5_181 free
- delta_up_5_182 free
- delta_up_5_183 free
- delta_up_5_184 free
- delta_up_5_185 free
- delta_up_5_186 free
- delta_up_5_187 free
- delta_up_5_188 free
- delta_up_5_189 free
- delta_up_5_190 free
- delta_up_5_191 free
- delta_up_5_192 free
- delta_up_5_193 free
- delta_up_5_194 free
- delta_up_5_195 free
- delta_up_5_196 free
- delta_up_5_197 free
- delta_up_5_198 free
- delta_up_5_199 free
- delta_up_5_200 free
- delta_up_6_1 free
- delta_up_6_2 free
- delta_up_6_3 free
- delta_up_6_4 free
- delta_up_6_5 free
- delta_up_6_6 free
- delta_up_6_7 free
- delta_up_6_8 free
- delta_up_6_9 free
- delta_up_6_10 free
- delta_up_6_11 free
- delta_up_6_12 free
- delta_up_6_13 free
- delta_up_6_14 free
- delta_up_6_15 free
- delta_up_6_16 free
- delta_up_6_17 free
- delta_up_6_18 free
- delta_up_6_19 free
- delta_up_6_20 free
- delta_up_6_21 free
- delta_up_6_22 free
- delta_up_6_23 free
- delta_up_6_24 free
- delta_up_6_25 free
- delta_up_6_26 free
- delta_up_6_27 free
- delta_up_6_28 free
- delta_up_6_29 free
- delta_up_6_30 free
- delta_up_6_31 free
- delta_up_6_32 free
- delta_up_6_33 free
- delta_up_6_34 free
- delta_up_6_35 free
- delta_up_6_36 free
- delta_up_6_37 free
- delta_up_6_38 free
- delta_up_6_39 free
- delta_up_6_40 free
- delta_up_6_41 free
- delta_up_6_42 free
- delta_up_6_43 free
- delta_up_6_44 free
- delta_up_6_45 free
- delta_up_6_46 free
- delta_up_6_47 free
- delta_up_6_48 free
- delta_up_6_49 free
- delta_up_6_50 free
- delta_up_6_51 free
- delta_up_6_52 free
- delta_up_6_53 free
- delta_up_6_54 free
- delta_up_6_55 free
- delta_up_6_56 free
- delta_up_6_57 free
- delta_up_6_58 free
- delta_up_6_59 free
- delta_up_6_60 free
- delta_up_6_61 free
- delta_up_6_62 free
- delta_up_6_63 free
- delta_up_6_64 free
- delta_up_6_65 free
- delta_up_6_66 free
- delta_up_6_67 free
- delta_up_6_68 free
- delta_up_6_69 free
- delta_up_6_70 free
- delta_up_6_71 free
- delta_up_6_72 free
- delta_up_6_73 free
- delta_up_6_74 free
- delta_up_6_75 free
- delta_up_6_76 free
- delta_up_6_77 free
- delta_up_6_78 free
- delta_up_6_79 free
- delta_up_6_80 free
- delta_up_6_81 free
- delta_up_6_82 free
- delta_up_6_83 free
- delta_up_6_84 free
- delta_up_6_85 free
- delta_up_6_86 free
- delta_up_6_87 free
- delta_up_6_88 free
- delta_up_6_89 free
- delta_up_6_90 free
- delta_up_6_91 free
- delta_up_6_92 free
- delta_up_6_93 free
- delta_up_6_94 free
- delta_up_6_95 free
- delta_up_6_96 free
- delta_up_6_97 free
- delta_up_6_98 free
- delta_up_6_99 free
- delta_up_6_100 free
- delta_up_6_101 free
- delta_up_6_102 free
- delta_up_6_103 free
- delta_up_6_104 free
- delta_up_6_105 free
- delta_up_6_106 free
- delta_up_6_107 free
- delta_up_6_108 free
- delta_up_6_109 free
- delta_up_6_110 free
- delta_up_6_111 free
- delta_up_6_112 free
- delta_up_6_113 free
- delta_up_6_114 free
- delta_up_6_115 free
- delta_up_6_116 free
- delta_up_6_117 free
- delta_up_6_118 free
- delta_up_6_119 free
- delta_up_6_120 free
- delta_up_6_121 free
- delta_up_6_122 free
- delta_up_6_123 free
- delta_up_6_124 free
- delta_up_6_125 free
- delta_up_6_126 free
- delta_up_6_127 free
- delta_up_6_128 free
- delta_up_6_129 free
- delta_up_6_130 free
- delta_up_6_131 free
- delta_up_6_132 free
- delta_up_6_133 free
- delta_up_6_134 free
- delta_up_6_135 free
- delta_up_6_136 free
- delta_up_6_137 free
- delta_up_6_138 free
- delta_up_6_139 free
- delta_up_6_140 free
- delta_up_6_141 free
- delta_up_6_142 free
- delta_up_6_143 free
- delta_up_6_144 free
- delta_up_6_145 free
- delta_up_6_146 free
- delta_up_6_147 free
- delta_up_6_148 free
- delta_up_6_149 free
- delta_up_6_150 free
- delta_up_6_151 free
- delta_up_6_152 free
- delta_up_6_153 free
- delta_up_6_154 free
- delta_up_6_155 free
- delta_up_6_156 free
- delta_up_6_157 free
- delta_up_6_158 free
- delta_up_6_159 free
- delta_up_6_160 free
- delta_up_6_161 free
- delta_up_6_162 free
- delta_up_6_163 free
- delta_up_6_164 free
- delta_up_6_165 free
- delta_up_6_166 free
- delta_up_6_167 free
- delta_up_6_168 free
- delta_up_6_169 free
- delta_up_6_170 free
- delta_up_6_171 free
- delta_up_6_172 free
- delta_up_6_173 free
- delta_up_6_174 free
- delta_up_6_175 free
- delta_up_6_176 free
- delta_up_6_177 free
- delta_up_6_178 free
- delta_up_6_179 free
- delta_up_6_180 free
- delta_up_6_181 free
- delta_up_6_182 free
- delta_up_6_183 free
- delta_up_6_184 free
- delta_up_6_185 free
- delta_up_6_186 free
- delta_up_6_187 free
- delta_up_6_188 free
- delta_up_6_189 free
- delta_up_6_190 free
- delta_up_6_191 free
- delta_up_6_192 free
- delta_up_6_193 free
- delta_up_6_194 free
- delta_up_6_195 free
- delta_up_6_196 free
- delta_up_6_197 free
- delta_up_6_198 free
- delta_up_6_199 free
- delta_up_6_200 free
- delta_up_7_1 free
- delta_up_7_2 free
- delta_up_7_3 free
- delta_up_7_4 free
- delta_up_7_5 free
- delta_up_7_6 free
- delta_up_7_7 free
- delta_up_7_8 free
- delta_up_7_9 free
- delta_up_7_10 free
- delta_up_7_11 free
- delta_up_7_12 free
- delta_up_7_13 free
- delta_up_7_14 free
- delta_up_7_15 free
- delta_up_7_16 free
- delta_up_7_17 free
- delta_up_7_18 free
- delta_up_7_19 free
- delta_up_7_20 free
- delta_up_7_21 free
- delta_up_7_22 free
- delta_up_7_23 free
- delta_up_7_24 free
- delta_up_7_25 free
- delta_up_7_26 free
- delta_up_7_27 free
- delta_up_7_28 free
- delta_up_7_29 free
- delta_up_7_30 free
- delta_up_7_31 free
- delta_up_7_32 free
- delta_up_7_33 free
- delta_up_7_34 free
- delta_up_7_35 free
- delta_up_7_36 free
- delta_up_7_37 free
- delta_up_7_38 free
- delta_up_7_39 free
- delta_up_7_40 free
- delta_up_7_41 free
- delta_up_7_42 free
- delta_up_7_43 free
- delta_up_7_44 free
- delta_up_7_45 free
- delta_up_7_46 free
- delta_up_7_47 free
- delta_up_7_48 free
- delta_up_7_49 free
- delta_up_7_50 free
- delta_up_7_51 free
- delta_up_7_52 free
- delta_up_7_53 free
- delta_up_7_54 free
- delta_up_7_55 free
- delta_up_7_56 free
- delta_up_7_57 free
- delta_up_7_58 free
- delta_up_7_59 free
- delta_up_7_60 free
- delta_up_7_61 free
- delta_up_7_62 free
- delta_up_7_63 free
- delta_up_7_64 free
- delta_up_7_65 free
- delta_up_7_66 free
- delta_up_7_67 free
- delta_up_7_68 free
- delta_up_7_69 free
- delta_up_7_70 free
- delta_up_7_71 free
- delta_up_7_72 free
- delta_up_7_73 free
- delta_up_7_74 free
- delta_up_7_75 free
- delta_up_7_76 free
- delta_up_7_77 free
- delta_up_7_78 free
- delta_up_7_79 free
- delta_up_7_80 free
- delta_up_7_81 free
- delta_up_7_82 free
- delta_up_7_83 free
- delta_up_7_84 free
- delta_up_7_85 free
- delta_up_7_86 free
- delta_up_7_87 free
- delta_up_7_88 free
- delta_up_7_89 free
- delta_up_7_90 free
- delta_up_7_91 free
- delta_up_7_92 free
- delta_up_7_93 free
- delta_up_7_94 free
- delta_up_7_95 free
- delta_up_7_96 free
- delta_up_7_97 free
- delta_up_7_98 free
- delta_up_7_99 free
- delta_up_7_100 free
- delta_up_7_101 free
- delta_up_7_102 free
- delta_up_7_103 free
- delta_up_7_104 free
- delta_up_7_105 free
- delta_up_7_106 free
- delta_up_7_107 free
- delta_up_7_108 free
- delta_up_7_109 free
- delta_up_7_110 free
- delta_up_7_111 free
- delta_up_7_112 free
- delta_up_7_113 free
- delta_up_7_114 free
- delta_up_7_115 free
- delta_up_7_116 free
- delta_up_7_117 free
- delta_up_7_118 free
- delta_up_7_119 free
- delta_up_7_120 free
- delta_up_7_121 free
- delta_up_7_122 free
- delta_up_7_123 free
- delta_up_7_124 free
- delta_up_7_125 free
- delta_up_7_126 free
- delta_up_7_127 free
- delta_up_7_128 free
- delta_up_7_129 free
- delta_up_7_130 free
- delta_up_7_131 free
- delta_up_7_132 free
- delta_up_7_133 free
- delta_up_7_134 free
- delta_up_7_135 free
- delta_up_7_136 free
- delta_up_7_137 free
- delta_up_7_138 free
- delta_up_7_139 free
- delta_up_7_140 free
- delta_up_7_141 free
- delta_up_7_142 free
- delta_up_7_143 free
- delta_up_7_144 free
- delta_up_7_145 free
- delta_up_7_146 free
- delta_up_7_147 free
- delta_up_7_148 free
- delta_up_7_149 free
- delta_up_7_150 free
- delta_up_7_151 free
- delta_up_7_152 free
- delta_up_7_153 free
- delta_up_7_154 free
- delta_up_7_155 free
- delta_up_7_156 free
- delta_up_7_157 free
- delta_up_7_158 free
- delta_up_7_159 free
- delta_up_7_160 free
- delta_up_7_161 free
- delta_up_7_162 free
- delta_up_7_163 free
- delta_up_7_164 free
- delta_up_7_165 free
- delta_up_7_166 free
- delta_up_7_167 free
- delta_up_7_168 free
- delta_up_7_169 free
- delta_up_7_170 free
- delta_up_7_171 free
- delta_up_7_172 free
- delta_up_7_173 free
- delta_up_7_174 free
- delta_up_7_175 free
- delta_up_7_176 free
- delta_up_7_177 free
- delta_up_7_178 free
- delta_up_7_179 free
- delta_up_7_180 free
- delta_up_7_181 free
- delta_up_7_182 free
- delta_up_7_183 free
- delta_up_7_184 free
- delta_up_7_185 free
- delta_up_7_186 free
- delta_up_7_187 free
- delta_up_7_188 free
- delta_up_7_189 free
- delta_up_7_190 free
- delta_up_7_191 free
- delta_up_7_192 free
- delta_up_7_193 free
- delta_up_7_194 free
- delta_up_7_195 free
- delta_up_7_196 free
- delta_up_7_197 free
- delta_up_7_198 free
- delta_up_7_199 free
- delta_up_7_200 free
- delta_up_8_1 free
- delta_up_8_2 free
- delta_up_8_3 free
- delta_up_8_4 free
- delta_up_8_5 free
- delta_up_8_6 free
- delta_up_8_7 free
- delta_up_8_8 free
- delta_up_8_9 free
- delta_up_8_10 free
- delta_up_8_11 free
- delta_up_8_12 free
- delta_up_8_13 free
- delta_up_8_14 free
- delta_up_8_15 free
- delta_up_8_16 free
- delta_up_8_17 free
- delta_up_8_18 free
- delta_up_8_19 free
- delta_up_8_20 free
- delta_up_8_21 free
- delta_up_8_22 free
- delta_up_8_23 free
- delta_up_8_24 free
- delta_up_8_25 free
- delta_up_8_26 free
- delta_up_8_27 free
- delta_up_8_28 free
- delta_up_8_29 free
- delta_up_8_30 free
- delta_up_8_31 free
- delta_up_8_32 free
- delta_up_8_33 free
- delta_up_8_34 free
- delta_up_8_35 free
- delta_up_8_36 free
- delta_up_8_37 free
- delta_up_8_38 free
- delta_up_8_39 free
- delta_up_8_40 free
- delta_up_8_41 free
- delta_up_8_42 free
- delta_up_8_43 free
- delta_up_8_44 free
- delta_up_8_45 free
- delta_up_8_46 free
- delta_up_8_47 free
- delta_up_8_48 free
- delta_up_8_49 free
- delta_up_8_50 free
- delta_up_8_51 free
- delta_up_8_52 free
- delta_up_8_53 free
- delta_up_8_54 free
- delta_up_8_55 free
- delta_up_8_56 free
- delta_up_8_57 free
- delta_up_8_58 free
- delta_up_8_59 free
- delta_up_8_60 free
- delta_up_8_61 free
- delta_up_8_62 free
- delta_up_8_63 free
- delta_up_8_64 free
- delta_up_8_65 free
- delta_up_8_66 free
- delta_up_8_67 free
- delta_up_8_68 free
- delta_up_8_69 free
- delta_up_8_70 free
- delta_up_8_71 free
- delta_up_8_72 free
- delta_up_8_73 free
- delta_up_8_74 free
- delta_up_8_75 free
- delta_up_8_76 free
- delta_up_8_77 free
- delta_up_8_78 free
- delta_up_8_79 free
- delta_up_8_80 free
- delta_up_8_81 free
- delta_up_8_82 free
- delta_up_8_83 free
- delta_up_8_84 free
- delta_up_8_85 free
- delta_up_8_86 free
- delta_up_8_87 free
- delta_up_8_88 free
- delta_up_8_89 free
- delta_up_8_90 free
- delta_up_8_91 free
- delta_up_8_92 free
- delta_up_8_93 free
- delta_up_8_94 free
- delta_up_8_95 free
- delta_up_8_96 free
- delta_up_8_97 free
- delta_up_8_98 free
- delta_up_8_99 free
- delta_up_8_100 free
- delta_up_8_101 free
- delta_up_8_102 free
- delta_up_8_103 free
- delta_up_8_104 free
- delta_up_8_105 free
- delta_up_8_106 free
- delta_up_8_107 free
- delta_up_8_108 free
- delta_up_8_109 free
- delta_up_8_110 free
- delta_up_8_111 free
- delta_up_8_112 free
- delta_up_8_113 free
- delta_up_8_114 free
- delta_up_8_115 free
- delta_up_8_116 free
- delta_up_8_117 free
- delta_up_8_118 free
- delta_up_8_119 free
- delta_up_8_120 free
- delta_up_8_121 free
- delta_up_8_122 free
- delta_up_8_123 free
- delta_up_8_124 free
- delta_up_8_125 free
- delta_up_8_126 free
- delta_up_8_127 free
- delta_up_8_128 free
- delta_up_8_129 free
- delta_up_8_130 free
- delta_up_8_131 free
- delta_up_8_132 free
- delta_up_8_133 free
- delta_up_8_134 free
- delta_up_8_135 free
- delta_up_8_136 free
- delta_up_8_137 free
- delta_up_8_138 free
- delta_up_8_139 free
- delta_up_8_140 free
- delta_up_8_141 free
- delta_up_8_142 free
- delta_up_8_143 free
- delta_up_8_144 free
- delta_up_8_145 free
- delta_up_8_146 free
- delta_up_8_147 free
- delta_up_8_148 free
- delta_up_8_149 free
- delta_up_8_150 free
- delta_up_8_151 free
- delta_up_8_152 free
- delta_up_8_153 free
- delta_up_8_154 free
- delta_up_8_155 free
- delta_up_8_156 free
- delta_up_8_157 free
- delta_up_8_158 free
- delta_up_8_159 free
- delta_up_8_160 free
- delta_up_8_161 free
- delta_up_8_162 free
- delta_up_8_163 free
- delta_up_8_164 free
- delta_up_8_165 free
- delta_up_8_166 free
- delta_up_8_167 free
- delta_up_8_168 free
- delta_up_8_169 free
- delta_up_8_170 free
- delta_up_8_171 free
- delta_up_8_172 free
- delta_up_8_173 free
- delta_up_8_174 free
- delta_up_8_175 free
- delta_up_8_176 free
- delta_up_8_177 free
- delta_up_8_178 free
- delta_up_8_179 free
- delta_up_8_180 free
- delta_up_8_181 free
- delta_up_8_182 free
- delta_up_8_183 free
- delta_up_8_184 free
- delta_up_8_185 free
- delta_up_8_186 free
- delta_up_8_187 free
- delta_up_8_188 free
- delta_up_8_189 free
- delta_up_8_190 free
- delta_up_8_191 free
- delta_up_8_192 free
- delta_up_8_193 free
- delta_up_8_194 free
- delta_up_8_195 free
- delta_up_8_196 free
- delta_up_8_197 free
- delta_up_8_198 free
- delta_up_8_199 free
- delta_up_8_200 free
- delta_up_9_1 free
- delta_up_9_2 free
- delta_up_9_3 free
- delta_up_9_4 free
- delta_up_9_5 free
- delta_up_9_6 free
- delta_up_9_7 free
- delta_up_9_8 free
- delta_up_9_9 free
- delta_up_9_10 free
- delta_up_9_11 free
- delta_up_9_12 free
- delta_up_9_13 free
- delta_up_9_14 free
- delta_up_9_15 free
- delta_up_9_16 free
- delta_up_9_17 free
- delta_up_9_18 free
- delta_up_9_19 free
- delta_up_9_20 free
- delta_up_9_21 free
- delta_up_9_22 free
- delta_up_9_23 free
- delta_up_9_24 free
- delta_up_9_25 free
- delta_up_9_26 free
- delta_up_9_27 free
- delta_up_9_28 free
- delta_up_9_29 free
- delta_up_9_30 free
- delta_up_9_31 free
- delta_up_9_32 free
- delta_up_9_33 free
- delta_up_9_34 free
- delta_up_9_35 free
- delta_up_9_36 free
- delta_up_9_37 free
- delta_up_9_38 free
- delta_up_9_39 free
- delta_up_9_40 free
- delta_up_9_41 free
- delta_up_9_42 free
- delta_up_9_43 free
- delta_up_9_44 free
- delta_up_9_45 free
- delta_up_9_46 free
- delta_up_9_47 free
- delta_up_9_48 free
- delta_up_9_49 free
- delta_up_9_50 free
- delta_up_9_51 free
- delta_up_9_52 free
- delta_up_9_53 free
- delta_up_9_54 free
- delta_up_9_55 free
- delta_up_9_56 free
- delta_up_9_57 free
- delta_up_9_58 free
- delta_up_9_59 free
- delta_up_9_60 free
- delta_up_9_61 free
- delta_up_9_62 free
- delta_up_9_63 free
- delta_up_9_64 free
- delta_up_9_65 free
- delta_up_9_66 free
- delta_up_9_67 free
- delta_up_9_68 free
- delta_up_9_69 free
- delta_up_9_70 free
- delta_up_9_71 free
- delta_up_9_72 free
- delta_up_9_73 free
- delta_up_9_74 free
- delta_up_9_75 free
- delta_up_9_76 free
- delta_up_9_77 free
- delta_up_9_78 free
- delta_up_9_79 free
- delta_up_9_80 free
- delta_up_9_81 free
- delta_up_9_82 free
- delta_up_9_83 free
- delta_up_9_84 free
- delta_up_9_85 free
- delta_up_9_86 free
- delta_up_9_87 free
- delta_up_9_88 free
- delta_up_9_89 free
- delta_up_9_90 free
- delta_up_9_91 free
- delta_up_9_92 free
- delta_up_9_93 free
- delta_up_9_94 free
- delta_up_9_95 free
- delta_up_9_96 free
- delta_up_9_97 free
- delta_up_9_98 free
- delta_up_9_99 free
- delta_up_9_100 free
- delta_up_9_101 free
- delta_up_9_102 free
- delta_up_9_103 free
- delta_up_9_104 free
- delta_up_9_105 free
- delta_up_9_106 free
- delta_up_9_107 free
- delta_up_9_108 free
- delta_up_9_109 free
- delta_up_9_110 free
- delta_up_9_111 free
- delta_up_9_112 free
- delta_up_9_113 free
- delta_up_9_114 free
- delta_up_9_115 free
- delta_up_9_116 free
- delta_up_9_117 free
- delta_up_9_118 free
- delta_up_9_119 free
- delta_up_9_120 free
- delta_up_9_121 free
- delta_up_9_122 free
- delta_up_9_123 free
- delta_up_9_124 free
- delta_up_9_125 free
- delta_up_9_126 free
- delta_up_9_127 free
- delta_up_9_128 free
- delta_up_9_129 free
- delta_up_9_130 free
- delta_up_9_131 free
- delta_up_9_132 free
- delta_up_9_133 free
- delta_up_9_134 free
- delta_up_9_135 free
- delta_up_9_136 free
- delta_up_9_137 free
- delta_up_9_138 free
- delta_up_9_139 free
- delta_up_9_140 free
- delta_up_9_141 free
- delta_up_9_142 free
- delta_up_9_143 free
- delta_up_9_144 free
- delta_up_9_145 free
- delta_up_9_146 free
- delta_up_9_147 free
- delta_up_9_148 free
- delta_up_9_149 free
- delta_up_9_150 free
- delta_up_9_151 free
- delta_up_9_152 free
- delta_up_9_153 free
- delta_up_9_154 free
- delta_up_9_155 free
- delta_up_9_156 free
- delta_up_9_157 free
- delta_up_9_158 free
- delta_up_9_159 free
- delta_up_9_160 free
- delta_up_9_161 free
- delta_up_9_162 free
- delta_up_9_163 free
- delta_up_9_164 free
- delta_up_9_165 free
- delta_up_9_166 free
- delta_up_9_167 free
- delta_up_9_168 free
- delta_up_9_169 free
- delta_up_9_170 free
- delta_up_9_171 free
- delta_up_9_172 free
- delta_up_9_173 free
- delta_up_9_174 free
- delta_up_9_175 free
- delta_up_9_176 free
- delta_up_9_177 free
- delta_up_9_178 free
- delta_up_9_179 free
- delta_up_9_180 free
- delta_up_9_181 free
- delta_up_9_182 free
- delta_up_9_183 free
- delta_up_9_184 free
- delta_up_9_185 free
- delta_up_9_186 free
- delta_up_9_187 free
- delta_up_9_188 free
- delta_up_9_189 free
- delta_up_9_190 free
- delta_up_9_191 free
- delta_up_9_192 free
- delta_up_9_193 free
- delta_up_9_194 free
- delta_up_9_195 free
- delta_up_9_196 free
- delta_up_9_197 free
- delta_up_9_198 free
- delta_up_9_199 free
- delta_up_9_200 free
- delta_up_10_1 free
- delta_up_10_2 free
- delta_up_10_3 free
- delta_up_10_4 free
- delta_up_10_5 free
- delta_up_10_6 free
- delta_up_10_7 free
- delta_up_10_8 free
- delta_up_10_9 free
- delta_up_10_10 free
- delta_up_10_11 free
- delta_up_10_12 free
- delta_up_10_13 free
- delta_up_10_14 free
- delta_up_10_15 free
- delta_up_10_16 free
- delta_up_10_17 free
- delta_up_10_18 free
- delta_up_10_19 free
- delta_up_10_20 free
- delta_up_10_21 free
- delta_up_10_22 free
- delta_up_10_23 free
- delta_up_10_24 free
- delta_up_10_25 free
- delta_up_10_26 free
- delta_up_10_27 free
- delta_up_10_28 free
- delta_up_10_29 free
- delta_up_10_30 free
- delta_up_10_31 free
- delta_up_10_32 free
- delta_up_10_33 free
- delta_up_10_34 free
- delta_up_10_35 free
- delta_up_10_36 free
- delta_up_10_37 free
- delta_up_10_38 free
- delta_up_10_39 free
- delta_up_10_40 free
- delta_up_10_41 free
- delta_up_10_42 free
- delta_up_10_43 free
- delta_up_10_44 free
- delta_up_10_45 free
- delta_up_10_46 free
- delta_up_10_47 free
- delta_up_10_48 free
- delta_up_10_49 free
- delta_up_10_50 free
- delta_up_10_51 free
- delta_up_10_52 free
- delta_up_10_53 free
- delta_up_10_54 free
- delta_up_10_55 free
- delta_up_10_56 free
- delta_up_10_57 free
- delta_up_10_58 free
- delta_up_10_59 free
- delta_up_10_60 free
- delta_up_10_61 free
- delta_up_10_62 free
- delta_up_10_63 free
- delta_up_10_64 free
- delta_up_10_65 free
- delta_up_10_66 free
- delta_up_10_67 free
- delta_up_10_68 free
- delta_up_10_69 free
- delta_up_10_70 free
- delta_up_10_71 free
- delta_up_10_72 free
- delta_up_10_73 free
- delta_up_10_74 free
- delta_up_10_75 free
- delta_up_10_76 free
- delta_up_10_77 free
- delta_up_10_78 free
- delta_up_10_79 free
- delta_up_10_80 free
- delta_up_10_81 free
- delta_up_10_82 free
- delta_up_10_83 free
- delta_up_10_84 free
- delta_up_10_85 free
- delta_up_10_86 free
- delta_up_10_87 free
- delta_up_10_88 free
- delta_up_10_89 free
- delta_up_10_90 free
- delta_up_10_91 free
- delta_up_10_92 free
- delta_up_10_93 free
- delta_up_10_94 free
- delta_up_10_95 free
- delta_up_10_96 free
- delta_up_10_97 free
- delta_up_10_98 free
- delta_up_10_99 free
- delta_up_10_100 free
- delta_up_10_101 free
- delta_up_10_102 free
- delta_up_10_103 free
- delta_up_10_104 free
- delta_up_10_105 free
- delta_up_10_106 free
- delta_up_10_107 free
- delta_up_10_108 free
- delta_up_10_109 free
- delta_up_10_110 free
- delta_up_10_111 free
- delta_up_10_112 free
- delta_up_10_113 free
- delta_up_10_114 free
- delta_up_10_115 free
- delta_up_10_116 free
- delta_up_10_117 free
- delta_up_10_118 free
- delta_up_10_119 free
- delta_up_10_120 free
- delta_up_10_121 free
- delta_up_10_122 free
- delta_up_10_123 free
- delta_up_10_124 free
- delta_up_10_125 free
- delta_up_10_126 free
- delta_up_10_127 free
- delta_up_10_128 free
- delta_up_10_129 free
- delta_up_10_130 free
- delta_up_10_131 free
- delta_up_10_132 free
- delta_up_10_133 free
- delta_up_10_134 free
- delta_up_10_135 free
- delta_up_10_136 free
- delta_up_10_137 free
- delta_up_10_138 free
- delta_up_10_139 free
- delta_up_10_140 free
- delta_up_10_141 free
- delta_up_10_142 free
- delta_up_10_143 free
- delta_up_10_144 free
- delta_up_10_145 free
- delta_up_10_146 free
- delta_up_10_147 free
- delta_up_10_148 free
- delta_up_10_149 free
- delta_up_10_150 free
- delta_up_10_151 free
- delta_up_10_152 free
- delta_up_10_153 free
- delta_up_10_154 free
- delta_up_10_155 free
- delta_up_10_156 free
- delta_up_10_157 free
- delta_up_10_158 free
- delta_up_10_159 free
- delta_up_10_160 free
- delta_up_10_161 free
- delta_up_10_162 free
- delta_up_10_163 free
- delta_up_10_164 free
- delta_up_10_165 free
- delta_up_10_166 free
- delta_up_10_167 free
- delta_up_10_168 free
- delta_up_10_169 free
- delta_up_10_170 free
- delta_up_10_171 free
- delta_up_10_172 free
- delta_up_10_173 free
- delta_up_10_174 free
- delta_up_10_175 free
- delta_up_10_176 free
- delta_up_10_177 free
- delta_up_10_178 free
- delta_up_10_179 free
- delta_up_10_180 free
- delta_up_10_181 free
- delta_up_10_182 free
- delta_up_10_183 free
- delta_up_10_184 free
- delta_up_10_185 free
- delta_up_10_186 free
- delta_up_10_187 free
- delta_up_10_188 free
- delta_up_10_189 free
- delta_up_10_190 free
- delta_up_10_191 free
- delta_up_10_192 free
- delta_up_10_193 free
- delta_up_10_194 free
- delta_up_10_195 free
- delta_up_10_196 free
- delta_up_10_197 free
- delta_up_10_198 free
- delta_up_10_199 free
- delta_up_10_200 free
- delta_up_11_1 free
- delta_up_11_2 free
- delta_up_11_3 free
- delta_up_11_4 free
- delta_up_11_5 free
- delta_up_11_6 free
- delta_up_11_7 free
- delta_up_11_8 free
- delta_up_11_9 free
- delta_up_11_10 free
- delta_up_11_11 free
- delta_up_11_12 free
- delta_up_11_13 free
- delta_up_11_14 free
- delta_up_11_15 free
- delta_up_11_16 free
- delta_up_11_17 free
- delta_up_11_18 free
- delta_up_11_19 free
- delta_up_11_20 free
- delta_up_11_21 free
- delta_up_11_22 free
- delta_up_11_23 free
- delta_up_11_24 free
- delta_up_11_25 free
- delta_up_11_26 free
- delta_up_11_27 free
- delta_up_11_28 free
- delta_up_11_29 free
- delta_up_11_30 free
- delta_up_11_31 free
- delta_up_11_32 free
- delta_up_11_33 free
- delta_up_11_34 free
- delta_up_11_35 free
- delta_up_11_36 free
- delta_up_11_37 free
- delta_up_11_38 free
- delta_up_11_39 free
- delta_up_11_40 free
- delta_up_11_41 free
- delta_up_11_42 free
- delta_up_11_43 free
- delta_up_11_44 free
- delta_up_11_45 free
- delta_up_11_46 free
- delta_up_11_47 free
- delta_up_11_48 free
- delta_up_11_49 free
- delta_up_11_50 free
- delta_up_11_51 free
- delta_up_11_52 free
- delta_up_11_53 free
- delta_up_11_54 free
- delta_up_11_55 free
- delta_up_11_56 free
- delta_up_11_57 free
- delta_up_11_58 free
- delta_up_11_59 free
- delta_up_11_60 free
- delta_up_11_61 free
- delta_up_11_62 free
- delta_up_11_63 free
- delta_up_11_64 free
- delta_up_11_65 free
- delta_up_11_66 free
- delta_up_11_67 free
- delta_up_11_68 free
- delta_up_11_69 free
- delta_up_11_70 free
- delta_up_11_71 free
- delta_up_11_72 free
- delta_up_11_73 free
- delta_up_11_74 free
- delta_up_11_75 free
- delta_up_11_76 free
- delta_up_11_77 free
- delta_up_11_78 free
- delta_up_11_79 free
- delta_up_11_80 free
- delta_up_11_81 free
- delta_up_11_82 free
- delta_up_11_83 free
- delta_up_11_84 free
- delta_up_11_85 free
- delta_up_11_86 free
- delta_up_11_87 free
- delta_up_11_88 free
- delta_up_11_89 free
- delta_up_11_90 free
- delta_up_11_91 free
- delta_up_11_92 free
- delta_up_11_93 free
- delta_up_11_94 free
- delta_up_11_95 free
- delta_up_11_96 free
- delta_up_11_97 free
- delta_up_11_98 free
- delta_up_11_99 free
- delta_up_11_100 free
- delta_up_11_101 free
- delta_up_11_102 free
- delta_up_11_103 free
- delta_up_11_104 free
- delta_up_11_105 free
- delta_up_11_106 free
- delta_up_11_107 free
- delta_up_11_108 free
- delta_up_11_109 free
- delta_up_11_110 free
- delta_up_11_111 free
- delta_up_11_112 free
- delta_up_11_113 free
- delta_up_11_114 free
- delta_up_11_115 free
- delta_up_11_116 free
- delta_up_11_117 free
- delta_up_11_118 free
- delta_up_11_119 free
- delta_up_11_120 free
- delta_up_11_121 free
- delta_up_11_122 free
- delta_up_11_123 free
- delta_up_11_124 free
- delta_up_11_125 free
- delta_up_11_126 free
- delta_up_11_127 free
- delta_up_11_128 free
- delta_up_11_129 free
- delta_up_11_130 free
- delta_up_11_131 free
- delta_up_11_132 free
- delta_up_11_133 free
- delta_up_11_134 free
- delta_up_11_135 free
- delta_up_11_136 free
- delta_up_11_137 free
- delta_up_11_138 free
- delta_up_11_139 free
- delta_up_11_140 free
- delta_up_11_141 free
- delta_up_11_142 free
- delta_up_11_143 free
- delta_up_11_144 free
- delta_up_11_145 free
- delta_up_11_146 free
- delta_up_11_147 free
- delta_up_11_148 free
- delta_up_11_149 free
- delta_up_11_150 free
- delta_up_11_151 free
- delta_up_11_152 free
- delta_up_11_153 free
- delta_up_11_154 free
- delta_up_11_155 free
- delta_up_11_156 free
- delta_up_11_157 free
- delta_up_11_158 free
- delta_up_11_159 free
- delta_up_11_160 free
- delta_up_11_161 free
- delta_up_11_162 free
- delta_up_11_163 free
- delta_up_11_164 free
- delta_up_11_165 free
- delta_up_11_166 free
- delta_up_11_167 free
- delta_up_11_168 free
- delta_up_11_169 free
- delta_up_11_170 free
- delta_up_11_171 free
- delta_up_11_172 free
- delta_up_11_173 free
- delta_up_11_174 free
- delta_up_11_175 free
- delta_up_11_176 free
- delta_up_11_177 free
- delta_up_11_178 free
- delta_up_11_179 free
- delta_up_11_180 free
- delta_up_11_181 free
- delta_up_11_182 free
- delta_up_11_183 free
- delta_up_11_184 free
- delta_up_11_185 free
- delta_up_11_186 free
- delta_up_11_187 free
- delta_up_11_188 free
- delta_up_11_189 free
- delta_up_11_190 free
- delta_up_11_191 free
- delta_up_11_192 free
- delta_up_11_193 free
- delta_up_11_194 free
- delta_up_11_195 free
- delta_up_11_196 free
- delta_up_11_197 free
- delta_up_11_198 free
- delta_up_11_199 free
- delta_up_11_200 free
- delta_up_12_1 free
- delta_up_12_2 free
- delta_up_12_3 free
- delta_up_12_4 free
- delta_up_12_5 free
- delta_up_12_6 free
- delta_up_12_7 free
- delta_up_12_8 free
- delta_up_12_9 free
- delta_up_12_10 free
- delta_up_12_11 free
- delta_up_12_12 free
- delta_up_12_13 free
- delta_up_12_14 free
- delta_up_12_15 free
- delta_up_12_16 free
- delta_up_12_17 free
- delta_up_12_18 free
- delta_up_12_19 free
- delta_up_12_20 free
- delta_up_12_21 free
- delta_up_12_22 free
- delta_up_12_23 free
- delta_up_12_24 free
- delta_up_12_25 free
- delta_up_12_26 free
- delta_up_12_27 free
- delta_up_12_28 free
- delta_up_12_29 free
- delta_up_12_30 free
- delta_up_12_31 free
- delta_up_12_32 free
- delta_up_12_33 free
- delta_up_12_34 free
- delta_up_12_35 free
- delta_up_12_36 free
- delta_up_12_37 free
- delta_up_12_38 free
- delta_up_12_39 free
- delta_up_12_40 free
- delta_up_12_41 free
- delta_up_12_42 free
- delta_up_12_43 free
- delta_up_12_44 free
- delta_up_12_45 free
- delta_up_12_46 free
- delta_up_12_47 free
- delta_up_12_48 free
- delta_up_12_49 free
- delta_up_12_50 free
- delta_up_12_51 free
- delta_up_12_52 free
- delta_up_12_53 free
- delta_up_12_54 free
- delta_up_12_55 free
- delta_up_12_56 free
- delta_up_12_57 free
- delta_up_12_58 free
- delta_up_12_59 free
- delta_up_12_60 free
- delta_up_12_61 free
- delta_up_12_62 free
- delta_up_12_63 free
- delta_up_12_64 free
- delta_up_12_65 free
- delta_up_12_66 free
- delta_up_12_67 free
- delta_up_12_68 free
- delta_up_12_69 free
- delta_up_12_70 free
- delta_up_12_71 free
- delta_up_12_72 free
- delta_up_12_73 free
- delta_up_12_74 free
- delta_up_12_75 free
- delta_up_12_76 free
- delta_up_12_77 free
- delta_up_12_78 free
- delta_up_12_79 free
- delta_up_12_80 free
- delta_up_12_81 free
- delta_up_12_82 free
- delta_up_12_83 free
- delta_up_12_84 free
- delta_up_12_85 free
- delta_up_12_86 free
- delta_up_12_87 free
- delta_up_12_88 free
- delta_up_12_89 free
- delta_up_12_90 free
- delta_up_12_91 free
- delta_up_12_92 free
- delta_up_12_93 free
- delta_up_12_94 free
- delta_up_12_95 free
- delta_up_12_96 free
- delta_up_12_97 free
- delta_up_12_98 free
- delta_up_12_99 free
- delta_up_12_100 free
- delta_up_12_101 free
- delta_up_12_102 free
- delta_up_12_103 free
- delta_up_12_104 free
- delta_up_12_105 free
- delta_up_12_106 free
- delta_up_12_107 free
- delta_up_12_108 free
- delta_up_12_109 free
- delta_up_12_110 free
- delta_up_12_111 free
- delta_up_12_112 free
- delta_up_12_113 free
- delta_up_12_114 free
- delta_up_12_115 free
- delta_up_12_116 free
- delta_up_12_117 free
- delta_up_12_118 free
- delta_up_12_119 free
- delta_up_12_120 free
- delta_up_12_121 free
- delta_up_12_122 free
- delta_up_12_123 free
- delta_up_12_124 free
- delta_up_12_125 free
- delta_up_12_126 free
- delta_up_12_127 free
- delta_up_12_128 free
- delta_up_12_129 free
- delta_up_12_130 free
- delta_up_12_131 free
- delta_up_12_132 free
- delta_up_12_133 free
- delta_up_12_134 free
- delta_up_12_135 free
- delta_up_12_136 free
- delta_up_12_137 free
- delta_up_12_138 free
- delta_up_12_139 free
- delta_up_12_140 free
- delta_up_12_141 free
- delta_up_12_142 free
- delta_up_12_143 free
- delta_up_12_144 free
- delta_up_12_145 free
- delta_up_12_146 free
- delta_up_12_147 free
- delta_up_12_148 free
- delta_up_12_149 free
- delta_up_12_150 free
- delta_up_12_151 free
- delta_up_12_152 free
- delta_up_12_153 free
- delta_up_12_154 free
- delta_up_12_155 free
- delta_up_12_156 free
- delta_up_12_157 free
- delta_up_12_158 free
- delta_up_12_159 free
- delta_up_12_160 free
- delta_up_12_161 free
- delta_up_12_162 free
- delta_up_12_163 free
- delta_up_12_164 free
- delta_up_12_165 free
- delta_up_12_166 free
- delta_up_12_167 free
- delta_up_12_168 free
- delta_up_12_169 free
- delta_up_12_170 free
- delta_up_12_171 free
- delta_up_12_172 free
- delta_up_12_173 free
- delta_up_12_174 free
- delta_up_12_175 free
- delta_up_12_176 free
- delta_up_12_177 free
- delta_up_12_178 free
- delta_up_12_179 free
- delta_up_12_180 free
- delta_up_12_181 free
- delta_up_12_182 free
- delta_up_12_183 free
- delta_up_12_184 free
- delta_up_12_185 free
- delta_up_12_186 free
- delta_up_12_187 free
- delta_up_12_188 free
- delta_up_12_189 free
- delta_up_12_190 free
- delta_up_12_191 free
- delta_up_12_192 free
- delta_up_12_193 free
- delta_up_12_194 free
- delta_up_12_195 free
- delta_up_12_196 free
- delta_up_12_197 free
- delta_up_12_198 free
- delta_up_12_199 free
- delta_up_12_200 free
- delta_up_13_1 free
- delta_up_13_2 free
- delta_up_13_3 free
- delta_up_13_4 free
- delta_up_13_5 free
- delta_up_13_6 free
- delta_up_13_7 free
- delta_up_13_8 free
- delta_up_13_9 free
- delta_up_13_10 free
- delta_up_13_11 free
- delta_up_13_12 free
- delta_up_13_13 free
- delta_up_13_14 free
- delta_up_13_15 free
- delta_up_13_16 free
- delta_up_13_17 free
- delta_up_13_18 free
- delta_up_13_19 free
- delta_up_13_20 free
- delta_up_13_21 free
- delta_up_13_22 free
- delta_up_13_23 free
- delta_up_13_24 free
- delta_up_13_25 free
- delta_up_13_26 free
- delta_up_13_27 free
- delta_up_13_28 free
- delta_up_13_29 free
- delta_up_13_30 free
- delta_up_13_31 free
- delta_up_13_32 free
- delta_up_13_33 free
- delta_up_13_34 free
- delta_up_13_35 free
- delta_up_13_36 free
- delta_up_13_37 free
- delta_up_13_38 free
- delta_up_13_39 free
- delta_up_13_40 free
- delta_up_13_41 free
- delta_up_13_42 free
- delta_up_13_43 free
- delta_up_13_44 free
- delta_up_13_45 free
- delta_up_13_46 free
- delta_up_13_47 free
- delta_up_13_48 free
- delta_up_13_49 free
- delta_up_13_50 free
- delta_up_13_51 free
- delta_up_13_52 free
- delta_up_13_53 free
- delta_up_13_54 free
- delta_up_13_55 free
- delta_up_13_56 free
- delta_up_13_57 free
- delta_up_13_58 free
- delta_up_13_59 free
- delta_up_13_60 free
- delta_up_13_61 free
- delta_up_13_62 free
- delta_up_13_63 free
- delta_up_13_64 free
- delta_up_13_65 free
- delta_up_13_66 free
- delta_up_13_67 free
- delta_up_13_68 free
- delta_up_13_69 free
- delta_up_13_70 free
- delta_up_13_71 free
- delta_up_13_72 free
- delta_up_13_73 free
- delta_up_13_74 free
- delta_up_13_75 free
- delta_up_13_76 free
- delta_up_13_77 free
- delta_up_13_78 free
- delta_up_13_79 free
- delta_up_13_80 free
- delta_up_13_81 free
- delta_up_13_82 free
- delta_up_13_83 free
- delta_up_13_84 free
- delta_up_13_85 free
- delta_up_13_86 free
- delta_up_13_87 free
- delta_up_13_88 free
- delta_up_13_89 free
- delta_up_13_90 free
- delta_up_13_91 free
- delta_up_13_92 free
- delta_up_13_93 free
- delta_up_13_94 free
- delta_up_13_95 free
- delta_up_13_96 free
- delta_up_13_97 free
- delta_up_13_98 free
- delta_up_13_99 free
- delta_up_13_100 free
- delta_up_13_101 free
- delta_up_13_102 free
- delta_up_13_103 free
- delta_up_13_104 free
- delta_up_13_105 free
- delta_up_13_106 free
- delta_up_13_107 free
- delta_up_13_108 free
- delta_up_13_109 free
- delta_up_13_110 free
- delta_up_13_111 free
- delta_up_13_112 free
- delta_up_13_113 free
- delta_up_13_114 free
- delta_up_13_115 free
- delta_up_13_116 free
- delta_up_13_117 free
- delta_up_13_118 free
- delta_up_13_119 free
- delta_up_13_120 free
- delta_up_13_121 free
- delta_up_13_122 free
- delta_up_13_123 free
- delta_up_13_124 free
- delta_up_13_125 free
- delta_up_13_126 free
- delta_up_13_127 free
- delta_up_13_128 free
- delta_up_13_129 free
- delta_up_13_130 free
- delta_up_13_131 free
- delta_up_13_132 free
- delta_up_13_133 free
- delta_up_13_134 free
- delta_up_13_135 free
- delta_up_13_136 free
- delta_up_13_137 free
- delta_up_13_138 free
- delta_up_13_139 free
- delta_up_13_140 free
- delta_up_13_141 free
- delta_up_13_142 free
- delta_up_13_143 free
- delta_up_13_144 free
- delta_up_13_145 free
- delta_up_13_146 free
- delta_up_13_147 free
- delta_up_13_148 free
- delta_up_13_149 free
- delta_up_13_150 free
- delta_up_13_151 free
- delta_up_13_152 free
- delta_up_13_153 free
- delta_up_13_154 free
- delta_up_13_155 free
- delta_up_13_156 free
- delta_up_13_157 free
- delta_up_13_158 free
- delta_up_13_159 free
- delta_up_13_160 free
- delta_up_13_161 free
- delta_up_13_162 free
- delta_up_13_163 free
- delta_up_13_164 free
- delta_up_13_165 free
- delta_up_13_166 free
- delta_up_13_167 free
- delta_up_13_168 free
- delta_up_13_169 free
- delta_up_13_170 free
- delta_up_13_171 free
- delta_up_13_172 free
- delta_up_13_173 free
- delta_up_13_174 free
- delta_up_13_175 free
- delta_up_13_176 free
- delta_up_13_177 free
- delta_up_13_178 free
- delta_up_13_179 free
- delta_up_13_180 free
- delta_up_13_181 free
- delta_up_13_182 free
- delta_up_13_183 free
- delta_up_13_184 free
- delta_up_13_185 free
- delta_up_13_186 free
- delta_up_13_187 free
- delta_up_13_188 free
- delta_up_13_189 free
- delta_up_13_190 free
- delta_up_13_191 free
- delta_up_13_192 free
- delta_up_13_193 free
- delta_up_13_194 free
- delta_up_13_195 free
- delta_up_13_196 free
- delta_up_13_197 free
- delta_up_13_198 free
- delta_up_13_199 free
- delta_up_13_200 free
- delta_up_14_1 free
- delta_up_14_2 free
- delta_up_14_3 free
- delta_up_14_4 free
- delta_up_14_5 free
- delta_up_14_6 free
- delta_up_14_7 free
- delta_up_14_8 free
- delta_up_14_9 free
- delta_up_14_10 free
- delta_up_14_11 free
- delta_up_14_12 free
- delta_up_14_13 free
- delta_up_14_14 free
- delta_up_14_15 free
- delta_up_14_16 free
- delta_up_14_17 free
- delta_up_14_18 free
- delta_up_14_19 free
- delta_up_14_20 free
- delta_up_14_21 free
- delta_up_14_22 free
- delta_up_14_23 free
- delta_up_14_24 free
- delta_up_14_25 free
- delta_up_14_26 free
- delta_up_14_27 free
- delta_up_14_28 free
- delta_up_14_29 free
- delta_up_14_30 free
- delta_up_14_31 free
- delta_up_14_32 free
- delta_up_14_33 free
- delta_up_14_34 free
- delta_up_14_35 free
- delta_up_14_36 free
- delta_up_14_37 free
- delta_up_14_38 free
- delta_up_14_39 free
- delta_up_14_40 free
- delta_up_14_41 free
- delta_up_14_42 free
- delta_up_14_43 free
- delta_up_14_44 free
- delta_up_14_45 free
- delta_up_14_46 free
- delta_up_14_47 free
- delta_up_14_48 free
- delta_up_14_49 free
- delta_up_14_50 free
- delta_up_14_51 free
- delta_up_14_52 free
- delta_up_14_53 free
- delta_up_14_54 free
- delta_up_14_55 free
- delta_up_14_56 free
- delta_up_14_57 free
- delta_up_14_58 free
- delta_up_14_59 free
- delta_up_14_60 free
- delta_up_14_61 free
- delta_up_14_62 free
- delta_up_14_63 free
- delta_up_14_64 free
- delta_up_14_65 free
- delta_up_14_66 free
- delta_up_14_67 free
- delta_up_14_68 free
- delta_up_14_69 free
- delta_up_14_70 free
- delta_up_14_71 free
- delta_up_14_72 free
- delta_up_14_73 free
- delta_up_14_74 free
- delta_up_14_75 free
- delta_up_14_76 free
- delta_up_14_77 free
- delta_up_14_78 free
- delta_up_14_79 free
- delta_up_14_80 free
- delta_up_14_81 free
- delta_up_14_82 free
- delta_up_14_83 free
- delta_up_14_84 free
- delta_up_14_85 free
- delta_up_14_86 free
- delta_up_14_87 free
- delta_up_14_88 free
- delta_up_14_89 free
- delta_up_14_90 free
- delta_up_14_91 free
- delta_up_14_92 free
- delta_up_14_93 free
- delta_up_14_94 free
- delta_up_14_95 free
- delta_up_14_96 free
- delta_up_14_97 free
- delta_up_14_98 free
- delta_up_14_99 free
- delta_up_14_100 free
- delta_up_14_101 free
- delta_up_14_102 free
- delta_up_14_103 free
- delta_up_14_104 free
- delta_up_14_105 free
- delta_up_14_106 free
- delta_up_14_107 free
- delta_up_14_108 free
- delta_up_14_109 free
- delta_up_14_110 free
- delta_up_14_111 free
- delta_up_14_112 free
- delta_up_14_113 free
- delta_up_14_114 free
- delta_up_14_115 free
- delta_up_14_116 free
- delta_up_14_117 free
- delta_up_14_118 free
- delta_up_14_119 free
- delta_up_14_120 free
- delta_up_14_121 free
- delta_up_14_122 free
- delta_up_14_123 free
- delta_up_14_124 free
- delta_up_14_125 free
- delta_up_14_126 free
- delta_up_14_127 free
- delta_up_14_128 free
- delta_up_14_129 free
- delta_up_14_130 free
- delta_up_14_131 free
- delta_up_14_132 free
- delta_up_14_133 free
- delta_up_14_134 free
- delta_up_14_135 free
- delta_up_14_136 free
- delta_up_14_137 free
- delta_up_14_138 free
- delta_up_14_139 free
- delta_up_14_140 free
- delta_up_14_141 free
- delta_up_14_142 free
- delta_up_14_143 free
- delta_up_14_144 free
- delta_up_14_145 free
- delta_up_14_146 free
- delta_up_14_147 free
- delta_up_14_148 free
- delta_up_14_149 free
- delta_up_14_150 free
- delta_up_14_151 free
- delta_up_14_152 free
- delta_up_14_153 free
- delta_up_14_154 free
- delta_up_14_155 free
- delta_up_14_156 free
- delta_up_14_157 free
- delta_up_14_158 free
- delta_up_14_159 free
- delta_up_14_160 free
- delta_up_14_161 free
- delta_up_14_162 free
- delta_up_14_163 free
- delta_up_14_164 free
- delta_up_14_165 free
- delta_up_14_166 free
- delta_up_14_167 free
- delta_up_14_168 free
- delta_up_14_169 free
- delta_up_14_170 free
- delta_up_14_171 free
- delta_up_14_172 free
- delta_up_14_173 free
- delta_up_14_174 free
- delta_up_14_175 free
- delta_up_14_176 free
- delta_up_14_177 free
- delta_up_14_178 free
- delta_up_14_179 free
- delta_up_14_180 free
- delta_up_14_181 free
- delta_up_14_182 free
- delta_up_14_183 free
- delta_up_14_184 free
- delta_up_14_185 free
- delta_up_14_186 free
- delta_up_14_187 free
- delta_up_14_188 free
- delta_up_14_189 free
- delta_up_14_190 free
- delta_up_14_191 free
- delta_up_14_192 free
- delta_up_14_193 free
- delta_up_14_194 free
- delta_up_14_195 free
- delta_up_14_196 free
- delta_up_14_197 free
- delta_up_14_198 free
- delta_up_14_199 free
- delta_up_14_200 free
- delta_up_15_1 free
- delta_up_15_2 free
- delta_up_15_3 free
- delta_up_15_4 free
- delta_up_15_5 free
- delta_up_15_6 free
- delta_up_15_7 free
- delta_up_15_8 free
- delta_up_15_9 free
- delta_up_15_10 free
- delta_up_15_11 free
- delta_up_15_12 free
- delta_up_15_13 free
- delta_up_15_14 free
- delta_up_15_15 free
- delta_up_15_16 free
- delta_up_15_17 free
- delta_up_15_18 free
- delta_up_15_19 free
- delta_up_15_20 free
- delta_up_15_21 free
- delta_up_15_22 free
- delta_up_15_23 free
- delta_up_15_24 free
- delta_up_15_25 free
- delta_up_15_26 free
- delta_up_15_27 free
- delta_up_15_28 free
- delta_up_15_29 free
- delta_up_15_30 free
- delta_up_15_31 free
- delta_up_15_32 free
- delta_up_15_33 free
- delta_up_15_34 free
- delta_up_15_35 free
- delta_up_15_36 free
- delta_up_15_37 free
- delta_up_15_38 free
- delta_up_15_39 free
- delta_up_15_40 free
- delta_up_15_41 free
- delta_up_15_42 free
- delta_up_15_43 free
- delta_up_15_44 free
- delta_up_15_45 free
- delta_up_15_46 free
- delta_up_15_47 free
- delta_up_15_48 free
- delta_up_15_49 free
- delta_up_15_50 free
- delta_up_15_51 free
- delta_up_15_52 free
- delta_up_15_53 free
- delta_up_15_54 free
- delta_up_15_55 free
- delta_up_15_56 free
- delta_up_15_57 free
- delta_up_15_58 free
- delta_up_15_59 free
- delta_up_15_60 free
- delta_up_15_61 free
- delta_up_15_62 free
- delta_up_15_63 free
- delta_up_15_64 free
- delta_up_15_65 free
- delta_up_15_66 free
- delta_up_15_67 free
- delta_up_15_68 free
- delta_up_15_69 free
- delta_up_15_70 free
- delta_up_15_71 free
- delta_up_15_72 free
- delta_up_15_73 free
- delta_up_15_74 free
- delta_up_15_75 free
- delta_up_15_76 free
- delta_up_15_77 free
- delta_up_15_78 free
- delta_up_15_79 free
- delta_up_15_80 free
- delta_up_15_81 free
- delta_up_15_82 free
- delta_up_15_83 free
- delta_up_15_84 free
- delta_up_15_85 free
- delta_up_15_86 free
- delta_up_15_87 free
- delta_up_15_88 free
- delta_up_15_89 free
- delta_up_15_90 free
- delta_up_15_91 free
- delta_up_15_92 free
- delta_up_15_93 free
- delta_up_15_94 free
- delta_up_15_95 free
- delta_up_15_96 free
- delta_up_15_97 free
- delta_up_15_98 free
- delta_up_15_99 free
- delta_up_15_100 free
- delta_up_15_101 free
- delta_up_15_102 free
- delta_up_15_103 free
- delta_up_15_104 free
- delta_up_15_105 free
- delta_up_15_106 free
- delta_up_15_107 free
- delta_up_15_108 free
- delta_up_15_109 free
- delta_up_15_110 free
- delta_up_15_111 free
- delta_up_15_112 free
- delta_up_15_113 free
- delta_up_15_114 free
- delta_up_15_115 free
- delta_up_15_116 free
- delta_up_15_117 free
- delta_up_15_118 free
- delta_up_15_119 free
- delta_up_15_120 free
- delta_up_15_121 free
- delta_up_15_122 free
- delta_up_15_123 free
- delta_up_15_124 free
- delta_up_15_125 free
- delta_up_15_126 free
- delta_up_15_127 free
- delta_up_15_128 free
- delta_up_15_129 free
- delta_up_15_130 free
- delta_up_15_131 free
- delta_up_15_132 free
- delta_up_15_133 free
- delta_up_15_134 free
- delta_up_15_135 free
- delta_up_15_136 free
- delta_up_15_137 free
- delta_up_15_138 free
- delta_up_15_139 free
- delta_up_15_140 free
- delta_up_15_141 free
- delta_up_15_142 free
- delta_up_15_143 free
- delta_up_15_144 free
- delta_up_15_145 free
- delta_up_15_146 free
- delta_up_15_147 free
- delta_up_15_148 free
- delta_up_15_149 free
- delta_up_15_150 free
- delta_up_15_151 free
- delta_up_15_152 free
- delta_up_15_153 free
- delta_up_15_154 free
- delta_up_15_155 free
- delta_up_15_156 free
- delta_up_15_157 free
- delta_up_15_158 free
- delta_up_15_159 free
- delta_up_15_160 free
- delta_up_15_161 free
- delta_up_15_162 free
- delta_up_15_163 free
- delta_up_15_164 free
- delta_up_15_165 free
- delta_up_15_166 free
- delta_up_15_167 free
- delta_up_15_168 free
- delta_up_15_169 free
- delta_up_15_170 free
- delta_up_15_171 free
- delta_up_15_172 free
- delta_up_15_173 free
- delta_up_15_174 free
- delta_up_15_175 free
- delta_up_15_176 free
- delta_up_15_177 free
- delta_up_15_178 free
- delta_up_15_179 free
- delta_up_15_180 free
- delta_up_15_181 free
- delta_up_15_182 free
- delta_up_15_183 free
- delta_up_15_184 free
- delta_up_15_185 free
- delta_up_15_186 free
- delta_up_15_187 free
- delta_up_15_188 free
- delta_up_15_189 free
- delta_up_15_190 free
- delta_up_15_191 free
- delta_up_15_192 free
- delta_up_15_193 free
- delta_up_15_194 free
- delta_up_15_195 free
- delta_up_15_196 free
- delta_up_15_197 free
- delta_up_15_198 free
- delta_up_15_199 free
- delta_up_15_200 free
- delta_up_16_1 free
- delta_up_16_2 free
- delta_up_16_3 free
- delta_up_16_4 free
- delta_up_16_5 free
- delta_up_16_6 free
- delta_up_16_7 free
- delta_up_16_8 free
- delta_up_16_9 free
- delta_up_16_10 free
- delta_up_16_11 free
- delta_up_16_12 free
- delta_up_16_13 free
- delta_up_16_14 free
- delta_up_16_15 free
- delta_up_16_16 free
- delta_up_16_17 free
- delta_up_16_18 free
- delta_up_16_19 free
- delta_up_16_20 free
- delta_up_16_21 free
- delta_up_16_22 free
- delta_up_16_23 free
- delta_up_16_24 free
- delta_up_16_25 free
- delta_up_16_26 free
- delta_up_16_27 free
- delta_up_16_28 free
- delta_up_16_29 free
- delta_up_16_30 free
- delta_up_16_31 free
- delta_up_16_32 free
- delta_up_16_33 free
- delta_up_16_34 free
- delta_up_16_35 free
- delta_up_16_36 free
- delta_up_16_37 free
- delta_up_16_38 free
- delta_up_16_39 free
- delta_up_16_40 free
- delta_up_16_41 free
- delta_up_16_42 free
- delta_up_16_43 free
- delta_up_16_44 free
- delta_up_16_45 free
- delta_up_16_46 free
- delta_up_16_47 free
- delta_up_16_48 free
- delta_up_16_49 free
- delta_up_16_50 free
- delta_up_16_51 free
- delta_up_16_52 free
- delta_up_16_53 free
- delta_up_16_54 free
- delta_up_16_55 free
- delta_up_16_56 free
- delta_up_16_57 free
- delta_up_16_58 free
- delta_up_16_59 free
- delta_up_16_60 free
- delta_up_16_61 free
- delta_up_16_62 free
- delta_up_16_63 free
- delta_up_16_64 free
- delta_up_16_65 free
- delta_up_16_66 free
- delta_up_16_67 free
- delta_up_16_68 free
- delta_up_16_69 free
- delta_up_16_70 free
- delta_up_16_71 free
- delta_up_16_72 free
- delta_up_16_73 free
- delta_up_16_74 free
- delta_up_16_75 free
- delta_up_16_76 free
- delta_up_16_77 free
- delta_up_16_78 free
- delta_up_16_79 free
- delta_up_16_80 free
- delta_up_16_81 free
- delta_up_16_82 free
- delta_up_16_83 free
- delta_up_16_84 free
- delta_up_16_85 free
- delta_up_16_86 free
- delta_up_16_87 free
- delta_up_16_88 free
- delta_up_16_89 free
- delta_up_16_90 free
- delta_up_16_91 free
- delta_up_16_92 free
- delta_up_16_93 free
- delta_up_16_94 free
- delta_up_16_95 free
- delta_up_16_96 free
- delta_up_16_97 free
- delta_up_16_98 free
- delta_up_16_99 free
- delta_up_16_100 free
- delta_up_16_101 free
- delta_up_16_102 free
- delta_up_16_103 free
- delta_up_16_104 free
- delta_up_16_105 free
- delta_up_16_106 free
- delta_up_16_107 free
- delta_up_16_108 free
- delta_up_16_109 free
- delta_up_16_110 free
- delta_up_16_111 free
- delta_up_16_112 free
- delta_up_16_113 free
- delta_up_16_114 free
- delta_up_16_115 free
- delta_up_16_116 free
- delta_up_16_117 free
- delta_up_16_118 free
- delta_up_16_119 free
- delta_up_16_120 free
- delta_up_16_121 free
- delta_up_16_122 free
- delta_up_16_123 free
- delta_up_16_124 free
- delta_up_16_125 free
- delta_up_16_126 free
- delta_up_16_127 free
- delta_up_16_128 free
- delta_up_16_129 free
- delta_up_16_130 free
- delta_up_16_131 free
- delta_up_16_132 free
- delta_up_16_133 free
- delta_up_16_134 free
- delta_up_16_135 free
- delta_up_16_136 free
- delta_up_16_137 free
- delta_up_16_138 free
- delta_up_16_139 free
- delta_up_16_140 free
- delta_up_16_141 free
- delta_up_16_142 free
- delta_up_16_143 free
- delta_up_16_144 free
- delta_up_16_145 free
- delta_up_16_146 free
- delta_up_16_147 free
- delta_up_16_148 free
- delta_up_16_149 free
- delta_up_16_150 free
- delta_up_16_151 free
- delta_up_16_152 free
- delta_up_16_153 free
- delta_up_16_154 free
- delta_up_16_155 free
- delta_up_16_156 free
- delta_up_16_157 free
- delta_up_16_158 free
- delta_up_16_159 free
- delta_up_16_160 free
- delta_up_16_161 free
- delta_up_16_162 free
- delta_up_16_163 free
- delta_up_16_164 free
- delta_up_16_165 free
- delta_up_16_166 free
- delta_up_16_167 free
- delta_up_16_168 free
- delta_up_16_169 free
- delta_up_16_170 free
- delta_up_16_171 free
- delta_up_16_172 free
- delta_up_16_173 free
- delta_up_16_174 free
- delta_up_16_175 free
- delta_up_16_176 free
- delta_up_16_177 free
- delta_up_16_178 free
- delta_up_16_179 free
- delta_up_16_180 free
- delta_up_16_181 free
- delta_up_16_182 free
- delta_up_16_183 free
- delta_up_16_184 free
- delta_up_16_185 free
- delta_up_16_186 free
- delta_up_16_187 free
- delta_up_16_188 free
- delta_up_16_189 free
- delta_up_16_190 free
- delta_up_16_191 free
- delta_up_16_192 free
- delta_up_16_193 free
- delta_up_16_194 free
- delta_up_16_195 free
- delta_up_16_196 free
- delta_up_16_197 free
- delta_up_16_198 free
- delta_up_16_199 free
- delta_up_16_200 free
- delta_up_17_1 free
- delta_up_17_2 free
- delta_up_17_3 free
- delta_up_17_4 free
- delta_up_17_5 free
- delta_up_17_6 free
- delta_up_17_7 free
- delta_up_17_8 free
- delta_up_17_9 free
- delta_up_17_10 free
- delta_up_17_11 free
- delta_up_17_12 free
- delta_up_17_13 free
- delta_up_17_14 free
- delta_up_17_15 free
- delta_up_17_16 free
- delta_up_17_17 free
- delta_up_17_18 free
- delta_up_17_19 free
- delta_up_17_20 free
- delta_up_17_21 free
- delta_up_17_22 free
- delta_up_17_23 free
- delta_up_17_24 free
- delta_up_17_25 free
- delta_up_17_26 free
- delta_up_17_27 free
- delta_up_17_28 free
- delta_up_17_29 free
- delta_up_17_30 free
- delta_up_17_31 free
- delta_up_17_32 free
- delta_up_17_33 free
- delta_up_17_34 free
- delta_up_17_35 free
- delta_up_17_36 free
- delta_up_17_37 free
- delta_up_17_38 free
- delta_up_17_39 free
- delta_up_17_40 free
- delta_up_17_41 free
- delta_up_17_42 free
- delta_up_17_43 free
- delta_up_17_44 free
- delta_up_17_45 free
- delta_up_17_46 free
- delta_up_17_47 free
- delta_up_17_48 free
- delta_up_17_49 free
- delta_up_17_50 free
- delta_up_17_51 free
- delta_up_17_52 free
- delta_up_17_53 free
- delta_up_17_54 free
- delta_up_17_55 free
- delta_up_17_56 free
- delta_up_17_57 free
- delta_up_17_58 free
- delta_up_17_59 free
- delta_up_17_60 free
- delta_up_17_61 free
- delta_up_17_62 free
- delta_up_17_63 free
- delta_up_17_64 free
- delta_up_17_65 free
- delta_up_17_66 free
- delta_up_17_67 free
- delta_up_17_68 free
- delta_up_17_69 free
- delta_up_17_70 free
- delta_up_17_71 free
- delta_up_17_72 free
- delta_up_17_73 free
- delta_up_17_74 free
- delta_up_17_75 free
- delta_up_17_76 free
- delta_up_17_77 free
- delta_up_17_78 free
- delta_up_17_79 free
- delta_up_17_80 free
- delta_up_17_81 free
- delta_up_17_82 free
- delta_up_17_83 free
- delta_up_17_84 free
- delta_up_17_85 free
- delta_up_17_86 free
- delta_up_17_87 free
- delta_up_17_88 free
- delta_up_17_89 free
- delta_up_17_90 free
- delta_up_17_91 free
- delta_up_17_92 free
- delta_up_17_93 free
- delta_up_17_94 free
- delta_up_17_95 free
- delta_up_17_96 free
- delta_up_17_97 free
- delta_up_17_98 free
- delta_up_17_99 free
- delta_up_17_100 free
- delta_up_17_101 free
- delta_up_17_102 free
- delta_up_17_103 free
- delta_up_17_104 free
- delta_up_17_105 free
- delta_up_17_106 free
- delta_up_17_107 free
- delta_up_17_108 free
- delta_up_17_109 free
- delta_up_17_110 free
- delta_up_17_111 free
- delta_up_17_112 free
- delta_up_17_113 free
- delta_up_17_114 free
- delta_up_17_115 free
- delta_up_17_116 free
- delta_up_17_117 free
- delta_up_17_118 free
- delta_up_17_119 free
- delta_up_17_120 free
- delta_up_17_121 free
- delta_up_17_122 free
- delta_up_17_123 free
- delta_up_17_124 free
- delta_up_17_125 free
- delta_up_17_126 free
- delta_up_17_127 free
- delta_up_17_128 free
- delta_up_17_129 free
- delta_up_17_130 free
- delta_up_17_131 free
- delta_up_17_132 free
- delta_up_17_133 free
- delta_up_17_134 free
- delta_up_17_135 free
- delta_up_17_136 free
- delta_up_17_137 free
- delta_up_17_138 free
- delta_up_17_139 free
- delta_up_17_140 free
- delta_up_17_141 free
- delta_up_17_142 free
- delta_up_17_143 free
- delta_up_17_144 free
- delta_up_17_145 free
- delta_up_17_146 free
- delta_up_17_147 free
- delta_up_17_148 free
- delta_up_17_149 free
- delta_up_17_150 free
- delta_up_17_151 free
- delta_up_17_152 free
- delta_up_17_153 free
- delta_up_17_154 free
- delta_up_17_155 free
- delta_up_17_156 free
- delta_up_17_157 free
- delta_up_17_158 free
- delta_up_17_159 free
- delta_up_17_160 free
- delta_up_17_161 free
- delta_up_17_162 free
- delta_up_17_163 free
- delta_up_17_164 free
- delta_up_17_165 free
- delta_up_17_166 free
- delta_up_17_167 free
- delta_up_17_168 free
- delta_up_17_169 free
- delta_up_17_170 free
- delta_up_17_171 free
- delta_up_17_172 free
- delta_up_17_173 free
- delta_up_17_174 free
- delta_up_17_175 free
- delta_up_17_176 free
- delta_up_17_177 free
- delta_up_17_178 free
- delta_up_17_179 free
- delta_up_17_180 free
- delta_up_17_181 free
- delta_up_17_182 free
- delta_up_17_183 free
- delta_up_17_184 free
- delta_up_17_185 free
- delta_up_17_186 free
- delta_up_17_187 free
- delta_up_17_188 free
- delta_up_17_189 free
- delta_up_17_190 free
- delta_up_17_191 free
- delta_up_17_192 free
- delta_up_17_193 free
- delta_up_17_194 free
- delta_up_17_195 free
- delta_up_17_196 free
- delta_up_17_197 free
- delta_up_17_198 free
- delta_up_17_199 free
- delta_up_17_200 free
- delta_up_18_1 free
- delta_up_18_2 free
- delta_up_18_3 free
- delta_up_18_4 free
- delta_up_18_5 free
- delta_up_18_6 free
- delta_up_18_7 free
- delta_up_18_8 free
- delta_up_18_9 free
- delta_up_18_10 free
- delta_up_18_11 free
- delta_up_18_12 free
- delta_up_18_13 free
- delta_up_18_14 free
- delta_up_18_15 free
- delta_up_18_16 free
- delta_up_18_17 free
- delta_up_18_18 free
- delta_up_18_19 free
- delta_up_18_20 free
- delta_up_18_21 free
- delta_up_18_22 free
- delta_up_18_23 free
- delta_up_18_24 free
- delta_up_18_25 free
- delta_up_18_26 free
- delta_up_18_27 free
- delta_up_18_28 free
- delta_up_18_29 free
- delta_up_18_30 free
- delta_up_18_31 free
- delta_up_18_32 free
- delta_up_18_33 free
- delta_up_18_34 free
- delta_up_18_35 free
- delta_up_18_36 free
- delta_up_18_37 free
- delta_up_18_38 free
- delta_up_18_39 free
- delta_up_18_40 free
- delta_up_18_41 free
- delta_up_18_42 free
- delta_up_18_43 free
- delta_up_18_44 free
- delta_up_18_45 free
- delta_up_18_46 free
- delta_up_18_47 free
- delta_up_18_48 free
- delta_up_18_49 free
- delta_up_18_50 free
- delta_up_18_51 free
- delta_up_18_52 free
- delta_up_18_53 free
- delta_up_18_54 free
- delta_up_18_55 free
- delta_up_18_56 free
- delta_up_18_57 free
- delta_up_18_58 free
- delta_up_18_59 free
- delta_up_18_60 free
- delta_up_18_61 free
- delta_up_18_62 free
- delta_up_18_63 free
- delta_up_18_64 free
- delta_up_18_65 free
- delta_up_18_66 free
- delta_up_18_67 free
- delta_up_18_68 free
- delta_up_18_69 free
- delta_up_18_70 free
- delta_up_18_71 free
- delta_up_18_72 free
- delta_up_18_73 free
- delta_up_18_74 free
- delta_up_18_75 free
- delta_up_18_76 free
- delta_up_18_77 free
- delta_up_18_78 free
- delta_up_18_79 free
- delta_up_18_80 free
- delta_up_18_81 free
- delta_up_18_82 free
- delta_up_18_83 free
- delta_up_18_84 free
- delta_up_18_85 free
- delta_up_18_86 free
- delta_up_18_87 free
- delta_up_18_88 free
- delta_up_18_89 free
- delta_up_18_90 free
- delta_up_18_91 free
- delta_up_18_92 free
- delta_up_18_93 free
- delta_up_18_94 free
- delta_up_18_95 free
- delta_up_18_96 free
- delta_up_18_97 free
- delta_up_18_98 free
- delta_up_18_99 free
- delta_up_18_100 free
- delta_up_18_101 free
- delta_up_18_102 free
- delta_up_18_103 free
- delta_up_18_104 free
- delta_up_18_105 free
- delta_up_18_106 free
- delta_up_18_107 free
- delta_up_18_108 free
- delta_up_18_109 free
- delta_up_18_110 free
- delta_up_18_111 free
- delta_up_18_112 free
- delta_up_18_113 free
- delta_up_18_114 free
- delta_up_18_115 free
- delta_up_18_116 free
- delta_up_18_117 free
- delta_up_18_118 free
- delta_up_18_119 free
- delta_up_18_120 free
- delta_up_18_121 free
- delta_up_18_122 free
- delta_up_18_123 free
- delta_up_18_124 free
- delta_up_18_125 free
- delta_up_18_126 free
- delta_up_18_127 free
- delta_up_18_128 free
- delta_up_18_129 free
- delta_up_18_130 free
- delta_up_18_131 free
- delta_up_18_132 free
- delta_up_18_133 free
- delta_up_18_134 free
- delta_up_18_135 free
- delta_up_18_136 free
- delta_up_18_137 free
- delta_up_18_138 free
- delta_up_18_139 free
- delta_up_18_140 free
- delta_up_18_141 free
- delta_up_18_142 free
- delta_up_18_143 free
- delta_up_18_144 free
- delta_up_18_145 free
- delta_up_18_146 free
- delta_up_18_147 free
- delta_up_18_148 free
- delta_up_18_149 free
- delta_up_18_150 free
- delta_up_18_151 free
- delta_up_18_152 free
- delta_up_18_153 free
- delta_up_18_154 free
- delta_up_18_155 free
- delta_up_18_156 free
- delta_up_18_157 free
- delta_up_18_158 free
- delta_up_18_159 free
- delta_up_18_160 free
- delta_up_18_161 free
- delta_up_18_162 free
- delta_up_18_163 free
- delta_up_18_164 free
- delta_up_18_165 free
- delta_up_18_166 free
- delta_up_18_167 free
- delta_up_18_168 free
- delta_up_18_169 free
- delta_up_18_170 free
- delta_up_18_171 free
- delta_up_18_172 free
- delta_up_18_173 free
- delta_up_18_174 free
- delta_up_18_175 free
- delta_up_18_176 free
- delta_up_18_177 free
- delta_up_18_178 free
- delta_up_18_179 free
- delta_up_18_180 free
- delta_up_18_181 free
- delta_up_18_182 free
- delta_up_18_183 free
- delta_up_18_184 free
- delta_up_18_185 free
- delta_up_18_186 free
- delta_up_18_187 free
- delta_up_18_188 free
- delta_up_18_189 free
- delta_up_18_190 free
- delta_up_18_191 free
- delta_up_18_192 free
- delta_up_18_193 free
- delta_up_18_194 free
- delta_up_18_195 free
- delta_up_18_196 free
- delta_up_18_197 free
- delta_up_18_198 free
- delta_up_18_199 free
- delta_up_18_200 free
- delta_up_19_1 free
- delta_up_19_2 free
- delta_up_19_3 free
- delta_up_19_4 free
- delta_up_19_5 free
- delta_up_19_6 free
- delta_up_19_7 free
- delta_up_19_8 free
- delta_up_19_9 free
- delta_up_19_10 free
- delta_up_19_11 free
- delta_up_19_12 free
- delta_up_19_13 free
- delta_up_19_14 free
- delta_up_19_15 free
- delta_up_19_16 free
- delta_up_19_17 free
- delta_up_19_18 free
- delta_up_19_19 free
- delta_up_19_20 free
- delta_up_19_21 free
- delta_up_19_22 free
- delta_up_19_23 free
- delta_up_19_24 free
- delta_up_19_25 free
- delta_up_19_26 free
- delta_up_19_27 free
- delta_up_19_28 free
- delta_up_19_29 free
- delta_up_19_30 free
- delta_up_19_31 free
- delta_up_19_32 free
- delta_up_19_33 free
- delta_up_19_34 free
- delta_up_19_35 free
- delta_up_19_36 free
- delta_up_19_37 free
- delta_up_19_38 free
- delta_up_19_39 free
- delta_up_19_40 free
- delta_up_19_41 free
- delta_up_19_42 free
- delta_up_19_43 free
- delta_up_19_44 free
- delta_up_19_45 free
- delta_up_19_46 free
- delta_up_19_47 free
- delta_up_19_48 free
- delta_up_19_49 free
- delta_up_19_50 free
- delta_up_19_51 free
- delta_up_19_52 free
- delta_up_19_53 free
- delta_up_19_54 free
- delta_up_19_55 free
- delta_up_19_56 free
- delta_up_19_57 free
- delta_up_19_58 free
- delta_up_19_59 free
- delta_up_19_60 free
- delta_up_19_61 free
- delta_up_19_62 free
- delta_up_19_63 free
- delta_up_19_64 free
- delta_up_19_65 free
- delta_up_19_66 free
- delta_up_19_67 free
- delta_up_19_68 free
- delta_up_19_69 free
- delta_up_19_70 free
- delta_up_19_71 free
- delta_up_19_72 free
- delta_up_19_73 free
- delta_up_19_74 free
- delta_up_19_75 free
- delta_up_19_76 free
- delta_up_19_77 free
- delta_up_19_78 free
- delta_up_19_79 free
- delta_up_19_80 free
- delta_up_19_81 free
- delta_up_19_82 free
- delta_up_19_83 free
- delta_up_19_84 free
- delta_up_19_85 free
- delta_up_19_86 free
- delta_up_19_87 free
- delta_up_19_88 free
- delta_up_19_89 free
- delta_up_19_90 free
- delta_up_19_91 free
- delta_up_19_92 free
- delta_up_19_93 free
- delta_up_19_94 free
- delta_up_19_95 free
- delta_up_19_96 free
- delta_up_19_97 free
- delta_up_19_98 free
- delta_up_19_99 free
- delta_up_19_100 free
- delta_up_19_101 free
- delta_up_19_102 free
- delta_up_19_103 free
- delta_up_19_104 free
- delta_up_19_105 free
- delta_up_19_106 free
- delta_up_19_107 free
- delta_up_19_108 free
- delta_up_19_109 free
- delta_up_19_110 free
- delta_up_19_111 free
- delta_up_19_112 free
- delta_up_19_113 free
- delta_up_19_114 free
- delta_up_19_115 free
- delta_up_19_116 free
- delta_up_19_117 free
- delta_up_19_118 free
- delta_up_19_119 free
- delta_up_19_120 free
- delta_up_19_121 free
- delta_up_19_122 free
- delta_up_19_123 free
- delta_up_19_124 free
- delta_up_19_125 free
- delta_up_19_126 free
- delta_up_19_127 free
- delta_up_19_128 free
- delta_up_19_129 free
- delta_up_19_130 free
- delta_up_19_131 free
- delta_up_19_132 free
- delta_up_19_133 free
- delta_up_19_134 free
- delta_up_19_135 free
- delta_up_19_136 free
- delta_up_19_137 free
- delta_up_19_138 free
- delta_up_19_139 free
- delta_up_19_140 free
- delta_up_19_141 free
- delta_up_19_142 free
- delta_up_19_143 free
- delta_up_19_144 free
- delta_up_19_145 free
- delta_up_19_146 free
- delta_up_19_147 free
- delta_up_19_148 free
- delta_up_19_149 free
- delta_up_19_150 free
- delta_up_19_151 free
- delta_up_19_152 free
- delta_up_19_153 free
- delta_up_19_154 free
- delta_up_19_155 free
- delta_up_19_156 free
- delta_up_19_157 free
- delta_up_19_158 free
- delta_up_19_159 free
- delta_up_19_160 free
- delta_up_19_161 free
- delta_up_19_162 free
- delta_up_19_163 free
- delta_up_19_164 free
- delta_up_19_165 free
- delta_up_19_166 free
- delta_up_19_167 free
- delta_up_19_168 free
- delta_up_19_169 free
- delta_up_19_170 free
- delta_up_19_171 free
- delta_up_19_172 free
- delta_up_19_173 free
- delta_up_19_174 free
- delta_up_19_175 free
- delta_up_19_176 free
- delta_up_19_177 free
- delta_up_19_178 free
- delta_up_19_179 free
- delta_up_19_180 free
- delta_up_19_181 free
- delta_up_19_182 free
- delta_up_19_183 free
- delta_up_19_184 free
- delta_up_19_185 free
- delta_up_19_186 free
- delta_up_19_187 free
- delta_up_19_188 free
- delta_up_19_189 free
- delta_up_19_190 free
- delta_up_19_191 free
- delta_up_19_192 free
- delta_up_19_193 free
- delta_up_19_194 free
- delta_up_19_195 free
- delta_up_19_196 free
- delta_up_19_197 free
- delta_up_19_198 free
- delta_up_19_199 free
- delta_up_19_200 free
- delta_up_20_1 free
- delta_up_20_2 free
- delta_up_20_3 free
- delta_up_20_4 free
- delta_up_20_5 free
- delta_up_20_6 free
- delta_up_20_7 free
- delta_up_20_8 free
- delta_up_20_9 free
- delta_up_20_10 free
- delta_up_20_11 free
- delta_up_20_12 free
- delta_up_20_13 free
- delta_up_20_14 free
- delta_up_20_15 free
- delta_up_20_16 free
- delta_up_20_17 free
- delta_up_20_18 free
- delta_up_20_19 free
- delta_up_20_20 free
- delta_up_20_21 free
- delta_up_20_22 free
- delta_up_20_23 free
- delta_up_20_24 free
- delta_up_20_25 free
- delta_up_20_26 free
- delta_up_20_27 free
- delta_up_20_28 free
- delta_up_20_29 free
- delta_up_20_30 free
- delta_up_20_31 free
- delta_up_20_32 free
- delta_up_20_33 free
- delta_up_20_34 free
- delta_up_20_35 free
- delta_up_20_36 free
- delta_up_20_37 free
- delta_up_20_38 free
- delta_up_20_39 free
- delta_up_20_40 free
- delta_up_20_41 free
- delta_up_20_42 free
- delta_up_20_43 free
- delta_up_20_44 free
- delta_up_20_45 free
- delta_up_20_46 free
- delta_up_20_47 free
- delta_up_20_48 free
- delta_up_20_49 free
- delta_up_20_50 free
- delta_up_20_51 free
- delta_up_20_52 free
- delta_up_20_53 free
- delta_up_20_54 free
- delta_up_20_55 free
- delta_up_20_56 free
- delta_up_20_57 free
- delta_up_20_58 free
- delta_up_20_59 free
- delta_up_20_60 free
- delta_up_20_61 free
- delta_up_20_62 free
- delta_up_20_63 free
- delta_up_20_64 free
- delta_up_20_65 free
- delta_up_20_66 free
- delta_up_20_67 free
- delta_up_20_68 free
- delta_up_20_69 free
- delta_up_20_70 free
- delta_up_20_71 free
- delta_up_20_72 free
- delta_up_20_73 free
- delta_up_20_74 free
- delta_up_20_75 free
- delta_up_20_76 free
- delta_up_20_77 free
- delta_up_20_78 free
- delta_up_20_79 free
- delta_up_20_80 free
- delta_up_20_81 free
- delta_up_20_82 free
- delta_up_20_83 free
- delta_up_20_84 free
- delta_up_20_85 free
- delta_up_20_86 free
- delta_up_20_87 free
- delta_up_20_88 free
- delta_up_20_89 free
- delta_up_20_90 free
- delta_up_20_91 free
- delta_up_20_92 free
- delta_up_20_93 free
- delta_up_20_94 free
- delta_up_20_95 free
- delta_up_20_96 free
- delta_up_20_97 free
- delta_up_20_98 free
- delta_up_20_99 free
- delta_up_20_100 free
- delta_up_20_101 free
- delta_up_20_102 free
- delta_up_20_103 free
- delta_up_20_104 free
- delta_up_20_105 free
- delta_up_20_106 free
- delta_up_20_107 free
- delta_up_20_108 free
- delta_up_20_109 free
- delta_up_20_110 free
- delta_up_20_111 free
- delta_up_20_112 free
- delta_up_20_113 free
- delta_up_20_114 free
- delta_up_20_115 free
- delta_up_20_116 free
- delta_up_20_117 free
- delta_up_20_118 free
- delta_up_20_119 free
- delta_up_20_120 free
- delta_up_20_121 free
- delta_up_20_122 free
- delta_up_20_123 free
- delta_up_20_124 free
- delta_up_20_125 free
- delta_up_20_126 free
- delta_up_20_127 free
- delta_up_20_128 free
- delta_up_20_129 free
- delta_up_20_130 free
- delta_up_20_131 free
- delta_up_20_132 free
- delta_up_20_133 free
- delta_up_20_134 free
- delta_up_20_135 free
- delta_up_20_136 free
- delta_up_20_137 free
- delta_up_20_138 free
- delta_up_20_139 free
- delta_up_20_140 free
- delta_up_20_141 free
- delta_up_20_142 free
- delta_up_20_143 free
- delta_up_20_144 free
- delta_up_20_145 free
- delta_up_20_146 free
- delta_up_20_147 free
- delta_up_20_148 free
- delta_up_20_149 free
- delta_up_20_150 free
- delta_up_20_151 free
- delta_up_20_152 free
- delta_up_20_153 free
- delta_up_20_154 free
- delta_up_20_155 free
- delta_up_20_156 free
- delta_up_20_157 free
- delta_up_20_158 free
- delta_up_20_159 free
- delta_up_20_160 free
- delta_up_20_161 free
- delta_up_20_162 free
- delta_up_20_163 free
- delta_up_20_164 free
- delta_up_20_165 free
- delta_up_20_166 free
- delta_up_20_167 free
- delta_up_20_168 free
- delta_up_20_169 free
- delta_up_20_170 free
- delta_up_20_171 free
- delta_up_20_172 free
- delta_up_20_173 free
- delta_up_20_174 free
- delta_up_20_175 free
- delta_up_20_176 free
- delta_up_20_177 free
- delta_up_20_178 free
- delta_up_20_179 free
- delta_up_20_180 free
- delta_up_20_181 free
- delta_up_20_182 free
- delta_up_20_183 free
- delta_up_20_184 free
- delta_up_20_185 free
- delta_up_20_186 free
- delta_up_20_187 free
- delta_up_20_188 free
- delta_up_20_189 free
- delta_up_20_190 free
- delta_up_20_191 free
- delta_up_20_192 free
- delta_up_20_193 free
- delta_up_20_194 free
- delta_up_20_195 free
- delta_up_20_196 free
- delta_up_20_197 free
- delta_up_20_198 free
- delta_up_20_199 free
- delta_up_20_200 free
- delta_up_21_1 free
- delta_up_21_2 free
- delta_up_21_3 free
- delta_up_21_4 free
- delta_up_21_5 free
- delta_up_21_6 free
- delta_up_21_7 free
- delta_up_21_8 free
- delta_up_21_9 free
- delta_up_21_10 free
- delta_up_21_11 free
- delta_up_21_12 free
- delta_up_21_13 free
- delta_up_21_14 free
- delta_up_21_15 free
- delta_up_21_16 free
- delta_up_21_17 free
- delta_up_21_18 free
- delta_up_21_19 free
- delta_up_21_20 free
- delta_up_21_21 free
- delta_up_21_22 free
- delta_up_21_23 free
- delta_up_21_24 free
- delta_up_21_25 free
- delta_up_21_26 free
- delta_up_21_27 free
- delta_up_21_28 free
- delta_up_21_29 free
- delta_up_21_30 free
- delta_up_21_31 free
- delta_up_21_32 free
- delta_up_21_33 free
- delta_up_21_34 free
- delta_up_21_35 free
- delta_up_21_36 free
- delta_up_21_37 free
- delta_up_21_38 free
- delta_up_21_39 free
- delta_up_21_40 free
- delta_up_21_41 free
- delta_up_21_42 free
- delta_up_21_43 free
- delta_up_21_44 free
- delta_up_21_45 free
- delta_up_21_46 free
- delta_up_21_47 free
- delta_up_21_48 free
- delta_up_21_49 free
- delta_up_21_50 free
- delta_up_21_51 free
- delta_up_21_52 free
- delta_up_21_53 free
- delta_up_21_54 free
- delta_up_21_55 free
- delta_up_21_56 free
- delta_up_21_57 free
- delta_up_21_58 free
- delta_up_21_59 free
- delta_up_21_60 free
- delta_up_21_61 free
- delta_up_21_62 free
- delta_up_21_63 free
- delta_up_21_64 free
- delta_up_21_65 free
- delta_up_21_66 free
- delta_up_21_67 free
- delta_up_21_68 free
- delta_up_21_69 free
- delta_up_21_70 free
- delta_up_21_71 free
- delta_up_21_72 free
- delta_up_21_73 free
- delta_up_21_74 free
- delta_up_21_75 free
- delta_up_21_76 free
- delta_up_21_77 free
- delta_up_21_78 free
- delta_up_21_79 free
- delta_up_21_80 free
- delta_up_21_81 free
- delta_up_21_82 free
- delta_up_21_83 free
- delta_up_21_84 free
- delta_up_21_85 free
- delta_up_21_86 free
- delta_up_21_87 free
- delta_up_21_88 free
- delta_up_21_89 free
- delta_up_21_90 free
- delta_up_21_91 free
- delta_up_21_92 free
- delta_up_21_93 free
- delta_up_21_94 free
- delta_up_21_95 free
- delta_up_21_96 free
- delta_up_21_97 free
- delta_up_21_98 free
- delta_up_21_99 free
- delta_up_21_100 free
- delta_up_21_101 free
- delta_up_21_102 free
- delta_up_21_103 free
- delta_up_21_104 free
- delta_up_21_105 free
- delta_up_21_106 free
- delta_up_21_107 free
- delta_up_21_108 free
- delta_up_21_109 free
- delta_up_21_110 free
- delta_up_21_111 free
- delta_up_21_112 free
- delta_up_21_113 free
- delta_up_21_114 free
- delta_up_21_115 free
- delta_up_21_116 free
- delta_up_21_117 free
- delta_up_21_118 free
- delta_up_21_119 free
- delta_up_21_120 free
- delta_up_21_121 free
- delta_up_21_122 free
- delta_up_21_123 free
- delta_up_21_124 free
- delta_up_21_125 free
- delta_up_21_126 free
- delta_up_21_127 free
- delta_up_21_128 free
- delta_up_21_129 free
- delta_up_21_130 free
- delta_up_21_131 free
- delta_up_21_132 free
- delta_up_21_133 free
- delta_up_21_134 free
- delta_up_21_135 free
- delta_up_21_136 free
- delta_up_21_137 free
- delta_up_21_138 free
- delta_up_21_139 free
- delta_up_21_140 free
- delta_up_21_141 free
- delta_up_21_142 free
- delta_up_21_143 free
- delta_up_21_144 free
- delta_up_21_145 free
- delta_up_21_146 free
- delta_up_21_147 free
- delta_up_21_148 free
- delta_up_21_149 free
- delta_up_21_150 free
- delta_up_21_151 free
- delta_up_21_152 free
- delta_up_21_153 free
- delta_up_21_154 free
- delta_up_21_155 free
- delta_up_21_156 free
- delta_up_21_157 free
- delta_up_21_158 free
- delta_up_21_159 free
- delta_up_21_160 free
- delta_up_21_161 free
- delta_up_21_162 free
- delta_up_21_163 free
- delta_up_21_164 free
- delta_up_21_165 free
- delta_up_21_166 free
- delta_up_21_167 free
- delta_up_21_168 free
- delta_up_21_169 free
- delta_up_21_170 free
- delta_up_21_171 free
- delta_up_21_172 free
- delta_up_21_173 free
- delta_up_21_174 free
- delta_up_21_175 free
- delta_up_21_176 free
- delta_up_21_177 free
- delta_up_21_178 free
- delta_up_21_179 free
- delta_up_21_180 free
- delta_up_21_181 free
- delta_up_21_182 free
- delta_up_21_183 free
- delta_up_21_184 free
- delta_up_21_185 free
- delta_up_21_186 free
- delta_up_21_187 free
- delta_up_21_188 free
- delta_up_21_189 free
- delta_up_21_190 free
- delta_up_21_191 free
- delta_up_21_192 free
- delta_up_21_193 free
- delta_up_21_194 free
- delta_up_21_195 free
- delta_up_21_196 free
- delta_up_21_197 free
- delta_up_21_198 free
- delta_up_21_199 free
- delta_up_21_200 free
- delta_up_22_1 free
- delta_up_22_2 free
- delta_up_22_3 free
- delta_up_22_4 free
- delta_up_22_5 free
- delta_up_22_6 free
- delta_up_22_7 free
- delta_up_22_8 free
- delta_up_22_9 free
- delta_up_22_10 free
- delta_up_22_11 free
- delta_up_22_12 free
- delta_up_22_13 free
- delta_up_22_14 free
- delta_up_22_15 free
- delta_up_22_16 free
- delta_up_22_17 free
- delta_up_22_18 free
- delta_up_22_19 free
- delta_up_22_20 free
- delta_up_22_21 free
- delta_up_22_22 free
- delta_up_22_23 free
- delta_up_22_24 free
- delta_up_22_25 free
- delta_up_22_26 free
- delta_up_22_27 free
- delta_up_22_28 free
- delta_up_22_29 free
- delta_up_22_30 free
- delta_up_22_31 free
- delta_up_22_32 free
- delta_up_22_33 free
- delta_up_22_34 free
- delta_up_22_35 free
- delta_up_22_36 free
- delta_up_22_37 free
- delta_up_22_38 free
- delta_up_22_39 free
- delta_up_22_40 free
- delta_up_22_41 free
- delta_up_22_42 free
- delta_up_22_43 free
- delta_up_22_44 free
- delta_up_22_45 free
- delta_up_22_46 free
- delta_up_22_47 free
- delta_up_22_48 free
- delta_up_22_49 free
- delta_up_22_50 free
- delta_up_22_51 free
- delta_up_22_52 free
- delta_up_22_53 free
- delta_up_22_54 free
- delta_up_22_55 free
- delta_up_22_56 free
- delta_up_22_57 free
- delta_up_22_58 free
- delta_up_22_59 free
- delta_up_22_60 free
- delta_up_22_61 free
- delta_up_22_62 free
- delta_up_22_63 free
- delta_up_22_64 free
- delta_up_22_65 free
- delta_up_22_66 free
- delta_up_22_67 free
- delta_up_22_68 free
- delta_up_22_69 free
- delta_up_22_70 free
- delta_up_22_71 free
- delta_up_22_72 free
- delta_up_22_73 free
- delta_up_22_74 free
- delta_up_22_75 free
- delta_up_22_76 free
- delta_up_22_77 free
- delta_up_22_78 free
- delta_up_22_79 free
- delta_up_22_80 free
- delta_up_22_81 free
- delta_up_22_82 free
- delta_up_22_83 free
- delta_up_22_84 free
- delta_up_22_85 free
- delta_up_22_86 free
- delta_up_22_87 free
- delta_up_22_88 free
- delta_up_22_89 free
- delta_up_22_90 free
- delta_up_22_91 free
- delta_up_22_92 free
- delta_up_22_93 free
- delta_up_22_94 free
- delta_up_22_95 free
- delta_up_22_96 free
- delta_up_22_97 free
- delta_up_22_98 free
- delta_up_22_99 free
- delta_up_22_100 free
- delta_up_22_101 free
- delta_up_22_102 free
- delta_up_22_103 free
- delta_up_22_104 free
- delta_up_22_105 free
- delta_up_22_106 free
- delta_up_22_107 free
- delta_up_22_108 free
- delta_up_22_109 free
- delta_up_22_110 free
- delta_up_22_111 free
- delta_up_22_112 free
- delta_up_22_113 free
- delta_up_22_114 free
- delta_up_22_115 free
- delta_up_22_116 free
- delta_up_22_117 free
- delta_up_22_118 free
- delta_up_22_119 free
- delta_up_22_120 free
- delta_up_22_121 free
- delta_up_22_122 free
- delta_up_22_123 free
- delta_up_22_124 free
- delta_up_22_125 free
- delta_up_22_126 free
- delta_up_22_127 free
- delta_up_22_128 free
- delta_up_22_129 free
- delta_up_22_130 free
- delta_up_22_131 free
- delta_up_22_132 free
- delta_up_22_133 free
- delta_up_22_134 free
- delta_up_22_135 free
- delta_up_22_136 free
- delta_up_22_137 free
- delta_up_22_138 free
- delta_up_22_139 free
- delta_up_22_140 free
- delta_up_22_141 free
- delta_up_22_142 free
- delta_up_22_143 free
- delta_up_22_144 free
- delta_up_22_145 free
- delta_up_22_146 free
- delta_up_22_147 free
- delta_up_22_148 free
- delta_up_22_149 free
- delta_up_22_150 free
- delta_up_22_151 free
- delta_up_22_152 free
- delta_up_22_153 free
- delta_up_22_154 free
- delta_up_22_155 free
- delta_up_22_156 free
- delta_up_22_157 free
- delta_up_22_158 free
- delta_up_22_159 free
- delta_up_22_160 free
- delta_up_22_161 free
- delta_up_22_162 free
- delta_up_22_163 free
- delta_up_22_164 free
- delta_up_22_165 free
- delta_up_22_166 free
- delta_up_22_167 free
- delta_up_22_168 free
- delta_up_22_169 free
- delta_up_22_170 free
- delta_up_22_171 free
- delta_up_22_172 free
- delta_up_22_173 free
- delta_up_22_174 free
- delta_up_22_175 free
- delta_up_22_176 free
- delta_up_22_177 free
- delta_up_22_178 free
- delta_up_22_179 free
- delta_up_22_180 free
- delta_up_22_181 free
- delta_up_22_182 free
- delta_up_22_183 free
- delta_up_22_184 free
- delta_up_22_185 free
- delta_up_22_186 free
- delta_up_22_187 free
- delta_up_22_188 free
- delta_up_22_189 free
- delta_up_22_190 free
- delta_up_22_191 free
- delta_up_22_192 free
- delta_up_22_193 free
- delta_up_22_194 free
- delta_up_22_195 free
- delta_up_22_196 free
- delta_up_22_197 free
- delta_up_22_198 free
- delta_up_22_199 free
- delta_up_22_200 free
- delta_up_23_1 free
- delta_up_23_2 free
- delta_up_23_3 free
- delta_up_23_4 free
- delta_up_23_5 free
- delta_up_23_6 free
- delta_up_23_7 free
- delta_up_23_8 free
- delta_up_23_9 free
- delta_up_23_10 free
- delta_up_23_11 free
- delta_up_23_12 free
- delta_up_23_13 free
- delta_up_23_14 free
- delta_up_23_15 free
- delta_up_23_16 free
- delta_up_23_17 free
- delta_up_23_18 free
- delta_up_23_19 free
- delta_up_23_20 free
- delta_up_23_21 free
- delta_up_23_22 free
- delta_up_23_23 free
- delta_up_23_24 free
- delta_up_23_25 free
- delta_up_23_26 free
- delta_up_23_27 free
- delta_up_23_28 free
- delta_up_23_29 free
- delta_up_23_30 free
- delta_up_23_31 free
- delta_up_23_32 free
- delta_up_23_33 free
- delta_up_23_34 free
- delta_up_23_35 free
- delta_up_23_36 free
- delta_up_23_37 free
- delta_up_23_38 free
- delta_up_23_39 free
- delta_up_23_40 free
- delta_up_23_41 free
- delta_up_23_42 free
- delta_up_23_43 free
- delta_up_23_44 free
- delta_up_23_45 free
- delta_up_23_46 free
- delta_up_23_47 free
- delta_up_23_48 free
- delta_up_23_49 free
- delta_up_23_50 free
- delta_up_23_51 free
- delta_up_23_52 free
- delta_up_23_53 free
- delta_up_23_54 free
- delta_up_23_55 free
- delta_up_23_56 free
- delta_up_23_57 free
- delta_up_23_58 free
- delta_up_23_59 free
- delta_up_23_60 free
- delta_up_23_61 free
- delta_up_23_62 free
- delta_up_23_63 free
- delta_up_23_64 free
- delta_up_23_65 free
- delta_up_23_66 free
- delta_up_23_67 free
- delta_up_23_68 free
- delta_up_23_69 free
- delta_up_23_70 free
- delta_up_23_71 free
- delta_up_23_72 free
- delta_up_23_73 free
- delta_up_23_74 free
- delta_up_23_75 free
- delta_up_23_76 free
- delta_up_23_77 free
- delta_up_23_78 free
- delta_up_23_79 free
- delta_up_23_80 free
- delta_up_23_81 free
- delta_up_23_82 free
- delta_up_23_83 free
- delta_up_23_84 free
- delta_up_23_85 free
- delta_up_23_86 free
- delta_up_23_87 free
- delta_up_23_88 free
- delta_up_23_89 free
- delta_up_23_90 free
- delta_up_23_91 free
- delta_up_23_92 free
- delta_up_23_93 free
- delta_up_23_94 free
- delta_up_23_95 free
- delta_up_23_96 free
- delta_up_23_97 free
- delta_up_23_98 free
- delta_up_23_99 free
- delta_up_23_100 free
- delta_up_23_101 free
- delta_up_23_102 free
- delta_up_23_103 free
- delta_up_23_104 free
- delta_up_23_105 free
- delta_up_23_106 free
- delta_up_23_107 free
- delta_up_23_108 free
- delta_up_23_109 free
- delta_up_23_110 free
- delta_up_23_111 free
- delta_up_23_112 free
- delta_up_23_113 free
- delta_up_23_114 free
- delta_up_23_115 free
- delta_up_23_116 free
- delta_up_23_117 free
- delta_up_23_118 free
- delta_up_23_119 free
- delta_up_23_120 free
- delta_up_23_121 free
- delta_up_23_122 free
- delta_up_23_123 free
- delta_up_23_124 free
- delta_up_23_125 free
- delta_up_23_126 free
- delta_up_23_127 free
- delta_up_23_128 free
- delta_up_23_129 free
- delta_up_23_130 free
- delta_up_23_131 free
- delta_up_23_132 free
- delta_up_23_133 free
- delta_up_23_134 free
- delta_up_23_135 free
- delta_up_23_136 free
- delta_up_23_137 free
- delta_up_23_138 free
- delta_up_23_139 free
- delta_up_23_140 free
- delta_up_23_141 free
- delta_up_23_142 free
- delta_up_23_143 free
- delta_up_23_144 free
- delta_up_23_145 free
- delta_up_23_146 free
- delta_up_23_147 free
- delta_up_23_148 free
- delta_up_23_149 free
- delta_up_23_150 free
- delta_up_23_151 free
- delta_up_23_152 free
- delta_up_23_153 free
- delta_up_23_154 free
- delta_up_23_155 free
- delta_up_23_156 free
- delta_up_23_157 free
- delta_up_23_158 free
- delta_up_23_159 free
- delta_up_23_160 free
- delta_up_23_161 free
- delta_up_23_162 free
- delta_up_23_163 free
- delta_up_23_164 free
- delta_up_23_165 free
- delta_up_23_166 free
- delta_up_23_167 free
- delta_up_23_168 free
- delta_up_23_169 free
- delta_up_23_170 free
- delta_up_23_171 free
- delta_up_23_172 free
- delta_up_23_173 free
- delta_up_23_174 free
- delta_up_23_175 free
- delta_up_23_176 free
- delta_up_23_177 free
- delta_up_23_178 free
- delta_up_23_179 free
- delta_up_23_180 free
- delta_up_23_181 free
- delta_up_23_182 free
- delta_up_23_183 free
- delta_up_23_184 free
- delta_up_23_185 free
- delta_up_23_186 free
- delta_up_23_187 free
- delta_up_23_188 free
- delta_up_23_189 free
- delta_up_23_190 free
- delta_up_23_191 free
- delta_up_23_192 free
- delta_up_23_193 free
- delta_up_23_194 free
- delta_up_23_195 free
- delta_up_23_196 free
- delta_up_23_197 free
- delta_up_23_198 free
- delta_up_23_199 free
- delta_up_23_200 free
- delta_up_24_1 free
- delta_up_24_2 free
- delta_up_24_3 free
- delta_up_24_4 free
- delta_up_24_5 free
- delta_up_24_6 free
- delta_up_24_7 free
- delta_up_24_8 free
- delta_up_24_9 free
- delta_up_24_10 free
- delta_up_24_11 free
- delta_up_24_12 free
- delta_up_24_13 free
- delta_up_24_14 free
- delta_up_24_15 free
- delta_up_24_16 free
- delta_up_24_17 free
- delta_up_24_18 free
- delta_up_24_19 free
- delta_up_24_20 free
- delta_up_24_21 free
- delta_up_24_22 free
- delta_up_24_23 free
- delta_up_24_24 free
- delta_up_24_25 free
- delta_up_24_26 free
- delta_up_24_27 free
- delta_up_24_28 free
- delta_up_24_29 free
- delta_up_24_30 free
- delta_up_24_31 free
- delta_up_24_32 free
- delta_up_24_33 free
- delta_up_24_34 free
- delta_up_24_35 free
- delta_up_24_36 free
- delta_up_24_37 free
- delta_up_24_38 free
- delta_up_24_39 free
- delta_up_24_40 free
- delta_up_24_41 free
- delta_up_24_42 free
- delta_up_24_43 free
- delta_up_24_44 free
- delta_up_24_45 free
- delta_up_24_46 free
- delta_up_24_47 free
- delta_up_24_48 free
- delta_up_24_49 free
- delta_up_24_50 free
- delta_up_24_51 free
- delta_up_24_52 free
- delta_up_24_53 free
- delta_up_24_54 free
- delta_up_24_55 free
- delta_up_24_56 free
- delta_up_24_57 free
- delta_up_24_58 free
- delta_up_24_59 free
- delta_up_24_60 free
- delta_up_24_61 free
- delta_up_24_62 free
- delta_up_24_63 free
- delta_up_24_64 free
- delta_up_24_65 free
- delta_up_24_66 free
- delta_up_24_67 free
- delta_up_24_68 free
- delta_up_24_69 free
- delta_up_24_70 free
- delta_up_24_71 free
- delta_up_24_72 free
- delta_up_24_73 free
- delta_up_24_74 free
- delta_up_24_75 free
- delta_up_24_76 free
- delta_up_24_77 free
- delta_up_24_78 free
- delta_up_24_79 free
- delta_up_24_80 free
- delta_up_24_81 free
- delta_up_24_82 free
- delta_up_24_83 free
- delta_up_24_84 free
- delta_up_24_85 free
- delta_up_24_86 free
- delta_up_24_87 free
- delta_up_24_88 free
- delta_up_24_89 free
- delta_up_24_90 free
- delta_up_24_91 free
- delta_up_24_92 free
- delta_up_24_93 free
- delta_up_24_94 free
- delta_up_24_95 free
- delta_up_24_96 free
- delta_up_24_97 free
- delta_up_24_98 free
- delta_up_24_99 free
- delta_up_24_100 free
- delta_up_24_101 free
- delta_up_24_102 free
- delta_up_24_103 free
- delta_up_24_104 free
- delta_up_24_105 free
- delta_up_24_106 free
- delta_up_24_107 free
- delta_up_24_108 free
- delta_up_24_109 free
- delta_up_24_110 free
- delta_up_24_111 free
- delta_up_24_112 free
- delta_up_24_113 free
- delta_up_24_114 free
- delta_up_24_115 free
- delta_up_24_116 free
- delta_up_24_117 free
- delta_up_24_118 free
- delta_up_24_119 free
- delta_up_24_120 free
- delta_up_24_121 free
- delta_up_24_122 free
- delta_up_24_123 free
- delta_up_24_124 free
- delta_up_24_125 free
- delta_up_24_126 free
- delta_up_24_127 free
- delta_up_24_128 free
- delta_up_24_129 free
- delta_up_24_130 free
- delta_up_24_131 free
- delta_up_24_132 free
- delta_up_24_133 free
- delta_up_24_134 free
- delta_up_24_135 free
- delta_up_24_136 free
- delta_up_24_137 free
- delta_up_24_138 free
- delta_up_24_139 free
- delta_up_24_140 free
- delta_up_24_141 free
- delta_up_24_142 free
- delta_up_24_143 free
- delta_up_24_144 free
- delta_up_24_145 free
- delta_up_24_146 free
- delta_up_24_147 free
- delta_up_24_148 free
- delta_up_24_149 free
- delta_up_24_150 free
- delta_up_24_151 free
- delta_up_24_152 free
- delta_up_24_153 free
- delta_up_24_154 free
- delta_up_24_155 free
- delta_up_24_156 free
- delta_up_24_157 free
- delta_up_24_158 free
- delta_up_24_159 free
- delta_up_24_160 free
- delta_up_24_161 free
- delta_up_24_162 free
- delta_up_24_163 free
- delta_up_24_164 free
- delta_up_24_165 free
- delta_up_24_166 free
- delta_up_24_167 free
- delta_up_24_168 free
- delta_up_24_169 free
- delta_up_24_170 free
- delta_up_24_171 free
- delta_up_24_172 free
- delta_up_24_173 free
- delta_up_24_174 free
- delta_up_24_175 free
- delta_up_24_176 free
- delta_up_24_177 free
- delta_up_24_178 free
- delta_up_24_179 free
- delta_up_24_180 free
- delta_up_24_181 free
- delta_up_24_182 free
- delta_up_24_183 free
- delta_up_24_184 free
- delta_up_24_185 free
- delta_up_24_186 free
- delta_up_24_187 free
- delta_up_24_188 free
- delta_up_24_189 free
- delta_up_24_190 free
- delta_up_24_191 free
- delta_up_24_192 free
- delta_up_24_193 free
- delta_up_24_194 free
- delta_up_24_195 free
- delta_up_24_196 free
- delta_up_24_197 free
- delta_up_24_198 free
- delta_up_24_199 free
- delta_up_24_200 free
- delta_down_1_1 free
- delta_down_1_2 free
- delta_down_1_3 free
- delta_down_1_4 free
- delta_down_1_5 free
- delta_down_1_6 free
- delta_down_1_7 free
- delta_down_1_8 free
- delta_down_1_9 free
- delta_down_1_10 free
- delta_down_1_11 free
- delta_down_1_12 free
- delta_down_1_13 free
- delta_down_1_14 free
- delta_down_1_15 free
- delta_down_1_16 free
- delta_down_1_17 free
- delta_down_1_18 free
- delta_down_1_19 free
- delta_down_1_20 free
- delta_down_1_21 free
- delta_down_1_22 free
- delta_down_1_23 free
- delta_down_1_24 free
- delta_down_1_25 free
- delta_down_1_26 free
- delta_down_1_27 free
- delta_down_1_28 free
- delta_down_1_29 free
- delta_down_1_30 free
- delta_down_1_31 free
- delta_down_1_32 free
- delta_down_1_33 free
- delta_down_1_34 free
- delta_down_1_35 free
- delta_down_1_36 free
- delta_down_1_37 free
- delta_down_1_38 free
- delta_down_1_39 free
- delta_down_1_40 free
- delta_down_1_41 free
- delta_down_1_42 free
- delta_down_1_43 free
- delta_down_1_44 free
- delta_down_1_45 free
- delta_down_1_46 free
- delta_down_1_47 free
- delta_down_1_48 free
- delta_down_1_49 free
- delta_down_1_50 free
- delta_down_1_51 free
- delta_down_1_52 free
- delta_down_1_53 free
- delta_down_1_54 free
- delta_down_1_55 free
- delta_down_1_56 free
- delta_down_1_57 free
- delta_down_1_58 free
- delta_down_1_59 free
- delta_down_1_60 free
- delta_down_1_61 free
- delta_down_1_62 free
- delta_down_1_63 free
- delta_down_1_64 free
- delta_down_1_65 free
- delta_down_1_66 free
- delta_down_1_67 free
- delta_down_1_68 free
- delta_down_1_69 free
- delta_down_1_70 free
- delta_down_1_71 free
- delta_down_1_72 free
- delta_down_1_73 free
- delta_down_1_74 free
- delta_down_1_75 free
- delta_down_1_76 free
- delta_down_1_77 free
- delta_down_1_78 free
- delta_down_1_79 free
- delta_down_1_80 free
- delta_down_1_81 free
- delta_down_1_82 free
- delta_down_1_83 free
- delta_down_1_84 free
- delta_down_1_85 free
- delta_down_1_86 free
- delta_down_1_87 free
- delta_down_1_88 free
- delta_down_1_89 free
- delta_down_1_90 free
- delta_down_1_91 free
- delta_down_1_92 free
- delta_down_1_93 free
- delta_down_1_94 free
- delta_down_1_95 free
- delta_down_1_96 free
- delta_down_1_97 free
- delta_down_1_98 free
- delta_down_1_99 free
- delta_down_1_100 free
- delta_down_1_101 free
- delta_down_1_102 free
- delta_down_1_103 free
- delta_down_1_104 free
- delta_down_1_105 free
- delta_down_1_106 free
- delta_down_1_107 free
- delta_down_1_108 free
- delta_down_1_109 free
- delta_down_1_110 free
- delta_down_1_111 free
- delta_down_1_112 free
- delta_down_1_113 free
- delta_down_1_114 free
- delta_down_1_115 free
- delta_down_1_116 free
- delta_down_1_117 free
- delta_down_1_118 free
- delta_down_1_119 free
- delta_down_1_120 free
- delta_down_1_121 free
- delta_down_1_122 free
- delta_down_1_123 free
- delta_down_1_124 free
- delta_down_1_125 free
- delta_down_1_126 free
- delta_down_1_127 free
- delta_down_1_128 free
- delta_down_1_129 free
- delta_down_1_130 free
- delta_down_1_131 free
- delta_down_1_132 free
- delta_down_1_133 free
- delta_down_1_134 free
- delta_down_1_135 free
- delta_down_1_136 free
- delta_down_1_137 free
- delta_down_1_138 free
- delta_down_1_139 free
- delta_down_1_140 free
- delta_down_1_141 free
- delta_down_1_142 free
- delta_down_1_143 free
- delta_down_1_144 free
- delta_down_1_145 free
- delta_down_1_146 free
- delta_down_1_147 free
- delta_down_1_148 free
- delta_down_1_149 free
- delta_down_1_150 free
- delta_down_1_151 free
- delta_down_1_152 free
- delta_down_1_153 free
- delta_down_1_154 free
- delta_down_1_155 free
- delta_down_1_156 free
- delta_down_1_157 free
- delta_down_1_158 free
- delta_down_1_159 free
- delta_down_1_160 free
- delta_down_1_161 free
- delta_down_1_162 free
- delta_down_1_163 free
- delta_down_1_164 free
- delta_down_1_165 free
- delta_down_1_166 free
- delta_down_1_167 free
- delta_down_1_168 free
- delta_down_1_169 free
- delta_down_1_170 free
- delta_down_1_171 free
- delta_down_1_172 free
- delta_down_1_173 free
- delta_down_1_174 free
- delta_down_1_175 free
- delta_down_1_176 free
- delta_down_1_177 free
- delta_down_1_178 free
- delta_down_1_179 free
- delta_down_1_180 free
- delta_down_1_181 free
- delta_down_1_182 free
- delta_down_1_183 free
- delta_down_1_184 free
- delta_down_1_185 free
- delta_down_1_186 free
- delta_down_1_187 free
- delta_down_1_188 free
- delta_down_1_189 free
- delta_down_1_190 free
- delta_down_1_191 free
- delta_down_1_192 free
- delta_down_1_193 free
- delta_down_1_194 free
- delta_down_1_195 free
- delta_down_1_196 free
- delta_down_1_197 free
- delta_down_1_198 free
- delta_down_1_199 free
- delta_down_1_200 free
- delta_down_2_1 free
- delta_down_2_2 free
- delta_down_2_3 free
- delta_down_2_4 free
- delta_down_2_5 free
- delta_down_2_6 free
- delta_down_2_7 free
- delta_down_2_8 free
- delta_down_2_9 free
- delta_down_2_10 free
- delta_down_2_11 free
- delta_down_2_12 free
- delta_down_2_13 free
- delta_down_2_14 free
- delta_down_2_15 free
- delta_down_2_16 free
- delta_down_2_17 free
- delta_down_2_18 free
- delta_down_2_19 free
- delta_down_2_20 free
- delta_down_2_21 free
- delta_down_2_22 free
- delta_down_2_23 free
- delta_down_2_24 free
- delta_down_2_25 free
- delta_down_2_26 free
- delta_down_2_27 free
- delta_down_2_28 free
- delta_down_2_29 free
- delta_down_2_30 free
- delta_down_2_31 free
- delta_down_2_32 free
- delta_down_2_33 free
- delta_down_2_34 free
- delta_down_2_35 free
- delta_down_2_36 free
- delta_down_2_37 free
- delta_down_2_38 free
- delta_down_2_39 free
- delta_down_2_40 free
- delta_down_2_41 free
- delta_down_2_42 free
- delta_down_2_43 free
- delta_down_2_44 free
- delta_down_2_45 free
- delta_down_2_46 free
- delta_down_2_47 free
- delta_down_2_48 free
- delta_down_2_49 free
- delta_down_2_50 free
- delta_down_2_51 free
- delta_down_2_52 free
- delta_down_2_53 free
- delta_down_2_54 free
- delta_down_2_55 free
- delta_down_2_56 free
- delta_down_2_57 free
- delta_down_2_58 free
- delta_down_2_59 free
- delta_down_2_60 free
- delta_down_2_61 free
- delta_down_2_62 free
- delta_down_2_63 free
- delta_down_2_64 free
- delta_down_2_65 free
- delta_down_2_66 free
- delta_down_2_67 free
- delta_down_2_68 free
- delta_down_2_69 free
- delta_down_2_70 free
- delta_down_2_71 free
- delta_down_2_72 free
- delta_down_2_73 free
- delta_down_2_74 free
- delta_down_2_75 free
- delta_down_2_76 free
- delta_down_2_77 free
- delta_down_2_78 free
- delta_down_2_79 free
- delta_down_2_80 free
- delta_down_2_81 free
- delta_down_2_82 free
- delta_down_2_83 free
- delta_down_2_84 free
- delta_down_2_85 free
- delta_down_2_86 free
- delta_down_2_87 free
- delta_down_2_88 free
- delta_down_2_89 free
- delta_down_2_90 free
- delta_down_2_91 free
- delta_down_2_92 free
- delta_down_2_93 free
- delta_down_2_94 free
- delta_down_2_95 free
- delta_down_2_96 free
- delta_down_2_97 free
- delta_down_2_98 free
- delta_down_2_99 free
- delta_down_2_100 free
- delta_down_2_101 free
- delta_down_2_102 free
- delta_down_2_103 free
- delta_down_2_104 free
- delta_down_2_105 free
- delta_down_2_106 free
- delta_down_2_107 free
- delta_down_2_108 free
- delta_down_2_109 free
- delta_down_2_110 free
- delta_down_2_111 free
- delta_down_2_112 free
- delta_down_2_113 free
- delta_down_2_114 free
- delta_down_2_115 free
- delta_down_2_116 free
- delta_down_2_117 free
- delta_down_2_118 free
- delta_down_2_119 free
- delta_down_2_120 free
- delta_down_2_121 free
- delta_down_2_122 free
- delta_down_2_123 free
- delta_down_2_124 free
- delta_down_2_125 free
- delta_down_2_126 free
- delta_down_2_127 free
- delta_down_2_128 free
- delta_down_2_129 free
- delta_down_2_130 free
- delta_down_2_131 free
- delta_down_2_132 free
- delta_down_2_133 free
- delta_down_2_134 free
- delta_down_2_135 free
- delta_down_2_136 free
- delta_down_2_137 free
- delta_down_2_138 free
- delta_down_2_139 free
- delta_down_2_140 free
- delta_down_2_141 free
- delta_down_2_142 free
- delta_down_2_143 free
- delta_down_2_144 free
- delta_down_2_145 free
- delta_down_2_146 free
- delta_down_2_147 free
- delta_down_2_148 free
- delta_down_2_149 free
- delta_down_2_150 free
- delta_down_2_151 free
- delta_down_2_152 free
- delta_down_2_153 free
- delta_down_2_154 free
- delta_down_2_155 free
- delta_down_2_156 free
- delta_down_2_157 free
- delta_down_2_158 free
- delta_down_2_159 free
- delta_down_2_160 free
- delta_down_2_161 free
- delta_down_2_162 free
- delta_down_2_163 free
- delta_down_2_164 free
- delta_down_2_165 free
- delta_down_2_166 free
- delta_down_2_167 free
- delta_down_2_168 free
- delta_down_2_169 free
- delta_down_2_170 free
- delta_down_2_171 free
- delta_down_2_172 free
- delta_down_2_173 free
- delta_down_2_174 free
- delta_down_2_175 free
- delta_down_2_176 free
- delta_down_2_177 free
- delta_down_2_178 free
- delta_down_2_179 free
- delta_down_2_180 free
- delta_down_2_181 free
- delta_down_2_182 free
- delta_down_2_183 free
- delta_down_2_184 free
- delta_down_2_185 free
- delta_down_2_186 free
- delta_down_2_187 free
- delta_down_2_188 free
- delta_down_2_189 free
- delta_down_2_190 free
- delta_down_2_191 free
- delta_down_2_192 free
- delta_down_2_193 free
- delta_down_2_194 free
- delta_down_2_195 free
- delta_down_2_196 free
- delta_down_2_197 free
- delta_down_2_198 free
- delta_down_2_199 free
- delta_down_2_200 free
- delta_down_3_1 free
- delta_down_3_2 free
- delta_down_3_3 free
- delta_down_3_4 free
- delta_down_3_5 free
- delta_down_3_6 free
- delta_down_3_7 free
- delta_down_3_8 free
- delta_down_3_9 free
- delta_down_3_10 free
- delta_down_3_11 free
- delta_down_3_12 free
- delta_down_3_13 free
- delta_down_3_14 free
- delta_down_3_15 free
- delta_down_3_16 free
- delta_down_3_17 free
- delta_down_3_18 free
- delta_down_3_19 free
- delta_down_3_20 free
- delta_down_3_21 free
- delta_down_3_22 free
- delta_down_3_23 free
- delta_down_3_24 free
- delta_down_3_25 free
- delta_down_3_26 free
- delta_down_3_27 free
- delta_down_3_28 free
- delta_down_3_29 free
- delta_down_3_30 free
- delta_down_3_31 free
- delta_down_3_32 free
- delta_down_3_33 free
- delta_down_3_34 free
- delta_down_3_35 free
- delta_down_3_36 free
- delta_down_3_37 free
- delta_down_3_38 free
- delta_down_3_39 free
- delta_down_3_40 free
- delta_down_3_41 free
- delta_down_3_42 free
- delta_down_3_43 free
- delta_down_3_44 free
- delta_down_3_45 free
- delta_down_3_46 free
- delta_down_3_47 free
- delta_down_3_48 free
- delta_down_3_49 free
- delta_down_3_50 free
- delta_down_3_51 free
- delta_down_3_52 free
- delta_down_3_53 free
- delta_down_3_54 free
- delta_down_3_55 free
- delta_down_3_56 free
- delta_down_3_57 free
- delta_down_3_58 free
- delta_down_3_59 free
- delta_down_3_60 free
- delta_down_3_61 free
- delta_down_3_62 free
- delta_down_3_63 free
- delta_down_3_64 free
- delta_down_3_65 free
- delta_down_3_66 free
- delta_down_3_67 free
- delta_down_3_68 free
- delta_down_3_69 free
- delta_down_3_70 free
- delta_down_3_71 free
- delta_down_3_72 free
- delta_down_3_73 free
- delta_down_3_74 free
- delta_down_3_75 free
- delta_down_3_76 free
- delta_down_3_77 free
- delta_down_3_78 free
- delta_down_3_79 free
- delta_down_3_80 free
- delta_down_3_81 free
- delta_down_3_82 free
- delta_down_3_83 free
- delta_down_3_84 free
- delta_down_3_85 free
- delta_down_3_86 free
- delta_down_3_87 free
- delta_down_3_88 free
- delta_down_3_89 free
- delta_down_3_90 free
- delta_down_3_91 free
- delta_down_3_92 free
- delta_down_3_93 free
- delta_down_3_94 free
- delta_down_3_95 free
- delta_down_3_96 free
- delta_down_3_97 free
- delta_down_3_98 free
- delta_down_3_99 free
- delta_down_3_100 free
- delta_down_3_101 free
- delta_down_3_102 free
- delta_down_3_103 free
- delta_down_3_104 free
- delta_down_3_105 free
- delta_down_3_106 free
- delta_down_3_107 free
- delta_down_3_108 free
- delta_down_3_109 free
- delta_down_3_110 free
- delta_down_3_111 free
- delta_down_3_112 free
- delta_down_3_113 free
- delta_down_3_114 free
- delta_down_3_115 free
- delta_down_3_116 free
- delta_down_3_117 free
- delta_down_3_118 free
- delta_down_3_119 free
- delta_down_3_120 free
- delta_down_3_121 free
- delta_down_3_122 free
- delta_down_3_123 free
- delta_down_3_124 free
- delta_down_3_125 free
- delta_down_3_126 free
- delta_down_3_127 free
- delta_down_3_128 free
- delta_down_3_129 free
- delta_down_3_130 free
- delta_down_3_131 free
- delta_down_3_132 free
- delta_down_3_133 free
- delta_down_3_134 free
- delta_down_3_135 free
- delta_down_3_136 free
- delta_down_3_137 free
- delta_down_3_138 free
- delta_down_3_139 free
- delta_down_3_140 free
- delta_down_3_141 free
- delta_down_3_142 free
- delta_down_3_143 free
- delta_down_3_144 free
- delta_down_3_145 free
- delta_down_3_146 free
- delta_down_3_147 free
- delta_down_3_148 free
- delta_down_3_149 free
- delta_down_3_150 free
- delta_down_3_151 free
- delta_down_3_152 free
- delta_down_3_153 free
- delta_down_3_154 free
- delta_down_3_155 free
- delta_down_3_156 free
- delta_down_3_157 free
- delta_down_3_158 free
- delta_down_3_159 free
- delta_down_3_160 free
- delta_down_3_161 free
- delta_down_3_162 free
- delta_down_3_163 free
- delta_down_3_164 free
- delta_down_3_165 free
- delta_down_3_166 free
- delta_down_3_167 free
- delta_down_3_168 free
- delta_down_3_169 free
- delta_down_3_170 free
- delta_down_3_171 free
- delta_down_3_172 free
- delta_down_3_173 free
- delta_down_3_174 free
- delta_down_3_175 free
- delta_down_3_176 free
- delta_down_3_177 free
- delta_down_3_178 free
- delta_down_3_179 free
- delta_down_3_180 free
- delta_down_3_181 free
- delta_down_3_182 free
- delta_down_3_183 free
- delta_down_3_184 free
- delta_down_3_185 free
- delta_down_3_186 free
- delta_down_3_187 free
- delta_down_3_188 free
- delta_down_3_189 free
- delta_down_3_190 free
- delta_down_3_191 free
- delta_down_3_192 free
- delta_down_3_193 free
- delta_down_3_194 free
- delta_down_3_195 free
- delta_down_3_196 free
- delta_down_3_197 free
- delta_down_3_198 free
- delta_down_3_199 free
- delta_down_3_200 free
- delta_down_4_1 free
- delta_down_4_2 free
- delta_down_4_3 free
- delta_down_4_4 free
- delta_down_4_5 free
- delta_down_4_6 free
- delta_down_4_7 free
- delta_down_4_8 free
- delta_down_4_9 free
- delta_down_4_10 free
- delta_down_4_11 free
- delta_down_4_12 free
- delta_down_4_13 free
- delta_down_4_14 free
- delta_down_4_15 free
- delta_down_4_16 free
- delta_down_4_17 free
- delta_down_4_18 free
- delta_down_4_19 free
- delta_down_4_20 free
- delta_down_4_21 free
- delta_down_4_22 free
- delta_down_4_23 free
- delta_down_4_24 free
- delta_down_4_25 free
- delta_down_4_26 free
- delta_down_4_27 free
- delta_down_4_28 free
- delta_down_4_29 free
- delta_down_4_30 free
- delta_down_4_31 free
- delta_down_4_32 free
- delta_down_4_33 free
- delta_down_4_34 free
- delta_down_4_35 free
- delta_down_4_36 free
- delta_down_4_37 free
- delta_down_4_38 free
- delta_down_4_39 free
- delta_down_4_40 free
- delta_down_4_41 free
- delta_down_4_42 free
- delta_down_4_43 free
- delta_down_4_44 free
- delta_down_4_45 free
- delta_down_4_46 free
- delta_down_4_47 free
- delta_down_4_48 free
- delta_down_4_49 free
- delta_down_4_50 free
- delta_down_4_51 free
- delta_down_4_52 free
- delta_down_4_53 free
- delta_down_4_54 free
- delta_down_4_55 free
- delta_down_4_56 free
- delta_down_4_57 free
- delta_down_4_58 free
- delta_down_4_59 free
- delta_down_4_60 free
- delta_down_4_61 free
- delta_down_4_62 free
- delta_down_4_63 free
- delta_down_4_64 free
- delta_down_4_65 free
- delta_down_4_66 free
- delta_down_4_67 free
- delta_down_4_68 free
- delta_down_4_69 free
- delta_down_4_70 free
- delta_down_4_71 free
- delta_down_4_72 free
- delta_down_4_73 free
- delta_down_4_74 free
- delta_down_4_75 free
- delta_down_4_76 free
- delta_down_4_77 free
- delta_down_4_78 free
- delta_down_4_79 free
- delta_down_4_80 free
- delta_down_4_81 free
- delta_down_4_82 free
- delta_down_4_83 free
- delta_down_4_84 free
- delta_down_4_85 free
- delta_down_4_86 free
- delta_down_4_87 free
- delta_down_4_88 free
- delta_down_4_89 free
- delta_down_4_90 free
- delta_down_4_91 free
- delta_down_4_92 free
- delta_down_4_93 free
- delta_down_4_94 free
- delta_down_4_95 free
- delta_down_4_96 free
- delta_down_4_97 free
- delta_down_4_98 free
- delta_down_4_99 free
- delta_down_4_100 free
- delta_down_4_101 free
- delta_down_4_102 free
- delta_down_4_103 free
- delta_down_4_104 free
- delta_down_4_105 free
- delta_down_4_106 free
- delta_down_4_107 free
- delta_down_4_108 free
- delta_down_4_109 free
- delta_down_4_110 free
- delta_down_4_111 free
- delta_down_4_112 free
- delta_down_4_113 free
- delta_down_4_114 free
- delta_down_4_115 free
- delta_down_4_116 free
- delta_down_4_117 free
- delta_down_4_118 free
- delta_down_4_119 free
- delta_down_4_120 free
- delta_down_4_121 free
- delta_down_4_122 free
- delta_down_4_123 free
- delta_down_4_124 free
- delta_down_4_125 free
- delta_down_4_126 free
- delta_down_4_127 free
- delta_down_4_128 free
- delta_down_4_129 free
- delta_down_4_130 free
- delta_down_4_131 free
- delta_down_4_132 free
- delta_down_4_133 free
- delta_down_4_134 free
- delta_down_4_135 free
- delta_down_4_136 free
- delta_down_4_137 free
- delta_down_4_138 free
- delta_down_4_139 free
- delta_down_4_140 free
- delta_down_4_141 free
- delta_down_4_142 free
- delta_down_4_143 free
- delta_down_4_144 free
- delta_down_4_145 free
- delta_down_4_146 free
- delta_down_4_147 free
- delta_down_4_148 free
- delta_down_4_149 free
- delta_down_4_150 free
- delta_down_4_151 free
- delta_down_4_152 free
- delta_down_4_153 free
- delta_down_4_154 free
- delta_down_4_155 free
- delta_down_4_156 free
- delta_down_4_157 free
- delta_down_4_158 free
- delta_down_4_159 free
- delta_down_4_160 free
- delta_down_4_161 free
- delta_down_4_162 free
- delta_down_4_163 free
- delta_down_4_164 free
- delta_down_4_165 free
- delta_down_4_166 free
- delta_down_4_167 free
- delta_down_4_168 free
- delta_down_4_169 free
- delta_down_4_170 free
- delta_down_4_171 free
- delta_down_4_172 free
- delta_down_4_173 free
- delta_down_4_174 free
- delta_down_4_175 free
- delta_down_4_176 free
- delta_down_4_177 free
- delta_down_4_178 free
- delta_down_4_179 free
- delta_down_4_180 free
- delta_down_4_181 free
- delta_down_4_182 free
- delta_down_4_183 free
- delta_down_4_184 free
- delta_down_4_185 free
- delta_down_4_186 free
- delta_down_4_187 free
- delta_down_4_188 free
- delta_down_4_189 free
- delta_down_4_190 free
- delta_down_4_191 free
- delta_down_4_192 free
- delta_down_4_193 free
- delta_down_4_194 free
- delta_down_4_195 free
- delta_down_4_196 free
- delta_down_4_197 free
- delta_down_4_198 free
- delta_down_4_199 free
- delta_down_4_200 free
- delta_down_5_1 free
- delta_down_5_2 free
- delta_down_5_3 free
- delta_down_5_4 free
- delta_down_5_5 free
- delta_down_5_6 free
- delta_down_5_7 free
- delta_down_5_8 free
- delta_down_5_9 free
- delta_down_5_10 free
- delta_down_5_11 free
- delta_down_5_12 free
- delta_down_5_13 free
- delta_down_5_14 free
- delta_down_5_15 free
- delta_down_5_16 free
- delta_down_5_17 free
- delta_down_5_18 free
- delta_down_5_19 free
- delta_down_5_20 free
- delta_down_5_21 free
- delta_down_5_22 free
- delta_down_5_23 free
- delta_down_5_24 free
- delta_down_5_25 free
- delta_down_5_26 free
- delta_down_5_27 free
- delta_down_5_28 free
- delta_down_5_29 free
- delta_down_5_30 free
- delta_down_5_31 free
- delta_down_5_32 free
- delta_down_5_33 free
- delta_down_5_34 free
- delta_down_5_35 free
- delta_down_5_36 free
- delta_down_5_37 free
- delta_down_5_38 free
- delta_down_5_39 free
- delta_down_5_40 free
- delta_down_5_41 free
- delta_down_5_42 free
- delta_down_5_43 free
- delta_down_5_44 free
- delta_down_5_45 free
- delta_down_5_46 free
- delta_down_5_47 free
- delta_down_5_48 free
- delta_down_5_49 free
- delta_down_5_50 free
- delta_down_5_51 free
- delta_down_5_52 free
- delta_down_5_53 free
- delta_down_5_54 free
- delta_down_5_55 free
- delta_down_5_56 free
- delta_down_5_57 free
- delta_down_5_58 free
- delta_down_5_59 free
- delta_down_5_60 free
- delta_down_5_61 free
- delta_down_5_62 free
- delta_down_5_63 free
- delta_down_5_64 free
- delta_down_5_65 free
- delta_down_5_66 free
- delta_down_5_67 free
- delta_down_5_68 free
- delta_down_5_69 free
- delta_down_5_70 free
- delta_down_5_71 free
- delta_down_5_72 free
- delta_down_5_73 free
- delta_down_5_74 free
- delta_down_5_75 free
- delta_down_5_76 free
- delta_down_5_77 free
- delta_down_5_78 free
- delta_down_5_79 free
- delta_down_5_80 free
- delta_down_5_81 free
- delta_down_5_82 free
- delta_down_5_83 free
- delta_down_5_84 free
- delta_down_5_85 free
- delta_down_5_86 free
- delta_down_5_87 free
- delta_down_5_88 free
- delta_down_5_89 free
- delta_down_5_90 free
- delta_down_5_91 free
- delta_down_5_92 free
- delta_down_5_93 free
- delta_down_5_94 free
- delta_down_5_95 free
- delta_down_5_96 free
- delta_down_5_97 free
- delta_down_5_98 free
- delta_down_5_99 free
- delta_down_5_100 free
- delta_down_5_101 free
- delta_down_5_102 free
- delta_down_5_103 free
- delta_down_5_104 free
- delta_down_5_105 free
- delta_down_5_106 free
- delta_down_5_107 free
- delta_down_5_108 free
- delta_down_5_109 free
- delta_down_5_110 free
- delta_down_5_111 free
- delta_down_5_112 free
- delta_down_5_113 free
- delta_down_5_114 free
- delta_down_5_115 free
- delta_down_5_116 free
- delta_down_5_117 free
- delta_down_5_118 free
- delta_down_5_119 free
- delta_down_5_120 free
- delta_down_5_121 free
- delta_down_5_122 free
- delta_down_5_123 free
- delta_down_5_124 free
- delta_down_5_125 free
- delta_down_5_126 free
- delta_down_5_127 free
- delta_down_5_128 free
- delta_down_5_129 free
- delta_down_5_130 free
- delta_down_5_131 free
- delta_down_5_132 free
- delta_down_5_133 free
- delta_down_5_134 free
- delta_down_5_135 free
- delta_down_5_136 free
- delta_down_5_137 free
- delta_down_5_138 free
- delta_down_5_139 free
- delta_down_5_140 free
- delta_down_5_141 free
- delta_down_5_142 free
- delta_down_5_143 free
- delta_down_5_144 free
- delta_down_5_145 free
- delta_down_5_146 free
- delta_down_5_147 free
- delta_down_5_148 free
- delta_down_5_149 free
- delta_down_5_150 free
- delta_down_5_151 free
- delta_down_5_152 free
- delta_down_5_153 free
- delta_down_5_154 free
- delta_down_5_155 free
- delta_down_5_156 free
- delta_down_5_157 free
- delta_down_5_158 free
- delta_down_5_159 free
- delta_down_5_160 free
- delta_down_5_161 free
- delta_down_5_162 free
- delta_down_5_163 free
- delta_down_5_164 free
- delta_down_5_165 free
- delta_down_5_166 free
- delta_down_5_167 free
- delta_down_5_168 free
- delta_down_5_169 free
- delta_down_5_170 free
- delta_down_5_171 free
- delta_down_5_172 free
- delta_down_5_173 free
- delta_down_5_174 free
- delta_down_5_175 free
- delta_down_5_176 free
- delta_down_5_177 free
- delta_down_5_178 free
- delta_down_5_179 free
- delta_down_5_180 free
- delta_down_5_181 free
- delta_down_5_182 free
- delta_down_5_183 free
- delta_down_5_184 free
- delta_down_5_185 free
- delta_down_5_186 free
- delta_down_5_187 free
- delta_down_5_188 free
- delta_down_5_189 free
- delta_down_5_190 free
- delta_down_5_191 free
- delta_down_5_192 free
- delta_down_5_193 free
- delta_down_5_194 free
- delta_down_5_195 free
- delta_down_5_196 free
- delta_down_5_197 free
- delta_down_5_198 free
- delta_down_5_199 free
- delta_down_5_200 free
- delta_down_6_1 free
- delta_down_6_2 free
- delta_down_6_3 free
- delta_down_6_4 free
- delta_down_6_5 free
- delta_down_6_6 free
- delta_down_6_7 free
- delta_down_6_8 free
- delta_down_6_9 free
- delta_down_6_10 free
- delta_down_6_11 free
- delta_down_6_12 free
- delta_down_6_13 free
- delta_down_6_14 free
- delta_down_6_15 free
- delta_down_6_16 free
- delta_down_6_17 free
- delta_down_6_18 free
- delta_down_6_19 free
- delta_down_6_20 free
- delta_down_6_21 free
- delta_down_6_22 free
- delta_down_6_23 free
- delta_down_6_24 free
- delta_down_6_25 free
- delta_down_6_26 free
- delta_down_6_27 free
- delta_down_6_28 free
- delta_down_6_29 free
- delta_down_6_30 free
- delta_down_6_31 free
- delta_down_6_32 free
- delta_down_6_33 free
- delta_down_6_34 free
- delta_down_6_35 free
- delta_down_6_36 free
- delta_down_6_37 free
- delta_down_6_38 free
- delta_down_6_39 free
- delta_down_6_40 free
- delta_down_6_41 free
- delta_down_6_42 free
- delta_down_6_43 free
- delta_down_6_44 free
- delta_down_6_45 free
- delta_down_6_46 free
- delta_down_6_47 free
- delta_down_6_48 free
- delta_down_6_49 free
- delta_down_6_50 free
- delta_down_6_51 free
- delta_down_6_52 free
- delta_down_6_53 free
- delta_down_6_54 free
- delta_down_6_55 free
- delta_down_6_56 free
- delta_down_6_57 free
- delta_down_6_58 free
- delta_down_6_59 free
- delta_down_6_60 free
- delta_down_6_61 free
- delta_down_6_62 free
- delta_down_6_63 free
- delta_down_6_64 free
- delta_down_6_65 free
- delta_down_6_66 free
- delta_down_6_67 free
- delta_down_6_68 free
- delta_down_6_69 free
- delta_down_6_70 free
- delta_down_6_71 free
- delta_down_6_72 free
- delta_down_6_73 free
- delta_down_6_74 free
- delta_down_6_75 free
- delta_down_6_76 free
- delta_down_6_77 free
- delta_down_6_78 free
- delta_down_6_79 free
- delta_down_6_80 free
- delta_down_6_81 free
- delta_down_6_82 free
- delta_down_6_83 free
- delta_down_6_84 free
- delta_down_6_85 free
- delta_down_6_86 free
- delta_down_6_87 free
- delta_down_6_88 free
- delta_down_6_89 free
- delta_down_6_90 free
- delta_down_6_91 free
- delta_down_6_92 free
- delta_down_6_93 free
- delta_down_6_94 free
- delta_down_6_95 free
- delta_down_6_96 free
- delta_down_6_97 free
- delta_down_6_98 free
- delta_down_6_99 free
- delta_down_6_100 free
- delta_down_6_101 free
- delta_down_6_102 free
- delta_down_6_103 free
- delta_down_6_104 free
- delta_down_6_105 free
- delta_down_6_106 free
- delta_down_6_107 free
- delta_down_6_108 free
- delta_down_6_109 free
- delta_down_6_110 free
- delta_down_6_111 free
- delta_down_6_112 free
- delta_down_6_113 free
- delta_down_6_114 free
- delta_down_6_115 free
- delta_down_6_116 free
- delta_down_6_117 free
- delta_down_6_118 free
- delta_down_6_119 free
- delta_down_6_120 free
- delta_down_6_121 free
- delta_down_6_122 free
- delta_down_6_123 free
- delta_down_6_124 free
- delta_down_6_125 free
- delta_down_6_126 free
- delta_down_6_127 free
- delta_down_6_128 free
- delta_down_6_129 free
- delta_down_6_130 free
- delta_down_6_131 free
- delta_down_6_132 free
- delta_down_6_133 free
- delta_down_6_134 free
- delta_down_6_135 free
- delta_down_6_136 free
- delta_down_6_137 free
- delta_down_6_138 free
- delta_down_6_139 free
- delta_down_6_140 free
- delta_down_6_141 free
- delta_down_6_142 free
- delta_down_6_143 free
- delta_down_6_144 free
- delta_down_6_145 free
- delta_down_6_146 free
- delta_down_6_147 free
- delta_down_6_148 free
- delta_down_6_149 free
- delta_down_6_150 free
- delta_down_6_151 free
- delta_down_6_152 free
- delta_down_6_153 free
- delta_down_6_154 free
- delta_down_6_155 free
- delta_down_6_156 free
- delta_down_6_157 free
- delta_down_6_158 free
- delta_down_6_159 free
- delta_down_6_160 free
- delta_down_6_161 free
- delta_down_6_162 free
- delta_down_6_163 free
- delta_down_6_164 free
- delta_down_6_165 free
- delta_down_6_166 free
- delta_down_6_167 free
- delta_down_6_168 free
- delta_down_6_169 free
- delta_down_6_170 free
- delta_down_6_171 free
- delta_down_6_172 free
- delta_down_6_173 free
- delta_down_6_174 free
- delta_down_6_175 free
- delta_down_6_176 free
- delta_down_6_177 free
- delta_down_6_178 free
- delta_down_6_179 free
- delta_down_6_180 free
- delta_down_6_181 free
- delta_down_6_182 free
- delta_down_6_183 free
- delta_down_6_184 free
- delta_down_6_185 free
- delta_down_6_186 free
- delta_down_6_187 free
- delta_down_6_188 free
- delta_down_6_189 free
- delta_down_6_190 free
- delta_down_6_191 free
- delta_down_6_192 free
- delta_down_6_193 free
- delta_down_6_194 free
- delta_down_6_195 free
- delta_down_6_196 free
- delta_down_6_197 free
- delta_down_6_198 free
- delta_down_6_199 free
- delta_down_6_200 free
- delta_down_7_1 free
- delta_down_7_2 free
- delta_down_7_3 free
- delta_down_7_4 free
- delta_down_7_5 free
- delta_down_7_6 free
- delta_down_7_7 free
- delta_down_7_8 free
- delta_down_7_9 free
- delta_down_7_10 free
- delta_down_7_11 free
- delta_down_7_12 free
- delta_down_7_13 free
- delta_down_7_14 free
- delta_down_7_15 free
- delta_down_7_16 free
- delta_down_7_17 free
- delta_down_7_18 free
- delta_down_7_19 free
- delta_down_7_20 free
- delta_down_7_21 free
- delta_down_7_22 free
- delta_down_7_23 free
- delta_down_7_24 free
- delta_down_7_25 free
- delta_down_7_26 free
- delta_down_7_27 free
- delta_down_7_28 free
- delta_down_7_29 free
- delta_down_7_30 free
- delta_down_7_31 free
- delta_down_7_32 free
- delta_down_7_33 free
- delta_down_7_34 free
- delta_down_7_35 free
- delta_down_7_36 free
- delta_down_7_37 free
- delta_down_7_38 free
- delta_down_7_39 free
- delta_down_7_40 free
- delta_down_7_41 free
- delta_down_7_42 free
- delta_down_7_43 free
- delta_down_7_44 free
- delta_down_7_45 free
- delta_down_7_46 free
- delta_down_7_47 free
- delta_down_7_48 free
- delta_down_7_49 free
- delta_down_7_50 free
- delta_down_7_51 free
- delta_down_7_52 free
- delta_down_7_53 free
- delta_down_7_54 free
- delta_down_7_55 free
- delta_down_7_56 free
- delta_down_7_57 free
- delta_down_7_58 free
- delta_down_7_59 free
- delta_down_7_60 free
- delta_down_7_61 free
- delta_down_7_62 free
- delta_down_7_63 free
- delta_down_7_64 free
- delta_down_7_65 free
- delta_down_7_66 free
- delta_down_7_67 free
- delta_down_7_68 free
- delta_down_7_69 free
- delta_down_7_70 free
- delta_down_7_71 free
- delta_down_7_72 free
- delta_down_7_73 free
- delta_down_7_74 free
- delta_down_7_75 free
- delta_down_7_76 free
- delta_down_7_77 free
- delta_down_7_78 free
- delta_down_7_79 free
- delta_down_7_80 free
- delta_down_7_81 free
- delta_down_7_82 free
- delta_down_7_83 free
- delta_down_7_84 free
- delta_down_7_85 free
- delta_down_7_86 free
- delta_down_7_87 free
- delta_down_7_88 free
- delta_down_7_89 free
- delta_down_7_90 free
- delta_down_7_91 free
- delta_down_7_92 free
- delta_down_7_93 free
- delta_down_7_94 free
- delta_down_7_95 free
- delta_down_7_96 free
- delta_down_7_97 free
- delta_down_7_98 free
- delta_down_7_99 free
- delta_down_7_100 free
- delta_down_7_101 free
- delta_down_7_102 free
- delta_down_7_103 free
- delta_down_7_104 free
- delta_down_7_105 free
- delta_down_7_106 free
- delta_down_7_107 free
- delta_down_7_108 free
- delta_down_7_109 free
- delta_down_7_110 free
- delta_down_7_111 free
- delta_down_7_112 free
- delta_down_7_113 free
- delta_down_7_114 free
- delta_down_7_115 free
- delta_down_7_116 free
- delta_down_7_117 free
- delta_down_7_118 free
- delta_down_7_119 free
- delta_down_7_120 free
- delta_down_7_121 free
- delta_down_7_122 free
- delta_down_7_123 free
- delta_down_7_124 free
- delta_down_7_125 free
- delta_down_7_126 free
- delta_down_7_127 free
- delta_down_7_128 free
- delta_down_7_129 free
- delta_down_7_130 free
- delta_down_7_131 free
- delta_down_7_132 free
- delta_down_7_133 free
- delta_down_7_134 free
- delta_down_7_135 free
- delta_down_7_136 free
- delta_down_7_137 free
- delta_down_7_138 free
- delta_down_7_139 free
- delta_down_7_140 free
- delta_down_7_141 free
- delta_down_7_142 free
- delta_down_7_143 free
- delta_down_7_144 free
- delta_down_7_145 free
- delta_down_7_146 free
- delta_down_7_147 free
- delta_down_7_148 free
- delta_down_7_149 free
- delta_down_7_150 free
- delta_down_7_151 free
- delta_down_7_152 free
- delta_down_7_153 free
- delta_down_7_154 free
- delta_down_7_155 free
- delta_down_7_156 free
- delta_down_7_157 free
- delta_down_7_158 free
- delta_down_7_159 free
- delta_down_7_160 free
- delta_down_7_161 free
- delta_down_7_162 free
- delta_down_7_163 free
- delta_down_7_164 free
- delta_down_7_165 free
- delta_down_7_166 free
- delta_down_7_167 free
- delta_down_7_168 free
- delta_down_7_169 free
- delta_down_7_170 free
- delta_down_7_171 free
- delta_down_7_172 free
- delta_down_7_173 free
- delta_down_7_174 free
- delta_down_7_175 free
- delta_down_7_176 free
- delta_down_7_177 free
- delta_down_7_178 free
- delta_down_7_179 free
- delta_down_7_180 free
- delta_down_7_181 free
- delta_down_7_182 free
- delta_down_7_183 free
- delta_down_7_184 free
- delta_down_7_185 free
- delta_down_7_186 free
- delta_down_7_187 free
- delta_down_7_188 free
- delta_down_7_189 free
- delta_down_7_190 free
- delta_down_7_191 free
- delta_down_7_192 free
- delta_down_7_193 free
- delta_down_7_194 free
- delta_down_7_195 free
- delta_down_7_196 free
- delta_down_7_197 free
- delta_down_7_198 free
- delta_down_7_199 free
- delta_down_7_200 free
- delta_down_8_1 free
- delta_down_8_2 free
- delta_down_8_3 free
- delta_down_8_4 free
- delta_down_8_5 free
- delta_down_8_6 free
- delta_down_8_7 free
- delta_down_8_8 free
- delta_down_8_9 free
- delta_down_8_10 free
- delta_down_8_11 free
- delta_down_8_12 free
- delta_down_8_13 free
- delta_down_8_14 free
- delta_down_8_15 free
- delta_down_8_16 free
- delta_down_8_17 free
- delta_down_8_18 free
- delta_down_8_19 free
- delta_down_8_20 free
- delta_down_8_21 free
- delta_down_8_22 free
- delta_down_8_23 free
- delta_down_8_24 free
- delta_down_8_25 free
- delta_down_8_26 free
- delta_down_8_27 free
- delta_down_8_28 free
- delta_down_8_29 free
- delta_down_8_30 free
- delta_down_8_31 free
- delta_down_8_32 free
- delta_down_8_33 free
- delta_down_8_34 free
- delta_down_8_35 free
- delta_down_8_36 free
- delta_down_8_37 free
- delta_down_8_38 free
- delta_down_8_39 free
- delta_down_8_40 free
- delta_down_8_41 free
- delta_down_8_42 free
- delta_down_8_43 free
- delta_down_8_44 free
- delta_down_8_45 free
- delta_down_8_46 free
- delta_down_8_47 free
- delta_down_8_48 free
- delta_down_8_49 free
- delta_down_8_50 free
- delta_down_8_51 free
- delta_down_8_52 free
- delta_down_8_53 free
- delta_down_8_54 free
- delta_down_8_55 free
- delta_down_8_56 free
- delta_down_8_57 free
- delta_down_8_58 free
- delta_down_8_59 free
- delta_down_8_60 free
- delta_down_8_61 free
- delta_down_8_62 free
- delta_down_8_63 free
- delta_down_8_64 free
- delta_down_8_65 free
- delta_down_8_66 free
- delta_down_8_67 free
- delta_down_8_68 free
- delta_down_8_69 free
- delta_down_8_70 free
- delta_down_8_71 free
- delta_down_8_72 free
- delta_down_8_73 free
- delta_down_8_74 free
- delta_down_8_75 free
- delta_down_8_76 free
- delta_down_8_77 free
- delta_down_8_78 free
- delta_down_8_79 free
- delta_down_8_80 free
- delta_down_8_81 free
- delta_down_8_82 free
- delta_down_8_83 free
- delta_down_8_84 free
- delta_down_8_85 free
- delta_down_8_86 free
- delta_down_8_87 free
- delta_down_8_88 free
- delta_down_8_89 free
- delta_down_8_90 free
- delta_down_8_91 free
- delta_down_8_92 free
- delta_down_8_93 free
- delta_down_8_94 free
- delta_down_8_95 free
- delta_down_8_96 free
- delta_down_8_97 free
- delta_down_8_98 free
- delta_down_8_99 free
- delta_down_8_100 free
- delta_down_8_101 free
- delta_down_8_102 free
- delta_down_8_103 free
- delta_down_8_104 free
- delta_down_8_105 free
- delta_down_8_106 free
- delta_down_8_107 free
- delta_down_8_108 free
- delta_down_8_109 free
- delta_down_8_110 free
- delta_down_8_111 free
- delta_down_8_112 free
- delta_down_8_113 free
- delta_down_8_114 free
- delta_down_8_115 free
- delta_down_8_116 free
- delta_down_8_117 free
- delta_down_8_118 free
- delta_down_8_119 free
- delta_down_8_120 free
- delta_down_8_121 free
- delta_down_8_122 free
- delta_down_8_123 free
- delta_down_8_124 free
- delta_down_8_125 free
- delta_down_8_126 free
- delta_down_8_127 free
- delta_down_8_128 free
- delta_down_8_129 free
- delta_down_8_130 free
- delta_down_8_131 free
- delta_down_8_132 free
- delta_down_8_133 free
- delta_down_8_134 free
- delta_down_8_135 free
- delta_down_8_136 free
- delta_down_8_137 free
- delta_down_8_138 free
- delta_down_8_139 free
- delta_down_8_140 free
- delta_down_8_141 free
- delta_down_8_142 free
- delta_down_8_143 free
- delta_down_8_144 free
- delta_down_8_145 free
- delta_down_8_146 free
- delta_down_8_147 free
- delta_down_8_148 free
- delta_down_8_149 free
- delta_down_8_150 free
- delta_down_8_151 free
- delta_down_8_152 free
- delta_down_8_153 free
- delta_down_8_154 free
- delta_down_8_155 free
- delta_down_8_156 free
- delta_down_8_157 free
- delta_down_8_158 free
- delta_down_8_159 free
- delta_down_8_160 free
- delta_down_8_161 free
- delta_down_8_162 free
- delta_down_8_163 free
- delta_down_8_164 free
- delta_down_8_165 free
- delta_down_8_166 free
- delta_down_8_167 free
- delta_down_8_168 free
- delta_down_8_169 free
- delta_down_8_170 free
- delta_down_8_171 free
- delta_down_8_172 free
- delta_down_8_173 free
- delta_down_8_174 free
- delta_down_8_175 free
- delta_down_8_176 free
- delta_down_8_177 free
- delta_down_8_178 free
- delta_down_8_179 free
- delta_down_8_180 free
- delta_down_8_181 free
- delta_down_8_182 free
- delta_down_8_183 free
- delta_down_8_184 free
- delta_down_8_185 free
- delta_down_8_186 free
- delta_down_8_187 free
- delta_down_8_188 free
- delta_down_8_189 free
- delta_down_8_190 free
- delta_down_8_191 free
- delta_down_8_192 free
- delta_down_8_193 free
- delta_down_8_194 free
- delta_down_8_195 free
- delta_down_8_196 free
- delta_down_8_197 free
- delta_down_8_198 free
- delta_down_8_199 free
- delta_down_8_200 free
- delta_down_9_1 free
- delta_down_9_2 free
- delta_down_9_3 free
- delta_down_9_4 free
- delta_down_9_5 free
- delta_down_9_6 free
- delta_down_9_7 free
- delta_down_9_8 free
- delta_down_9_9 free
- delta_down_9_10 free
- delta_down_9_11 free
- delta_down_9_12 free
- delta_down_9_13 free
- delta_down_9_14 free
- delta_down_9_15 free
- delta_down_9_16 free
- delta_down_9_17 free
- delta_down_9_18 free
- delta_down_9_19 free
- delta_down_9_20 free
- delta_down_9_21 free
- delta_down_9_22 free
- delta_down_9_23 free
- delta_down_9_24 free
- delta_down_9_25 free
- delta_down_9_26 free
- delta_down_9_27 free
- delta_down_9_28 free
- delta_down_9_29 free
- delta_down_9_30 free
- delta_down_9_31 free
- delta_down_9_32 free
- delta_down_9_33 free
- delta_down_9_34 free
- delta_down_9_35 free
- delta_down_9_36 free
- delta_down_9_37 free
- delta_down_9_38 free
- delta_down_9_39 free
- delta_down_9_40 free
- delta_down_9_41 free
- delta_down_9_42 free
- delta_down_9_43 free
- delta_down_9_44 free
- delta_down_9_45 free
- delta_down_9_46 free
- delta_down_9_47 free
- delta_down_9_48 free
- delta_down_9_49 free
- delta_down_9_50 free
- delta_down_9_51 free
- delta_down_9_52 free
- delta_down_9_53 free
- delta_down_9_54 free
- delta_down_9_55 free
- delta_down_9_56 free
- delta_down_9_57 free
- delta_down_9_58 free
- delta_down_9_59 free
- delta_down_9_60 free
- delta_down_9_61 free
- delta_down_9_62 free
- delta_down_9_63 free
- delta_down_9_64 free
- delta_down_9_65 free
- delta_down_9_66 free
- delta_down_9_67 free
- delta_down_9_68 free
- delta_down_9_69 free
- delta_down_9_70 free
- delta_down_9_71 free
- delta_down_9_72 free
- delta_down_9_73 free
- delta_down_9_74 free
- delta_down_9_75 free
- delta_down_9_76 free
- delta_down_9_77 free
- delta_down_9_78 free
- delta_down_9_79 free
- delta_down_9_80 free
- delta_down_9_81 free
- delta_down_9_82 free
- delta_down_9_83 free
- delta_down_9_84 free
- delta_down_9_85 free
- delta_down_9_86 free
- delta_down_9_87 free
- delta_down_9_88 free
- delta_down_9_89 free
- delta_down_9_90 free
- delta_down_9_91 free
- delta_down_9_92 free
- delta_down_9_93 free
- delta_down_9_94 free
- delta_down_9_95 free
- delta_down_9_96 free
- delta_down_9_97 free
- delta_down_9_98 free
- delta_down_9_99 free
- delta_down_9_100 free
- delta_down_9_101 free
- delta_down_9_102 free
- delta_down_9_103 free
- delta_down_9_104 free
- delta_down_9_105 free
- delta_down_9_106 free
- delta_down_9_107 free
- delta_down_9_108 free
- delta_down_9_109 free
- delta_down_9_110 free
- delta_down_9_111 free
- delta_down_9_112 free
- delta_down_9_113 free
- delta_down_9_114 free
- delta_down_9_115 free
- delta_down_9_116 free
- delta_down_9_117 free
- delta_down_9_118 free
- delta_down_9_119 free
- delta_down_9_120 free
- delta_down_9_121 free
- delta_down_9_122 free
- delta_down_9_123 free
- delta_down_9_124 free
- delta_down_9_125 free
- delta_down_9_126 free
- delta_down_9_127 free
- delta_down_9_128 free
- delta_down_9_129 free
- delta_down_9_130 free
- delta_down_9_131 free
- delta_down_9_132 free
- delta_down_9_133 free
- delta_down_9_134 free
- delta_down_9_135 free
- delta_down_9_136 free
- delta_down_9_137 free
- delta_down_9_138 free
- delta_down_9_139 free
- delta_down_9_140 free
- delta_down_9_141 free
- delta_down_9_142 free
- delta_down_9_143 free
- delta_down_9_144 free
- delta_down_9_145 free
- delta_down_9_146 free
- delta_down_9_147 free
- delta_down_9_148 free
- delta_down_9_149 free
- delta_down_9_150 free
- delta_down_9_151 free
- delta_down_9_152 free
- delta_down_9_153 free
- delta_down_9_154 free
- delta_down_9_155 free
- delta_down_9_156 free
- delta_down_9_157 free
- delta_down_9_158 free
- delta_down_9_159 free
- delta_down_9_160 free
- delta_down_9_161 free
- delta_down_9_162 free
- delta_down_9_163 free
- delta_down_9_164 free
- delta_down_9_165 free
- delta_down_9_166 free
- delta_down_9_167 free
- delta_down_9_168 free
- delta_down_9_169 free
- delta_down_9_170 free
- delta_down_9_171 free
- delta_down_9_172 free
- delta_down_9_173 free
- delta_down_9_174 free
- delta_down_9_175 free
- delta_down_9_176 free
- delta_down_9_177 free
- delta_down_9_178 free
- delta_down_9_179 free
- delta_down_9_180 free
- delta_down_9_181 free
- delta_down_9_182 free
- delta_down_9_183 free
- delta_down_9_184 free
- delta_down_9_185 free
- delta_down_9_186 free
- delta_down_9_187 free
- delta_down_9_188 free
- delta_down_9_189 free
- delta_down_9_190 free
- delta_down_9_191 free
- delta_down_9_192 free
- delta_down_9_193 free
- delta_down_9_194 free
- delta_down_9_195 free
- delta_down_9_196 free
- delta_down_9_197 free
- delta_down_9_198 free
- delta_down_9_199 free
- delta_down_9_200 free
- delta_down_10_1 free
- delta_down_10_2 free
- delta_down_10_3 free
- delta_down_10_4 free
- delta_down_10_5 free
- delta_down_10_6 free
- delta_down_10_7 free
- delta_down_10_8 free
- delta_down_10_9 free
- delta_down_10_10 free
- delta_down_10_11 free
- delta_down_10_12 free
- delta_down_10_13 free
- delta_down_10_14 free
- delta_down_10_15 free
- delta_down_10_16 free
- delta_down_10_17 free
- delta_down_10_18 free
- delta_down_10_19 free
- delta_down_10_20 free
- delta_down_10_21 free
- delta_down_10_22 free
- delta_down_10_23 free
- delta_down_10_24 free
- delta_down_10_25 free
- delta_down_10_26 free
- delta_down_10_27 free
- delta_down_10_28 free
- delta_down_10_29 free
- delta_down_10_30 free
- delta_down_10_31 free
- delta_down_10_32 free
- delta_down_10_33 free
- delta_down_10_34 free
- delta_down_10_35 free
- delta_down_10_36 free
- delta_down_10_37 free
- delta_down_10_38 free
- delta_down_10_39 free
- delta_down_10_40 free
- delta_down_10_41 free
- delta_down_10_42 free
- delta_down_10_43 free
- delta_down_10_44 free
- delta_down_10_45 free
- delta_down_10_46 free
- delta_down_10_47 free
- delta_down_10_48 free
- delta_down_10_49 free
- delta_down_10_50 free
- delta_down_10_51 free
- delta_down_10_52 free
- delta_down_10_53 free
- delta_down_10_54 free
- delta_down_10_55 free
- delta_down_10_56 free
- delta_down_10_57 free
- delta_down_10_58 free
- delta_down_10_59 free
- delta_down_10_60 free
- delta_down_10_61 free
- delta_down_10_62 free
- delta_down_10_63 free
- delta_down_10_64 free
- delta_down_10_65 free
- delta_down_10_66 free
- delta_down_10_67 free
- delta_down_10_68 free
- delta_down_10_69 free
- delta_down_10_70 free
- delta_down_10_71 free
- delta_down_10_72 free
- delta_down_10_73 free
- delta_down_10_74 free
- delta_down_10_75 free
- delta_down_10_76 free
- delta_down_10_77 free
- delta_down_10_78 free
- delta_down_10_79 free
- delta_down_10_80 free
- delta_down_10_81 free
- delta_down_10_82 free
- delta_down_10_83 free
- delta_down_10_84 free
- delta_down_10_85 free
- delta_down_10_86 free
- delta_down_10_87 free
- delta_down_10_88 free
- delta_down_10_89 free
- delta_down_10_90 free
- delta_down_10_91 free
- delta_down_10_92 free
- delta_down_10_93 free
- delta_down_10_94 free
- delta_down_10_95 free
- delta_down_10_96 free
- delta_down_10_97 free
- delta_down_10_98 free
- delta_down_10_99 free
- delta_down_10_100 free
- delta_down_10_101 free
- delta_down_10_102 free
- delta_down_10_103 free
- delta_down_10_104 free
- delta_down_10_105 free
- delta_down_10_106 free
- delta_down_10_107 free
- delta_down_10_108 free
- delta_down_10_109 free
- delta_down_10_110 free
- delta_down_10_111 free
- delta_down_10_112 free
- delta_down_10_113 free
- delta_down_10_114 free
- delta_down_10_115 free
- delta_down_10_116 free
- delta_down_10_117 free
- delta_down_10_118 free
- delta_down_10_119 free
- delta_down_10_120 free
- delta_down_10_121 free
- delta_down_10_122 free
- delta_down_10_123 free
- delta_down_10_124 free
- delta_down_10_125 free
- delta_down_10_126 free
- delta_down_10_127 free
- delta_down_10_128 free
- delta_down_10_129 free
- delta_down_10_130 free
- delta_down_10_131 free
- delta_down_10_132 free
- delta_down_10_133 free
- delta_down_10_134 free
- delta_down_10_135 free
- delta_down_10_136 free
- delta_down_10_137 free
- delta_down_10_138 free
- delta_down_10_139 free
- delta_down_10_140 free
- delta_down_10_141 free
- delta_down_10_142 free
- delta_down_10_143 free
- delta_down_10_144 free
- delta_down_10_145 free
- delta_down_10_146 free
- delta_down_10_147 free
- delta_down_10_148 free
- delta_down_10_149 free
- delta_down_10_150 free
- delta_down_10_151 free
- delta_down_10_152 free
- delta_down_10_153 free
- delta_down_10_154 free
- delta_down_10_155 free
- delta_down_10_156 free
- delta_down_10_157 free
- delta_down_10_158 free
- delta_down_10_159 free
- delta_down_10_160 free
- delta_down_10_161 free
- delta_down_10_162 free
- delta_down_10_163 free
- delta_down_10_164 free
- delta_down_10_165 free
- delta_down_10_166 free
- delta_down_10_167 free
- delta_down_10_168 free
- delta_down_10_169 free
- delta_down_10_170 free
- delta_down_10_171 free
- delta_down_10_172 free
- delta_down_10_173 free
- delta_down_10_174 free
- delta_down_10_175 free
- delta_down_10_176 free
- delta_down_10_177 free
- delta_down_10_178 free
- delta_down_10_179 free
- delta_down_10_180 free
- delta_down_10_181 free
- delta_down_10_182 free
- delta_down_10_183 free
- delta_down_10_184 free
- delta_down_10_185 free
- delta_down_10_186 free
- delta_down_10_187 free
- delta_down_10_188 free
- delta_down_10_189 free
- delta_down_10_190 free
- delta_down_10_191 free
- delta_down_10_192 free
- delta_down_10_193 free
- delta_down_10_194 free
- delta_down_10_195 free
- delta_down_10_196 free
- delta_down_10_197 free
- delta_down_10_198 free
- delta_down_10_199 free
- delta_down_10_200 free
- delta_down_11_1 free
- delta_down_11_2 free
- delta_down_11_3 free
- delta_down_11_4 free
- delta_down_11_5 free
- delta_down_11_6 free
- delta_down_11_7 free
- delta_down_11_8 free
- delta_down_11_9 free
- delta_down_11_10 free
- delta_down_11_11 free
- delta_down_11_12 free
- delta_down_11_13 free
- delta_down_11_14 free
- delta_down_11_15 free
- delta_down_11_16 free
- delta_down_11_17 free
- delta_down_11_18 free
- delta_down_11_19 free
- delta_down_11_20 free
- delta_down_11_21 free
- delta_down_11_22 free
- delta_down_11_23 free
- delta_down_11_24 free
- delta_down_11_25 free
- delta_down_11_26 free
- delta_down_11_27 free
- delta_down_11_28 free
- delta_down_11_29 free
- delta_down_11_30 free
- delta_down_11_31 free
- delta_down_11_32 free
- delta_down_11_33 free
- delta_down_11_34 free
- delta_down_11_35 free
- delta_down_11_36 free
- delta_down_11_37 free
- delta_down_11_38 free
- delta_down_11_39 free
- delta_down_11_40 free
- delta_down_11_41 free
- delta_down_11_42 free
- delta_down_11_43 free
- delta_down_11_44 free
- delta_down_11_45 free
- delta_down_11_46 free
- delta_down_11_47 free
- delta_down_11_48 free
- delta_down_11_49 free
- delta_down_11_50 free
- delta_down_11_51 free
- delta_down_11_52 free
- delta_down_11_53 free
- delta_down_11_54 free
- delta_down_11_55 free
- delta_down_11_56 free
- delta_down_11_57 free
- delta_down_11_58 free
- delta_down_11_59 free
- delta_down_11_60 free
- delta_down_11_61 free
- delta_down_11_62 free
- delta_down_11_63 free
- delta_down_11_64 free
- delta_down_11_65 free
- delta_down_11_66 free
- delta_down_11_67 free
- delta_down_11_68 free
- delta_down_11_69 free
- delta_down_11_70 free
- delta_down_11_71 free
- delta_down_11_72 free
- delta_down_11_73 free
- delta_down_11_74 free
- delta_down_11_75 free
- delta_down_11_76 free
- delta_down_11_77 free
- delta_down_11_78 free
- delta_down_11_79 free
- delta_down_11_80 free
- delta_down_11_81 free
- delta_down_11_82 free
- delta_down_11_83 free
- delta_down_11_84 free
- delta_down_11_85 free
- delta_down_11_86 free
- delta_down_11_87 free
- delta_down_11_88 free
- delta_down_11_89 free
- delta_down_11_90 free
- delta_down_11_91 free
- delta_down_11_92 free
- delta_down_11_93 free
- delta_down_11_94 free
- delta_down_11_95 free
- delta_down_11_96 free
- delta_down_11_97 free
- delta_down_11_98 free
- delta_down_11_99 free
- delta_down_11_100 free
- delta_down_11_101 free
- delta_down_11_102 free
- delta_down_11_103 free
- delta_down_11_104 free
- delta_down_11_105 free
- delta_down_11_106 free
- delta_down_11_107 free
- delta_down_11_108 free
- delta_down_11_109 free
- delta_down_11_110 free
- delta_down_11_111 free
- delta_down_11_112 free
- delta_down_11_113 free
- delta_down_11_114 free
- delta_down_11_115 free
- delta_down_11_116 free
- delta_down_11_117 free
- delta_down_11_118 free
- delta_down_11_119 free
- delta_down_11_120 free
- delta_down_11_121 free
- delta_down_11_122 free
- delta_down_11_123 free
- delta_down_11_124 free
- delta_down_11_125 free
- delta_down_11_126 free
- delta_down_11_127 free
- delta_down_11_128 free
- delta_down_11_129 free
- delta_down_11_130 free
- delta_down_11_131 free
- delta_down_11_132 free
- delta_down_11_133 free
- delta_down_11_134 free
- delta_down_11_135 free
- delta_down_11_136 free
- delta_down_11_137 free
- delta_down_11_138 free
- delta_down_11_139 free
- delta_down_11_140 free
- delta_down_11_141 free
- delta_down_11_142 free
- delta_down_11_143 free
- delta_down_11_144 free
- delta_down_11_145 free
- delta_down_11_146 free
- delta_down_11_147 free
- delta_down_11_148 free
- delta_down_11_149 free
- delta_down_11_150 free
- delta_down_11_151 free
- delta_down_11_152 free
- delta_down_11_153 free
- delta_down_11_154 free
- delta_down_11_155 free
- delta_down_11_156 free
- delta_down_11_157 free
- delta_down_11_158 free
- delta_down_11_159 free
- delta_down_11_160 free
- delta_down_11_161 free
- delta_down_11_162 free
- delta_down_11_163 free
- delta_down_11_164 free
- delta_down_11_165 free
- delta_down_11_166 free
- delta_down_11_167 free
- delta_down_11_168 free
- delta_down_11_169 free
- delta_down_11_170 free
- delta_down_11_171 free
- delta_down_11_172 free
- delta_down_11_173 free
- delta_down_11_174 free
- delta_down_11_175 free
- delta_down_11_176 free
- delta_down_11_177 free
- delta_down_11_178 free
- delta_down_11_179 free
- delta_down_11_180 free
- delta_down_11_181 free
- delta_down_11_182 free
- delta_down_11_183 free
- delta_down_11_184 free
- delta_down_11_185 free
- delta_down_11_186 free
- delta_down_11_187 free
- delta_down_11_188 free
- delta_down_11_189 free
- delta_down_11_190 free
- delta_down_11_191 free
- delta_down_11_192 free
- delta_down_11_193 free
- delta_down_11_194 free
- delta_down_11_195 free
- delta_down_11_196 free
- delta_down_11_197 free
- delta_down_11_198 free
- delta_down_11_199 free
- delta_down_11_200 free
- delta_down_12_1 free
- delta_down_12_2 free
- delta_down_12_3 free
- delta_down_12_4 free
- delta_down_12_5 free
- delta_down_12_6 free
- delta_down_12_7 free
- delta_down_12_8 free
- delta_down_12_9 free
- delta_down_12_10 free
- delta_down_12_11 free
- delta_down_12_12 free
- delta_down_12_13 free
- delta_down_12_14 free
- delta_down_12_15 free
- delta_down_12_16 free
- delta_down_12_17 free
- delta_down_12_18 free
- delta_down_12_19 free
- delta_down_12_20 free
- delta_down_12_21 free
- delta_down_12_22 free
- delta_down_12_23 free
- delta_down_12_24 free
- delta_down_12_25 free
- delta_down_12_26 free
- delta_down_12_27 free
- delta_down_12_28 free
- delta_down_12_29 free
- delta_down_12_30 free
- delta_down_12_31 free
- delta_down_12_32 free
- delta_down_12_33 free
- delta_down_12_34 free
- delta_down_12_35 free
- delta_down_12_36 free
- delta_down_12_37 free
- delta_down_12_38 free
- delta_down_12_39 free
- delta_down_12_40 free
- delta_down_12_41 free
- delta_down_12_42 free
- delta_down_12_43 free
- delta_down_12_44 free
- delta_down_12_45 free
- delta_down_12_46 free
- delta_down_12_47 free
- delta_down_12_48 free
- delta_down_12_49 free
- delta_down_12_50 free
- delta_down_12_51 free
- delta_down_12_52 free
- delta_down_12_53 free
- delta_down_12_54 free
- delta_down_12_55 free
- delta_down_12_56 free
- delta_down_12_57 free
- delta_down_12_58 free
- delta_down_12_59 free
- delta_down_12_60 free
- delta_down_12_61 free
- delta_down_12_62 free
- delta_down_12_63 free
- delta_down_12_64 free
- delta_down_12_65 free
- delta_down_12_66 free
- delta_down_12_67 free
- delta_down_12_68 free
- delta_down_12_69 free
- delta_down_12_70 free
- delta_down_12_71 free
- delta_down_12_72 free
- delta_down_12_73 free
- delta_down_12_74 free
- delta_down_12_75 free
- delta_down_12_76 free
- delta_down_12_77 free
- delta_down_12_78 free
- delta_down_12_79 free
- delta_down_12_80 free
- delta_down_12_81 free
- delta_down_12_82 free
- delta_down_12_83 free
- delta_down_12_84 free
- delta_down_12_85 free
- delta_down_12_86 free
- delta_down_12_87 free
- delta_down_12_88 free
- delta_down_12_89 free
- delta_down_12_90 free
- delta_down_12_91 free
- delta_down_12_92 free
- delta_down_12_93 free
- delta_down_12_94 free
- delta_down_12_95 free
- delta_down_12_96 free
- delta_down_12_97 free
- delta_down_12_98 free
- delta_down_12_99 free
- delta_down_12_100 free
- delta_down_12_101 free
- delta_down_12_102 free
- delta_down_12_103 free
- delta_down_12_104 free
- delta_down_12_105 free
- delta_down_12_106 free
- delta_down_12_107 free
- delta_down_12_108 free
- delta_down_12_109 free
- delta_down_12_110 free
- delta_down_12_111 free
- delta_down_12_112 free
- delta_down_12_113 free
- delta_down_12_114 free
- delta_down_12_115 free
- delta_down_12_116 free
- delta_down_12_117 free
- delta_down_12_118 free
- delta_down_12_119 free
- delta_down_12_120 free
- delta_down_12_121 free
- delta_down_12_122 free
- delta_down_12_123 free
- delta_down_12_124 free
- delta_down_12_125 free
- delta_down_12_126 free
- delta_down_12_127 free
- delta_down_12_128 free
- delta_down_12_129 free
- delta_down_12_130 free
- delta_down_12_131 free
- delta_down_12_132 free
- delta_down_12_133 free
- delta_down_12_134 free
- delta_down_12_135 free
- delta_down_12_136 free
- delta_down_12_137 free
- delta_down_12_138 free
- delta_down_12_139 free
- delta_down_12_140 free
- delta_down_12_141 free
- delta_down_12_142 free
- delta_down_12_143 free
- delta_down_12_144 free
- delta_down_12_145 free
- delta_down_12_146 free
- delta_down_12_147 free
- delta_down_12_148 free
- delta_down_12_149 free
- delta_down_12_150 free
- delta_down_12_151 free
- delta_down_12_152 free
- delta_down_12_153 free
- delta_down_12_154 free
- delta_down_12_155 free
- delta_down_12_156 free
- delta_down_12_157 free
- delta_down_12_158 free
- delta_down_12_159 free
- delta_down_12_160 free
- delta_down_12_161 free
- delta_down_12_162 free
- delta_down_12_163 free
- delta_down_12_164 free
- delta_down_12_165 free
- delta_down_12_166 free
- delta_down_12_167 free
- delta_down_12_168 free
- delta_down_12_169 free
- delta_down_12_170 free
- delta_down_12_171 free
- delta_down_12_172 free
- delta_down_12_173 free
- delta_down_12_174 free
- delta_down_12_175 free
- delta_down_12_176 free
- delta_down_12_177 free
- delta_down_12_178 free
- delta_down_12_179 free
- delta_down_12_180 free
- delta_down_12_181 free
- delta_down_12_182 free
- delta_down_12_183 free
- delta_down_12_184 free
- delta_down_12_185 free
- delta_down_12_186 free
- delta_down_12_187 free
- delta_down_12_188 free
- delta_down_12_189 free
- delta_down_12_190 free
- delta_down_12_191 free
- delta_down_12_192 free
- delta_down_12_193 free
- delta_down_12_194 free
- delta_down_12_195 free
- delta_down_12_196 free
- delta_down_12_197 free
- delta_down_12_198 free
- delta_down_12_199 free
- delta_down_12_200 free
- delta_down_13_1 free
- delta_down_13_2 free
- delta_down_13_3 free
- delta_down_13_4 free
- delta_down_13_5 free
- delta_down_13_6 free
- delta_down_13_7 free
- delta_down_13_8 free
- delta_down_13_9 free
- delta_down_13_10 free
- delta_down_13_11 free
- delta_down_13_12 free
- delta_down_13_13 free
- delta_down_13_14 free
- delta_down_13_15 free
- delta_down_13_16 free
- delta_down_13_17 free
- delta_down_13_18 free
- delta_down_13_19 free
- delta_down_13_20 free
- delta_down_13_21 free
- delta_down_13_22 free
- delta_down_13_23 free
- delta_down_13_24 free
- delta_down_13_25 free
- delta_down_13_26 free
- delta_down_13_27 free
- delta_down_13_28 free
- delta_down_13_29 free
- delta_down_13_30 free
- delta_down_13_31 free
- delta_down_13_32 free
- delta_down_13_33 free
- delta_down_13_34 free
- delta_down_13_35 free
- delta_down_13_36 free
- delta_down_13_37 free
- delta_down_13_38 free
- delta_down_13_39 free
- delta_down_13_40 free
- delta_down_13_41 free
- delta_down_13_42 free
- delta_down_13_43 free
- delta_down_13_44 free
- delta_down_13_45 free
- delta_down_13_46 free
- delta_down_13_47 free
- delta_down_13_48 free
- delta_down_13_49 free
- delta_down_13_50 free
- delta_down_13_51 free
- delta_down_13_52 free
- delta_down_13_53 free
- delta_down_13_54 free
- delta_down_13_55 free
- delta_down_13_56 free
- delta_down_13_57 free
- delta_down_13_58 free
- delta_down_13_59 free
- delta_down_13_60 free
- delta_down_13_61 free
- delta_down_13_62 free
- delta_down_13_63 free
- delta_down_13_64 free
- delta_down_13_65 free
- delta_down_13_66 free
- delta_down_13_67 free
- delta_down_13_68 free
- delta_down_13_69 free
- delta_down_13_70 free
- delta_down_13_71 free
- delta_down_13_72 free
- delta_down_13_73 free
- delta_down_13_74 free
- delta_down_13_75 free
- delta_down_13_76 free
- delta_down_13_77 free
- delta_down_13_78 free
- delta_down_13_79 free
- delta_down_13_80 free
- delta_down_13_81 free
- delta_down_13_82 free
- delta_down_13_83 free
- delta_down_13_84 free
- delta_down_13_85 free
- delta_down_13_86 free
- delta_down_13_87 free
- delta_down_13_88 free
- delta_down_13_89 free
- delta_down_13_90 free
- delta_down_13_91 free
- delta_down_13_92 free
- delta_down_13_93 free
- delta_down_13_94 free
- delta_down_13_95 free
- delta_down_13_96 free
- delta_down_13_97 free
- delta_down_13_98 free
- delta_down_13_99 free
- delta_down_13_100 free
- delta_down_13_101 free
- delta_down_13_102 free
- delta_down_13_103 free
- delta_down_13_104 free
- delta_down_13_105 free
- delta_down_13_106 free
- delta_down_13_107 free
- delta_down_13_108 free
- delta_down_13_109 free
- delta_down_13_110 free
- delta_down_13_111 free
- delta_down_13_112 free
- delta_down_13_113 free
- delta_down_13_114 free
- delta_down_13_115 free
- delta_down_13_116 free
- delta_down_13_117 free
- delta_down_13_118 free
- delta_down_13_119 free
- delta_down_13_120 free
- delta_down_13_121 free
- delta_down_13_122 free
- delta_down_13_123 free
- delta_down_13_124 free
- delta_down_13_125 free
- delta_down_13_126 free
- delta_down_13_127 free
- delta_down_13_128 free
- delta_down_13_129 free
- delta_down_13_130 free
- delta_down_13_131 free
- delta_down_13_132 free
- delta_down_13_133 free
- delta_down_13_134 free
- delta_down_13_135 free
- delta_down_13_136 free
- delta_down_13_137 free
- delta_down_13_138 free
- delta_down_13_139 free
- delta_down_13_140 free
- delta_down_13_141 free
- delta_down_13_142 free
- delta_down_13_143 free
- delta_down_13_144 free
- delta_down_13_145 free
- delta_down_13_146 free
- delta_down_13_147 free
- delta_down_13_148 free
- delta_down_13_149 free
- delta_down_13_150 free
- delta_down_13_151 free
- delta_down_13_152 free
- delta_down_13_153 free
- delta_down_13_154 free
- delta_down_13_155 free
- delta_down_13_156 free
- delta_down_13_157 free
- delta_down_13_158 free
- delta_down_13_159 free
- delta_down_13_160 free
- delta_down_13_161 free
- delta_down_13_162 free
- delta_down_13_163 free
- delta_down_13_164 free
- delta_down_13_165 free
- delta_down_13_166 free
- delta_down_13_167 free
- delta_down_13_168 free
- delta_down_13_169 free
- delta_down_13_170 free
- delta_down_13_171 free
- delta_down_13_172 free
- delta_down_13_173 free
- delta_down_13_174 free
- delta_down_13_175 free
- delta_down_13_176 free
- delta_down_13_177 free
- delta_down_13_178 free
- delta_down_13_179 free
- delta_down_13_180 free
- delta_down_13_181 free
- delta_down_13_182 free
- delta_down_13_183 free
- delta_down_13_184 free
- delta_down_13_185 free
- delta_down_13_186 free
- delta_down_13_187 free
- delta_down_13_188 free
- delta_down_13_189 free
- delta_down_13_190 free
- delta_down_13_191 free
- delta_down_13_192 free
- delta_down_13_193 free
- delta_down_13_194 free
- delta_down_13_195 free
- delta_down_13_196 free
- delta_down_13_197 free
- delta_down_13_198 free
- delta_down_13_199 free
- delta_down_13_200 free
- delta_down_14_1 free
- delta_down_14_2 free
- delta_down_14_3 free
- delta_down_14_4 free
- delta_down_14_5 free
- delta_down_14_6 free
- delta_down_14_7 free
- delta_down_14_8 free
- delta_down_14_9 free
- delta_down_14_10 free
- delta_down_14_11 free
- delta_down_14_12 free
- delta_down_14_13 free
- delta_down_14_14 free
- delta_down_14_15 free
- delta_down_14_16 free
- delta_down_14_17 free
- delta_down_14_18 free
- delta_down_14_19 free
- delta_down_14_20 free
- delta_down_14_21 free
- delta_down_14_22 free
- delta_down_14_23 free
- delta_down_14_24 free
- delta_down_14_25 free
- delta_down_14_26 free
- delta_down_14_27 free
- delta_down_14_28 free
- delta_down_14_29 free
- delta_down_14_30 free
- delta_down_14_31 free
- delta_down_14_32 free
- delta_down_14_33 free
- delta_down_14_34 free
- delta_down_14_35 free
- delta_down_14_36 free
- delta_down_14_37 free
- delta_down_14_38 free
- delta_down_14_39 free
- delta_down_14_40 free
- delta_down_14_41 free
- delta_down_14_42 free
- delta_down_14_43 free
- delta_down_14_44 free
- delta_down_14_45 free
- delta_down_14_46 free
- delta_down_14_47 free
- delta_down_14_48 free
- delta_down_14_49 free
- delta_down_14_50 free
- delta_down_14_51 free
- delta_down_14_52 free
- delta_down_14_53 free
- delta_down_14_54 free
- delta_down_14_55 free
- delta_down_14_56 free
- delta_down_14_57 free
- delta_down_14_58 free
- delta_down_14_59 free
- delta_down_14_60 free
- delta_down_14_61 free
- delta_down_14_62 free
- delta_down_14_63 free
- delta_down_14_64 free
- delta_down_14_65 free
- delta_down_14_66 free
- delta_down_14_67 free
- delta_down_14_68 free
- delta_down_14_69 free
- delta_down_14_70 free
- delta_down_14_71 free
- delta_down_14_72 free
- delta_down_14_73 free
- delta_down_14_74 free
- delta_down_14_75 free
- delta_down_14_76 free
- delta_down_14_77 free
- delta_down_14_78 free
- delta_down_14_79 free
- delta_down_14_80 free
- delta_down_14_81 free
- delta_down_14_82 free
- delta_down_14_83 free
- delta_down_14_84 free
- delta_down_14_85 free
- delta_down_14_86 free
- delta_down_14_87 free
- delta_down_14_88 free
- delta_down_14_89 free
- delta_down_14_90 free
- delta_down_14_91 free
- delta_down_14_92 free
- delta_down_14_93 free
- delta_down_14_94 free
- delta_down_14_95 free
- delta_down_14_96 free
- delta_down_14_97 free
- delta_down_14_98 free
- delta_down_14_99 free
- delta_down_14_100 free
- delta_down_14_101 free
- delta_down_14_102 free
- delta_down_14_103 free
- delta_down_14_104 free
- delta_down_14_105 free
- delta_down_14_106 free
- delta_down_14_107 free
- delta_down_14_108 free
- delta_down_14_109 free
- delta_down_14_110 free
- delta_down_14_111 free
- delta_down_14_112 free
- delta_down_14_113 free
- delta_down_14_114 free
- delta_down_14_115 free
- delta_down_14_116 free
- delta_down_14_117 free
- delta_down_14_118 free
- delta_down_14_119 free
- delta_down_14_120 free
- delta_down_14_121 free
- delta_down_14_122 free
- delta_down_14_123 free
- delta_down_14_124 free
- delta_down_14_125 free
- delta_down_14_126 free
- delta_down_14_127 free
- delta_down_14_128 free
- delta_down_14_129 free
- delta_down_14_130 free
- delta_down_14_131 free
- delta_down_14_132 free
- delta_down_14_133 free
- delta_down_14_134 free
- delta_down_14_135 free
- delta_down_14_136 free
- delta_down_14_137 free
- delta_down_14_138 free
- delta_down_14_139 free
- delta_down_14_140 free
- delta_down_14_141 free
- delta_down_14_142 free
- delta_down_14_143 free
- delta_down_14_144 free
- delta_down_14_145 free
- delta_down_14_146 free
- delta_down_14_147 free
- delta_down_14_148 free
- delta_down_14_149 free
- delta_down_14_150 free
- delta_down_14_151 free
- delta_down_14_152 free
- delta_down_14_153 free
- delta_down_14_154 free
- delta_down_14_155 free
- delta_down_14_156 free
- delta_down_14_157 free
- delta_down_14_158 free
- delta_down_14_159 free
- delta_down_14_160 free
- delta_down_14_161 free
- delta_down_14_162 free
- delta_down_14_163 free
- delta_down_14_164 free
- delta_down_14_165 free
- delta_down_14_166 free
- delta_down_14_167 free
- delta_down_14_168 free
- delta_down_14_169 free
- delta_down_14_170 free
- delta_down_14_171 free
- delta_down_14_172 free
- delta_down_14_173 free
- delta_down_14_174 free
- delta_down_14_175 free
- delta_down_14_176 free
- delta_down_14_177 free
- delta_down_14_178 free
- delta_down_14_179 free
- delta_down_14_180 free
- delta_down_14_181 free
- delta_down_14_182 free
- delta_down_14_183 free
- delta_down_14_184 free
- delta_down_14_185 free
- delta_down_14_186 free
- delta_down_14_187 free
- delta_down_14_188 free
- delta_down_14_189 free
- delta_down_14_190 free
- delta_down_14_191 free
- delta_down_14_192 free
- delta_down_14_193 free
- delta_down_14_194 free
- delta_down_14_195 free
- delta_down_14_196 free
- delta_down_14_197 free
- delta_down_14_198 free
- delta_down_14_199 free
- delta_down_14_200 free
- delta_down_15_1 free
- delta_down_15_2 free
- delta_down_15_3 free
- delta_down_15_4 free
- delta_down_15_5 free
- delta_down_15_6 free
- delta_down_15_7 free
- delta_down_15_8 free
- delta_down_15_9 free
- delta_down_15_10 free
- delta_down_15_11 free
- delta_down_15_12 free
- delta_down_15_13 free
- delta_down_15_14 free
- delta_down_15_15 free
- delta_down_15_16 free
- delta_down_15_17 free
- delta_down_15_18 free
- delta_down_15_19 free
- delta_down_15_20 free
- delta_down_15_21 free
- delta_down_15_22 free
- delta_down_15_23 free
- delta_down_15_24 free
- delta_down_15_25 free
- delta_down_15_26 free
- delta_down_15_27 free
- delta_down_15_28 free
- delta_down_15_29 free
- delta_down_15_30 free
- delta_down_15_31 free
- delta_down_15_32 free
- delta_down_15_33 free
- delta_down_15_34 free
- delta_down_15_35 free
- delta_down_15_36 free
- delta_down_15_37 free
- delta_down_15_38 free
- delta_down_15_39 free
- delta_down_15_40 free
- delta_down_15_41 free
- delta_down_15_42 free
- delta_down_15_43 free
- delta_down_15_44 free
- delta_down_15_45 free
- delta_down_15_46 free
- delta_down_15_47 free
- delta_down_15_48 free
- delta_down_15_49 free
- delta_down_15_50 free
- delta_down_15_51 free
- delta_down_15_52 free
- delta_down_15_53 free
- delta_down_15_54 free
- delta_down_15_55 free
- delta_down_15_56 free
- delta_down_15_57 free
- delta_down_15_58 free
- delta_down_15_59 free
- delta_down_15_60 free
- delta_down_15_61 free
- delta_down_15_62 free
- delta_down_15_63 free
- delta_down_15_64 free
- delta_down_15_65 free
- delta_down_15_66 free
- delta_down_15_67 free
- delta_down_15_68 free
- delta_down_15_69 free
- delta_down_15_70 free
- delta_down_15_71 free
- delta_down_15_72 free
- delta_down_15_73 free
- delta_down_15_74 free
- delta_down_15_75 free
- delta_down_15_76 free
- delta_down_15_77 free
- delta_down_15_78 free
- delta_down_15_79 free
- delta_down_15_80 free
- delta_down_15_81 free
- delta_down_15_82 free
- delta_down_15_83 free
- delta_down_15_84 free
- delta_down_15_85 free
- delta_down_15_86 free
- delta_down_15_87 free
- delta_down_15_88 free
- delta_down_15_89 free
- delta_down_15_90 free
- delta_down_15_91 free
- delta_down_15_92 free
- delta_down_15_93 free
- delta_down_15_94 free
- delta_down_15_95 free
- delta_down_15_96 free
- delta_down_15_97 free
- delta_down_15_98 free
- delta_down_15_99 free
- delta_down_15_100 free
- delta_down_15_101 free
- delta_down_15_102 free
- delta_down_15_103 free
- delta_down_15_104 free
- delta_down_15_105 free
- delta_down_15_106 free
- delta_down_15_107 free
- delta_down_15_108 free
- delta_down_15_109 free
- delta_down_15_110 free
- delta_down_15_111 free
- delta_down_15_112 free
- delta_down_15_113 free
- delta_down_15_114 free
- delta_down_15_115 free
- delta_down_15_116 free
- delta_down_15_117 free
- delta_down_15_118 free
- delta_down_15_119 free
- delta_down_15_120 free
- delta_down_15_121 free
- delta_down_15_122 free
- delta_down_15_123 free
- delta_down_15_124 free
- delta_down_15_125 free
- delta_down_15_126 free
- delta_down_15_127 free
- delta_down_15_128 free
- delta_down_15_129 free
- delta_down_15_130 free
- delta_down_15_131 free
- delta_down_15_132 free
- delta_down_15_133 free
- delta_down_15_134 free
- delta_down_15_135 free
- delta_down_15_136 free
- delta_down_15_137 free
- delta_down_15_138 free
- delta_down_15_139 free
- delta_down_15_140 free
- delta_down_15_141 free
- delta_down_15_142 free
- delta_down_15_143 free
- delta_down_15_144 free
- delta_down_15_145 free
- delta_down_15_146 free
- delta_down_15_147 free
- delta_down_15_148 free
- delta_down_15_149 free
- delta_down_15_150 free
- delta_down_15_151 free
- delta_down_15_152 free
- delta_down_15_153 free
- delta_down_15_154 free
- delta_down_15_155 free
- delta_down_15_156 free
- delta_down_15_157 free
- delta_down_15_158 free
- delta_down_15_159 free
- delta_down_15_160 free
- delta_down_15_161 free
- delta_down_15_162 free
- delta_down_15_163 free
- delta_down_15_164 free
- delta_down_15_165 free
- delta_down_15_166 free
- delta_down_15_167 free
- delta_down_15_168 free
- delta_down_15_169 free
- delta_down_15_170 free
- delta_down_15_171 free
- delta_down_15_172 free
- delta_down_15_173 free
- delta_down_15_174 free
- delta_down_15_175 free
- delta_down_15_176 free
- delta_down_15_177 free
- delta_down_15_178 free
- delta_down_15_179 free
- delta_down_15_180 free
- delta_down_15_181 free
- delta_down_15_182 free
- delta_down_15_183 free
- delta_down_15_184 free
- delta_down_15_185 free
- delta_down_15_186 free
- delta_down_15_187 free
- delta_down_15_188 free
- delta_down_15_189 free
- delta_down_15_190 free
- delta_down_15_191 free
- delta_down_15_192 free
- delta_down_15_193 free
- delta_down_15_194 free
- delta_down_15_195 free
- delta_down_15_196 free
- delta_down_15_197 free
- delta_down_15_198 free
- delta_down_15_199 free
- delta_down_15_200 free
- delta_down_16_1 free
- delta_down_16_2 free
- delta_down_16_3 free
- delta_down_16_4 free
- delta_down_16_5 free
- delta_down_16_6 free
- delta_down_16_7 free
- delta_down_16_8 free
- delta_down_16_9 free
- delta_down_16_10 free
- delta_down_16_11 free
- delta_down_16_12 free
- delta_down_16_13 free
- delta_down_16_14 free
- delta_down_16_15 free
- delta_down_16_16 free
- delta_down_16_17 free
- delta_down_16_18 free
- delta_down_16_19 free
- delta_down_16_20 free
- delta_down_16_21 free
- delta_down_16_22 free
- delta_down_16_23 free
- delta_down_16_24 free
- delta_down_16_25 free
- delta_down_16_26 free
- delta_down_16_27 free
- delta_down_16_28 free
- delta_down_16_29 free
- delta_down_16_30 free
- delta_down_16_31 free
- delta_down_16_32 free
- delta_down_16_33 free
- delta_down_16_34 free
- delta_down_16_35 free
- delta_down_16_36 free
- delta_down_16_37 free
- delta_down_16_38 free
- delta_down_16_39 free
- delta_down_16_40 free
- delta_down_16_41 free
- delta_down_16_42 free
- delta_down_16_43 free
- delta_down_16_44 free
- delta_down_16_45 free
- delta_down_16_46 free
- delta_down_16_47 free
- delta_down_16_48 free
- delta_down_16_49 free
- delta_down_16_50 free
- delta_down_16_51 free
- delta_down_16_52 free
- delta_down_16_53 free
- delta_down_16_54 free
- delta_down_16_55 free
- delta_down_16_56 free
- delta_down_16_57 free
- delta_down_16_58 free
- delta_down_16_59 free
- delta_down_16_60 free
- delta_down_16_61 free
- delta_down_16_62 free
- delta_down_16_63 free
- delta_down_16_64 free
- delta_down_16_65 free
- delta_down_16_66 free
- delta_down_16_67 free
- delta_down_16_68 free
- delta_down_16_69 free
- delta_down_16_70 free
- delta_down_16_71 free
- delta_down_16_72 free
- delta_down_16_73 free
- delta_down_16_74 free
- delta_down_16_75 free
- delta_down_16_76 free
- delta_down_16_77 free
- delta_down_16_78 free
- delta_down_16_79 free
- delta_down_16_80 free
- delta_down_16_81 free
- delta_down_16_82 free
- delta_down_16_83 free
- delta_down_16_84 free
- delta_down_16_85 free
- delta_down_16_86 free
- delta_down_16_87 free
- delta_down_16_88 free
- delta_down_16_89 free
- delta_down_16_90 free
- delta_down_16_91 free
- delta_down_16_92 free
- delta_down_16_93 free
- delta_down_16_94 free
- delta_down_16_95 free
- delta_down_16_96 free
- delta_down_16_97 free
- delta_down_16_98 free
- delta_down_16_99 free
- delta_down_16_100 free
- delta_down_16_101 free
- delta_down_16_102 free
- delta_down_16_103 free
- delta_down_16_104 free
- delta_down_16_105 free
- delta_down_16_106 free
- delta_down_16_107 free
- delta_down_16_108 free
- delta_down_16_109 free
- delta_down_16_110 free
- delta_down_16_111 free
- delta_down_16_112 free
- delta_down_16_113 free
- delta_down_16_114 free
- delta_down_16_115 free
- delta_down_16_116 free
- delta_down_16_117 free
- delta_down_16_118 free
- delta_down_16_119 free
- delta_down_16_120 free
- delta_down_16_121 free
- delta_down_16_122 free
- delta_down_16_123 free
- delta_down_16_124 free
- delta_down_16_125 free
- delta_down_16_126 free
- delta_down_16_127 free
- delta_down_16_128 free
- delta_down_16_129 free
- delta_down_16_130 free
- delta_down_16_131 free
- delta_down_16_132 free
- delta_down_16_133 free
- delta_down_16_134 free
- delta_down_16_135 free
- delta_down_16_136 free
- delta_down_16_137 free
- delta_down_16_138 free
- delta_down_16_139 free
- delta_down_16_140 free
- delta_down_16_141 free
- delta_down_16_142 free
- delta_down_16_143 free
- delta_down_16_144 free
- delta_down_16_145 free
- delta_down_16_146 free
- delta_down_16_147 free
- delta_down_16_148 free
- delta_down_16_149 free
- delta_down_16_150 free
- delta_down_16_151 free
- delta_down_16_152 free
- delta_down_16_153 free
- delta_down_16_154 free
- delta_down_16_155 free
- delta_down_16_156 free
- delta_down_16_157 free
- delta_down_16_158 free
- delta_down_16_159 free
- delta_down_16_160 free
- delta_down_16_161 free
- delta_down_16_162 free
- delta_down_16_163 free
- delta_down_16_164 free
- delta_down_16_165 free
- delta_down_16_166 free
- delta_down_16_167 free
- delta_down_16_168 free
- delta_down_16_169 free
- delta_down_16_170 free
- delta_down_16_171 free
- delta_down_16_172 free
- delta_down_16_173 free
- delta_down_16_174 free
- delta_down_16_175 free
- delta_down_16_176 free
- delta_down_16_177 free
- delta_down_16_178 free
- delta_down_16_179 free
- delta_down_16_180 free
- delta_down_16_181 free
- delta_down_16_182 free
- delta_down_16_183 free
- delta_down_16_184 free
- delta_down_16_185 free
- delta_down_16_186 free
- delta_down_16_187 free
- delta_down_16_188 free
- delta_down_16_189 free
- delta_down_16_190 free
- delta_down_16_191 free
- delta_down_16_192 free
- delta_down_16_193 free
- delta_down_16_194 free
- delta_down_16_195 free
- delta_down_16_196 free
- delta_down_16_197 free
- delta_down_16_198 free
- delta_down_16_199 free
- delta_down_16_200 free
- delta_down_17_1 free
- delta_down_17_2 free
- delta_down_17_3 free
- delta_down_17_4 free
- delta_down_17_5 free
- delta_down_17_6 free
- delta_down_17_7 free
- delta_down_17_8 free
- delta_down_17_9 free
- delta_down_17_10 free
- delta_down_17_11 free
- delta_down_17_12 free
- delta_down_17_13 free
- delta_down_17_14 free
- delta_down_17_15 free
- delta_down_17_16 free
- delta_down_17_17 free
- delta_down_17_18 free
- delta_down_17_19 free
- delta_down_17_20 free
- delta_down_17_21 free
- delta_down_17_22 free
- delta_down_17_23 free
- delta_down_17_24 free
- delta_down_17_25 free
- delta_down_17_26 free
- delta_down_17_27 free
- delta_down_17_28 free
- delta_down_17_29 free
- delta_down_17_30 free
- delta_down_17_31 free
- delta_down_17_32 free
- delta_down_17_33 free
- delta_down_17_34 free
- delta_down_17_35 free
- delta_down_17_36 free
- delta_down_17_37 free
- delta_down_17_38 free
- delta_down_17_39 free
- delta_down_17_40 free
- delta_down_17_41 free
- delta_down_17_42 free
- delta_down_17_43 free
- delta_down_17_44 free
- delta_down_17_45 free
- delta_down_17_46 free
- delta_down_17_47 free
- delta_down_17_48 free
- delta_down_17_49 free
- delta_down_17_50 free
- delta_down_17_51 free
- delta_down_17_52 free
- delta_down_17_53 free
- delta_down_17_54 free
- delta_down_17_55 free
- delta_down_17_56 free
- delta_down_17_57 free
- delta_down_17_58 free
- delta_down_17_59 free
- delta_down_17_60 free
- delta_down_17_61 free
- delta_down_17_62 free
- delta_down_17_63 free
- delta_down_17_64 free
- delta_down_17_65 free
- delta_down_17_66 free
- delta_down_17_67 free
- delta_down_17_68 free
- delta_down_17_69 free
- delta_down_17_70 free
- delta_down_17_71 free
- delta_down_17_72 free
- delta_down_17_73 free
- delta_down_17_74 free
- delta_down_17_75 free
- delta_down_17_76 free
- delta_down_17_77 free
- delta_down_17_78 free
- delta_down_17_79 free
- delta_down_17_80 free
- delta_down_17_81 free
- delta_down_17_82 free
- delta_down_17_83 free
- delta_down_17_84 free
- delta_down_17_85 free
- delta_down_17_86 free
- delta_down_17_87 free
- delta_down_17_88 free
- delta_down_17_89 free
- delta_down_17_90 free
- delta_down_17_91 free
- delta_down_17_92 free
- delta_down_17_93 free
- delta_down_17_94 free
- delta_down_17_95 free
- delta_down_17_96 free
- delta_down_17_97 free
- delta_down_17_98 free
- delta_down_17_99 free
- delta_down_17_100 free
- delta_down_17_101 free
- delta_down_17_102 free
- delta_down_17_103 free
- delta_down_17_104 free
- delta_down_17_105 free
- delta_down_17_106 free
- delta_down_17_107 free
- delta_down_17_108 free
- delta_down_17_109 free
- delta_down_17_110 free
- delta_down_17_111 free
- delta_down_17_112 free
- delta_down_17_113 free
- delta_down_17_114 free
- delta_down_17_115 free
- delta_down_17_116 free
- delta_down_17_117 free
- delta_down_17_118 free
- delta_down_17_119 free
- delta_down_17_120 free
- delta_down_17_121 free
- delta_down_17_122 free
- delta_down_17_123 free
- delta_down_17_124 free
- delta_down_17_125 free
- delta_down_17_126 free
- delta_down_17_127 free
- delta_down_17_128 free
- delta_down_17_129 free
- delta_down_17_130 free
- delta_down_17_131 free
- delta_down_17_132 free
- delta_down_17_133 free
- delta_down_17_134 free
- delta_down_17_135 free
- delta_down_17_136 free
- delta_down_17_137 free
- delta_down_17_138 free
- delta_down_17_139 free
- delta_down_17_140 free
- delta_down_17_141 free
- delta_down_17_142 free
- delta_down_17_143 free
- delta_down_17_144 free
- delta_down_17_145 free
- delta_down_17_146 free
- delta_down_17_147 free
- delta_down_17_148 free
- delta_down_17_149 free
- delta_down_17_150 free
- delta_down_17_151 free
- delta_down_17_152 free
- delta_down_17_153 free
- delta_down_17_154 free
- delta_down_17_155 free
- delta_down_17_156 free
- delta_down_17_157 free
- delta_down_17_158 free
- delta_down_17_159 free
- delta_down_17_160 free
- delta_down_17_161 free
- delta_down_17_162 free
- delta_down_17_163 free
- delta_down_17_164 free
- delta_down_17_165 free
- delta_down_17_166 free
- delta_down_17_167 free
- delta_down_17_168 free
- delta_down_17_169 free
- delta_down_17_170 free
- delta_down_17_171 free
- delta_down_17_172 free
- delta_down_17_173 free
- delta_down_17_174 free
- delta_down_17_175 free
- delta_down_17_176 free
- delta_down_17_177 free
- delta_down_17_178 free
- delta_down_17_179 free
- delta_down_17_180 free
- delta_down_17_181 free
- delta_down_17_182 free
- delta_down_17_183 free
- delta_down_17_184 free
- delta_down_17_185 free
- delta_down_17_186 free
- delta_down_17_187 free
- delta_down_17_188 free
- delta_down_17_189 free
- delta_down_17_190 free
- delta_down_17_191 free
- delta_down_17_192 free
- delta_down_17_193 free
- delta_down_17_194 free
- delta_down_17_195 free
- delta_down_17_196 free
- delta_down_17_197 free
- delta_down_17_198 free
- delta_down_17_199 free
- delta_down_17_200 free
- delta_down_18_1 free
- delta_down_18_2 free
- delta_down_18_3 free
- delta_down_18_4 free
- delta_down_18_5 free
- delta_down_18_6 free
- delta_down_18_7 free
- delta_down_18_8 free
- delta_down_18_9 free
- delta_down_18_10 free
- delta_down_18_11 free
- delta_down_18_12 free
- delta_down_18_13 free
- delta_down_18_14 free
- delta_down_18_15 free
- delta_down_18_16 free
- delta_down_18_17 free
- delta_down_18_18 free
- delta_down_18_19 free
- delta_down_18_20 free
- delta_down_18_21 free
- delta_down_18_22 free
- delta_down_18_23 free
- delta_down_18_24 free
- delta_down_18_25 free
- delta_down_18_26 free
- delta_down_18_27 free
- delta_down_18_28 free
- delta_down_18_29 free
- delta_down_18_30 free
- delta_down_18_31 free
- delta_down_18_32 free
- delta_down_18_33 free
- delta_down_18_34 free
- delta_down_18_35 free
- delta_down_18_36 free
- delta_down_18_37 free
- delta_down_18_38 free
- delta_down_18_39 free
- delta_down_18_40 free
- delta_down_18_41 free
- delta_down_18_42 free
- delta_down_18_43 free
- delta_down_18_44 free
- delta_down_18_45 free
- delta_down_18_46 free
- delta_down_18_47 free
- delta_down_18_48 free
- delta_down_18_49 free
- delta_down_18_50 free
- delta_down_18_51 free
- delta_down_18_52 free
- delta_down_18_53 free
- delta_down_18_54 free
- delta_down_18_55 free
- delta_down_18_56 free
- delta_down_18_57 free
- delta_down_18_58 free
- delta_down_18_59 free
- delta_down_18_60 free
- delta_down_18_61 free
- delta_down_18_62 free
- delta_down_18_63 free
- delta_down_18_64 free
- delta_down_18_65 free
- delta_down_18_66 free
- delta_down_18_67 free
- delta_down_18_68 free
- delta_down_18_69 free
- delta_down_18_70 free
- delta_down_18_71 free
- delta_down_18_72 free
- delta_down_18_73 free
- delta_down_18_74 free
- delta_down_18_75 free
- delta_down_18_76 free
- delta_down_18_77 free
- delta_down_18_78 free
- delta_down_18_79 free
- delta_down_18_80 free
- delta_down_18_81 free
- delta_down_18_82 free
- delta_down_18_83 free
- delta_down_18_84 free
- delta_down_18_85 free
- delta_down_18_86 free
- delta_down_18_87 free
- delta_down_18_88 free
- delta_down_18_89 free
- delta_down_18_90 free
- delta_down_18_91 free
- delta_down_18_92 free
- delta_down_18_93 free
- delta_down_18_94 free
- delta_down_18_95 free
- delta_down_18_96 free
- delta_down_18_97 free
- delta_down_18_98 free
- delta_down_18_99 free
- delta_down_18_100 free
- delta_down_18_101 free
- delta_down_18_102 free
- delta_down_18_103 free
- delta_down_18_104 free
- delta_down_18_105 free
- delta_down_18_106 free
- delta_down_18_107 free
- delta_down_18_108 free
- delta_down_18_109 free
- delta_down_18_110 free
- delta_down_18_111 free
- delta_down_18_112 free
- delta_down_18_113 free
- delta_down_18_114 free
- delta_down_18_115 free
- delta_down_18_116 free
- delta_down_18_117 free
- delta_down_18_118 free
- delta_down_18_119 free
- delta_down_18_120 free
- delta_down_18_121 free
- delta_down_18_122 free
- delta_down_18_123 free
- delta_down_18_124 free
- delta_down_18_125 free
- delta_down_18_126 free
- delta_down_18_127 free
- delta_down_18_128 free
- delta_down_18_129 free
- delta_down_18_130 free
- delta_down_18_131 free
- delta_down_18_132 free
- delta_down_18_133 free
- delta_down_18_134 free
- delta_down_18_135 free
- delta_down_18_136 free
- delta_down_18_137 free
- delta_down_18_138 free
- delta_down_18_139 free
- delta_down_18_140 free
- delta_down_18_141 free
- delta_down_18_142 free
- delta_down_18_143 free
- delta_down_18_144 free
- delta_down_18_145 free
- delta_down_18_146 free
- delta_down_18_147 free
- delta_down_18_148 free
- delta_down_18_149 free
- delta_down_18_150 free
- delta_down_18_151 free
- delta_down_18_152 free
- delta_down_18_153 free
- delta_down_18_154 free
- delta_down_18_155 free
- delta_down_18_156 free
- delta_down_18_157 free
- delta_down_18_158 free
- delta_down_18_159 free
- delta_down_18_160 free
- delta_down_18_161 free
- delta_down_18_162 free
- delta_down_18_163 free
- delta_down_18_164 free
- delta_down_18_165 free
- delta_down_18_166 free
- delta_down_18_167 free
- delta_down_18_168 free
- delta_down_18_169 free
- delta_down_18_170 free
- delta_down_18_171 free
- delta_down_18_172 free
- delta_down_18_173 free
- delta_down_18_174 free
- delta_down_18_175 free
- delta_down_18_176 free
- delta_down_18_177 free
- delta_down_18_178 free
- delta_down_18_179 free
- delta_down_18_180 free
- delta_down_18_181 free
- delta_down_18_182 free
- delta_down_18_183 free
- delta_down_18_184 free
- delta_down_18_185 free
- delta_down_18_186 free
- delta_down_18_187 free
- delta_down_18_188 free
- delta_down_18_189 free
- delta_down_18_190 free
- delta_down_18_191 free
- delta_down_18_192 free
- delta_down_18_193 free
- delta_down_18_194 free
- delta_down_18_195 free
- delta_down_18_196 free
- delta_down_18_197 free
- delta_down_18_198 free
- delta_down_18_199 free
- delta_down_18_200 free
- delta_down_19_1 free
- delta_down_19_2 free
- delta_down_19_3 free
- delta_down_19_4 free
- delta_down_19_5 free
- delta_down_19_6 free
- delta_down_19_7 free
- delta_down_19_8 free
- delta_down_19_9 free
- delta_down_19_10 free
- delta_down_19_11 free
- delta_down_19_12 free
- delta_down_19_13 free
- delta_down_19_14 free
- delta_down_19_15 free
- delta_down_19_16 free
- delta_down_19_17 free
- delta_down_19_18 free
- delta_down_19_19 free
- delta_down_19_20 free
- delta_down_19_21 free
- delta_down_19_22 free
- delta_down_19_23 free
- delta_down_19_24 free
- delta_down_19_25 free
- delta_down_19_26 free
- delta_down_19_27 free
- delta_down_19_28 free
- delta_down_19_29 free
- delta_down_19_30 free
- delta_down_19_31 free
- delta_down_19_32 free
- delta_down_19_33 free
- delta_down_19_34 free
- delta_down_19_35 free
- delta_down_19_36 free
- delta_down_19_37 free
- delta_down_19_38 free
- delta_down_19_39 free
- delta_down_19_40 free
- delta_down_19_41 free
- delta_down_19_42 free
- delta_down_19_43 free
- delta_down_19_44 free
- delta_down_19_45 free
- delta_down_19_46 free
- delta_down_19_47 free
- delta_down_19_48 free
- delta_down_19_49 free
- delta_down_19_50 free
- delta_down_19_51 free
- delta_down_19_52 free
- delta_down_19_53 free
- delta_down_19_54 free
- delta_down_19_55 free
- delta_down_19_56 free
- delta_down_19_57 free
- delta_down_19_58 free
- delta_down_19_59 free
- delta_down_19_60 free
- delta_down_19_61 free
- delta_down_19_62 free
- delta_down_19_63 free
- delta_down_19_64 free
- delta_down_19_65 free
- delta_down_19_66 free
- delta_down_19_67 free
- delta_down_19_68 free
- delta_down_19_69 free
- delta_down_19_70 free
- delta_down_19_71 free
- delta_down_19_72 free
- delta_down_19_73 free
- delta_down_19_74 free
- delta_down_19_75 free
- delta_down_19_76 free
- delta_down_19_77 free
- delta_down_19_78 free
- delta_down_19_79 free
- delta_down_19_80 free
- delta_down_19_81 free
- delta_down_19_82 free
- delta_down_19_83 free
- delta_down_19_84 free
- delta_down_19_85 free
- delta_down_19_86 free
- delta_down_19_87 free
- delta_down_19_88 free
- delta_down_19_89 free
- delta_down_19_90 free
- delta_down_19_91 free
- delta_down_19_92 free
- delta_down_19_93 free
- delta_down_19_94 free
- delta_down_19_95 free
- delta_down_19_96 free
- delta_down_19_97 free
- delta_down_19_98 free
- delta_down_19_99 free
- delta_down_19_100 free
- delta_down_19_101 free
- delta_down_19_102 free
- delta_down_19_103 free
- delta_down_19_104 free
- delta_down_19_105 free
- delta_down_19_106 free
- delta_down_19_107 free
- delta_down_19_108 free
- delta_down_19_109 free
- delta_down_19_110 free
- delta_down_19_111 free
- delta_down_19_112 free
- delta_down_19_113 free
- delta_down_19_114 free
- delta_down_19_115 free
- delta_down_19_116 free
- delta_down_19_117 free
- delta_down_19_118 free
- delta_down_19_119 free
- delta_down_19_120 free
- delta_down_19_121 free
- delta_down_19_122 free
- delta_down_19_123 free
- delta_down_19_124 free
- delta_down_19_125 free
- delta_down_19_126 free
- delta_down_19_127 free
- delta_down_19_128 free
- delta_down_19_129 free
- delta_down_19_130 free
- delta_down_19_131 free
- delta_down_19_132 free
- delta_down_19_133 free
- delta_down_19_134 free
- delta_down_19_135 free
- delta_down_19_136 free
- delta_down_19_137 free
- delta_down_19_138 free
- delta_down_19_139 free
- delta_down_19_140 free
- delta_down_19_141 free
- delta_down_19_142 free
- delta_down_19_143 free
- delta_down_19_144 free
- delta_down_19_145 free
- delta_down_19_146 free
- delta_down_19_147 free
- delta_down_19_148 free
- delta_down_19_149 free
- delta_down_19_150 free
- delta_down_19_151 free
- delta_down_19_152 free
- delta_down_19_153 free
- delta_down_19_154 free
- delta_down_19_155 free
- delta_down_19_156 free
- delta_down_19_157 free
- delta_down_19_158 free
- delta_down_19_159 free
- delta_down_19_160 free
- delta_down_19_161 free
- delta_down_19_162 free
- delta_down_19_163 free
- delta_down_19_164 free
- delta_down_19_165 free
- delta_down_19_166 free
- delta_down_19_167 free
- delta_down_19_168 free
- delta_down_19_169 free
- delta_down_19_170 free
- delta_down_19_171 free
- delta_down_19_172 free
- delta_down_19_173 free
- delta_down_19_174 free
- delta_down_19_175 free
- delta_down_19_176 free
- delta_down_19_177 free
- delta_down_19_178 free
- delta_down_19_179 free
- delta_down_19_180 free
- delta_down_19_181 free
- delta_down_19_182 free
- delta_down_19_183 free
- delta_down_19_184 free
- delta_down_19_185 free
- delta_down_19_186 free
- delta_down_19_187 free
- delta_down_19_188 free
- delta_down_19_189 free
- delta_down_19_190 free
- delta_down_19_191 free
- delta_down_19_192 free
- delta_down_19_193 free
- delta_down_19_194 free
- delta_down_19_195 free
- delta_down_19_196 free
- delta_down_19_197 free
- delta_down_19_198 free
- delta_down_19_199 free
- delta_down_19_200 free
- delta_down_20_1 free
- delta_down_20_2 free
- delta_down_20_3 free
- delta_down_20_4 free
- delta_down_20_5 free
- delta_down_20_6 free
- delta_down_20_7 free
- delta_down_20_8 free
- delta_down_20_9 free
- delta_down_20_10 free
- delta_down_20_11 free
- delta_down_20_12 free
- delta_down_20_13 free
- delta_down_20_14 free
- delta_down_20_15 free
- delta_down_20_16 free
- delta_down_20_17 free
- delta_down_20_18 free
- delta_down_20_19 free
- delta_down_20_20 free
- delta_down_20_21 free
- delta_down_20_22 free
- delta_down_20_23 free
- delta_down_20_24 free
- delta_down_20_25 free
- delta_down_20_26 free
- delta_down_20_27 free
- delta_down_20_28 free
- delta_down_20_29 free
- delta_down_20_30 free
- delta_down_20_31 free
- delta_down_20_32 free
- delta_down_20_33 free
- delta_down_20_34 free
- delta_down_20_35 free
- delta_down_20_36 free
- delta_down_20_37 free
- delta_down_20_38 free
- delta_down_20_39 free
- delta_down_20_40 free
- delta_down_20_41 free
- delta_down_20_42 free
- delta_down_20_43 free
- delta_down_20_44 free
- delta_down_20_45 free
- delta_down_20_46 free
- delta_down_20_47 free
- delta_down_20_48 free
- delta_down_20_49 free
- delta_down_20_50 free
- delta_down_20_51 free
- delta_down_20_52 free
- delta_down_20_53 free
- delta_down_20_54 free
- delta_down_20_55 free
- delta_down_20_56 free
- delta_down_20_57 free
- delta_down_20_58 free
- delta_down_20_59 free
- delta_down_20_60 free
- delta_down_20_61 free
- delta_down_20_62 free
- delta_down_20_63 free
- delta_down_20_64 free
- delta_down_20_65 free
- delta_down_20_66 free
- delta_down_20_67 free
- delta_down_20_68 free
- delta_down_20_69 free
- delta_down_20_70 free
- delta_down_20_71 free
- delta_down_20_72 free
- delta_down_20_73 free
- delta_down_20_74 free
- delta_down_20_75 free
- delta_down_20_76 free
- delta_down_20_77 free
- delta_down_20_78 free
- delta_down_20_79 free
- delta_down_20_80 free
- delta_down_20_81 free
- delta_down_20_82 free
- delta_down_20_83 free
- delta_down_20_84 free
- delta_down_20_85 free
- delta_down_20_86 free
- delta_down_20_87 free
- delta_down_20_88 free
- delta_down_20_89 free
- delta_down_20_90 free
- delta_down_20_91 free
- delta_down_20_92 free
- delta_down_20_93 free
- delta_down_20_94 free
- delta_down_20_95 free
- delta_down_20_96 free
- delta_down_20_97 free
- delta_down_20_98 free
- delta_down_20_99 free
- delta_down_20_100 free
- delta_down_20_101 free
- delta_down_20_102 free
- delta_down_20_103 free
- delta_down_20_104 free
- delta_down_20_105 free
- delta_down_20_106 free
- delta_down_20_107 free
- delta_down_20_108 free
- delta_down_20_109 free
- delta_down_20_110 free
- delta_down_20_111 free
- delta_down_20_112 free
- delta_down_20_113 free
- delta_down_20_114 free
- delta_down_20_115 free
- delta_down_20_116 free
- delta_down_20_117 free
- delta_down_20_118 free
- delta_down_20_119 free
- delta_down_20_120 free
- delta_down_20_121 free
- delta_down_20_122 free
- delta_down_20_123 free
- delta_down_20_124 free
- delta_down_20_125 free
- delta_down_20_126 free
- delta_down_20_127 free
- delta_down_20_128 free
- delta_down_20_129 free
- delta_down_20_130 free
- delta_down_20_131 free
- delta_down_20_132 free
- delta_down_20_133 free
- delta_down_20_134 free
- delta_down_20_135 free
- delta_down_20_136 free
- delta_down_20_137 free
- delta_down_20_138 free
- delta_down_20_139 free
- delta_down_20_140 free
- delta_down_20_141 free
- delta_down_20_142 free
- delta_down_20_143 free
- delta_down_20_144 free
- delta_down_20_145 free
- delta_down_20_146 free
- delta_down_20_147 free
- delta_down_20_148 free
- delta_down_20_149 free
- delta_down_20_150 free
- delta_down_20_151 free
- delta_down_20_152 free
- delta_down_20_153 free
- delta_down_20_154 free
- delta_down_20_155 free
- delta_down_20_156 free
- delta_down_20_157 free
- delta_down_20_158 free
- delta_down_20_159 free
- delta_down_20_160 free
- delta_down_20_161 free
- delta_down_20_162 free
- delta_down_20_163 free
- delta_down_20_164 free
- delta_down_20_165 free
- delta_down_20_166 free
- delta_down_20_167 free
- delta_down_20_168 free
- delta_down_20_169 free
- delta_down_20_170 free
- delta_down_20_171 free
- delta_down_20_172 free
- delta_down_20_173 free
- delta_down_20_174 free
- delta_down_20_175 free
- delta_down_20_176 free
- delta_down_20_177 free
- delta_down_20_178 free
- delta_down_20_179 free
- delta_down_20_180 free
- delta_down_20_181 free
- delta_down_20_182 free
- delta_down_20_183 free
- delta_down_20_184 free
- delta_down_20_185 free
- delta_down_20_186 free
- delta_down_20_187 free
- delta_down_20_188 free
- delta_down_20_189 free
- delta_down_20_190 free
- delta_down_20_191 free
- delta_down_20_192 free
- delta_down_20_193 free
- delta_down_20_194 free
- delta_down_20_195 free
- delta_down_20_196 free
- delta_down_20_197 free
- delta_down_20_198 free
- delta_down_20_199 free
- delta_down_20_200 free
- delta_down_21_1 free
- delta_down_21_2 free
- delta_down_21_3 free
- delta_down_21_4 free
- delta_down_21_5 free
- delta_down_21_6 free
- delta_down_21_7 free
- delta_down_21_8 free
- delta_down_21_9 free
- delta_down_21_10 free
- delta_down_21_11 free
- delta_down_21_12 free
- delta_down_21_13 free
- delta_down_21_14 free
- delta_down_21_15 free
- delta_down_21_16 free
- delta_down_21_17 free
- delta_down_21_18 free
- delta_down_21_19 free
- delta_down_21_20 free
- delta_down_21_21 free
- delta_down_21_22 free
- delta_down_21_23 free
- delta_down_21_24 free
- delta_down_21_25 free
- delta_down_21_26 free
- delta_down_21_27 free
- delta_down_21_28 free
- delta_down_21_29 free
- delta_down_21_30 free
- delta_down_21_31 free
- delta_down_21_32 free
- delta_down_21_33 free
- delta_down_21_34 free
- delta_down_21_35 free
- delta_down_21_36 free
- delta_down_21_37 free
- delta_down_21_38 free
- delta_down_21_39 free
- delta_down_21_40 free
- delta_down_21_41 free
- delta_down_21_42 free
- delta_down_21_43 free
- delta_down_21_44 free
- delta_down_21_45 free
- delta_down_21_46 free
- delta_down_21_47 free
- delta_down_21_48 free
- delta_down_21_49 free
- delta_down_21_50 free
- delta_down_21_51 free
- delta_down_21_52 free
- delta_down_21_53 free
- delta_down_21_54 free
- delta_down_21_55 free
- delta_down_21_56 free
- delta_down_21_57 free
- delta_down_21_58 free
- delta_down_21_59 free
- delta_down_21_60 free
- delta_down_21_61 free
- delta_down_21_62 free
- delta_down_21_63 free
- delta_down_21_64 free
- delta_down_21_65 free
- delta_down_21_66 free
- delta_down_21_67 free
- delta_down_21_68 free
- delta_down_21_69 free
- delta_down_21_70 free
- delta_down_21_71 free
- delta_down_21_72 free
- delta_down_21_73 free
- delta_down_21_74 free
- delta_down_21_75 free
- delta_down_21_76 free
- delta_down_21_77 free
- delta_down_21_78 free
- delta_down_21_79 free
- delta_down_21_80 free
- delta_down_21_81 free
- delta_down_21_82 free
- delta_down_21_83 free
- delta_down_21_84 free
- delta_down_21_85 free
- delta_down_21_86 free
- delta_down_21_87 free
- delta_down_21_88 free
- delta_down_21_89 free
- delta_down_21_90 free
- delta_down_21_91 free
- delta_down_21_92 free
- delta_down_21_93 free
- delta_down_21_94 free
- delta_down_21_95 free
- delta_down_21_96 free
- delta_down_21_97 free
- delta_down_21_98 free
- delta_down_21_99 free
- delta_down_21_100 free
- delta_down_21_101 free
- delta_down_21_102 free
- delta_down_21_103 free
- delta_down_21_104 free
- delta_down_21_105 free
- delta_down_21_106 free
- delta_down_21_107 free
- delta_down_21_108 free
- delta_down_21_109 free
- delta_down_21_110 free
- delta_down_21_111 free
- delta_down_21_112 free
- delta_down_21_113 free
- delta_down_21_114 free
- delta_down_21_115 free
- delta_down_21_116 free
- delta_down_21_117 free
- delta_down_21_118 free
- delta_down_21_119 free
- delta_down_21_120 free
- delta_down_21_121 free
- delta_down_21_122 free
- delta_down_21_123 free
- delta_down_21_124 free
- delta_down_21_125 free
- delta_down_21_126 free
- delta_down_21_127 free
- delta_down_21_128 free
- delta_down_21_129 free
- delta_down_21_130 free
- delta_down_21_131 free
- delta_down_21_132 free
- delta_down_21_133 free
- delta_down_21_134 free
- delta_down_21_135 free
- delta_down_21_136 free
- delta_down_21_137 free
- delta_down_21_138 free
- delta_down_21_139 free
- delta_down_21_140 free
- delta_down_21_141 free
- delta_down_21_142 free
- delta_down_21_143 free
- delta_down_21_144 free
- delta_down_21_145 free
- delta_down_21_146 free
- delta_down_21_147 free
- delta_down_21_148 free
- delta_down_21_149 free
- delta_down_21_150 free
- delta_down_21_151 free
- delta_down_21_152 free
- delta_down_21_153 free
- delta_down_21_154 free
- delta_down_21_155 free
- delta_down_21_156 free
- delta_down_21_157 free
- delta_down_21_158 free
- delta_down_21_159 free
- delta_down_21_160 free
- delta_down_21_161 free
- delta_down_21_162 free
- delta_down_21_163 free
- delta_down_21_164 free
- delta_down_21_165 free
- delta_down_21_166 free
- delta_down_21_167 free
- delta_down_21_168 free
- delta_down_21_169 free
- delta_down_21_170 free
- delta_down_21_171 free
- delta_down_21_172 free
- delta_down_21_173 free
- delta_down_21_174 free
- delta_down_21_175 free
- delta_down_21_176 free
- delta_down_21_177 free
- delta_down_21_178 free
- delta_down_21_179 free
- delta_down_21_180 free
- delta_down_21_181 free
- delta_down_21_182 free
- delta_down_21_183 free
- delta_down_21_184 free
- delta_down_21_185 free
- delta_down_21_186 free
- delta_down_21_187 free
- delta_down_21_188 free
- delta_down_21_189 free
- delta_down_21_190 free
- delta_down_21_191 free
- delta_down_21_192 free
- delta_down_21_193 free
- delta_down_21_194 free
- delta_down_21_195 free
- delta_down_21_196 free
- delta_down_21_197 free
- delta_down_21_198 free
- delta_down_21_199 free
- delta_down_21_200 free
- delta_down_22_1 free
- delta_down_22_2 free
- delta_down_22_3 free
- delta_down_22_4 free
- delta_down_22_5 free
- delta_down_22_6 free
- delta_down_22_7 free
- delta_down_22_8 free
- delta_down_22_9 free
- delta_down_22_10 free
- delta_down_22_11 free
- delta_down_22_12 free
- delta_down_22_13 free
- delta_down_22_14 free
- delta_down_22_15 free
- delta_down_22_16 free
- delta_down_22_17 free
- delta_down_22_18 free
- delta_down_22_19 free
- delta_down_22_20 free
- delta_down_22_21 free
- delta_down_22_22 free
- delta_down_22_23 free
- delta_down_22_24 free
- delta_down_22_25 free
- delta_down_22_26 free
- delta_down_22_27 free
- delta_down_22_28 free
- delta_down_22_29 free
- delta_down_22_30 free
- delta_down_22_31 free
- delta_down_22_32 free
- delta_down_22_33 free
- delta_down_22_34 free
- delta_down_22_35 free
- delta_down_22_36 free
- delta_down_22_37 free
- delta_down_22_38 free
- delta_down_22_39 free
- delta_down_22_40 free
- delta_down_22_41 free
- delta_down_22_42 free
- delta_down_22_43 free
- delta_down_22_44 free
- delta_down_22_45 free
- delta_down_22_46 free
- delta_down_22_47 free
- delta_down_22_48 free
- delta_down_22_49 free
- delta_down_22_50 free
- delta_down_22_51 free
- delta_down_22_52 free
- delta_down_22_53 free
- delta_down_22_54 free
- delta_down_22_55 free
- delta_down_22_56 free
- delta_down_22_57 free
- delta_down_22_58 free
- delta_down_22_59 free
- delta_down_22_60 free
- delta_down_22_61 free
- delta_down_22_62 free
- delta_down_22_63 free
- delta_down_22_64 free
- delta_down_22_65 free
- delta_down_22_66 free
- delta_down_22_67 free
- delta_down_22_68 free
- delta_down_22_69 free
- delta_down_22_70 free
- delta_down_22_71 free
- delta_down_22_72 free
- delta_down_22_73 free
- delta_down_22_74 free
- delta_down_22_75 free
- delta_down_22_76 free
- delta_down_22_77 free
- delta_down_22_78 free
- delta_down_22_79 free
- delta_down_22_80 free
- delta_down_22_81 free
- delta_down_22_82 free
- delta_down_22_83 free
- delta_down_22_84 free
- delta_down_22_85 free
- delta_down_22_86 free
- delta_down_22_87 free
- delta_down_22_88 free
- delta_down_22_89 free
- delta_down_22_90 free
- delta_down_22_91 free
- delta_down_22_92 free
- delta_down_22_93 free
- delta_down_22_94 free
- delta_down_22_95 free
- delta_down_22_96 free
- delta_down_22_97 free
- delta_down_22_98 free
- delta_down_22_99 free
- delta_down_22_100 free
- delta_down_22_101 free
- delta_down_22_102 free
- delta_down_22_103 free
- delta_down_22_104 free
- delta_down_22_105 free
- delta_down_22_106 free
- delta_down_22_107 free
- delta_down_22_108 free
- delta_down_22_109 free
- delta_down_22_110 free
- delta_down_22_111 free
- delta_down_22_112 free
- delta_down_22_113 free
- delta_down_22_114 free
- delta_down_22_115 free
- delta_down_22_116 free
- delta_down_22_117 free
- delta_down_22_118 free
- delta_down_22_119 free
- delta_down_22_120 free
- delta_down_22_121 free
- delta_down_22_122 free
- delta_down_22_123 free
- delta_down_22_124 free
- delta_down_22_125 free
- delta_down_22_126 free
- delta_down_22_127 free
- delta_down_22_128 free
- delta_down_22_129 free
- delta_down_22_130 free
- delta_down_22_131 free
- delta_down_22_132 free
- delta_down_22_133 free
- delta_down_22_134 free
- delta_down_22_135 free
- delta_down_22_136 free
- delta_down_22_137 free
- delta_down_22_138 free
- delta_down_22_139 free
- delta_down_22_140 free
- delta_down_22_141 free
- delta_down_22_142 free
- delta_down_22_143 free
- delta_down_22_144 free
- delta_down_22_145 free
- delta_down_22_146 free
- delta_down_22_147 free
- delta_down_22_148 free
- delta_down_22_149 free
- delta_down_22_150 free
- delta_down_22_151 free
- delta_down_22_152 free
- delta_down_22_153 free
- delta_down_22_154 free
- delta_down_22_155 free
- delta_down_22_156 free
- delta_down_22_157 free
- delta_down_22_158 free
- delta_down_22_159 free
- delta_down_22_160 free
- delta_down_22_161 free
- delta_down_22_162 free
- delta_down_22_163 free
- delta_down_22_164 free
- delta_down_22_165 free
- delta_down_22_166 free
- delta_down_22_167 free
- delta_down_22_168 free
- delta_down_22_169 free
- delta_down_22_170 free
- delta_down_22_171 free
- delta_down_22_172 free
- delta_down_22_173 free
- delta_down_22_174 free
- delta_down_22_175 free
- delta_down_22_176 free
- delta_down_22_177 free
- delta_down_22_178 free
- delta_down_22_179 free
- delta_down_22_180 free
- delta_down_22_181 free
- delta_down_22_182 free
- delta_down_22_183 free
- delta_down_22_184 free
- delta_down_22_185 free
- delta_down_22_186 free
- delta_down_22_187 free
- delta_down_22_188 free
- delta_down_22_189 free
- delta_down_22_190 free
- delta_down_22_191 free
- delta_down_22_192 free
- delta_down_22_193 free
- delta_down_22_194 free
- delta_down_22_195 free
- delta_down_22_196 free
- delta_down_22_197 free
- delta_down_22_198 free
- delta_down_22_199 free
- delta_down_22_200 free
- delta_down_23_1 free
- delta_down_23_2 free
- delta_down_23_3 free
- delta_down_23_4 free
- delta_down_23_5 free
- delta_down_23_6 free
- delta_down_23_7 free
- delta_down_23_8 free
- delta_down_23_9 free
- delta_down_23_10 free
- delta_down_23_11 free
- delta_down_23_12 free
- delta_down_23_13 free
- delta_down_23_14 free
- delta_down_23_15 free
- delta_down_23_16 free
- delta_down_23_17 free
- delta_down_23_18 free
- delta_down_23_19 free
- delta_down_23_20 free
- delta_down_23_21 free
- delta_down_23_22 free
- delta_down_23_23 free
- delta_down_23_24 free
- delta_down_23_25 free
- delta_down_23_26 free
- delta_down_23_27 free
- delta_down_23_28 free
- delta_down_23_29 free
- delta_down_23_30 free
- delta_down_23_31 free
- delta_down_23_32 free
- delta_down_23_33 free
- delta_down_23_34 free
- delta_down_23_35 free
- delta_down_23_36 free
- delta_down_23_37 free
- delta_down_23_38 free
- delta_down_23_39 free
- delta_down_23_40 free
- delta_down_23_41 free
- delta_down_23_42 free
- delta_down_23_43 free
- delta_down_23_44 free
- delta_down_23_45 free
- delta_down_23_46 free
- delta_down_23_47 free
- delta_down_23_48 free
- delta_down_23_49 free
- delta_down_23_50 free
- delta_down_23_51 free
- delta_down_23_52 free
- delta_down_23_53 free
- delta_down_23_54 free
- delta_down_23_55 free
- delta_down_23_56 free
- delta_down_23_57 free
- delta_down_23_58 free
- delta_down_23_59 free
- delta_down_23_60 free
- delta_down_23_61 free
- delta_down_23_62 free
- delta_down_23_63 free
- delta_down_23_64 free
- delta_down_23_65 free
- delta_down_23_66 free
- delta_down_23_67 free
- delta_down_23_68 free
- delta_down_23_69 free
- delta_down_23_70 free
- delta_down_23_71 free
- delta_down_23_72 free
- delta_down_23_73 free
- delta_down_23_74 free
- delta_down_23_75 free
- delta_down_23_76 free
- delta_down_23_77 free
- delta_down_23_78 free
- delta_down_23_79 free
- delta_down_23_80 free
- delta_down_23_81 free
- delta_down_23_82 free
- delta_down_23_83 free
- delta_down_23_84 free
- delta_down_23_85 free
- delta_down_23_86 free
- delta_down_23_87 free
- delta_down_23_88 free
- delta_down_23_89 free
- delta_down_23_90 free
- delta_down_23_91 free
- delta_down_23_92 free
- delta_down_23_93 free
- delta_down_23_94 free
- delta_down_23_95 free
- delta_down_23_96 free
- delta_down_23_97 free
- delta_down_23_98 free
- delta_down_23_99 free
- delta_down_23_100 free
- delta_down_23_101 free
- delta_down_23_102 free
- delta_down_23_103 free
- delta_down_23_104 free
- delta_down_23_105 free
- delta_down_23_106 free
- delta_down_23_107 free
- delta_down_23_108 free
- delta_down_23_109 free
- delta_down_23_110 free
- delta_down_23_111 free
- delta_down_23_112 free
- delta_down_23_113 free
- delta_down_23_114 free
- delta_down_23_115 free
- delta_down_23_116 free
- delta_down_23_117 free
- delta_down_23_118 free
- delta_down_23_119 free
- delta_down_23_120 free
- delta_down_23_121 free
- delta_down_23_122 free
- delta_down_23_123 free
- delta_down_23_124 free
- delta_down_23_125 free
- delta_down_23_126 free
- delta_down_23_127 free
- delta_down_23_128 free
- delta_down_23_129 free
- delta_down_23_130 free
- delta_down_23_131 free
- delta_down_23_132 free
- delta_down_23_133 free
- delta_down_23_134 free
- delta_down_23_135 free
- delta_down_23_136 free
- delta_down_23_137 free
- delta_down_23_138 free
- delta_down_23_139 free
- delta_down_23_140 free
- delta_down_23_141 free
- delta_down_23_142 free
- delta_down_23_143 free
- delta_down_23_144 free
- delta_down_23_145 free
- delta_down_23_146 free
- delta_down_23_147 free
- delta_down_23_148 free
- delta_down_23_149 free
- delta_down_23_150 free
- delta_down_23_151 free
- delta_down_23_152 free
- delta_down_23_153 free
- delta_down_23_154 free
- delta_down_23_155 free
- delta_down_23_156 free
- delta_down_23_157 free
- delta_down_23_158 free
- delta_down_23_159 free
- delta_down_23_160 free
- delta_down_23_161 free
- delta_down_23_162 free
- delta_down_23_163 free
- delta_down_23_164 free
- delta_down_23_165 free
- delta_down_23_166 free
- delta_down_23_167 free
- delta_down_23_168 free
- delta_down_23_169 free
- delta_down_23_170 free
- delta_down_23_171 free
- delta_down_23_172 free
- delta_down_23_173 free
- delta_down_23_174 free
- delta_down_23_175 free
- delta_down_23_176 free
- delta_down_23_177 free
- delta_down_23_178 free
- delta_down_23_179 free
- delta_down_23_180 free
- delta_down_23_181 free
- delta_down_23_182 free
- delta_down_23_183 free
- delta_down_23_184 free
- delta_down_23_185 free
- delta_down_23_186 free
- delta_down_23_187 free
- delta_down_23_188 free
- delta_down_23_189 free
- delta_down_23_190 free
- delta_down_23_191 free
- delta_down_23_192 free
- delta_down_23_193 free
- delta_down_23_194 free
- delta_down_23_195 free
- delta_down_23_196 free
- delta_down_23_197 free
- delta_down_23_198 free
- delta_down_23_199 free
- delta_down_23_200 free
- delta_down_24_1 free
- delta_down_24_2 free
- delta_down_24_3 free
- delta_down_24_4 free
- delta_down_24_5 free
- delta_down_24_6 free
- delta_down_24_7 free
- delta_down_24_8 free
- delta_down_24_9 free
- delta_down_24_10 free
- delta_down_24_11 free
- delta_down_24_12 free
- delta_down_24_13 free
- delta_down_24_14 free
- delta_down_24_15 free
- delta_down_24_16 free
- delta_down_24_17 free
- delta_down_24_18 free
- delta_down_24_19 free
- delta_down_24_20 free
- delta_down_24_21 free
- delta_down_24_22 free
- delta_down_24_23 free
- delta_down_24_24 free
- delta_down_24_25 free
- delta_down_24_26 free
- delta_down_24_27 free
- delta_down_24_28 free
- delta_down_24_29 free
- delta_down_24_30 free
- delta_down_24_31 free
- delta_down_24_32 free
- delta_down_24_33 free
- delta_down_24_34 free
- delta_down_24_35 free
- delta_down_24_36 free
- delta_down_24_37 free
- delta_down_24_38 free
- delta_down_24_39 free
- delta_down_24_40 free
- delta_down_24_41 free
- delta_down_24_42 free
- delta_down_24_43 free
- delta_down_24_44 free
- delta_down_24_45 free
- delta_down_24_46 free
- delta_down_24_47 free
- delta_down_24_48 free
- delta_down_24_49 free
- delta_down_24_50 free
- delta_down_24_51 free
- delta_down_24_52 free
- delta_down_24_53 free
- delta_down_24_54 free
- delta_down_24_55 free
- delta_down_24_56 free
- delta_down_24_57 free
- delta_down_24_58 free
- delta_down_24_59 free
- delta_down_24_60 free
- delta_down_24_61 free
- delta_down_24_62 free
- delta_down_24_63 free
- delta_down_24_64 free
- delta_down_24_65 free
- delta_down_24_66 free
- delta_down_24_67 free
- delta_down_24_68 free
- delta_down_24_69 free
- delta_down_24_70 free
- delta_down_24_71 free
- delta_down_24_72 free
- delta_down_24_73 free
- delta_down_24_74 free
- delta_down_24_75 free
- delta_down_24_76 free
- delta_down_24_77 free
- delta_down_24_78 free
- delta_down_24_79 free
- delta_down_24_80 free
- delta_down_24_81 free
- delta_down_24_82 free
- delta_down_24_83 free
- delta_down_24_84 free
- delta_down_24_85 free
- delta_down_24_86 free
- delta_down_24_87 free
- delta_down_24_88 free
- delta_down_24_89 free
- delta_down_24_90 free
- delta_down_24_91 free
- delta_down_24_92 free
- delta_down_24_93 free
- delta_down_24_94 free
- delta_down_24_95 free
- delta_down_24_96 free
- delta_down_24_97 free
- delta_down_24_98 free
- delta_down_24_99 free
- delta_down_24_100 free
- delta_down_24_101 free
- delta_down_24_102 free
- delta_down_24_103 free
- delta_down_24_104 free
- delta_down_24_105 free
- delta_down_24_106 free
- delta_down_24_107 free
- delta_down_24_108 free
- delta_down_24_109 free
- delta_down_24_110 free
- delta_down_24_111 free
- delta_down_24_112 free
- delta_down_24_113 free
- delta_down_24_114 free
- delta_down_24_115 free
- delta_down_24_116 free
- delta_down_24_117 free
- delta_down_24_118 free
- delta_down_24_119 free
- delta_down_24_120 free
- delta_down_24_121 free
- delta_down_24_122 free
- delta_down_24_123 free
- delta_down_24_124 free
- delta_down_24_125 free
- delta_down_24_126 free
- delta_down_24_127 free
- delta_down_24_128 free
- delta_down_24_129 free
- delta_down_24_130 free
- delta_down_24_131 free
- delta_down_24_132 free
- delta_down_24_133 free
- delta_down_24_134 free
- delta_down_24_135 free
- delta_down_24_136 free
- delta_down_24_137 free
- delta_down_24_138 free
- delta_down_24_139 free
- delta_down_24_140 free
- delta_down_24_141 free
- delta_down_24_142 free
- delta_down_24_143 free
- delta_down_24_144 free
- delta_down_24_145 free
- delta_down_24_146 free
- delta_down_24_147 free
- delta_down_24_148 free
- delta_down_24_149 free
- delta_down_24_150 free
- delta_down_24_151 free
- delta_down_24_152 free
- delta_down_24_153 free
- delta_down_24_154 free
- delta_down_24_155 free
- delta_down_24_156 free
- delta_down_24_157 free
- delta_down_24_158 free
- delta_down_24_159 free
- delta_down_24_160 free
- delta_down_24_161 free
- delta_down_24_162 free
- delta_down_24_163 free
- delta_down_24_164 free
- delta_down_24_165 free
- delta_down_24_166 free
- delta_down_24_167 free
- delta_down_24_168 free
- delta_down_24_169 free
- delta_down_24_170 free
- delta_down_24_171 free
- delta_down_24_172 free
- delta_down_24_173 free
- delta_down_24_174 free
- delta_down_24_175 free
- delta_down_24_176 free
- delta_down_24_177 free
- delta_down_24_178 free
- delta_down_24_179 free
- delta_down_24_180 free
- delta_down_24_181 free
- delta_down_24_182 free
- delta_down_24_183 free
- delta_down_24_184 free
- delta_down_24_185 free
- delta_down_24_186 free
- delta_down_24_187 free
- delta_down_24_188 free
- delta_down_24_189 free
- delta_down_24_190 free
- delta_down_24_191 free
- delta_down_24_192 free
- delta_down_24_193 free
- delta_down_24_194 free
- delta_down_24_195 free
- delta_down_24_196 free
- delta_down_24_197 free
- delta_down_24_198 free
- delta_down_24_199 free
- delta_down_24_200 free
 End

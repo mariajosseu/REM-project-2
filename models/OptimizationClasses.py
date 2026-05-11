@@ -106,6 +106,21 @@ class LP_OptimizationProblem():
         else:
             print(f"optimization of {self.model.ModelName} was not successful")
     
+    def get_computational_aspects(self):
+        """Extract computational aspects (variables, constraints, solve time)"""
+        return {
+            "num_variables": self.model.NumVars,
+            "num_constraints": self.model.NumConstrs,
+            "solve_time": self.model.Runtime
+        }
+    
+    def display_computational_aspects(self):
+        """Display computational aspects after model solve"""
+        aspects = self.get_computational_aspects()
+        print(f"Computational aspects: {aspects['num_variables']:,} variables, "
+              f"{aspects['num_constraints']:,} constraints, "
+              f"solved in {aspects['solve_time']:.3f} seconds.")
+    
     def display_results(self):
         print()
         print("="*70)
